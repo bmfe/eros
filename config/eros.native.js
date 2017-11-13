@@ -1,9 +1,9 @@
 module.exports = {
-    "appName": "weex-eros-template-standard",
+    "appName": "eros-template-name",
     "appBoard": '/config/index.js',
     "version": {
-        "android": "weex-eros-version",
-        "iOS": "weex-eros-version"
+        "android": "eros-template-version",
+        "iOS": "eros-template-version"
     },
     "page": {
         "homePage": "/pages/eros-demos/index.js",

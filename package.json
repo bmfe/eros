@@ -1,6 +1,6 @@
 {
-    "name": "weex-eros-template-standard",
-    "version": "1.0.4",
+    "name": "eros-template-name",
+    "version": "eros-template-version",
     "description": "a weex project",
     "main": "index.js",
     "keywords": [
