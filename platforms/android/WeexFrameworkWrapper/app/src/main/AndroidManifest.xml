@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.benmu.wx">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="getui.permission.GetuiService.com.bmdoctor.jyt"/>
+
+    <!--amap额外权限-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <application
+
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:name=".App"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+
+
+        <meta-data
+                android:name="UMENG_APPKEY"
+                android:value="${UMENG_APP_KEY}"/>
+        <meta-data
+                android:name="UMENG_CHANNEL"
+                android:value="${UMENG_CHANNEL_VALUE}"/>
+
+
+        <activity android:name="com.benmu.wx.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.benmu.weex.example.categoty.page"/>
+
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.journeyapps.barcodescanner.CaptureActivity"
+                android:screenOrientation="portrait"
+                tools:replace="screenOrientation"
+                />
+
+        <!--图片预览Activity-->
+        <activity
+                android:name="com.benmu.framework.activity.BrowseImgActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light.NoTitleBar"/>
+
+        <activity
+                android:name=".activity.SplashActivity"
+                android:theme="@style/FullscreenTheme"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.benmu.framework.activity.GlobalWebViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.benmu.weex.example.category.web"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.benmu.framework.activity.DebugActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.benmu.weex.example.category.debug"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.benmu.framework.service.BroadcastChannelService"/>
+
+        <!--wxApi-->
+        <activity
+                android:name=".wxapi.WXEntryActivity"
+                android:exported="true"
+                android:launchMode="singleTop"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="your wx appId"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".wxapi.WXPayEntryActivity"
+                android:exported="true"
+                android:launchMode="singleTop"/>
+
+    </application>
+
+</manifest>

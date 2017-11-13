@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@import "common";
+
+//角标
+.badges{
+  background-color: $color_danger;
+  width: 50px;
+  height: 40px;
+  border-radius: 30px;
+  text-align: center;
+  color: #ffffff;
+  padding-top:7px;
+  font-size: 24px;
+}
+
+.large-badges{
+  background-color: $color_danger;
+  width: 70px;
+  height: 40px;
+  border-radius: 30px;
+  text-align: center;
+  color: #ffffff;
+  padding-top:7px;
+}

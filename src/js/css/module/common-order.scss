@@ -1,0 +1,45 @@
+// 标题分类
+.wrap-label {
+  padding-left: 30;
+  padding-right: 30;
+  padding-top: 50;
+  padding-bottom: 30;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.label-tit {
+  font-size: $font-32;
+  color: $blue-ink;
+}
+.line {
+  margin-right: 18;
+  width: 10;
+  height: 16;
+  border-radius: 10;
+}
+.line-green {
+  background-color: $base-green;
+}
+.line-orange {
+  background-color: $base-orange;
+}
+.line-black {
+  background-color: $blue-ink;
+}
+.line-red {
+  background-color: $base-red;
+}
+// 标题分类 end
+
+.order-num {
+  margin-left: 30;
+  font-size: $font-24;
+  color: $base-white;
+  font-weight: bold;
+  padding-top: 8;
+  padding-right: 10;
+  padding-bottom: 8;
+  padding-left: 10;
+  border-radius: 32;
+  background-color: $base-red;
+}

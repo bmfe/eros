@@ -1,0 +1,96 @@
+Created by IDE
+.DS_Store
+.idea/
+*.iml
+
+.*
+!.gitignore
+!.eslintrc
+!.babelrc
+
+# Node
+logs
+*.log
+npm-debug.log*
+.npm
+node_modules
+dist
+bower_components
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Android
+# built application files
+*.apk
+*.ap_
+wxframework
+sdk
+bmwidget
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+sign.properties
+
+# Eclipse project files
+.classpath
+.project
+
+# Android Studio
+.idea/
+.gradle
+/*/local.properties
+/*/outd
+build/
+.idea/
+.gradle/
+android/playground/local.properties
+
+/*/*/production
+*.iml
+*.iws
+*.ipr
+*~
+*.swp
+# END Android
+
+# IOS
+# Xcode
+*/build/*
+*.pbxuser
+*.pbxprog
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+WeexiOSSDK
+Benmu-iOS-Library
+
+#CocoaPods
+Pods
+
+*.xccheckout
+*.xcworkspacedata
+*.xcworkspace
+Podfile.lock
+# END IOS

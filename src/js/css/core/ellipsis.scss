@@ -1,0 +1,22 @@
+/*公用文字截断*/
+.limit-one{
+    lines: 1;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+.limit-two{
+    lines: 2;
+    text-overflow: ellipsis;
+}
+.limit-three{
+    lines: 3;
+    text-overflow: ellipsis;
+}
+.limit-four {
+    lines: 4;
+    text-overflow: ellipsis;
+}
+.unlimit{
+    lines: 0;
+    text-overflow: ellipsis;
+}

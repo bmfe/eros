@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+@import "common";
+
+//标题栏
+
+.bui-header-box{
+  flex-direction: column;
+  background-color: #3c763d;
+}
+.bui-header{
+  flex: 1;
+  padding-left:$nb20;
+  padding-right: $nb20;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bui-header-left{
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: $nb20;
+  top: 0;
+  bottom: 0;
+}
+
+.bui-header-right{
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: $nb20;
+  top: 0;
+  bottom: 0;
+}
+
+.bui-header-main{
+  justify-content: center;
+  flex: 1;
+  padding-left: $nb10;
+  padding-right: $nb10;
+  flex-direction: row;
+}
+
+.bui-header-title{
+  font-size: $nb34;
+  color: $color_white;
+  text-align: center;
+  padding-left: $nb15;
+  padding-right: $nb15;
+  padding-top: $nb15;
+  padding-bottom: $nb15;
+  lines:1;
+  text-overflow: ellipsis;
+}
+.bui-header-text{
+  font-size: $nb32;
+  color: $color_white;
+  text-align: center;
+  lines:1;
+}
+
+.bui-header-icon{
+  width: $nb48;
+  height: $nb48;
+}
+.bui-header-icon-next{
+  width: $nb48;
+  height: $nb48;
+  margin-right:$nb30;
+}
+
+.pdl10{
+  padding-left: $nb10;
+}
+.pdr10{
+  padding-right: $nb10;
+}
+

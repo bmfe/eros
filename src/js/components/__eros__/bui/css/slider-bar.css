@@ -1,0 +1,25 @@
+.bui-slider-bar-box {
+  position: fixed;
+  width: 600px;
+  top: 0px;
+  bottom: 0px;
+  background-color: #ffffff;
+  padding: 30px;
+  flex-direction: column; }
+
+.bui-left-slider-bar-box {
+  left: -600px; }
+
+.bui-right-slider-bar-box {
+  right: -600px; }
+
+.bui-slider-title {
+  margin-top: 50px;
+  text-align: center; }
+
+.bui-slider-content {
+  margin-top: 50px;
+  flex-direction: column;
+  flex: 1; }
+
+/*# sourceMappingURL=slider-bar.css.map */

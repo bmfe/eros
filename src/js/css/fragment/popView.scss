@@ -1,0 +1,234 @@
+@import "../core/base";
+/*dialog定位*/
+.dialog-wrapper{
+  @include abs-pos;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.pop-arrow {
+  margin-top: 6;
+  width: 20;
+  height: 20;
+  transform: rotate(45deg);
+  background-color: #fff;
+}
+.popView {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  align-items: center;
+}
+.view-right {
+  align-items: flex-end;
+}
+.pop-list {
+  margin-top: -10;
+  width: 520;
+  background-color: #fff;
+  border-radius: 15;
+}
+.pop-item {
+  font-size: 32;
+  font-weight: bold;
+  color: #333;
+  line-height: 100;
+  text-align: center;
+  border-top-width: 1px;
+  border-color: #ccc;
+  border-style: solid;
+}
+//筛选
+.pop-list-filter {
+  margin-top: -10;
+  background-color: #fff;
+  border-radius: 15;
+}
+
+.pop-item-filter {
+  padding-left: 56;
+  padding-right: 56;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color: rgba(0,0,0,.4);
+}
+.no-border-top {
+  border-top-width: 0;
+}
+.mask-white {
+  @include abs-pos;
+  background-color: rgba(255, 255, 255, .9);
+}
+//新建工单 count
+.pop-bot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-directoin: column;
+}
+.pop-wrap {
+  flex: 1;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-left: 60;
+  padding-right: 60;
+}
+.pop-content {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+.bg-radius{
+  width: 110;
+  height: 110;
+  align-items: center;
+  justify-content: center;
+  border-radius: 55;
+}
+.bg-orange {
+  background-color: $base-orange;
+  box-shadow: 0 3px 5px rgba(245,166,106,.1);
+}
+.bg-green {
+  background-color: $base-green;
+  box-shadow: 0px 3px 5px rgba(7,174,156,.1);
+}
+
+.wrap-boxs {
+  @include border();
+  width: 750;
+  height: 110;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255,255,255,.9);
+  box-shadow: 0 3px 5px #ebf0f5;
+}
+.pop-txt {
+  margin-top: 20;
+  margin-bottom: 50;
+  font-size: $font-32;
+  color: $base-color;
+}
+
+//del-img
+.popView-create,
+.popView-remark {
+  width: 650;
+  border-radius: 18;
+  background-color: $base-white;
+  text-align: center;
+}
+.pop-title {
+  font-weight: bold;
+  font-size: $font-32;
+  color: $base-color;
+  text-align: center;
+}
+/*dialog 按钮盒子*/
+.btn-box{
+  @include border(top);
+  @extend .flex-align;
+  margin-top: 20;
+  flex-direction: row;
+}
+.btn-text{
+  flex: 1;
+  color: $dialog-submit-color;
+  font-size: $font-30;
+  text-align: center;
+  padding-bottom: 25;
+  padding-top: 25;
+  font-weight: bold;
+}
+.btn-first-child{
+  @include border(right);
+  color: $dialog-cancel-color;
+  font-weight: bold;
+}
+//添加备注弹层
+.note-pop {
+    border-radius: 10;
+    margin-right: 30;
+    margin-left: 30;
+    margin-bottom: 10;
+    height: 240;
+    background-color: #f0f5fa;
+    padding-top: 30;
+    padding-left: 30;
+    font-size: $font-32;
+    color: $base-color;
+    line-height: 54;
+    placeholder-color: $base-disabled;
+}
+.set-limit-pos {
+  right: 60;
+}
+/* pop-select start*/
+.pop-select {
+  background-color: $base-white;
+  @include abs-pos(auto, 0, 0, 0);
+  height: 550;
+}
+.pop-hd {
+  //top: 0;
+  @include border-both(top,bottom);
+  padding-left: 30;
+  padding-right: 30;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100;
+}
+.hd-title {
+  font-size: $font-32;
+  color: $blue-ink;
+  font-weight: bold;
+}
+.hd-done {
+  @include abs-pos(0,0,0,auto);
+  font-size: $font-32;
+  color: $base-green;
+  padding-top: 30;
+  padding-left: 90;
+  padding-bottom: 30;
+  padding-right: 30;
+}
+.list-worder {
+  @include abs-pos(100,0, 0, 0);
+}
+/* 工单问题分类 */
+.worder-cell {
+  flex-direction: row;
+  @extend .flex-align;
+  @include border(bottom);
+  height: 110;
+}
+.list-item-txt {
+  font-size: $font-32;
+  color: $base-color;
+}
+.list-item-on {
+  color: $base-green;
+}
+/* pop-select end*/
+.set-space {
+  padding-top: 60;
+  padding-bottom: 40;
+  margin-left: 40;
+  margin-right: 40;
+}
+/*编码弹层*/
+.pop-img {
+  margin: 30;
+  width: 590;
+  height: 360;
+}

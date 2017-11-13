@@ -1,0 +1,43 @@
+@import "common";
+
+.radio-box {
+  align-items: center;
+  padding-top: $nb15;
+  padding-bottom: $nb15;
+  padding-left: $nb5;
+  margin-right: $nb40;
+  padding-right: $nb20;
+}
+
+.radio-label {
+  font-size: $nb30;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.switch-box {
+  height: 80px;
+}
+
+.switch {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.switch-label {
+  font-size: $nb30;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}

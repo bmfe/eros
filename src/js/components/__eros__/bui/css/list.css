@@ -1,0 +1,116 @@
+.bui-list {
+  flex: 1; }
+
+.bui-cell {
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
+  border-bottom-width: 1px;
+  border-bottom-color: #d7dde4;
+  border-bottom-style: solid; }
+
+.bui-cell:active {
+  background-color: #f5f5f5; }
+
+.bui-cell-large {
+  flex-direction: row;
+  align-items: center;
+  height: 120px;
+  border-bottom-width: 1px;
+  border-bottom-color: #d7dde4;
+  border-bottom-style: solid; }
+
+.bui-cell-large:active {
+  background-color: #f5f5f5; }
+
+.bui-cell-xlarge {
+  flex-direction: row;
+  align-items: center;
+  height: 140px;
+  border-bottom-width: 1px;
+  border-bottom-color: #d7dde4;
+  border-bottom-style: solid; }
+
+.bui-cell-xlarge:active {
+  background-color: #f5f5f5; }
+
+.bui-list-left {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px; }
+
+.bui-list-main {
+  padding-left: 20px;
+  flex: 1;
+  justify-content: center; }
+
+.bui-list-right {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px; }
+
+.bui-list-title {
+  font-size: 34px;
+  color: #464c5b;
+  text-overflow: ellipsis;
+  lines: 1; }
+
+.bui-list-subtitle {
+  font-size: 30px;
+  color: #9ea7b4;
+  text-overflow: ellipsis;
+  lines: 1; }
+
+.bui-list-thumb {
+  width: 80px;
+  height: 80px; }
+
+.bui-list-action {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 300px; }
+
+.bui-loading {
+  width: 750px;
+  height: 150px;
+  flex-direction: column;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.bui-refresh {
+  justify-content: center;
+  flex-direction: row;
+  width: 750px;
+  height: 100px;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.bui-loading-indicator {
+  font-size: 30px;
+  text-align: center;
+  color: #9ea7b4; }
+
+.bui-indicator {
+  height: 60px;
+  width: 60px;
+  color: #9ea7b4; }
+
+/*# sourceMappingURL=list.css.map */

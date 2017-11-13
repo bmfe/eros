@@ -1,0 +1,136 @@
+@import "common";
+
+.bui-list {
+  flex: 1;
+}
+
+.bui-cell {
+  flex-direction: row;
+  align-items: center;
+  height: $nb100;
+  border-bottom-width: 1px;
+  border-bottom-color: $color_border;
+  border-bottom-style: solid;
+}
+
+.bui-cell:active {
+  background-color: $color_default;
+}
+
+.bui-cell-large {
+  flex-direction: row;
+  align-items: center;
+  height: $nb120;
+  border-bottom-width: 1px;
+  border-bottom-color: $color_border;
+  border-bottom-style: solid;
+}
+
+.bui-cell-large:active {
+  background-color: $color_default;
+}
+
+.bui-cell-xlarge {
+  flex-direction: row;
+  align-items: center;
+  height: $nb140;
+  border-bottom-width: 1px;
+  border-bottom-color: $color_border;
+  border-bottom-style: solid;
+}
+
+.bui-cell-xlarge:active {
+  background-color: $color_default;
+}
+
+.bui-list-left {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: $nb20;
+}
+
+.bui-list-main {
+  padding-left: $nb20;
+  flex: 1;
+  justify-content: center;
+}
+
+.bui-list-right {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: $nb20;
+}
+
+.bui-list-title {
+
+  font-size: $nb34;
+  color: $color_title;
+  text-overflow: ellipsis;
+  lines: 1;
+}
+
+.bui-list-subtitle {
+  font-size: $nb30;
+  color: $color_subtitle;
+  text-overflow: ellipsis;
+  lines: 1;
+}
+
+.bui-list-thumb {
+  width: $nb80;
+  height: $nb80;
+}
+
+.bui-list-action {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+.bui-loading{
+  width: 750px;
+  height: 150px;
+  flex-direction: column;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.bui-refresh{
+  //position: absolute;
+  //left: 0px;
+  //right: 0px;
+  //height: 100px;
+  justify-content: center;
+  flex-direction: row;
+  width: 750px;
+  height: 100px;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.bui-loading-indicator{
+  font-size: 30px;
+  text-align: center;
+  color: $color_subtitle;
+}
+.bui-indicator {
+  height: 60px;
+  width: 60px;
+  color: $color_subtitle;
+}

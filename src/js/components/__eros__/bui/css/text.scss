@@ -1,0 +1,27 @@
+@import "common";
+
+.h1{
+  font-size: $nb80;
+  line-height: $nb120;
+  color: $color_title;
+}
+.h2{
+  font-size: $nb60;
+  line-height: $nb100;
+  color: $color_title;
+}
+.h3{
+  font-size: $nb45;
+  line-height: $nb60;
+  color: $color_title;
+}
+.h4{
+  font-size: $nb32;
+  line-height: $nb45;
+  color: $color_title;
+}
+.h5{
+  font-size: $nb28;
+  line-height: $nb40;
+  color: $color_title;
+}

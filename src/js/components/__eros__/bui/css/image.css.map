@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,gBAAgB;EACd,KAAK,ECWA,IAAI;EDVT,MAAM,ECUD,IAAI",
+"sources": ["image.scss","common.scss"],
+"names": [],
+"file": "image.css"
+}

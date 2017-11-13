@@ -1,0 +1,92 @@
+
+@import "src/js/css/core/base";
+.tabs {
+  flex-direction: row;
+  padding-left: 118;
+  padding-right: 117;
+  padding-top: 10;
+  padding-bottom: 20;
+  background-color: $base-green;
+}
+.wrap-tab {
+  flex: 1;
+  height: 80;
+  flex-direction: row;
+  border-radius: 10;
+  overflow: hidden;
+  background-color: $base-white;
+}
+.tab-box {
+  flex: 1;
+  @extend .flex-align;
+  background-color: $base-white;
+  color: $base-green;
+  height: 80;
+  @include border-all ($border-color:$base-white,$solid: solid,$width-value: 2)
+}
+
+.tab-txt {
+  font-size: $font-32;
+  font-weight: bold;
+  color: $base-green;
+}
+.item-on {
+  background-color: $base-green;
+  color: $base-white;
+}
+.items-on {
+  color: $base-green;
+}
+.left-tab {
+  border-top-left-radius: 10;
+  border-bottom-left-radius: 10;
+}
+.right-tab {
+  border-top-right-radius: 10;
+  border-bottom-right-radius: 10;
+}
+
+/*tab 滚动*/
+.tabs-scroll{
+  position: relative;
+  width: 750;
+  height: 130;
+  margin-top: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  background-color: #fff;
+  box-shadow: 3px 0 5px #ebf0f5;
+}
+.tab-box-scroll {
+  width: 187;
+  height: 130;
+  flex-direction: row;
+  align-items: center;
+}
+.tab-items {
+  font-size: $font-32;
+  font-weight: bold;
+  color:  $blue-ink;
+}
+.tabs-num {
+  margin-top: 14;
+  font-size: $font-28;
+  color:  $blue-ink;
+}
+.flex-column-center {
+  flex-direction: column;
+  justify-content: center;
+}
+.scroll-arrow {
+  width: 130;
+  height: 130;
+  position: absolute;
+  right: 0;
+}
+.tabs-on {
+  @include border(bottom,$border-color:$base-green,$width-value: 4);
+}
+.tabs-default {
+  @include border(bottom,$border-color:$base-white,$width-value: 4);
+}

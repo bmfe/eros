@@ -1,0 +1,436 @@
+@import "../core/variables";
+@import "../core/base";
+@import "../core/mixins";
+@import "dialog";
+.panel-tit {
+    margin-left: 30;
+    padding-top: 26;
+    padding-bottom: 16;
+    font-size: $font-24;
+    color: $blue-ink;
+}
+
+.form-wrap {
+    margin-top: 10;
+    @include border-both(top, bottom);
+    background-color: $base-white;
+}
+
+.form-wrap-v2 {
+    margin-top: 20;
+    background-color: $base-white;
+}
+
+.item {
+    height: $new-item-height;
+    flex-direction: row;
+    @extend .flex-align;
+    margin-left: 70;
+    margin-right: 70;
+    @include border();
+}
+//工单详情
+.item-worder {
+    height: 100;
+    flex-direction: row;
+    margin-left: 30;
+    margin-right: 30;
+    @include border();
+    @extend .flex-align;
+
+}
+.itemAuto-worder {
+    flex-direction: row;
+    @extend .flex-align;
+    margin-left: 30;
+    margin-right: 30;
+    @include border(top);
+    padding-top: 25;
+    padding-bottom: 25;
+}
+.label-tit-worder {
+    font-size: $font-32;
+    color: $blue-ink;
+}
+.itemAuto {
+    flex-direction: row;
+    @extend .flex-align;
+    margin-left: 40;
+    @include border(top);
+    padding-top: 25;
+    padding-bottom: 25;
+}
+
+.label-tit {
+    width: 200;
+    font-size: $font-32;
+    color: $base-color;
+}
+
+.label-tit-v2 {
+    width: 200;
+    font-size: $font-32;
+    font-weight: bold;
+    color: $base-color;
+}
+
+.label-tit-money {
+    font-size: $font-32;
+    font-weight: bold;
+    color: $base-color;
+}
+
+.money-layout {
+    flex-direction: row;
+    align-items: center;
+}
+
+.label-tit-unit {
+    font-size: 28;
+    color: $blue-ink;
+}
+
+.input-main {
+    flex: 1;
+}
+
+.input-box {
+    flex: 1;
+    font-size: $font-32;
+    color: $base-color;
+    height: 100; //安卓光标问题
+    placeholder-clor: $base-placehoder;
+}
+
+.input-box-auto {
+    flex: 1;
+    font-size: $font-32;
+    color: $base-color;
+    placeholder-clor: $base-placehoder;
+    padding-top: 10;
+    padding-bottom: 10;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+
+/*提示*/
+
+.wrapper-tips {
+    margin-top: 30;
+    flex-direction: row;
+    @extend .flex-align;
+}
+
+.tips-agree {
+    font-size: $font-26;
+    color: $base-color;
+}
+
+.tips-deal {
+    font-size: $font-26;
+    color: $base-blue;
+}
+
+.tips-warn {
+    font-size: $font-24;
+    color: #999;
+    padding-left: 30;
+    padding-right: 30;
+}
+
+.cardDetailInfo {
+    @include border(top);
+    @include border(bottom);
+    @extend .flex-align;
+    padding-top: $list-padding;
+    ;
+    padding-bottom: $list-padding;
+    ;
+    background-color: $base-white;
+    flex-direction: row;
+}
+
+.more-text {
+    color: $blue-ink;
+    font-size: $font-30;
+}
+
+
+/*单选按钮*/
+
+.radio-main {
+    flex: 3;
+    flex-direction: row;
+    padding-top: 35;
+    padding-bottom: 35;
+}
+
+.wrap-radio {
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+}
+.wrap-radio-box {
+    flex-direction: row;
+    align-items: center;
+}
+.radio-circle {
+    margin-right: 20;
+    width: 22;
+    height: 22;
+    border-radius: 11;
+    @include border-all($border-color);
+}
+
+.selected {
+    position: absolute;
+    top: 5;
+    left: 5;
+    width: 10;
+    height: 10;
+    border-radius: 5;
+    @include border-all($border-color);
+    border-color: $base-blue;
+    background-color: $base-blue;
+}
+
+.def-null {
+    width: 0;
+    height: 0;
+}
+
+.radio-txt {
+    font-size: $font-30;
+    color: $base-color;
+}
+
+
+/*获取验证码*/
+
+.get-code {
+    @extend .flex-align;
+    padding-top: 15;
+    padding-left: 10;
+    padding-bottom: 15;
+    padding-right: 10;
+    font-size: $font-32;
+    color: $base-green;
+    text-align: center;
+}
+
+.disabled {
+    color: #b8b9bb;
+}
+
+.gray-txt {
+    color: #b8b9bb;
+}
+
+
+/*同意协议之前的复选框*/
+
+.wrap-checkbox {
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkbox {
+    margin-right: 20;
+    width: 26;
+    height: 26;
+    border-radius: 4;
+    background-color: #fff;
+    @include border-all($border-color);
+}
+
+.not-checked {
+    width: 0;
+    height: 0;
+}
+
+.checked {
+    position: absolute;
+    left: 6;
+    top: 7;
+    width: 12;
+    height: 8;
+    border-left-width: 2;
+    border-left-style: solid;
+    border-left-color: $base-blue;
+    border-bottom-width: 2;
+    border-bottom-style: solid;
+    border-bottom-color: $base-blue;
+    transform: rotate(-45deg);
+}
+
+.checked-box {
+    margin-right: 10;
+    width: 48;
+    height: 48;
+    border-radius: 24;
+    background-color: #56c4ef;
+}
+
+.icon-checked {
+    position: absolute;
+    left: 10;
+    top: 10;
+    width: 28;
+    height: 16;
+    border-left-width: 3;
+    border-left-style: solid;
+    border-left-color: #fff;
+    border-bottom-width: 3;
+    border-bottom-style: solid;
+    border-bottom-color: #fff;
+    transform: rotate(-40deg);
+}
+
+.dialog-bd-checkArea {
+    margin-top: 10;
+}
+
+.checked-box-null {
+    border-radius: 24;
+    background-color: #fff;
+    @include border-all($border-color);
+}
+
+
+/*卡详情通用 左中右布局 中间为标题*/
+
+.item-text {
+    padding-top: $list-padding;
+    padding-bottom: $list-padding;
+    font-size: $font-30;
+    color: $base-color;
+}
+
+
+/*语音验证*/
+
+.bm-error {
+    margin-left: 30;
+    margin-bottom: -20;
+    margin-top: 10;
+    color: #f00;
+    font-size: $font-24;
+}
+
+.yz-tips {
+    padding-top: 24;
+    padding-right: 26;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.not-fetch {
+    font-size: $font-24;
+    color: $blue-ink;
+}
+
+.yz-voice {
+    font-size: $font-24;
+    color: #45c4dd;
+}
+
+.wait-noget {
+    margin-bottom: 30;
+    font-size: $font-24;
+    color: #999;
+    padding-top: 24;
+    text-align: center;
+}
+
+.export-txt {
+    flex: 1;
+    font-size: $font-30;
+    color: $base-color;
+}
+
+
+/*选择就诊人*/
+
+.item-selectCard {
+    padding-top: 30;
+    padding-bottom: 30;
+}
+
+.text-gray {
+    color: $blue-ink;
+}
+
+.input-area {
+    flex: 1;
+    font-size: $font-30;
+    color: $base-color;
+}
+
+.btn-dash-mt0 {
+    @include btn(transparent, $base-color, 2, dashed, #ccc, normal);
+    margin-top: 0;
+}
+
+.btn-gray-mt0 {
+    @include btn($btn-gray);
+    margin-top: 0;
+}
+
+.border-hide {
+    margin-top: -1;
+}
+
+.text-tip {
+    font-size: $font-24;
+    color: $blue-ink;
+    padding-top: 30;
+    padding-bottom: 10;
+    padding-left: 30;
+}
+
+
+/*缴费*/
+
+.form-wrap-gap {
+    padding-bottom: 30;
+}
+
+.list-wrap {
+    padding-bottom: 0;
+}
+
+.item-noBorder {
+    @include border($width-value: 0);
+    padding-top: 30;
+    padding-bottom: 0;
+    margin-left: 0;
+}
+
+.item-col {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-right: 30;
+    align-items: flex-start;
+}
+
+.text-all {
+    font-size: $font-30;
+    color: $base-color;
+    line-height: 40;
+}
+
+.shrink-more {
+    font-size: $font-26;
+    color: $blue-ink;
+}
+/*设置灰色字*/
+.set-txt {
+    font-size: $font-30;
+    color: $blue-ink;
+}
+.selected-txt {
+    color: #333;
+}

@@ -1,0 +1,79 @@
+@import "common";
+
+$dialog_height: 400px;
+//$dialog_action_height: 80px;
+$dialog_content-height: 220px;
+
+.bui-dialog-layout {
+  //position: fixed;
+  //top: 0;
+  //bottom: 0;
+  //left: 0;
+  //right: 0;
+  //flex: 1;
+}
+
+.bui-dialog-mask {
+  background-color: $color_black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex: 1;
+  opacity: 0.7;
+}
+
+.bui-dialog {
+  position: fixed;
+  background-color: $color_white;
+  border-radius: $nb10;
+  height: $dialog_height;
+  top: 300px;
+  left: $nb50;
+  right: $nb50;
+  flex: 1;
+}
+
+.bui-dialog-title {
+  justify-content: center;
+  height: $nb80;
+  padding-left: $nb30;
+  padding-right: $nb30;
+}
+
+.dialog-title-text {
+  color: $color_black;
+  font-size: $nb32;
+}
+
+.bui-dialog-content {
+  height: $dialog_content-height;
+  padding-left: $nb30;
+  padding-right: $nb30;
+  padding-bottom: $nb30;
+}
+
+.bui-dialog-footer {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: $nb80;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: $color_border;
+}
+
+.dialog-action-text {
+  flex: 1;
+  text-align: center;
+  font-size: $nb32;
+  color: $color_primary;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: $color_border;
+}
+
+.dialog-action-text:active {
+  color: $color_black;
+}

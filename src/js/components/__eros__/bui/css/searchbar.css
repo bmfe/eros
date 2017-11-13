@@ -1,0 +1,46 @@
+.bui-searchbar {
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px; }
+
+.bui-input {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  position: relative; }
+
+.bui-search-icon-box-text {
+  color: #9ea7b4;
+  font-size: 30px;
+  padding-left: 15px; }
+
+.bui-search-input-text {
+  font-size: 30px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.bui-search-search {
+  font-size: 30px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-bottom: 15px; }
+
+.bui-search-bg-default {
+  background-color: #f5f5f5; }
+
+.bui-search-text-color-default {
+  color: #657180; }
+
+.bui-search-bg-primary {
+  background-color: #4ca4fe; }
+
+.bui-search-text-color-primary {
+  color: #ffffff; }
+
+/*# sourceMappingURL=searchbar.css.map */

@@ -1,0 +1,20 @@
+.badges {
+  background-color: #ff4e24;
+  width: 50px;
+  height: 40px;
+  border-radius: 30px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 7px;
+  font-size: 24px; }
+
+.large-badges {
+  background-color: #ff4e24;
+  width: 70px;
+  height: 40px;
+  border-radius: 30px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 7px; }
+
+/*# sourceMappingURL=badges.css.map */

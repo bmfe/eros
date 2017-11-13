@@ -1,0 +1,104 @@
+@charset "utf-8";
+@mixin border($direction: top,$border-color:$border-color,$solid: solid,$width-value: 1){
+    border-#{$direction}-style: $solid;
+    border-#{$direction}-width: $width-value;
+    border-#{$direction}-color: $border-color;
+}
+@mixin border-both($direction-both1: top,$direction-both2: bottom,$solid: solid,$width-value-top: 1,$width-value-bottom: 1,$border-color:$border-color){
+    border-#{$direction-both1}-style: $solid;
+    border-#{$direction-both1}-width: $width-value-top;
+    border-#{$direction-both1}-color: $border-color;
+    border-#{$direction-both2}-style: $solid;
+    border-#{$direction-both2}-width: $width-value-bottom;
+    border-#{$direction-both2}-color: $border-color;
+}
+@mixin border-all ($border-color:$base-blue,$solid: solid,$width-value: 1) {
+    border-width: $width-value;
+    border-style: $solid;
+    border-color: $border-color;
+}
+.flex-align{
+    align-items: center;
+    justify-content: center;
+}
+@mixin btn($background-color: $btn-green,$color: #fff,$border-width:1,$border-style:solid,$border-color: transparent,$font-weight: bold,$margin-top: 88,$margin-bottom: 60,$margin-l: 70,$margin-r: 70,$btn-border-radius: 8){
+    background-color: $background-color;
+    border-radius: $btn-border-radius;
+    padding-top: 32;
+    padding-bottom: 32;
+    text-align: center;
+    color: $color;
+    font-weight: $font-weight;
+    font-size: $font-36;
+    margin-top: $margin-top;
+    margin-bottom: $margin-bottom;
+    margin-left: $margin-l;
+    margin-right: $margin-r;
+    border-width: $border-width;
+    border-style: $border-style;
+    border-color: $border-color;
+}
+@mixin btn-new($bgcolor:$btn-green,$color: #fff,$btn-lh: 80,$btn-radius: 8,$btn-fs: 32,$btn-fw: bold) {
+    background-color: $bgcolor;
+    color: $color;
+    border-radius: $btn-radius;
+    text-align: center;
+    line-height: $btn-lh;
+    font-size: $btn-fs;
+    font-weight: $btn-fw;
+    vertical-align: middle;
+}
+@mixin abs-pos($top: 0, $right: 0, $bottom: 0, $left: 0){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+@mixin text-overflow ( $lines: 1, $ellipsis: ellipsis,$width: 550) {
+    width: $width;
+    lines: $lines;
+    text-overflow: $ellipsis;
+}
+.btn {
+    @include btn();
+}
+
+.btn-dash {
+    @include btn(transparent,$base-color,2,dashed,$blue-ink);
+}
+
+.btn-red {
+    @include btn($base-color-pink);
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-column {
+    display: flex;
+    flex-direciton: column;
+}
+.flex-row-start {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-row-center {
+    flex-direction: row;
+    @extend .flex-align;
+}
+.flex-row-between {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-column-between {
+    flex-direction: column;
+    justify-content: space-between;
+}
+.flex-row-end {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+}

@@ -1,0 +1,1 @@
+include ':app', ':wxframework', ':sdk', ':bmwidget'

@@ -1,0 +1,69 @@
+.bui-tabbar-wrapper {
+  width: 750px;
+  flex: 1; }
+
+.bui-tabbar-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: 100px; }
+
+.bui-tabbar {
+  flex-direction: row;
+  height: 100px; }
+
+.bui-tabbar-item-container {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #d7dde4; }
+
+.bui-tabbar-text {
+  margin-top: 5px;
+  text-align: center; }
+
+.bui-scroller-bar-top {
+  height: 80px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #d7dde4; }
+
+.bui-scroller-tabbar-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 80px;
+  margin-bottom: 0; }
+
+.bui-scroller-tabbar {
+  flex-direction: row;
+  align-items: center; }
+
+.bui-scroller-tabbar-row {
+  height: 80px;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px; }
+
+.actived {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  right: 40px;
+  border-bottom-width: 5px;
+  border-bottom-style: solid; }
+
+.text {
+  color: #9ea7b4;
+  text-align: center; }
+
+/*# sourceMappingURL=tabbar.css.map */

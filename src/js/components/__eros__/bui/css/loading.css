@@ -1,0 +1,25 @@
+.load-block {
+  position: fixed;
+  left: 280px;
+  right: 280px;
+  height: 150px;
+  background-color: #000000;
+  opacity: 0.7;
+  top: 350px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center; }
+
+.load-text {
+  color: #ffffff;
+  font-size: 30px; }
+
+.load-icon {
+  width: 64px;
+  height: 64px;
+  font-size: 50px;
+  text-align: center; }
+
+/*# sourceMappingURL=loading.css.map */

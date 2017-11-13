@@ -1,0 +1,129 @@
+@import "src/js/css/core/base";
+
+.wrap-input {
+  @extend .flex-row-between;
+  margin-left: 30;
+  margin-right: 30;
+  height: 110;
+  border-radius: 10;
+  background-color: $base-white;
+  padding-left: 30;
+  padding-right: 40;
+  box-shadow: 0 5 10 #ebf0f5;
+}
+.wrap-input-list {
+  margin-left: 30;
+  margin-right: 30;
+  border-radius: 10;
+  overflow: hidden;
+}
+.input-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include border();
+  height: 110;
+  background-color: $base-white;
+  padding-left: 30;
+  padding-right: 40;
+}
+.write-panel {
+  margin-left: 30;
+  margin-right: 30;
+  border-radius: 10;
+  background-color: $base-white;
+  padding-left: 30;
+  padding-right: 30;
+  box-shadow: 0 5 10 #ebf0f5;
+}
+.textarea-box {
+  position: relative;
+  padding-bottom: 40;
+}
+.note {
+  height: 190;
+  background-color: $base-white;
+  margin-top: 30;
+  margin-bottom: 30;
+  font-size: $font-32;
+  color: $base-color;
+  line-height: 54;
+  placeholder-color: $base-disabled;
+}
+.word-limit {
+  flex-direction: row;
+  position: absolute;
+  bottom : 30;
+  right: 0;
+  font-size:$font-32;
+  color: $blue-ink;
+}
+.addPic {
+  padding-top: 25;
+  padding-right: 25;
+  padding-bottom: 25;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+.wrap-pic-box {
+  position: relative;
+  margin-right: 10;
+  align-items: center;
+  width: 100;
+  height: 100;
+  justify-content: center;
+}
+
+.pic {
+  width: 90;
+  height: 90;
+  background-color: #f0f4fa;
+  @include border-all(#dfe1eb,solid,1);
+}
+.wrap-pic-txt {
+  flex: 1;
+  margin-left: 20;
+  margin-right: 30;
+}
+.addpic-txt {
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: $font-32;
+  line-height: 36;
+  color: #ceced9;
+  text-align: left;
+}
+.no-border {
+  border-top-width: 0;
+  border-bottom-width: 0;
+}
+
+.btn-submit {
+  margin-top: 78;
+  margin-right: 30;
+  margin-bottom: 30;
+  margin-left: 30;
+  @include btn-new($btn-lh: 100,$btn-fs: 36);
+}
+.btn-gray {
+  background-color: $btn-gray;
+}
+.export-select {
+  flex: 1;
+  font-size: $font-32;
+  color: $base-disabled;
+}
+.new-write-panel {
+  margin-left: 30;
+  margin-right: 30;
+  border-radius: 10;
+  background-color: $base-white;
+  padding-left: 25;
+  box-shadow: 0 5 10 #ebf0f5;
+  overflow: hidden;
+}
+.pb0 {
+  padding-bottom: 0;
+}

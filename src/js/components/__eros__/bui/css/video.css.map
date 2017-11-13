@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,UAAU;EACR,IAAI,EAAE,CAAC;EACP,MAAM,EAAE,KAAK",
+"sources": ["video.scss"],
+"names": [],
+"file": "video.css"
+}

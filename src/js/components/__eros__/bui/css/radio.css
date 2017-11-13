@@ -1,0 +1,24 @@
+.radioBox {
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  margin-right: 40px;
+  padding-right: 20px; }
+
+.label {
+  font-size: 30px; }
+
+.disabled {
+  opacity: 0.5; }
+
+.switchstyle {
+  align-items: flex-start; }
+
+.flex-column {
+  flex-direction: column; }
+
+.flex-row {
+  flex-direction: row; }
+
+/*# sourceMappingURL=radio.css.map */

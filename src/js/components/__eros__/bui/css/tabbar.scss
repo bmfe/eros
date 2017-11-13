@@ -1,0 +1,84 @@
+@import "common";
+
+.bui-tabbar-wrapper {
+  width: 750px;
+  flex: 1;
+}
+
+.bui-tabbar-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: $nb100;
+}
+
+.bui-tabbar {
+  flex-direction: row;
+  height: $nb100;
+}
+
+.bui-tabbar-item-container {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: $color_border;
+}
+
+.bui-tabbar-icon {
+}
+
+.bui-tabbar-text {
+  margin-top: $nb5;
+  text-align: center;
+}
+
+
+
+.bui-scroller-bar-top {
+  height: $nb80;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $color_border;
+}
+.bui-scroller-tabbar-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: $nb80;
+  margin-bottom: 0;
+}
+
+
+.bui-scroller-tabbar{
+  flex-direction: row;
+  //justify-content: center;
+  align-items: center;
+}
+.bui-scroller-tabbar-row {
+  height: $nb80;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: $nb50;
+  padding-right: $nb50;
+}
+
+.actived{
+  position: absolute;
+  bottom: 0;
+  left: $nb40;
+  right: $nb40;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+}
+.text {
+  color: $color_subtitle;
+  text-align: center;
+}

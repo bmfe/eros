@@ -1,0 +1,56 @@
+@import "common";
+//@import "buiweex";
+
+
+.bui-searchbar{
+  padding-left: $nb20;
+  padding-top: $nb15;
+  padding-right: $nb20;
+  padding-bottom: $nb15;
+}
+.bui-input{
+  background-color: $color_white;
+  border-radius: $nb10;
+  padding-left: $nb20;
+  padding-top: $nb15;
+  padding-right: $nb20;
+  padding-bottom: $nb15;
+  position: relative;
+}
+.bui-search-icon-box{
+
+}
+.bui-search-icon-box-text{
+  color: $color_subtitle;
+  font-size: $nb30;
+  padding-left: $nb15;
+}
+.bui-search-input-text{
+  font-size: $nb30;
+  height: $nb40;
+  padding-left: $nb10;
+  padding-right: $nb10;
+}
+.bui-search-search{
+  font-size: $nb30;
+  padding-left: $nb15;
+  padding-top: $nb15;
+  padding-right: $nb10;
+  padding-bottom: $nb15;
+}
+.bui-search-bg-default{
+  background-color: $color_default;
+}
+.bui-search-text-color-default{
+  color: $color_content;
+}
+.bui-search-bg-primary{
+  background-color: #4ca4fe;
+}
+.bui-search-text-color-primary{
+  color: $color_white;
+}
+
+
+
+

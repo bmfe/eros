@@ -1,0 +1,74 @@
+@import "common";
+
+.btn {
+  height: $nb100;
+  line-height:$nb100;
+  font-size: $nb34;
+  text-align: center;
+  padding-left: $nb20;
+  padding-right: $nb20;
+}
+
+//type
+.btn-primary {
+  background-color: $color_primary;
+  color: $color_white;
+}
+
+.btn-primary:active {
+  background-color: $color_dark_primary;
+}
+
+.btn-success {
+  background-color: $color_success;
+  color: $color_white;
+}
+
+.btn-success:active {
+  background-color: $color_success_active;
+}
+
+.btn-info {
+  background-color: $color_light_primary;
+}
+
+.btn-info:active {
+  background-color: $color_primary;
+}
+
+.btn-warning {
+  background-color: $color_warning;
+  color: $color_white;
+}
+
+.btn-warning:active {
+  background-color: $color_warning_active;
+}
+
+.btn-danger {
+  background-color: $color_danger;
+  color: $color_white;
+}
+
+.btn-danger:active {
+  background-color: $color_danger_active;
+}
+
+.btn-disabled {
+  background-color: $color_disabled;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color_default_active;
+  color: $color_subtitle;
+}
+
+.btn-default {
+  background-color: $color_default;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color_default_active;
+}
+
+.btn-default:active {
+  background-color: $color_default_active;
+}

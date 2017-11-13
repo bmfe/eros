@@ -1,0 +1,162 @@
+/*dialog半透明层*/
+@import "../core/base";
+.mask {
+    @include abs-pos;
+    background-color: rgba(0, 0, 0, .4);
+}
+/*dialog定位*/
+.dialog-wrap{
+    @include abs-pos;
+    @extend .flex-align;
+}
+/*dialog 内容盒子*/
+.dialog{
+    width: $dialog-width;
+    background-color: $base-white;
+    border-radius: $dialog-border-radius;
+    padding-top: $dialog-padding-top;
+}
+.dialog-hd{
+    margin-bottom: 20;
+}
+/*dialog 标题文字*/
+.dialog-hd-text{
+    font-size: $font-34;
+    color: $dialog-text;
+    text-align: center;
+    font-weight: bold;
+}
+/*dialog 主内容区*/
+.dialog-bd{
+    padding-top: 5;
+    padding-right: 40;
+    padding-bottom: 20;
+    padding-left: 40;
+}
+/*dialog 主内容区可划动 例：选择证件 list cell*/
+.scroll-bd{
+    height: 260;
+    margin-top: 20;
+}
+.cell-item{
+    @include border(top);
+    padding-top: 22;
+    padding-right: 30;
+    padding-bottom: 22;
+    padding-left: 30;
+}
+/*dialog 主内容区横排 */
+.dialog-bd-row{
+    flex-direction: row;
+    align-items: center;
+}
+/*dialog 主内容区可划动文字属性 */
+.dialog-text{
+    color: $dialog-text;
+    font-size: $font-30;
+}
+.flex-1{
+    flex: 1;
+}
+.dialog-bd-align{
+    align-items: center;
+}
+.dialog-bd-flex-align {
+    flex-direction: row;
+    @extend .flex-align;
+}
+.serv-text{
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+/*选择就诊卡左右布局*/
+.pop-box{
+    flex-direction: row;
+    padding-top: 20;
+    padding-bottom: 20;
+    padding-left: 30;
+    padding-right: 30;
+    @include border(top);
+    margin-top: 10;
+}
+.pop-left{
+    flex: 1;
+    font-size: $font-30;
+    color: $base-color;
+}
+.pop-right{
+    font-size: $font-30;
+    color: $base-color;
+}
+.hidden {
+    hidden: true;
+}
+.show {
+    hidden: false;
+    flex: 1;
+}
+/*dialog 按钮盒子*/
+.btn-box{
+    @include border(top);
+    @extend .flex-align;
+    margin-top: 20;
+    flex-direction: row;
+}
+.btn-text{
+    flex: 1;
+    color: $dialog-submit-color;
+    font-size: $font-30;
+    text-align: center;
+    padding-bottom: 25;
+    padding-top: 25;
+    font-weight: bold;
+}
+.btn-first-child{
+    @include border(right);
+    color: $dialog-cancel-color;
+    font-weight: bold;
+}
+////
+.submit-text{
+    color: #d96d77;
+}
+.dialog-row-wrap{
+    margin-top: 20;
+}
+.dialog-row{
+    flex-direction: row;
+    margin-bottom: 10;
+}
+
+.dialog-text-center{
+    text-align: center;
+    color: $base-blue;
+    text-decoration: underline;
+    font-size: $font-30;
+    margin-top: 10;
+}
+.check-row{
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10;
+}
+.check-row-text{
+    font-size: $font-26;
+    color: $dialog-text;
+    margin-left: 20;
+}
+.dialog-large{
+    width: 700;
+    background-color: #f0f3f5;
+}
+.text-large{
+    font-size: $font-40;
+    color: $blue-ink;
+    margin-top: 10;
+
+}
+.btn-gray-txt {
+    color: $btn-gray;
+}
+

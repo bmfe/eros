@@ -1,0 +1,50 @@
+@import "common";
+
+.tip {
+  padding-left: $nb20;
+  padding-right: $nb20;
+  padding-top: $nb20;
+  padding-bottom: $nb20;
+  border-radius: $nb10;
+  margin-bottom: $nb10;
+}
+
+.tip-txt {
+  font-size: 30px;
+}
+
+.tip-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.tip-txt-success {
+  color: #3c763d;
+}
+
+.tip-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.tip-txt-info {
+  color: #31708f;
+}
+
+.tip-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.tip-txt-warning {
+  color: #8a6d3b;
+}
+
+.tip-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.tip-txt-danger {
+  color: #a94442;
+}

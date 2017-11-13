@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+@import "common";
+
+
+
+
+.load-layout {
+  //position: fixed;
+  //left: 0px;
+  //top: 0px;
+  //bottom: 0px;
+  //width: 750px;
+  //flex-direction: row;
+  //justify-content: center;
+}
+
+.load-block {
+  position: fixed;
+  left: 280px;
+  right: 280px;
+  height: 150px;
+  background-color: $color_black;
+  opacity: 0.7;
+  top: 350px;
+  padding-left: $nb20;
+  padding-right: $nb20;
+  border-radius: $nb15;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-text {
+  color: #ffffff;
+  font-size: $nb30;
+}
+
+.load-icon {
+  width: 64px;
+  height: 64px;
+  font-size: $nb50;
+  text-align: center;
+}

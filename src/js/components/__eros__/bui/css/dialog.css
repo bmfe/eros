@@ -1,0 +1,58 @@
+.bui-dialog-mask {
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex: 1;
+  opacity: 0.7; }
+
+.bui-dialog {
+  position: fixed;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 400px;
+  top: 300px;
+  left: 50px;
+  right: 50px;
+  flex: 1; }
+
+.bui-dialog-title {
+  justify-content: center;
+  height: 80px;
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.dialog-title-text {
+  color: #000000;
+  font-size: 32px; }
+
+.bui-dialog-content {
+  height: 220px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px; }
+
+.bui-dialog-footer {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #d7dde4; }
+
+.dialog-action-text {
+  flex: 1;
+  text-align: center;
+  font-size: 32px;
+  color: #3399ff;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #d7dde4; }
+
+.dialog-action-text:active {
+  color: #000000; }
+
+/*# sourceMappingURL=dialog.css.map */

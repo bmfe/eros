@@ -1,0 +1,132 @@
+// @Author: songqi
+// @Date:   2017-03-21
+// @Last modified by:   songqi
+// @Last modified time: 2017-03-21
+
+
+
+//body的默认背景颜色
+$bgcolor:                           #eff3f4;
+//当前选中文字色
+$item-on-color:                     #ffffff;
+//问诊问题背景
+$question-bg-color:                 #f5f5f5;
+$question-rank-bg:                  #edbb70;
+
+//文字大小设置
+$font-18:                           18;
+$font-20:                           20;
+$font-22:                           22;
+$font-24:                           24;
+$font-26:                           26;
+$font-28:                           28;
+$font-30:                           30;
+$font-32:                           32;
+$font-34:                           34;
+$font-36:                           36;
+$font-40:                           40;
+$font-42:                           42;
+$font-44:                           44;
+$font-47:                           47;
+$font-48:                           48;
+$font-50:                           50;
+$font-52:                           52;
+$font-60:                           60;
+$font-70:                           70;
+$font-80:                           80;
+$font-140:                          140;
+$font-160:                          160;
+$font-184:                          184;
+$font-200:                          200;
+$font-240:                          240;
+$font-255:                          255;
+
+//FORM表单相关
+$item-height:                       100;
+$new-item-height:                   120;
+$recharge-btn-def:                  #00c4a9;
+$recharge-btn-on:                   #16d4b8;
+
+$base-placehoder:                   #ceced9;
+$blue-ink:                          #777;
+$base-gray:                         #a6a6a6;
+$base-white:                        #fff;
+$base-red:                          #e15959;
+$base-blue:                         #00b4cb;
+$base-green:                        #07ae9c;
+$base-orange:                       #f5a66a;
+$base-chanel:                       #acacbf;
+$base-disabled:                     #ceced9;
+$export-blue:                       #04b0ed;
+$export-orange:                     #ef735a;
+$export-red:                        #fca353;
+$line-blue:                         #00b4cb;
+$line-green:                        #95ca78;
+$line-orange:                       #f7a65c;
+$unread-message:                    #ff4f4d;
+// 默认文本颜色
+$base-color:                        #333;
+// 默认浅灰色文本颜色
+$base-gray-color:                   #b2b2b2;
+// 默认副标题文本颜色
+$base-assist-color:                 #8a8a99;
+// 默认按钮背景色
+$btn-green:                         #07ae9c;
+// 禁用按钮背景色  #c7ced4;
+$btn-gray:                          #ceced9;
+// 默认边框色
+$border-color:                      #dfe1eb;
+// 默认边框色
+$warning-icon-color:                #dfe1eb;
+//表单默认padding
+$list-padding:                      30;
+//消息列表链接跳转文字色
+$base-color-pink:                   #f27985;
+//未认证色
+$not-real:                          #ffa200;
+//京医通卡颜色
+$base-bg-jytk:                      #1fb1ea;
+//临时卡颜色
+$base-bg-lsk:                       #16d1b5;
+//临时挂失卡颜色
+$base-bg-lsgs:                      #9fbdbf;
+//社保卡颜色
+$base-bg-sbk:                       #a48ce0;
+//弹窗默认宽度
+$dialog-width:                      600;
+//弹窗默认文本色
+$dialog-text:                       #2e2f33;
+//弹窗确认按钮文本色
+$dialog-submit-color:               #07ae9c;
+//弹窗取消按钮文本色
+$dialog-cancel-color:               #333;
+//弹窗圆角大小
+$dialog-border-radius:              16;
+//按钮圆角大小
+$btn-border-radius:                 8;
+//弹窗容器距上padding值
+$dialog-padding-top:                40;
+//消息列表字体主色
+$font-main-color:                   #666;
+//消息列表箭头色&&时间颜色
+$gray-color:                        #ccc;
+//消息闪烁提示色
+$twinkle-color:                     #ea5555;
+//没有消息提示时文本色
+$font-no-info:                      #b2b2b2;
+//bg-eee
+$bg-eee:                            #eee;
+$color-3:                           #333;
+$bg-input:                          #f0f3f5;
+$bg-register:                       #fce5e5;
+$bg-outpatient:                     #dff8f4;
+$bg-health-self:                    #e8f7e0;
+$bg-proficient:                     #e2f0f8;
+$gray-point:                        #dfe1eb;
+$bg-gray:                           #eff3f4;
+$base-sub-color:                    #adabc0;
+$bg-my-card:                        #fafafc;
+$normal:                            #5ecbba;
+$level01:                           #eebe2a;
+$level02:                           #ffa14d;
+$level03:                           #ff4f4d;

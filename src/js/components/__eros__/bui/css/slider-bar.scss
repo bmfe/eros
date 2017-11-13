@@ -1,0 +1,36 @@
+@import "common";
+
+.bui-slider-bar{
+  //position: fixed;
+  //left:0px;
+  //right: 0px;
+  //top: 0px;
+  //bottom: 0px;
+}
+
+.bui-slider-bar-box{
+  position: fixed;
+  width: 600px;
+  top: 0px;
+  bottom: 0px;
+  background-color: $color_white;
+  padding: $nb30;
+  flex-direction: column;
+}
+.bui-left-slider-bar-box{
+  left: -600px;
+}
+.bui-right-slider-bar-box{
+  right: -600px;
+}
+
+.bui-slider-title{
+  margin-top: $nb50;
+  text-align: center;
+}
+
+.bui-slider-content{
+  margin-top: $nb50;
+  flex-direction: column;
+  flex: 1;
+}

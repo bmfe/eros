@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+//距离 包括字体,空白（内外边距）常用的变量
+$nb5: 5px;
+$nb10: 10px;
+$nb15: 15px;
+$nb20: 20px;
+$nb24: 24px;
+$nb25: 25px;
+$nb28: 28px;
+$nb30: 30px;
+$nb32: 32px;
+$nb34: 34px;
+$nb35: 35px;
+$nb40: 40px;
+$nb45: 45px;
+$nb48: 48px;
+$nb50: 50px;
+$nb55: 55px;
+$nb60: 60px;
+$nb80: 80px;
+$nb100: 100px;
+$nb120: 120px;
+$nb140: 140px;
+
+//颜色变量
+//主色:其中primary用于normal,light-primary常用于hover，dark-primary常用于active
+$color_primary: #3399ff;
+$color_light_primary: #5da3f6;
+$color_dark_primary: #3091f2;
+//辅助色:辅助色是具有代表性的颜色，常用于信息提示，比如成功、警告和失败
+$color_info: #5BC0DE;
+$color_success: #00cc66;
+$color_success_active: #00c277;
+$color_warning: #ff9900;
+$color_warning_active: #f38c00;
+$color_danger: #ff4e24;
+$color_danger_active: #fa3300;
+$color_default:#f5f5f5;
+$color_default_active: #e5e3df;
+//中性色:常用于文本、背景、边框、阴影等，可以体现出页面的层次结构
+$color_black: #000000;
+$color_title: #464c5b;
+$color_content: #657180;
+$color_subtitle:#9ea7b4;
+$color_disabled: #d9e1ec;
+$color_border: #d7dde4;
+$color_divider: #e3e8ee;
+$color_background: #e8eaec;
+$color_white: #ffffff;

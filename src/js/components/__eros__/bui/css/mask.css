@@ -1,0 +1,10 @@
+.bui-mask {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: #000000;
+  opacity: 0.3; }
+
+/*# sourceMappingURL=mask.css.map */

@@ -1,0 +1,61 @@
+@import "common";
+
+.bui-form{
+  border-bottom-width: 1px;
+  border-bottom-color: $color_border;
+}
+
+.bui-form-box{
+
+}
+.bui-form-title{
+  font-size: $nb28;
+  color: $color_subtitle;
+  padding-left: $nb30;
+  padding-top: $nb15;
+  padding-bottom: $nb15;
+  background-color: $color_default;
+}
+.bui-form-group{
+  border-top-width: 1px;
+  border-top-color: $color_border;
+  padding-top: $nb30;
+  padding-bottom: $nb30;
+  padding-left: $nb30;
+  padding-right: $nb30;
+}
+.bui-form-group-center{
+  justify-content: space-between;
+  align-items: center;
+}
+.bui-form-group-start{
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.form-label{
+  font-size: $nb28;
+  margin-right: $nb25;
+}
+.form-control{
+  font-size: $nb30;
+  color: $color_content;
+  placeholder-color: $color_content;
+}
+.multi-input{
+  position: relative;
+  top: -$nb15;
+}
+.height35{
+  height: $nb35;
+}
+.help-block{
+  color: $color_subtitle;
+  font-size: $nb25;
+}
+.select-text{
+  color: $color_subtitle;
+  font-size: $nb32;
+}
+.form-right{
+
+}
