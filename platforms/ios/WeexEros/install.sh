@@ -13,7 +13,7 @@ git checkout 0.15.0
 
 cd ../
 
-git clone https://github.com/xiaohuapunk/Benmu-iOS-Library.git
+git clone https://github.com/bmfe/Benmu-iOS-Library.git
 
 cd Benmu-iOS-Library
 
