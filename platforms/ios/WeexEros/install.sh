@@ -5,7 +5,7 @@ sudo rm -rf Benmu-iOS-Library/
 #sudo rm -rf Podfile.lock
 #sudo rm -rf Pods/
 
-git clone https://github.com/xiaohuapunk/WeexiOSSDK.git
+git clone https://github.com/bmfe/WeexiOSSDK.git
 
 cd WeexiOSSDK
 
