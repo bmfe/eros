@@ -12,8 +12,8 @@ module.exports = {
         "navItemColor": "#333"
     },
     "url": {
-        "request": "http://app.weex-eros.com",
-        "jsServer": "http://app.weex-eros.com",
+        "request": "http://127.0.0.1:8899",
+        "jsServer": "http://127.0.0.1:8899",
         "image": "https://lev-inf.benmu-health.com/test/xxx"
     },
     "zipFolder": {

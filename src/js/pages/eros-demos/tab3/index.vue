@@ -52,7 +52,7 @@
 </style>
 
 <script>
-if (process.env.NODE_ENV === 'development')  require('Config')
+
 export default {
   methods: {
     handle(type) {
@@ -160,7 +160,7 @@ export default {
       })
     },
     handle_callPhone() {
-      this.$router.toCallPhone(123)
+      this.$router.toCallPhone(123123)
     },
     handle_localIconfont() {
       this.$router.open({

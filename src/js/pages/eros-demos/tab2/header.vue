@@ -10,8 +10,9 @@
 </template>
 
 <script>
-if (process.env.NODE_ENV === 'development')  require('Config')
-import { buiHeader, buiIcon } from 'Eros/bui'
+
+import buiHeader from 'Eros/bui/components/bui-header'
+import buiIcon from 'Eros/bui/components/bui-icon'
 export default {
     components: {
         buiHeader, buiIcon

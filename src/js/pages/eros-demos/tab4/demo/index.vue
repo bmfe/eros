@@ -21,7 +21,7 @@
     </div>
 </template>
 <script>
-if (process.env.NODE_ENV === 'development')  require('Config')
+
 const SCROLL_FULL_WIDTH = 750
 const dom = weex.requireModule('dom')
 

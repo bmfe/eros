@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import {buiButton, buiImageSlider} from 'Eros/bui'
+import buiButton from 'Eros/bui/components/bui-button'
+import buiImageSlider from 'Eros/bui/components/bui-image-slider'
 export default {
     components: { buiButton, buiImageSlider },
     data: function () {
@@ -54,7 +55,7 @@ export default {
         clearStorage() {
             this.$storage.removeAllSync()
             this.storageVal = this.$storage.getSync('name')
-        },
+        }
     }
 }
 </script>

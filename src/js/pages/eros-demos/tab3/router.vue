@@ -7,8 +7,8 @@
 </template>
 
 <script>
-if (process.env.NODE_ENV === 'development')  require('Config')
-import {buiButton} from 'Eros/bui'
+
+import buiButton from 'Eros/bui/components/bui-button'
 export default {
     created() {
         this.bindEvent()
