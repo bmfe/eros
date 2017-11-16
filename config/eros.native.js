@@ -14,10 +14,11 @@ module.exports = {
     "url": {
         "request": "http://127.0.0.1:8899",
         "jsServer": "http://127.0.0.1:8899",
-        "image": "https://lev-inf.benmu-health.com/test/xxx"
+
+        "image": "https://lev-inf.benmu-health.com/test/xxx",
+        "bundleUpdate": "http://localhosts:3001/app/check"
     },
     "zipFolder": {
-        "server": "/Users/yangmingzhe/Work/opensource/eros-diff-folder",
         "iOS": "/ios/WeexEros/WeexEros",
         "android": "/android/WeexFrameworkWrapper/app/src/main/assets"
     },
