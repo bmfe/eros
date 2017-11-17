@@ -21,11 +21,11 @@ windows:
 * .NET Framework 2.0 SDK 或以上 （Window 10 安装4.0及以上）
 * Microsoft Visual Studio 2005 或以上
 
-#### 脚手架安装:
+#### 脚手架安装:
 ```
 $ npm i eros-cli -g
 ```
-如果你在中国地区，我们还是推荐您使用 [cnpm](https://npm.taobao.org/) 安装
+如果你在中国地区，我们还是推荐您使用 [cnpm](https://npm.taobao.org/) 安装
 ```
 $ cnpm i eros-cli -g 
 ```
@@ -49,23 +49,23 @@ $ cnpm i eros-cli -g
 > 如果您使用虚拟机进行跨平台开发，也需要配置好对应平台的所需环境。
 
 ## Start
-1. 首先通过脚手架自动生成开发模板(我们不推荐用sudo来执行脚手架的任何指令)
+1. 首先通过脚手架自动生成开发模板(我们不推荐用sudo来执行脚手架的任何指令)
 ```
 $ eros init
 ```
-按提示选择模板，填写 app/项目名称和版本后在当前路径下会生成对应模板，然后 `cd` 到项目中
+按提示选择模板，填写 app/项目名称和版本后在当前路径下会生成对应模板，然后 `cd` 到项目中
 
-2. 下载所需依赖
+2. 下载所需依赖
 ```
 $ npm install
 $ eros install
 ```
 3. 安装完依赖之后:
-* iOS: 会自动打开 Xcode ，然后选择一个模拟器，点击左上角的播放(运行)按钮，即可看到内置包中已经内置好的 eros demo.
+* iOS: 会自动打开 `Xcode` ，然后选择一个模拟器，点击左上角的播放(运行)按钮，即可看到内置包中已经内置好的 eros demo.
 * Android: writing...
 
 ## develop
-具体请查看文档中
+具体请查看文档
 
 
 ## Ecosystem
