@@ -1,0 +1,39 @@
+### 生命周期
+
+在不影响`vue生命周期`的前提下，`weex-eros`暴露出来了额外的生命周期钩子函数供您使用，但一定要注意，**这些钩子函数是异步的**。
+
+```
+export default {
+    bmRouter: {
+
+        viewWillAppear(params，options) {},
+
+        viewDidAppear: (params，options) {},
+
+        viewWillBackAppear: (params，options) {},
+
+        viewDidBackAppear: (params，options) {},
+
+        viewWillDisappear: (options) {},
+
+        viewDidDisappear: (options) {}
+    }
+}
+```
+
+**Api：**
+
+* **viewWillAppear**\( **params** \| $router.open 时候传递的 params, **options **\)：页面将要出现。
+
+* **viewDidAppear**\(**params** \| $router.open 时候传递的 params, **options**\)：页面已经出现。
+
+* **viewWillBackAppear**\(**params** \| $router.setBackParams 时候设置的 params, **options**\)：返回目标页面将要出现。
+
+* **viewDidBackAppear**\(**params** \| $router.setBackParams 时候设置的 params, **options**\)：返回目标页面已经出现。
+
+* **viewWillDisappear**\(**options**\)：页面将要消失。
+
+* **viewDidDisappear**\(**options**\)：页面已经消失。
+
+
+

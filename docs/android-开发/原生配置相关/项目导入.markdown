@@ -1,0 +1,20 @@
+### 项目导入
+
+如果你已经按照快速入门中的环境搭建下载好了JDK和AndroidStuido即可通过本节导入，运行项目。
+
+1.点击AndroidStudio上方的**File---&gt;New---&gt;Import Project。**
+
+![](https://img.benmu-health.com/gitbook/1505963461481.jpg)
+
+2.找到eros在你本地的地址，选择**weex-eros/android/WeexFrameworkWrapper**,点击**OK。**
+
+![](https://img.benmu-health.com/gitbook/1505963624252.jpg)
+
+3.待项目构建完成，点击AndroidStudio上方工具栏的**Run**，即可运行项目。![](https://img.benmu-health.com/gitbook/1505963683163.jpg)
+
+#### 注意：
+
+1.第一次打开AndroidStuido时，由于本地环境未配置好，AndroidStuido会提示错误，按照IDE提示，大部分环境问题都可以解决。
+
+2.执行本节内容时，请确保你已经成功执行了eros install 和eros pack 。
+
