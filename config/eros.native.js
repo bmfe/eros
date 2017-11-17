@@ -12,7 +12,7 @@ module.exports = {
         "navItemColor": "#333"
     },
     "url": {
-        "request": "http://127.0.0.1:8899",
+        "request": "http://127.0.0.1:52077",
         "jsServer": "http://127.0.0.1:8899",
 
         "image": "https://lev-inf.benmu-health.com/test/xxx",

@@ -1,20 +1,14 @@
-### weex-eros
+### 介绍
+eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写法的解决方案。
 
----
+eros 的定位不是组件库（后续当然会拓展），由于 app 开发的特殊性，他则更偏重关心于整个 app 项目，**他的优势在于我们对 weex 官方的二次封装，能及时跟进 weex 的新特性，并通过脚手架支持更新 module，widget， appboard 等机制，让熟悉 Vue 的同学都能更少的关注Weex版本升级和本身的兼容性问题，快速进行业务迭代** ，也让前端和客户端能通过 weex 底层机制来进行交互。
 
-weex-eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 Vue2 写法的解决方案。
+当然，在您的 PC 上运行 eros，是非常简单的，当您下载好周边所有的工具和库的时候，只需几行命令，进行一些初始化配置，便可以进行开发，脚手架也提供指令来更新 eros 基础库，而您无需关心 weex 的版本，因为已经内嵌到基础库中。
 
-weex-eros 的定位不是组件库（后续当然会拓展），由于 app 开发的特殊性，他则更偏重关心于整个 app 项目，**他的优势在于我们对 weex 官方的二次封装，能及时跟进 weex 的新特性，并通过脚手架支持更新 module，widget 等机制，让熟悉 Vue 的同学都能更少的关注Weex版本升级和本身的兼容性问题，快速进行业务迭代** ，也让前端和客户端能通过 weex 底层机制来进行交互。
+### 为什么会有 eros ？
 
-基于 weex 我们已经有两个项目已经发布上线，并且体验得到 weex 相关开发者的认可，weex 的解决方案是值得大家实践的。每次 weex 的更新都能带来惊喜，weex-eros 是我们总结出来的一套混合应用的解决方案，更多的是对 weex 的扩展，解决实际开发问题，我们从 weex 开发中得到了非常多的收益，更希望通过我们的力量推动 weex 的发展。
 
-当然，在您的 PC 上运行 weex-eros，是非常简单的，当您[下载好周边所有的工具和库](https://gitee.com/karynsong/weex-eros-doc/wikis/pages?title=%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA&parent=%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)的时候，只需[几行命令](https://gitee.com/karynsong/weex-eros-doc/wikis/pages?title=%E5%B7%A5%E7%A8%8B%E5%88%9B%E5%BB%BA&parent=%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)，配置[好本地的 host 和对应的 config.json 文件](https://gitee.com/karynsong/weex-eros-doc/wikis/pages?title=%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95&parent=%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)，便可以进行开发，脚手架也提供指令来更新 weex-eros 基础库，而您无需关心 weex 的版本，因为已经内嵌到基础库中。
-
-### 为什么会有 weex-eros？
-
----
-
-**weex 开发痛点：**
+weex 开发痛点：
 
 * weex 在初始化时，启动环境会遇到种种问题；
 
@@ -30,7 +24,8 @@ weex-eros 的定位不是组件库（后续当然会拓展），由于 app 开�
 
 * 没有成套的 UI 组件进行简易 APP 快速开发；
 
-##### 我们能帮助解决：
+
+### 我们能解决
 
 * 通过脚手架，初始化出完整的项目工程目录；
 
@@ -46,41 +41,18 @@ weex-eros 的定位不是组件库（后续当然会拓展），由于 app 开�
 
 ### 工作原理
 
----
 ![工作原理](https://gitee.com/uploads/images/2017/1026/154734_0a730bcf_1595985.png "原理.png")
 
 ### 前期准备
 
----
+在开发之前可能需要学习并使用以下框架，而 eros 是基于他们来进行开发的。
 
-在开发之前可能需要了解一些基础的技术，我们是在下面这些基础知识之上进行开发的。
+* [weex](http://weex-project.io/cn/)
+* [**vue**](https://cn.vuejs.org/index.html)
 
-##### [weex](http://weex-project.io/cn/)
-
-> 整体是基于 weex 进行的二次开发，对 weex 进行了二次包装，除了语法上是使用 Vue2，其他 components 和 module\(希望使用我们推荐的方式\)都可以使用官方的，并且我们更希望开发者能了解 weex 的大致的实现原理，对开发应用会更有帮助。
-
-[**Vue2.0**](https://cn.vuejs.org/index.html)
-
-> 业务搭建时，语法都是用 Vue2，支持所有 Vue2 的语法特性。
-
-##### [BMFE\_scaffold](https://www.gitbook.com/book/karynsong/weex-eros/edit#)
-
-> 前端脚手架，支持前端从项目创建到项目发布间的所有自动化工作。
 
 ### 支持性
 
----
-
 只支持纯 weex 的 Vue 多页面应用开发，正在逐步实现对已有工程的集成方案。（多页面在 weex 使用中性能会更好，页面间切换的动画可以是原生动画）
 
-目前只支持 iOS 和 Android 的开发，暂不支持 web 。目前 Mac 版 和 Windows 下都能进行开发，但是推荐使用 Mac 开发，window 会遇到很多 node-sass 的环境问题（w eb 和 native 的交互及用户习惯会有差别，两者所承载的侧重点也会有差别，所以一套开发多套使用并没有让多端更精细化，web 更多是降级方案，但是目前 weex-eros 有内置包和完备的远程更新方案，所以需要降级的场景基本不会出现）
-
----
-
-##### 欢迎大家加入weex-eros微信开发群一起讨论，**在开发过程中如果遇到任何问题，我们将尽快为您答复。**
-
-##### 由于当前群人数过多，目前只能通过邀请的方式进群请大家先添加小花同学的微信然后邀请大家进群。
-
-
-![小花同学微信](https://gitee.com/uploads/images/2017/1026/154652_651ba169_1595985.jpeg "91505787548_.pic.jpg")
-### 
+目前只支持 iOS 和 Android 的开发，暂不支持 web 。目前 Mac 版 和 Windows 下都能进行开发，但是推荐使用 Mac 开发，window 会遇到很多 node-sass 的环境问题（w eb 和 native 的交互及用户习惯会有差别，两者所承载的侧重点也会有差别，所以一套开发多套使用并没有让多端更精细化，web 更多是降级方案，但是目前 eros 有内置包和完备的远程更新方案，所以需要降级的场景基本不会出现）
