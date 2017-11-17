@@ -1,3 +1,7 @@
+## Required
+开发之前您需要学习 weex 知识，并且能熟练使用 vue 开发，文档地址如下。
+* [weex](http://weex.apache.org/cn/guide/)
+* [vue](https://cn.vuejs.org/v2/guide/)
 ## Docs
 * [eros v1](https://karynsong.gitbooks.io/weex-eros/content/)
 * eros v2 (building...)
@@ -64,9 +68,8 @@ $ eros install
 * iOS: 会自动打开 `Xcode` ，然后选择一个模拟器，点击左上角的播放(运行)按钮，即可看到内置包中已经内置好的 eros demo.
 * Android: writing...
 
-## develop
-具体请查看文档
-
+## Developing and debugging
+(building...) 具体请查看文档
 
 ## Ecosystem
 | Project | Description |
