@@ -71,8 +71,6 @@ $ eros install
 ## Ecosystem
 | Project | Description |
 |---------|-------------|
-| [eros-cli] | 简单的 eros 项目构建工具，可以提供搭建，开发，调试和发布等功能。 |
-| [eros-publish] | 简单的服务器差分包更新逻辑，需要和脚手架搭配使用。 |
-[eros-cli]: https://github.com/bmfe/eros-cli
-[eros-publish]: https://github.com/bmfe/eros-publish
+| [eros-cli](https://github.com/bmfe/eros-cli) | 简单的 eros 项目构建工具，可以提供搭建，开发，调试和发布等功能。 |
+| [eros-publish](https://github.com/bmfe/eros-publish) | 简单的服务器差分包更新逻辑，需要和脚手架搭配使用。 |
 
