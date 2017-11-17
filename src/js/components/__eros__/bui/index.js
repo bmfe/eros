@@ -1,35 +1,83 @@
-/**
- * 框架中常用的工具方法
- */
-var common = {
-    //components下的组件
-    "buiActionSheet": require("./components/bui-actionsheet.vue"),
-    "buiButton": require("./components/bui-button.vue"),
-    "buiCheckbox": require("./components/bui-checkbox.vue"),
-    "buiDialog": require("./components/bui-dialog.vue"),
-    "buiDropdown": require("./components/bui-dropdown.vue"),
-    "buiHeader": require("./components/bui-header.vue"),
-    "buiIcon": require("./components/bui-icon.vue"),
-    "buiImage": require("./components/bui-image.vue"),
-    "buiLazyRender": require("./components/bui-lazy-render.vue"),
-    "buiLoad": require("./components/bui-load.vue"),
-    "buiMask": require("./components/bui-mask.vue"),
-    "buiPanel": require("./components/bui-panel.vue"),
-    "buiRadio": require("./components/bui-radio.vue"),
-    "buiSearchbarCenter": require("./components/bui-searchbar-center.vue"),
-    "buiSearchbarLeft": require("./components/bui-searchbar-left.vue"),
-    "buiSliderBar": require("./components/bui-slider-bar.vue"),
-    "buiSwitch": require("./components/bui-switch.vue"),
-    "buiTabbar": require("./components/bui-tabbar.vue"),
-    "buiTabbarItem": require("./components/bui-tabbar-item.vue"),
-    "buiTabbarItemA": require("./components/bui-tabbar-item-a.vue"),
-    "buiTabbarScroll": require("./components/bui-tabbar-scroll.vue"),
-    "buiTabbarScrollItem": require("./components/bui-tabbar-scroll-item.vue"),
-    "buiTip": require("./components/bui-tip.vue"),
-    "buiVideo": require("./components/bui-video.vue"),
-    "buiContent": require("./components/bui-content.vue"),
-    "buiContentScroll": require("./components/bui-content-scroll.vue"),
-    "buiImageSlider": require("./components/bui-image-slider.vue")
-}
+import buiButton from "./components/bui-button.vue"
+import buiCheckbox from "./components/bui-checkbox.vue"
+import buiDialog from "./components/bui-dialog.vue"
+import buiDropdown from "./components/bui-dropdown.vue"
+import buiHeader from "./components/bui-header.vue"
+import buiIcon from "./components/bui-icon.vue"
+import buiImage from "./components/bui-image.vue"
+import buiLazyRender from "./components/bui-lazy-render.vue"
+import buiLoad from "./components/bui-load.vue"
+import buiMask from "./components/bui-mask.vue"
+import buiPanel from "./components/bui-panel.vue"
+import buiRadio from "./components/bui-radio.vue"
+import buiSearchbarCenter from "./components/bui-searchbar-center.vue"
+import buiSearchbarLeft from "./components/bui-searchbar-left.vue"
+import buiSliderBar from "./components/bui-slider-bar.vue"
+import buiSwitch from "./components/bui-switch.vue"
+import buiTabbar from "./components/bui-tabbar.vue"
+import buiTabbarItem from "./components/bui-tabbar-item.vue"
+import buiTabbarItemA from "./components/bui-tabbar-item-a.vue"
+import buiTabbarScroll from "./components/bui-tabbar-scroll.vue"
+import buiTabbarScrollItem from "./components/bui-tabbar-scroll-item.vue"
+import buiTip from "./components/bui-tip.vue"
+import buiVideo from "./components/bui-video.vue"
+import buiContent from "./components/bui-content.vue"
+import buiContentScroll from "./components/bui-content-scroll.vue"
+import buiImageSlider from "./components/bui-image-slider.vue"
 
-module.exports = common;
+
+// export const buiButton = _buiButton
+// export const buiCheckbox = _buiCheckbox
+// export const buiDialog = _buiDialog
+// export const buiDropdown = _buiDropdown
+// export const buiHeader = _buiHeader
+// export const buiIcon = _buiIcon
+// export const buiImage = _buiImage
+// export const buiLazyRender = _buiLazyRender
+// export const buiLoad = _buiLoad
+// export const buiMask = _buiMask
+// export const buiPanel = _buiPanel
+// export const buiRadio = _buiRadio
+// export const buiSearchbarCenter = _buiSearchbarCenter
+// export const buiSearchbarLeft = _buiSearchbarLeft
+// export const buiSliderBar = _buiSliderBar
+// export const buiSwitch = _buiSwitch
+// export const buiTabbar = _buiTabbar
+// export const buiTabbarItem = _buiTabbarItem
+// export const buiTabbarItemA = _buiTabbarItemA
+// export const buiTabbarScroll = _buiTabbarScroll
+// export const buiTabbarScrollItem = _buiTabbarScrollItem
+// export const buiTip = _buiTip
+// export const buiVideo = _buiVideo
+// export const buiContent = _buiContent
+// export const buiContentScroll = _buiContentScroll
+// export const buiImageSlider = _buiImageSlider
+
+module.exports.default = module.exports = {
+    buiButton,
+    buiCheckbox,
+    buiDialog,
+    buiDropdown,
+    buiHeader,
+    buiIcon,
+    buiImage,
+    buiLazyRender,
+    buiLoad,
+    buiMask,
+    buiPanel,
+    buiRadio,
+    buiSearchbarCenter,
+    buiSearchbarLeft,
+    buiSliderBar,
+    buiSwitch,
+    buiTabbar,
+    buiTabbarItem,
+    buiTabbarItemA,
+    buiTabbarScroll,
+    buiTabbarScrollItem,
+    buiTip,
+    buiVideo,
+    buiContent,
+    buiContentScroll,
+    buiImageSlider
+}

@@ -1,0 +1,27 @@
+### 准备阶段
+
+在开发调试Android之前你可能需要以下软件：
+
+1. JDK
+2. AndroidStudio
+3. Charles
+4. Genymotion
+
+JDK是JAVA开发包，AndroidStudio是Android开发IDE，这两项不再做过多介绍。重点解释Charles和Genymotion的用途。
+
+**Charles**
+
+Charles可以帮助你抓包和设置代理。如果你需要本地调试，为了让android设备成功访问到本地服务，需要将android设备的代理设置到你的pc上。关于Charles的使用可以参考[http://www.jianshu.com/p/fdd7c681929c](http://www.jianshu.com/p/fdd7c681929c)
+
+**Genymotion**
+
+如果你使用Android模拟器进行开发调试，AndroidStudio内置的模拟器无法进行网络代理的设置，Genymotion是一个三方的免费模拟器，可以设置网络代理。代理设置流程：
+
+1.打开设置页面,点击WIFI。![](https://img.benmu-health.com/gitbook/1505965984877.jpg)
+
+2.长按WiredSSID,在弹窗中选择mofigy network。![](https://img.benmu-health.com/gitbook/1505966124180.jpg)3.将代理设置为手动，proxy host为你pc的ip地址，端口默认为8888，点击save完成设置。
+
+![](https://img.benmu-health.com/gitbook/1505966248545.jpg)
+
+4.上述过程需要你的设备和pc处于同一个局域网下，设置完成后，用android设备访问任意网址，查看charles是否有请求，如果存在，说明设置成功。
+

@@ -85,7 +85,7 @@
 </style>
 
 <script>
-if (process.env.NODE_ENV === 'development')  require('Config')
+
   var Amap = null;
   try {
     Amap = require('@weex-module/amap');

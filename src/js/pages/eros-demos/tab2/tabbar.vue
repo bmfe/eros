@@ -60,7 +60,8 @@
 }
 </style>
 <script>
-import {buiTabbar, buiTabbarItem} from 'Eros/bui'
+import buiTabbar from 'Eros/bui/components/bui-tabbar'
+import buiTabbarItem from 'Eros/bui/components/bui-tabbar-item'
 export default {
     data() {
         return {

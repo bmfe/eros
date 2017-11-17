@@ -1,0 +1,12 @@
+#### bm eros dev 服务不成功
+**mac/linux:**
+正常来说 mac/linux 下不会有任何报错，如果提示权限不足请 sudo 执行。
+**windows**
+如果报权限不足，如果 dev.json 未做修改，默认是80端口，请找出80端口占用程序并关闭他。
+
+如果报了以下错误:
+> vue packages version mismatch
+
+运行 weex 的指令 **weex-repair**
+**原因是你的全局 Vue 环境被污染了。**
+

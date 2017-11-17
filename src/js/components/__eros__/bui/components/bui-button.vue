@@ -7,7 +7,7 @@
 <style lang="sass" src="../css/button.scss"></style>
 
 <script>
-    module.exports = {
+    export default {
         props: {
             "type": {default: 'default'},
             "value": {default: 'Button'},

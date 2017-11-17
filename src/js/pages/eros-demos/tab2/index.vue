@@ -17,8 +17,7 @@
 </template>
 
 <script>
-if (process.env.NODE_ENV === 'development')  require('Config')
-import { buiIcon } from 'Eros/bui'
+import buiIcon from 'Eros/bui/components/bui-icon'
 export default {
     components: { buiIcon },
     data: {

@@ -12,12 +12,13 @@ module.exports = {
         "navItemColor": "#333"
     },
     "url": {
-        "request": "http://app.weex-eros.com",
-        "jsServer": "http://app.weex-eros.com",
-        "image": "https://lev-inf.benmu-health.com/test/xxx"
+        "request": "http://127.0.0.1:52077",
+        "jsServer": "http://127.0.0.1:8899",
+
+        "image": "https://lev-inf.benmu-health.com/test/xxx",
+        "bundleUpdate": "http://localhosts:3001/app/check"
     },
     "zipFolder": {
-        "server": "/Users/yangmingzhe/Work/opensource/eros-diff-folder",
         "iOS": "/ios/WeexEros/WeexEros",
         "android": "/android/WeexFrameworkWrapper/app/src/main/assets"
     },

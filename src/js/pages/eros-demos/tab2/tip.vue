@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { buiTip } from 'Eros/bui'
+import buiTip from 'Eros/bui/components/bui-tip'
 export default {
     components: {
         'bui-tip': buiTip

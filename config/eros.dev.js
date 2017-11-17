@@ -1,7 +1,11 @@
+// appBoard，mediator 不建议进行修改 如果修改了 也请对应修改
 module.exports = {
     "exports": [
+        // appBoard 
         "js/config/index.js",
+        // mediator
         "js/mediator/index.vue",
+        // home
         "js/pages/eros-demos/index.vue",
 
         "js/pages/eros-demos/tab1/tab-page/index.vue",
@@ -31,6 +35,10 @@ module.exports = {
         "Widget": "js/widget",
         "Pages": "js/pages",
         "Utils": "js/utils"
+    },
+    "diff": {
+        "pwd": "/Users/yangmingzhe/Work/opensource/eros-diff-folder",
+        "proxy": "https://app.weex-eros.com/source"
     },
     "server": {
         "path": "./",

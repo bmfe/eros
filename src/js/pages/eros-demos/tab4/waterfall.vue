@@ -236,7 +236,7 @@
 </style>
 
 <script>
-  if (process.env.NODE_ENV === 'development')  require('Config')
+  
   export default {
     globalEvent: {
         appActive() {

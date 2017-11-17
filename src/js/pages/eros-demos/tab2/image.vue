@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { buiImage } from 'Eros/bui'
+import buiImage from 'Eros/bui/components/bui-image'
 export default {
     components: {
         buiImage

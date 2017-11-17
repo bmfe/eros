@@ -13,7 +13,7 @@
 </template>
 
 <script>
-    import { buiIcon } from 'Eros/bui'
+    import buiIcon from 'Eros/bui/components/bui-icon'
     export default {
         components: { buiIcon },
         data() {
