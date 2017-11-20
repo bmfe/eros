@@ -26,7 +26,8 @@ Image.install = (Vue, options) => {
                 camera.uploadImage({
                     maxCount: options.maxCount || 1,
                     imageWidth: options.imageWidth || 0,
-                    allowCrop: options.allowCrop || false
+                    allowCrop: options.allowCrop || false,
+                    params: options.params || {}
                 }, (resData) => {
                     if (!resData) {
                         resData = {

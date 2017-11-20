@@ -50,10 +50,4 @@ export const responseHandler = (options, resData, resolve, reject) => {
     }
 }
 
-// 自动拼接 platform.json 中的 requestUrl
-var _apis = {}
-for (var i in AJAX_MAP) {
-    if (!_apis[i]) _apis[i] = undefined
-    _apis[i] = AJAX_MAP[i]
-}
-export const apis = _apis
+export const apis = AJAX_MAP
