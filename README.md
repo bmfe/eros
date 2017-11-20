@@ -110,7 +110,6 @@ $ eros install
 | [eros-publish](https://github.com/bmfe/eros-publish) | 简单的服务器差分包更新逻辑，需要和脚手架搭配使用。 |
 
 ## Imgrate
-# 迁移指南
 如果直接使用 eros-cli 开发的同学可以直接跳过。
 
 ### v1 -> v2 变动
