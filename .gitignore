@@ -8,6 +8,8 @@ Created by IDE
 !.eslintrc
 !.babelrc
 
+docs
+
 # Node
 logs
 *.log
