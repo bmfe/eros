@@ -42,7 +42,7 @@ module.exports = {
     },
     "server": {
         "path": "./",
-        "port": 8899
+        "port": 80
     },
     "proxy": [{
         "route": "/test",
