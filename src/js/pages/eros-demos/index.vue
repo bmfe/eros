@@ -1,6 +1,6 @@
 
 <template>
-    <tabs :tabItems="tabItems" @tabsOnClick="tabsOnClick"></tabs>
+    <tabs :tabItems="tabItems" @tabBarOnClick="tabBarOnClick"></tabs>
 </template>
 <script>
 import tabs from 'Components/tabs/bar'
@@ -72,7 +72,7 @@ export default {
         tabs
     },
     methods: {
-        tabsOnClick(e) {
+       tabBarOnClick(e) {
             console.log('tabsOnClick', e.index)
         }
     }
