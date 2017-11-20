@@ -132,7 +132,7 @@ $ eros install
 2. config.json dev.json 分别改为 eros.native.js 和 eros.dev.js
 > 改为 js 可以方便标注和拓展，本地用到的地方可以直接引入。
 
-修改的时候注意不要全部复制粘贴，建议一项一项的来拷贝
+修改的时候注意不要全部复制粘贴，建议一项一项的来拷贝
 
 新增：
 
@@ -142,14 +142,14 @@ $ eros install
 
 `eros.dev.js/diff.pwd   diff.proxy`
 
-打差分包逻辑配置,如不需要可以无视
+打差分包逻辑配置,如不需要可以无视
 
 默认配置 dev 监听地址改为了 127.0.0.1:8899，如果需要真机调试的同学还是用之前填写配置hosts的路径即可。
 
 
-3. `eros.dev.js/exports` 中添加了如下配置
+3. `eros.dev.js/exports` 中添加了如下配置
 ```javascript
-// appBoard 
+// appBoard 
 "js/config/index.js",
 // mediator
 "js/mediator/index.vue",
