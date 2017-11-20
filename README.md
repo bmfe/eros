@@ -83,12 +83,18 @@ $ cnpm i eros-cli -g
     * 如果以上命令报错则执行：`$ sudo gem install -n /usr/local/bin cocoapods --pre`
     * 最后执行：`$ pod setup 过程比较漫长，请耐心等待执行完成`
 
-#### darwin 开发 Android:
+### darwin/windows 开发 Android
 * 下载并安装 [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)。
 * 下载并安装 [Android Studio](https://developer.android.google.cn/studio/index.html)。
-#### windows 开发 Android
-* 下载并安装 [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)。
-* 下载并安装 [Android Studio](https://developer.android.google.cn/studio/index.html)。
+
+JDK 是 JAVA 开发包，AndroidStudio 是 Android开发IDE，这两项不再做过多介绍。
+
+> 如果您使用虚拟机进行跨平台开发，也需要配置好对应平台的所需环境
+
+### 模拟器安装
+* ios 开发中 xcode 已经自带了模拟器
+* android 开发者可以下载 `Genymotion`
+    * 
 
 > 如果您使用虚拟机进行跨平台开发，也需要配置好对应平台的所需环境。
 
