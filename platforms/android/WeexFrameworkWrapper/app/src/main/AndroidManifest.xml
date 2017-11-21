@@ -130,7 +130,7 @@
         <service android:name="com.amap.api.location.APSService"></service>
         <!--amap finish-->
 
-         <!--个推-->
+        <!--个推-->
         <!-- 自定义权限 -->
         <permission
                 android:name="getui.permission.GetuiService.${APP_ID}"
@@ -221,7 +221,7 @@
             </intent-filter>
         </receiver>
         <!-- 个推SDK配置结束 -->
-        
+
     </application>
 
 </manifest>
