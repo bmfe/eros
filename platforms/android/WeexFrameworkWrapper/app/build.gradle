@@ -2,13 +2,15 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion '26.0.2'
+    flavorDimensions 'default'
     defaultConfig {
         applicationId "com.benmu.wx"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters "x86"
@@ -67,11 +69,11 @@ android {
 
     productFlavors {
         samplechannel{
-
+            dimension 'default'
         }
 
         yingyongbao{
-
+            dimension 'default'
         }
     }
     productFlavors.all {
@@ -92,6 +94,7 @@ repositories {
         dirs '../wxframework/libs', 'libs'
 
     }
+    google()
 }
 
 
