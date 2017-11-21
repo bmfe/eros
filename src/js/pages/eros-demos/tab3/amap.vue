@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <weex-amap class="map" id="map2017" :sdk-key="keys"  :map-instance="map" :zoom="zoom" :center="pos">
+    <weex-amap class="map" id="map2017" :map-instance="map" :zoom="zoom" :center="pos">
       <weex-amap-marker :position="point.position" :title="point.title" :icon="point.icon" v-for="(point, index) in pointArr" :key="index"  @click="markerClick"></weex-amap-marker>
     </weex-amap>
     <div class="map-control">
@@ -88,11 +88,11 @@
 
   var Amap = null;
   try {
-    Amap = require('@weex-module/amap');
+    Amap = weex.requireModule('amap');
   } catch(err) {
     console.log(err);
   }
-  var modal = require('@weex-module/modal');
+  var modal = weex.requireModule('bmModal');
   const icons = [
     'http://img1.vued.vanthink.cn/vuedae096307bfda38c9af8f5be0a80a3644.png',
     'http://img1.vued.vanthink.cn/vuedc1f33fb4f2be7d8e7698f11591c57be9.png',
@@ -109,11 +109,6 @@
   ];
   module.exports = {
     data: {
-      keys: {
-        h5:'f4b99dcd51752142ec0f1bdcb9a8ec02',
-        ios: '623c0396a9b879461c971a14baa678fb',
-        android: 'db6a973159cb0c2639ad02c617a786ae'
-      },
       pos: [116.487, 40.00003],
       zoom: 9,
       pointArr: [
