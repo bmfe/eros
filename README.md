@@ -109,13 +109,30 @@ $ eros install
 ```
 3. 安装完依赖之后:
 * iOS: 会自动打开 `Xcode` ，然后选择一个模拟器，点击左上角的播放(运行)按钮，即可看到内置包中已经内置好的 eros demo.
-* Android: writing...
 
-## Developing and debugging
-(building...) 具体请查看文档
+* Android:开发者需要多几个步骤:
+
+1.点击AndroidStudio上方的**File---&gt;New---&gt;Import Project。**
+
+![](https://img.benmu-health.com/gitbook/1505963461481.jpg)
+	2.找到eros在你本地的地址，选择 **platforms/android/WeexFrameworkWrapper** ,点击**OK。**
+
+![](https://img.benmu-health.com/gitbook/1505963624252.jpg)
+	3.待项目构建完成，点击 AndroidStudio 上方工具栏的 **Run** ，即可运行项目。![](https://img.benmu-health.com/gitbook/1505963683163.jpg)
+
+注意：
+> 第一次打开 AndroidStuido 时，由于本地环境未配置好，AndroidStuido 会提示错误，按照 IDE 提示，大部分环境问题都可以解决。
+## Developing
+[开发文档](https://github.com/bmfe/eros-template/wiki/%E4%B8%9A%E5%8A%A1%E5%BC%80%E5%8F%91)
+## debugging
+[调试文档](https://github.com/bmfe/eros-template/wiki/%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95)
 
 ## Ecosystem
 | Project | Description |
 |---------|-------------|
 | [eros-cli](https://github.com/bmfe/eros-cli) | 简单的 eros 项目构建工具，可以提供搭建，开发，调试和发布等功能。 |
 | [eros-publish](https://github.com/bmfe/eros-publish) | 简单的服务器差分包更新逻辑，需要和脚手架搭配使用。 |
+| [eros-ios-library](https://github.com/bmfe/Benmu-iOS-Library) | eros ios Weex 项目依赖库。 |
+| [eros-android-framework](https://github.com/bmfe/WeexErosFramework) | eros weex 移动解决方案安卓端框架。 |
+| [eros-android-widget](https://github.com/bmfe/BMWidget) | eros 安卓组件库。 |
+| [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端WeexSDK。 |
