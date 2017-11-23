@@ -83,7 +83,7 @@ $ cnpm i eros-cli -g
     * 如果以上命令报错则执行：`$ sudo gem install -n /usr/local/bin cocoapods --pre`
     * 最后执行：`$ pod setup 过程比较漫长，请耐心等待执行完成`
 
-### darwin/windows 开发 Android
+#### darwin/windows 开发 Android:
 * 下载并安装 [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)。
 * 下载并安装 [Android Studio](https://developer.android.google.cn/studio/index.html)。
 
@@ -111,14 +111,11 @@ $ eros install
 * iOS: 会自动打开 `Xcode` ，然后选择一个模拟器，点击左上角的播放(运行)按钮，即可看到内置包中已经内置好的 eros demo.
 
 * Android:开发者需要多几个步骤:
-
-1.点击AndroidStudio上方的**File---&gt;New---&gt;Import Project。**
-
+1. 点击AndroidStudio上方的 **File---&gt;New---&gt;Import Project。**
 ![](https://img.benmu-health.com/gitbook/1505963461481.jpg)
-	2.找到eros在你本地的地址，选择 **platforms/android/WeexFrameworkWrapper** ,点击**OK。**
-
+2. 找到eros在你本地的地址，选择 **platforms/android/WeexFrameworkWrapper** ,点击**OK。**
 ![](https://img.benmu-health.com/gitbook/1505963624252.jpg)
-	3.待项目构建完成，点击 AndroidStudio 上方工具栏的 **Run** ，即可运行项目。![](https://img.benmu-health.com/gitbook/1505963683163.jpg)
+3. 待项目构建完成，点击 AndroidStudio 上方工具栏的 **Run** ，即可运行项目。![](https://img.benmu-health.com/gitbook/1505963683163.jpg)
 
 注意：
 > 第一次打开 AndroidStuido 时，由于本地环境未配置好，AndroidStuido 会提示错误，按照 IDE 提示，大部分环境问题都可以解决。
