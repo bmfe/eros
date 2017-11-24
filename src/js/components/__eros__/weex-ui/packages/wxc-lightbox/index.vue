@@ -37,7 +37,7 @@
 
 <script>
   import WxcMask from '../wxc-mask';
-  module.exports = {
+  export default {
     components: {
       WxcMask
     },

@@ -29,7 +29,7 @@ npm install weex-ui --save
 </template>
 <script>
   import { WxcResult } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcResult },
     data () {
       return {

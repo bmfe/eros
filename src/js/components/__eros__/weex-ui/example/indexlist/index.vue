@@ -25,7 +25,7 @@
   const dataList = require('./data');
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { WxcIndexlist },
     data: () => ({
       list: dataList,

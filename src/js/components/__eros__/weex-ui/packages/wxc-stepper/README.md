@@ -50,7 +50,7 @@ npm install weex-ui --save
 
 <script>
   import { WxcStepper } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcStepper },
     data: () => ({
       value: 4,

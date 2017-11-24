@@ -181,8 +181,8 @@
 </style>
 
 <script>
-  const icon = require('./icon.base64.js');
-  module.exports = {
+  import icon from './icon.base64.js'
+  export default {
     props: {
       disabled: {
         type: Boolean,

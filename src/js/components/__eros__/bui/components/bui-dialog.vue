@@ -20,7 +20,7 @@
 
 <style lang="sass" src="../css/dialog.scss"></style>
 <script>
-    module.exports = {
+    export default {
         props: {
             show: {
                 type: Boolean,

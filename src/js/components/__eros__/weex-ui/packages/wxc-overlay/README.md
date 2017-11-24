@@ -32,7 +32,7 @@ npm i weex-ui --save
 </template>
 <script>
   import wxcOverlay from '@ali/wxc-overlay';
-  module.exports = {
+  export default {
     components: { wxcOverlay },
     data: () => ({
       show: false

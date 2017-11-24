@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    module.exports = {
+    export default {
         props: {
             padded: {default: false},
             padding: {default: "20px"}, //default 20px

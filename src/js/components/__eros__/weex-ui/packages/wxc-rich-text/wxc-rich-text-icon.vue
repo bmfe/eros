@@ -16,7 +16,7 @@
 </style>
 
 <script>
-  module.exports = {
+  export default {
     props: {
       iconSrc: {
         type: String,

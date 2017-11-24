@@ -6,7 +6,7 @@
 
 <style lang="sass" src="../css/tip.scss"></style>
 <script>
-    module.exports = {
+    export default {
         props: {
             type: {default: 'success'},
             value: {default: ''}

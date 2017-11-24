@@ -71,7 +71,7 @@
   const Utils = require('./utils');
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { WxcTabPage, WxcItem },
     data: () => ({
       tabTitles: config.tabTitles,

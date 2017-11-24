@@ -46,7 +46,7 @@ npm install weex-ui --save
 
 <script>
   import { WxcDialog } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcDialog },
     data: function () {
       return {

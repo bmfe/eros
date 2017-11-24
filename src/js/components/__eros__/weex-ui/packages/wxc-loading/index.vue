@@ -58,7 +58,7 @@
   const Util = require('./util');
   const appVersion = weex.config.env.appVersion || '0';
   const needShowPng = Util.compareVersion('8.2.4', appVersion) && Util.isTrip() && Util.isAndroid();
-  module.exports = {
+  export default {
     props: {
       show: {
         type: Boolean,

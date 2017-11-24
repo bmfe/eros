@@ -48,13 +48,17 @@
 </style>
 
 <script>
+import WxcRichTextText from './wxc-rich-text-text.vue'
+import WxcRichTextLink from './wxc-rich-text-link.vue'
+import WxcRichTextIcon from './wxc-rich-text-icon.vue'
+import WxcRichTextTag from './wxc-rich-text-tag.vue'
   const Utils = require('./utils');
-  module.exports = {
+  export default {
     components: {
-      WxcRichTextText: require('./wxc-rich-text-text.vue'),
-      WxcRichTextLink: require('./wxc-rich-text-link.vue'),
-      WxcRichTextIcon: require('./wxc-rich-text-icon.vue'),
-      WxcRichTextTag: require('./wxc-rich-text-tag.vue')
+      WxcRichTextText: WxcRichTextText,
+      WxcRichTextLink: WxcRichTextLink,
+      WxcRichTextIcon: WxcRichTextIcon,
+      WxcRichTextTag: WxcRichTextTag
     },
     props: {
       configList: {

@@ -73,7 +73,7 @@
   import { WxcRichText, WxcSpecialRichText } from '../../index';
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcRichText, WxcSpecialRichText },
     data: () => ({
       configList: [{

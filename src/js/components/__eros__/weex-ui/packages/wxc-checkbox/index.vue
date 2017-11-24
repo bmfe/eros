@@ -22,7 +22,8 @@
 
 <script>
   import WxcCell from '../wxc-cell';
-  import { CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED } from './icon.base64.js'
+  import { CHECKED } from './icon.base64'
+  console.log(CHECKED)
   export default {
     components: { WxcCell },
     props: {

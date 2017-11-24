@@ -4,7 +4,7 @@
 
 <script>
 
-    module.exports = {
+    export default {
         props: {
             "opacity": {
                 default: '0.2'

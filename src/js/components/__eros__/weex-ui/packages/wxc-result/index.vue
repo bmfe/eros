@@ -80,7 +80,7 @@
 
 <script>
   const TYPES = require('./type');
-  module.exports = {
+  export default {
     props: {
       type: {
         type: String,

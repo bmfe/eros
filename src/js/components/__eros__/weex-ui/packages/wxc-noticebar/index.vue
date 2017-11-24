@@ -57,10 +57,10 @@
 </style>
 
 <script>
-  const icon = require('./icon.base64.js');
+  import icon from './icon.base64.js'
   const Utils = require('./utils');
 
-  module.exports = {
+  export default {
     props: {
       notice: {
         type: String,

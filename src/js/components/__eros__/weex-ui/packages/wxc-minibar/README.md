@@ -38,7 +38,7 @@ npm install weex-ui --save
   import { WxcMinibar } from 'weex-ui';
   const modal = weex.requireModule('modal');
 
-  module.exports = {
+  export default {
     components: { WxcMinibar },
     methods: {
       minibarLeftButtonClick () {

@@ -72,7 +72,7 @@
   const modal = weex.requireModule('modal');
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcStepper },
     data: () => ({
       value: 4,

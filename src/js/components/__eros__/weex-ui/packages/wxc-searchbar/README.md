@@ -50,7 +50,7 @@ npm install weex-ui --save
 <script>
 
   import { WxcSearchbar } from 'weex-ui'
-  module.exports = {
+  export default {
     components: { WxcSearchbar },
     data: () => ({
       value: ''

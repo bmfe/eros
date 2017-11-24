@@ -33,10 +33,10 @@ npm install weex-ui --save
   
 </template>
 <script>
-  const icon = require('./icon.base64.js');
+  import icon from './icon.base64.js'
   import { WxcRichText,wxcSpecialRichText } from 'weex-ui';
 
-  module.exports = {
+  export default {
     components: { WxcRichText },
     data: () => ({
       configList: [{

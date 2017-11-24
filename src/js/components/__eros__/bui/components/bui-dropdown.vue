@@ -14,7 +14,7 @@
 
 <script>
     var animation = weex.requireModule('animation');
-    module.exports = {
+    export default {
         data: function () {
             return {
                 widthDrop: "260px",

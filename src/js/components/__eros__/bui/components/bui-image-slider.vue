@@ -29,7 +29,7 @@
 </style>
 <script>
 import buiImage from './bui-image'
-    module.exports = {
+    export default {
         components: {buiImage},
         props: {
             sliderStyle: {

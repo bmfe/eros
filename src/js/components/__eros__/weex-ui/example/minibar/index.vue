@@ -79,10 +79,10 @@
   import { WxcMinibar } from '../../index';
 
   const modal = weex.requireModule('modal');
-  const icon = require('./icon.base64.js');
+  import icon from './icon.base64.js'
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcMinibar },
     data: () => ({
       rightButton: icon.cartIcon,

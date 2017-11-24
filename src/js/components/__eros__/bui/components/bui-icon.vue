@@ -7,7 +7,7 @@
     var he = require("../utils/he"),
         domModule = weex.requireModule("dom");
 
-    module.exports = {
+    export default {
         beforeCreate() {
             domModule.addRule('fontFace',{
                 'fontFamily': 'bui-iconfont',

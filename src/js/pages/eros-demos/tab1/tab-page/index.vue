@@ -68,12 +68,12 @@
   const dom = weex.requireModule('dom');
 
   import { WxcTabPage } from 'Eros/weex-ui';
-  import WxcItem from './wxc-item.vue';
+  import WxcItem from './wxc-item';
 
-  const config = require('./config');
-  const Utils = require('./utils');
+  import Utils from './utils'
+  import config from './config'
 
-  module.exports = {
+  export default {
     components: { WxcTabPage, WxcItem },
     data: () => ({
       tabTitles: config.tabTitles,

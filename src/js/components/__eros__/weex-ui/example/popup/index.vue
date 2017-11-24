@@ -157,7 +157,7 @@
   import Category from '../_mods/category.vue';
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcPopup },
     data: () => ({
       isBottomShow: false,

@@ -34,7 +34,7 @@ npm install weex-ui --save
   const modal = weex.requireModule('modal');
   import { WxcIndexlist } from 'weex-ui';
   const dataList = require('./data');
-  module.exports = {
+  export default {
     components: { WxcIndexlist },
     data: () => ({
       list: dataList,

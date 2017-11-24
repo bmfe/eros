@@ -26,7 +26,7 @@
 <style lang="sass" src="../css/panel.scss"></style>
 
 <script>
-  module.exports = {
+  export default {
     props: {
       type: { default: 'default' },
       title: { default: '' },

@@ -40,7 +40,7 @@ tnpm install weex-ui --save
 
 <script>
   import { WxcLightbox } from 'weex-ui';
-  module.exports = {
+  export default {
     components: {
       WxcLightbox
     },

@@ -15,8 +15,7 @@
 </template>
 
 <script>
-import buiButton from 'Eros/bui/components/bui-button'
-import buiImageSlider from 'Eros/bui/components/bui-image-slider'
+import {buiButton, buiImageSlider} from 'Eros/bui'
 export default {
     components: { buiButton, buiImageSlider },
     data: function () {

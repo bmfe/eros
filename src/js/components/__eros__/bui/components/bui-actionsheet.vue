@@ -18,7 +18,7 @@
 
 <script>
     var animation = weex.requireModule('animation');
-    module.exports = {
+    export default {
         props: {
             title: {
                 default: "请选择操作"

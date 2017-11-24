@@ -56,7 +56,7 @@
 <script>
   const dom = weex.requireModule('dom');
   const Util = require('./util');
-  module.exports = {
+  export default {
     props: {
       height: {
         type: [Number, String],

@@ -71,7 +71,7 @@ npm install weex-ui --save
   const Utils = require('./utils');
   import { WxcTabPage} from 'weex-ui';
   import WxcItem from './wxc-item';
-  module.exports = {
+  export default {
     components: { WxcTabPage, WxcItem },
     data: () => ({
       tabTitles: config.tabTitles,

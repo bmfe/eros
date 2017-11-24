@@ -52,7 +52,7 @@
   const { platform } = weex.config.env;
   const isWeb = typeof (window) === 'object' && platform.toLowerCase() === 'web';
   import WxcOverlay from '../wxc-overlay';
-  module.exports = {
+  export default {
     components: { WxcOverlay },
     props: {
       show: {

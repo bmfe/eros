@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    module.exports = {
+    export default {
         props: {
             'src': {default: ''},
             'playstatus': {default: 'pause'},

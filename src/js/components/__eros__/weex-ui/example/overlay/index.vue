@@ -75,7 +75,7 @@
   import { WxcOverlay } from '../../index';
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcOverlay },
     data: () => ({
       show: false,

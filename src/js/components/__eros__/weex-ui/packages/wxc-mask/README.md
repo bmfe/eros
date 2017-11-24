@@ -52,7 +52,7 @@ npm i weex-ui --save
 <script>
   import { WxcMask } from 'weex-ui';
   const navigationBar = weex.requireModule('navigationBar');
-  module.exports = {
+  export default {
     components: { WxcMask },
     data: () => ({
       show: false,

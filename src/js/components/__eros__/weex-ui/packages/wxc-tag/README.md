@@ -26,7 +26,7 @@ npm i weex-ui --save
 </template>
 <script>
   import { wxcTag } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { wxcTag }
   };
 </script>

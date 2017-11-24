@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    module.exports = {
+    export default {
         computed: {
             "imagePath": function () {
                 if (this.src.indexOf("http") >= 0) {

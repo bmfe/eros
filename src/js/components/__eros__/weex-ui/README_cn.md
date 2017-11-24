@@ -30,7 +30,7 @@ npm i weex-ui -S
 
 <script>
   import { WxcButton, WxcPopup } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcButton, WxcPopup },
     data: () => ({
       isShow: false

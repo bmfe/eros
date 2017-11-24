@@ -30,7 +30,8 @@
         text: ''
     };
     import buiIcon from './bui-icon'
-    module.exports = {
+
+    export default {
         components: {buiIcon},
         data:function () {
             return {}

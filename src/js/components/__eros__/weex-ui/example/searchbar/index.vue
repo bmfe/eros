@@ -95,7 +95,7 @@
   import { WxcSearchbar } from '../../index'
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcSearchbar },
     data: () => ({
       value: '',

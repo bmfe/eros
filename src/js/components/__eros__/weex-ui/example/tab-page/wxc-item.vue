@@ -229,7 +229,7 @@
   const expressionBinding = weex.requireModule('expressionBinding');
   import { WxcRichText, WxcSpecialRichText } from '../../index';
 
-  module.exports = {
+  export default {
     components: { WxcRichText, WxcSpecialRichText },
     props: {
       title: {

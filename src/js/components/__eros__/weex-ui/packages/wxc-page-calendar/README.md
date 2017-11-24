@@ -50,7 +50,7 @@ npm i weex-ui --save
 </template>
 <script>
   import { wxcPageCalendar } from 'weex-ui';
-  module.exports = {
+  export default {
     components: {
       wxcPageCalendar
     },

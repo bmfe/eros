@@ -1,7 +1,7 @@
 // appBoard，mediator 不建议进行修改 如果修改了 也请对应修改
 module.exports = {
     "exports": [
-        // appBoard 
+        // appBoard 
         "js/config/index.js",
         // mediator
         "js/mediator/index.vue",

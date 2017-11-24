@@ -8,7 +8,7 @@
 <style lang="sass" src="../css/tabbar.scss"></style>
 
 <script>
-    module.exports = {
+    export default {
         props: {
             index: {default: 0},
             title: {default: ''},

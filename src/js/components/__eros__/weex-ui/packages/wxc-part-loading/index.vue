@@ -9,8 +9,9 @@
 </template>
 
 <script>
-  import { PART } from '../wxc-loading/icon.base64';
-  module.exports = {
+  import icon from '../wxc-loading/icon.base64';
+  console.log(icon)
+  export default {
     props: {
       show: {
         type: Boolean,

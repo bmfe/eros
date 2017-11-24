@@ -56,9 +56,9 @@
 
 <script>
   const animation = weex.requireModule('animation');
-  const icon = require('./icon.base64.js');
+  import icon from './icon.base64.js'
   import WxcOverlay from '../wxc-overlay';
-  module.exports = {
+  export default {
     components: { WxcOverlay },
     props: {
       height: {

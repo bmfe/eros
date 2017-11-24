@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import 'Config'
 import buiIcon from 'Eros/bui/components/bui-icon'
 export default {
     components: { buiIcon },

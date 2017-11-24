@@ -1,7 +1,7 @@
 /**
  * Created by Tw93 on 2016/10/29.
  */
-module.exports = {
+export default {
   closeIcon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAiklEQVR42u3Uuw2DQBBF0VeCS6AEujWQ4Ab5dADa1JIDfCyLYF5CxJ4bTWq1226b0v/srTmPyz+sY45lyKz4MubV3vr6xxahePumzSMc9wjHPcJxj3DcIxz3CMc9AnGPQNwD8Fj5hYNj5Xj8YjoOEY5DhOMQ4ThEOA4Rjv8tYnume8cxYk+tVvuwE8W1BhjijgxwAAAAAElFTkSuQmCC",
 
   linkIcon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAaUlEQVR42u2XsQ2AMAwEbwRGYjRGoCOu4k0YgUkSRgClywLECvprXN5VLxkxDffBShTF8Go8JZFjAhJ7C4iNMFwRilCEIuaKMDZGcmeWmjj7gLFy4+rkLrnkkkv+5cR62Ma3G/uYiD/yAlUn8FXOOtT+AAAAAElFTkSuQmCC",

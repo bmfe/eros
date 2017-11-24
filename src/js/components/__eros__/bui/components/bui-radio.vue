@@ -10,7 +10,7 @@
 <style lang="sass" src="../css/radio.scss"></style>
 
 <script>
-    module.exports = {
+    export default {
         props: {
             "direction": {
                 type: String,

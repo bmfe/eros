@@ -120,7 +120,7 @@
   import Category from '../_mods/category.vue';
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { WxcCell, Title, Category },
     created () {
       setTitle('Cell')

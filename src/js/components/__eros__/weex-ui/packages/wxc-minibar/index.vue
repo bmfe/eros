@@ -58,10 +58,10 @@
 </style>
 
 <script>
-  const icon = require('./icon.base64.js');
+  import icon from './icon.base64.js'
   const Navigator = weex.requireModule('navigator');
 
-  module.exports = {
+  export default {
     props: {
       backgroundColor: {
         type: String,

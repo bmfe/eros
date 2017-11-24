@@ -1,13 +1,16 @@
+<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!-- Created by Tw93 on 17/07/28. -->
+<!-- Updated by Tw93 on 17/11/16.-->
 
 <template>
   <div class="wxc-tab-page"
-       :style="{ height: (tabPageHeight)+'px' }">
+       :style="{ height: (tabPageHeight)+'px', backgroundColor:wrapBgColor }">
     <scroller class="tab-title-list"
               ref="tab-title-list"
               :show-scrollbar="false"
               scroll-direction="horizontal"
               :data-spm="spmC"
-              :style="{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height)+'px' }">
+              :style="{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height)+'px',paddingLeft:tabStyles.leftOffset+'px' }">
 
       <div class="title-item"
            v-for="(v,index) in tabTitles"
@@ -15,16 +18,21 @@
            :ref="'wxc-tab-title-'+index"
            @click="setPage(index,v.url)"
            :data-spm-click="`gostr=/tbtrip;locaid=d${v.dataSpm!==undefined ? v.dataSpm : '996' + index}`"
-           :style="{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage == index ? tabStyles.activeBgColor : tabStyles.bgColor }">
+           :style="{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage == index ? tabStyles.activeBgColor : tabStyles.bgColor }"
+           :accessible="true"
+           :aria-label="`${v.title?v.title:'标签'+index}`">
 
         <image :src="currentPage == index ? v.activeIcon : v.icon"
-               v-if="titleType == 'icon'"
+               v-if="titleType == 'icon' && !titleUseSlot"
                :style="{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}"></image>
-        <text :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
-              class="tab-text">{{v.title}}</text>
+        <text
+          v-if="!titleUseSlot"
+          :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
+          class="tab-text">{{v.title}}</text>
         <div class="border-bottom"
-             v-if="tabStyles.hasActiveBottom"
+             v-if="tabStyles.hasActiveBottom && !titleUseSlot"
              :style="{ width: tabStyles.activeBottomWidth+'px', left: (tabStyles.width-tabStyles.activeBottomWidth)/2+'px', height: tabStyles.activeBottomHeight+'px', backgroundColor: currentPage == index ? tabStyles.activeBottomColor : 'transparent' }"></div>
+        <slot :name="`tab-title-${index}`" v-if="titleUseSlot"></slot>
       </div>
     </scroller>
     <div class="tab-page-wrap"
@@ -47,13 +55,10 @@
   .wxc-tab-page {
     width: 750px;
     flex-direction: column;
-    background-color: #f2f3f4;
   }
-
   .tab-title-list {
     flex-direction: row;
   }
-
   .title-item {
     justify-content: center;
     align-items: center;
@@ -61,24 +66,20 @@
     border-bottom-style: solid;
     position: relative;
   }
-
   .border-bottom {
     position: absolute;
     bottom: 0;
   }
-
   .tab-page-wrap {
     width: 750px;
     overflow: hidden;
     position: relative;
   }
-
   .tab-container {
     flex: 1;
     flex-direction: row;
     position: absolute;
   }
-
   .tab-text {
     lines: 1;
     text-overflow: ellipsis;
@@ -86,17 +87,16 @@
 </style>
 
 <script>
+  import Utils from './utils';
+  
   const dom = weex.requireModule('dom');
   const animation = weex.requireModule('animation');
   const swipeBack = weex.requireModule('swipeBack');
   const expressionBinding = weex.requireModule('expressionBinding');
-
-  const Utils = require('./utils');
   const supportsEB = Utils.env.supportsEB();
   const supportsEBForIos = Utils.env.supportsEBForIos();
   const isIos = Utils.env.isIOS();
-
-  module.exports = {
+  export default {
     props: {
       tabTitles: {
         type: Array,
@@ -109,6 +109,10 @@
       spmC: {
         type: [String, Number],
         default: ''
+      },
+      titleUseSlot: {
+        type: Boolean,
+        default: false
       },
       tabStyles: {
         type: Object,
@@ -128,7 +132,8 @@
           activeBottomWidth: 120,
           activeBottomHeight: 6,
           textPaddingLeft: 10,
-          textPaddingRight: 10
+          textPaddingRight: 10,
+          leftOffset: 0
         })
       },
       titleType: {
@@ -154,6 +159,10 @@
       timingFunction: {
         type: String,
         default: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+      },
+      wrapBgColor: {
+        type: String,
+        default: '#f2f3f4'
       }
     },
     data: () => ({
@@ -173,7 +182,10 @@
       if (supportsEBForIos && this.needSlider && this.isTabView) {
         setTimeout(() => {
           const tabPageEl = this.$refs['tab-page-wrap'];
-          tabPageEl && tabPageEl.ref && this.bindExp(tabPageEl);
+          if (tabPageEl && tabPageEl.ref) {
+            expressionBinding.enableBinding(tabPageEl.ref, 'pan');
+            this.bindExp(tabPageEl);
+          }
         }, 20);
       }
     },
@@ -211,7 +223,6 @@
             property: 'transform.translateX',
             expression: `{\"type\":\"-\",\"children\":[{\"type\":\"Identifier\",\"value\":\"x\"},{\"type\":\"NumericLiteral\",\"value\":${dist}}]}`
           }];
-          expressionBinding.enableBinding(element.ref, 'pan');
           expressionBinding.createBinding(element.ref, 'pan', '', args, e => {
             const { deltaX, state } = e;
             if (state === 'end') {
@@ -226,7 +237,7 @@
           });
         }
       },
-      setPage (page, url = null) {
+      setPage (page, url = null, animated = true) {
         if (!this.isTabView) {
           this.jumpOut(url);
           return;
@@ -240,42 +251,42 @@
         const { width } = this.tabStyles;
         const appearNum = parseInt(750 / width);
         const tabsNum = this.tabTitles.length;
-        const computedPage = tabsNum > appearNum ? 2 : page;
-        const offset = page > appearNum ? -(750 - width) / 2 : -width * computedPage;
-
-        (previousPage > appearNum || page > 1) && dom.scrollToElement(currentTabEl, {
-          offset
-        });
-
-        page <= 1 && previousPage > page && dom.scrollToElement(currentTabEl, {
-          offset: -width * page
-        });
-
+        const offset = page > appearNum ? -(750 - width) / 2 : -width * 2;
+        if (appearNum < tabsNum) {
+          (previousPage > appearNum || page > 1) && dom.scrollToElement(currentTabEl, {
+            offset, animated
+          });
+          page <= 1 && previousPage > page && dom.scrollToElement(currentTabEl, {
+            offset: -width * page,
+            animated
+          });
+        }
+        this.isMoving = false;
+        this.currentPage = page;
         if (isIos) {
           // 高版本ios 手淘上面会有不固定情况，hack一下
           setTimeout(() => {
-            this._animateTransformX(page);
+            this._animateTransformX(page, animated);
+            this.$emit('wxcTabPageCurrentTabSelected', { page });
           }, 10);
         } else {
-          this._animateTransformX(page);
+          this._animateTransformX(page, animated);
+          this.$emit('wxcTabPageCurrentTabSelected', { page });
         }
-
-        this.isMoving = false;
-        this.currentPage = page;
-        this.$emit('wxcTabPageCurrentTabSelected', { page });
       },
       jumpOut (url) {
         url && Utils.goToH5Page(url)
       },
-      _animateTransformX (page) {
+      _animateTransformX (page, animated) {
         const { duration, timingFunction } = this;
+        const computedDur = animated ? duration : 0.00001;
         const containerEl = this.$refs[`tab-container`];
         const dist = page * 750;
         animation.transition(containerEl, {
           styles: {
             transform: `translateX(${-dist}px)`
           },
-          duration,
+          duration: computedDur,
           timingFunction,
           delay: 0
         }, () => {

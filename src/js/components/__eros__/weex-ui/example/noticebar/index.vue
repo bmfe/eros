@@ -89,7 +89,7 @@
 
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcNoticebar },
     data: () => ({
       url: 'https://h5.m.taobao.com/trip/wx-travel-home/home/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-travel-home%2Fhome%2Findex.weex.js'

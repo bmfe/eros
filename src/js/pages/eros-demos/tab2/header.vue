@@ -13,6 +13,7 @@
 
 import buiHeader from 'Eros/bui/components/bui-header'
 import buiIcon from 'Eros/bui/components/bui-icon'
+import {foo1} from './test'
 export default {
     components: {
         buiHeader, buiIcon

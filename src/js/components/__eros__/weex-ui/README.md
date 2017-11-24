@@ -33,7 +33,7 @@ npm i weex-ui -S
   // or
   // import WxcButton from 'weex-ui/packages/wxc-button';
   // import WxcPopup from 'weex-ui/packages/wxc-popup';
-  module.exports = {
+  export default {
     components: { WxcButton, WxcPopup },
     data: () => ({
       isShow: false

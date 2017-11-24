@@ -42,7 +42,7 @@ tnpm i weex-ui --save
 
 <script>
   import { WxcPopup } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcPopup },
     data: () => ({
       isBottomShow: false,

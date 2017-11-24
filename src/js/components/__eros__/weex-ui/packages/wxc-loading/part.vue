@@ -14,7 +14,7 @@
 
 <script>
   import { PART } from './icon.base64';
-  module.exports = {
+  export default {
     props: {
       show: {
         type: Boolean,

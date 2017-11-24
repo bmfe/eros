@@ -12,7 +12,7 @@
 <style lang="sass" src="../css/radio.scss"></style>
 
 <script>
-    module.exports = {
+    export default {
         props: {
             "title": {      //文本
                 type: String

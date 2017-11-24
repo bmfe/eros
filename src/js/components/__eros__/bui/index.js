@@ -53,7 +53,7 @@ import buiImageSlider from "./components/bui-image-slider.vue"
 // export const buiContentScroll = _buiContentScroll
 // export const buiImageSlider = _buiImageSlider
 
-module.exports.default = module.exports = {
+export {
     buiButton,
     buiCheckbox,
     buiDialog,

@@ -84,7 +84,7 @@ npm install weex-ui --save
 
 <script>
   import {WxcCell} from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcCell },
     methods: {
       wxcCellDivClick (e) {

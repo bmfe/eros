@@ -44,7 +44,7 @@ npm i weex-ui --save
 <script>
   const modal = weex.requireModule('modal');
   import { WxcNoticebar } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcNoticebar },
     data: () => ({
       show: true

@@ -32,7 +32,7 @@
 <style lang="sass" src="../css/tabbar.scss"></style>
 
 <script>
-    module.exports = {
+    export default {
         props: {
             scroll: {},
             tabItems: {default: []},

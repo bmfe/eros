@@ -50,7 +50,7 @@
   const dom = weex.requireModule('dom');
 
   import WxcMinibar from '../wxc-minibar'
-  module.exports = {
+  export default {
     components: { WxcMinibar },
     props: {
       selectedDate: Array,

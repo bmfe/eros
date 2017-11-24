@@ -11,7 +11,7 @@
 <script>
     var animation = weex.requireModule('animation');
     import buiIcon from './bui-icon'
-    module.exports = {
+    export default {
         components: {buiIcon},
         props: {
             show: {
