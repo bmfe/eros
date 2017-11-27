@@ -10,8 +10,7 @@
     "license": "MIT",
     "dependencies": {
         "lodash": "^4.17.4",
-        "url-parse": "^1.1.9",
-        "vue": "^2.1.7"
+        "url-parse": "^1.1.9"
     },
     "devDependencies": {
         "babel-core": "^6.20.0",
