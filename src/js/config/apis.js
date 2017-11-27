@@ -3,10 +3,14 @@ import isFunction from 'lodash/isFunction'
 let modal = weex.requireModule('bmModal')
 let tools = weex.requireModule('bmTool')
 
+// 接口超时设置
+export const TIMEOUT = 30000
+
 // 配置请求的别名
-const AJAX_MAP = {
+export const apis = {
     'COMMON.getInfo': '/test/info'
 }
+
 
 /**
  * 请求返回统一拦截器
@@ -49,5 +53,3 @@ export const responseHandler = (options, resData, resolve, reject) => {
         reject(resData)
     }
 }
-
-export const apis = AJAX_MAP

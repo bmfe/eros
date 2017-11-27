@@ -80,15 +80,8 @@ Camera.install = (Vue, options) => {
                     if (isFunction(callback)) {
                         callback.call(this, resData)
                     }
-                    if (resData && resData.resCode == 0) {
-                        resolve(resData)
-                    } else {
-                        resData.msg && modal.alert({
-                            message: resData.msg,
-                            okTitle: '确定'
-                        })
-                        reject(resData)
-                    }
+                    // 修改默认逻辑 直接抛出最外面
+                    resolve(resData)
                 })
             })
         },

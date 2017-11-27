@@ -5,6 +5,7 @@
  * @Last modified time: 2017-05-08
  */
 
+import { TIMEOUT } from 'Config/apis'
 var bmAxios = weex.requireModule('bmAxios')
 
 export default {
@@ -16,7 +17,8 @@ export default {
                     method: options.method || 'GET',
                     url: Vue.prototype.eros.apis[options.name] || options.url,
                     header: options.header || {},
-                    data: options.data || {}
+                    data: options.data || {},
+                    timeout: TIMEOUT || 30000,
                 }, (resData) => {
                     // 可以做统一的监控
                     Vue.prototype.eros.responseHandler(options, resData, resolve, reject)
