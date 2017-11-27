@@ -17,7 +17,7 @@ export default {
     },
     bmRouter: {
         viewWillAppear() {
-            console.log(11111111111, 'viewWillAppear')
+            console.log(2222, 'viewWillAppear')
         }
     },
     created() {
