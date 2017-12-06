@@ -236,7 +236,6 @@
 </style>
 
 <script>
-  
   export default {
     globalEvent: {
         appActive() {
