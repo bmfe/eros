@@ -197,6 +197,9 @@ Router.install = (Vue, options) => {
                     phone: phone
                 })
             }
+        },
+        finish() {
+            router.finish()
         }
     }
 }
