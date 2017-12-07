@@ -13,7 +13,7 @@
 
 #import "BMPushMessageManager.h"
 
-#import <GeTuiSdk.h>
+#import <GTSDK/GeTuiSdk.h>
 #import <WXApi.h>
 
 #import "BMRouterManager.h"
