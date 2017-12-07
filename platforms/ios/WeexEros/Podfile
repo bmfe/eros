@@ -12,12 +12,12 @@ def common
     pod 'YTKNetwork', '2.0.3'
     pod 'SSZipArchive', '1.6.2'
     pod 'YYModel', '1.0.4'
-    pod 'Masonry', '1.0.2'
-    pod 'SVProgressHUD', '2.1.2'
-    pod 'UMengUShare/Social/WeChat', '6.3.0'
-    pod 'GTSDK', '1.6.2.0-noidfa'
+    pod 'Masonry', '1.1.0'
+    pod 'SVProgressHUD', '2.2.2'
+    pod 'UMengUShare/Social/WeChat', '6.4.6'
+    pod 'GTSDK', '2.0.0.0-noidfa'
     pod 'UMengAnalytics-NO-IDFA', '4.2.5'
-    pod 'TZImagePickerController', '1.7.8'
+    pod 'TZImagePickerController', '1.9.6'
     pod 'FDFullscreenPopGesture', '1.1'
     pod 'BMBaseLibrary', :path=>'./Benmu-iOS-Library', :subspecs=>[
         'BMDevice',
