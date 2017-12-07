@@ -27,6 +27,7 @@ export default {
         }
     },
     created() {
+        let globalEvent = weex.requireModule('globalEvent')
         globalEvent.addEventListener("homeBack", function(options) {
             (this.curHomeBackTriggerTimes === this.maxHomeBackTriggerTimes) && this.$router.finish()
             this.curHomeBackTriggerTimes ++
