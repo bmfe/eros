@@ -20,12 +20,6 @@ export default {
             console.log(11111111111, 'viewWillAppear')
         }
     },
-    data() {
-        return {
-            curHomeBackTriggerTimes: 0,
-            maxHomeBackTriggerTimes: 5
-        }
-    },
     created() {
         let globalEvent = weex.requireModule('globalEvent')
         globalEvent.addEventListener("homeBack", options => {
@@ -36,6 +30,8 @@ export default {
     },
     data() {
         return {
+            curHomeBackTriggerTimes: 0,
+            maxHomeBackTriggerTimes: 5,
             bundleUrl: '',
             tabItems: [{
                 index: 0,
