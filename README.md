@@ -1,6 +1,5 @@
 ## Intro
 eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写法的解决方案，由于 app 开发的特殊性，eros 则更偏重关心于整个 app 项目。
-
 #### 优势：
 * eros 对 weex 官方进行二次封装，能及时跟进 weex 的新特性，
 * eros-cli 支持生成开发模板，更新平台相关依赖，打包等，在熟悉了 eros 之后，对于中小型 app 应用能进行快速迭代。
@@ -31,6 +30,11 @@ eros 在尽全力弥补不足。
 * 支持 vue、sass、stylus、less、babel
 * 支持 weex 的 vue 入口式开发和 js 入口式开发
 * 等等...
+
+## Principle
+
+![工作原理](http://on-img.com/chart_image/59c5d743e4b0d34a18d69580.png)
+[大图地址](http://on-img.com/chart_image/59c5d743e4b0d34a18d69580.png)
 
 ## Required
 开发之前您需要学习 weex 知识，并且能熟练使用 vue 开发，文档地址如下。
