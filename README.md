@@ -123,6 +123,18 @@ $ eros install
 
 注意：
 > 第一次打开 AndroidStuido 时，由于本地环境未配置好，AndroidStuido 会提示错误，按照 IDE 提示，大部分环境问题都可以解决。
+
+于是 eros 的 demo 便能在模拟器中跑起来了。
+
+![eros-demo](http://upload.ouliu.net/i/20171212233540q8alw.gif)
+
+在 eros demo 中我们可以看到：
+* tab1 中内置了 weex-ui 并有 demo
+* tab2 中内置了 bui 并有 demo
+* tab3 中有大部分 widget 使用的实例
+* tab4 中跑了官方的瀑布流例子和我们编写一个支持手势滑动的多个 List 的类似新闻的实例。
+
+> eros 的 demo 很重要，建议在开发中，首先跟随 demo 编写几个页面，并保留其代码作为使用参考。
 ## Developing
 [开发文档](https://github.com/bmfe/eros-template/wiki/%E4%B8%9A%E5%8A%A1%E5%BC%80%E5%8F%91)
 ## debugging
