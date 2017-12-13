@@ -41,8 +41,7 @@ eros 在尽全力弥补不足。
 * [weex](http://weex.apache.org/cn/guide/)
 * [vue](https://cn.vuejs.org/v2/guide/)
 ## Docs
-* [eros v1](https://karynsong.gitbooks.io/weex-eros/content/)
-* [eros v2](https://github.com/bmfe/eros-template/wiki/eros) (持续更新中...)
+* [eros](https://github.com/bmfe/eros-template/wiki/eros) (持续更新中...)
 ## Support 
 > 跟随着 weex 的支持性，`但目前我们并不支持开发代码兼容 web 端`
 
@@ -135,10 +134,8 @@ $ eros install
 * tab4 中跑了官方的瀑布流例子和我们编写一个支持手势滑动的多个 List 的类似新闻的实例。
 
 > eros 的 demo 很重要，建议在开发中，首先跟随 demo 编写几个页面，并保留其代码作为使用参考。
-## Developing
-[开发文档](https://github.com/bmfe/eros-template/wiki/%E4%B8%9A%E5%8A%A1%E5%BC%80%E5%8F%91)
-## debugging
-[调试文档](https://github.com/bmfe/eros-template/wiki/%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95)
+## Hello World
+[Hello World](https://github.com/bmfe/eros-template/wiki/eros-%7C-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97)
 
 ## Ecosystem
 | Project | Description |
