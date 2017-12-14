@@ -27,7 +27,8 @@ Image.install = (Vue, options) => {
                     maxCount: options.maxCount || 1,
                     imageWidth: options.imageWidth || 0,
                     allowCrop: options.allowCrop || false,
-                    params: options.params || {}
+                    header: options.header || {},
+                    params: options.params || {},
                 }, (resData) => {
                     if (!resData) {
                         resData = {

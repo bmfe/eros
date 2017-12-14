@@ -1,6 +1,5 @@
 ## Intro
 eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写法的解决方案，由于 app 开发的特殊性，eros 则更偏重关心于整个 app 项目。
-
 #### 优势：
 * eros 对 weex 官方进行二次封装，能及时跟进 weex 的新特性，
 * eros-cli 支持生成开发模板，更新平台相关依赖，打包等，在熟悉了 eros 之后，对于中小型 app 应用能进行快速迭代。
@@ -32,13 +31,17 @@ eros 在尽全力弥补不足。
 * 支持 weex 的 vue 入口式开发和 js 入口式开发
 * 等等...
 
+## Principle
+
+![工作原理](http://on-img.com/chart_image/59c5d743e4b0d34a18d69580.png)
+[大图地址](http://on-img.com/chart_image/59c5d743e4b0d34a18d69580.png)
+
 ## Required
 开发之前您需要学习 weex 知识，并且能熟练使用 vue 开发，文档地址如下。
 * [weex](http://weex.apache.org/cn/guide/)
 * [vue](https://cn.vuejs.org/v2/guide/)
 ## Docs
-* [eros v1](https://karynsong.gitbooks.io/weex-eros/content/)
-* [eros v2](https://github.com/bmfe/eros-template/wiki/eros) (持续更新中...)
+* [eros](https://github.com/bmfe/eros-template/wiki/eros) (持续更新中...)
 ## Support 
 > 跟随着 weex 的支持性，`但目前我们并不支持开发代码兼容 web 端`
 
@@ -119,10 +122,20 @@ $ eros install
 
 注意：
 > 第一次打开 AndroidStuido 时，由于本地环境未配置好，AndroidStuido 会提示错误，按照 IDE 提示，大部分环境问题都可以解决。
-## Developing
-[开发文档](https://github.com/bmfe/eros-template/wiki/%E4%B8%9A%E5%8A%A1%E5%BC%80%E5%8F%91)
-## debugging
-[调试文档](https://github.com/bmfe/eros-template/wiki/%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95)
+
+于是 eros 的 demo 便能在模拟器中跑起来了。
+
+![eros-demo](http://upload.ouliu.net/i/20171212233540q8alw.gif)
+
+在 eros demo 中我们可以看到：
+* tab1 中内置了 weex-ui 并有 demo
+* tab2 中内置了 bui 并有 demo
+* tab3 中有大部分 widget 使用的实例
+* tab4 中跑了官方的瀑布流例子和我们编写一个支持手势滑动的多个 List 的类似新闻的实例。
+
+> eros 的 demo 很重要，建议在开发中，首先跟随 demo 编写几个页面，并保留其代码作为使用参考。
+## Hello World
+[Hello World](https://github.com/bmfe/eros-template/wiki/eros-%7C-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97)
 
 ## Ecosystem
 | Project | Description |
