@@ -9,7 +9,7 @@ git clone https://github.com/bmfe/WeexiOSSDK.git
 
 cd WeexiOSSDK
 
-git checkout 0.15.0
+git checkout 0.17.0
 
 cd ../
 
@@ -17,7 +17,7 @@ git clone https://github.com/bmfe/Benmu-iOS-Library.git
 
 cd Benmu-iOS-Library
 
-git checkout 1.0.0
+git checkout 1.1.0
 
 cd ../
 
