@@ -24,6 +24,7 @@ Image.install = (Vue, options) => {
             }
             return new Promise((resolve, reject) => {
                 camera.uploadImage({
+                    url: options.url || '',
                     maxCount: options.maxCount || 1,
                     imageWidth: options.imageWidth || 0,
                     allowCrop: options.allowCrop || false,
