@@ -8,7 +8,6 @@ def common
     pod 'WXDevtool', '0.15.3', :configurations => ['Debug']
     pod 'SDWebImage', '3.7.5'
     pod 'SocketRocket', '0.4.2'
-    pod 'ATSDK-Weex', '0.0.1'
     pod 'YTKNetwork', '2.0.3'
     pod 'SSZipArchive', '1.6.2'
     pod 'YYModel', '1.0.4'
