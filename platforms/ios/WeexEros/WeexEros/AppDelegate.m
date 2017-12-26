@@ -24,7 +24,7 @@
 #import "BMDefine.h"
 #import "HYGuideView.h"
 
-
+#import <CryptLib.h>
 
 @interface AppDelegate ()
 {
