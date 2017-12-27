@@ -150,3 +150,8 @@ $ eros install
 | [eros-android-framework](https://github.com/bmfe/WeexErosFramework) | eros weex 移动解决方案安卓端框架。 |
 | [eros-android-widget](https://github.com/bmfe/BMWidget) | eros 安卓组件库。 |
 | [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端 WeexSDK。 |
+
+### 此处应有打赏，请简单粗暴地爱我们！
+![](./image/shang.jpeg)
+
+帮我买杯咖啡，继续创作，谢谢大家！
