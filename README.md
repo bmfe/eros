@@ -152,6 +152,6 @@ $ eros install
 | [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端 WeexSDK。 |
 
 ### 此处应有打赏，请简单粗暴地爱我们！
-![](./image/shang.jpeg)
+![](https://github.com/bmfe/eros-template/wiki/image/shang.jpeg)
 
 帮我买杯咖啡，继续创作，谢谢大家！
