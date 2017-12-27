@@ -1,5 +1,14 @@
 {
-  "presets": ["es2015", "stage-0"],
+  "presets": [
+      ["env", {
+          "targets": {
+              "modules": false,
+              "loose": true,
+              "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+          }
+      }],
+      "stage-2"
+  ],
   "plugins": [
     [
       "component",
@@ -9,5 +18,11 @@
         "style": false
       }
     ]
-  ]
+  ],
+  "env": {
+      "test": {
+          "presets": ["env", "stage-2"],
+          "plugins": ["istanbul"]
+      }
+  }
 }

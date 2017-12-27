@@ -3,6 +3,7 @@
     <tabs :tabItems="tabItems" @tabBarOnClick="tabBarOnClick"></tabs>
 </template>
 <script>
+import {foo} from './tree-shaking'
 import tabs from 'Components/tabs/bar'
 const IMAGE ='http://gtms01.alicdn.com/tps/i1/TB1qw.hMpXXXXagXXXX9t7RGVXX-46-46.png'
 const SELECTED_IMAGE = 'http://gtms04.alicdn.com/tps/i4/TB16jjPMpXXXXazXVXX9t7RGVXX-46-46.png'
