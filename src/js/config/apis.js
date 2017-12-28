@@ -1,13 +1,8 @@
-import isFunction from 'lodash/isFunction'
-
-let modal = weex.requireModule('bmModal')
-let tools = weex.requireModule('bmTool')
-
 // 接口超时设置
 export const TIMEOUT = 30000
 
 // 配置请求的别名
-export const apis = {
+export const APIS = {
     'COMMON.getInfo': '/test/info'
 }
 
@@ -31,25 +26,15 @@ export const apis = {
 
 // 假设 resCode 为 0 为业务操作成功，非 0 为业务操作失败，我们需要写如下逻辑
 export const responseHandler = (options, resData, resolve, reject) => {
-    if (resData && resData.resCode == 0) {
-        // 操作成功 resolve 成功数据
-        resolve(resData)
-    } else {
-        // 弹窗统一消失，防止弹错误提示的时候还有别的弹窗
-        modal.hideLoading()
-        let { resCode } = resData
-        if (resCode == 101) {
-            // 特殊code的不同处理，根据业务自行编写
-            return
-        }
-        if (!options.noShowDefaultError) {
-            // 统一弹窗处理
-            modal.alert({
-                message: resData.msg,
-                okTitle: '确定'
-            })
-        }
-        // 如果需要特殊处理， 请求时候传入 noShowDefaultError :true ,这个请求就不会走弹窗的默认逻辑
+    let {status, errorMsg, data} = resData
+    if(status !== '200') {
+        modal.alert({
+            message: errorMsg,
+            okTitle: '知道了'
+        })
         reject(resData)
     }
+
+    // 自定义请求逻辑
+    resolve(data)
 }

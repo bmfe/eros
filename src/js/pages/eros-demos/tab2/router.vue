@@ -2,13 +2,12 @@
     <scroller>   
         <bui-button @click="changeStore" value="修改 mediator-store"></bui-button>
         <text>{{store}}</text>
-        
     </scroller>
 </template>
 
 <script>
 
-import buiButton from 'Eros/bui/components/bui-button'
+import buiButton  from 'bui-weex/src/components/bui-button'
 export default {
     created() {
         this.bindEvent()

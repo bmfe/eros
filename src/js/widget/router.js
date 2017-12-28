@@ -15,6 +15,7 @@ import isFunction from 'lodash/isFunction'
 import _isUndefined from 'lodash/isUndefined'
 import isPlainObject from 'lodash/isPlainObject'
 
+import ROUTES from 'Config/routes'
 // 客户端默认打开页面的动画
 export const DEFAULT_ANIMATETYPE = 'PUSH'
 
@@ -142,7 +143,9 @@ Router.install = (Vue, options) => {
             })
         },
         getUrl(page) {
-            let currentPageInfo = Vue.prototype.eros.pages[page]
+            console.log(ROUTES)
+            console.log(page)
+            let currentPageInfo = ROUTES[page]
             if (!currentPageInfo) {
                 modal.alert({
                     message: '跳转页面不存在',
