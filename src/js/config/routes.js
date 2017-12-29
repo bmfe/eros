@@ -6,7 +6,8 @@
 
 export default {
     'tab2.test': {
-        url: '/pages/eros-demos/examples/page-calendar/index.js'
+        title: '路由测试页',
+        url: '/pages/eros-demos/tab2/router.js'
     },
     'tab2.amap': {
         title: '地图页面',

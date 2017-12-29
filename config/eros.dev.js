@@ -8,12 +8,11 @@ module.exports = {
         // home
         "js/pages/eros-demos/index.vue",
 
-        "js/pages/eros-demos/tab1/tab-page/index.vue1",
+        "js/pages/eros-demos/tab1/tab-page/index.vue",
         "js/pages/eros-demos/tab2/index.vue",
         "js/pages/eros-demos/tab3/index.vue",
 
         "js/pages/eros-demos/tab2/router.vue",
-        "js/pages/eros-demos/examples/page-calendar/index.vue",
         "js/pages/eros-demos/tab2/amap.vue",
         "js/pages/eros-demos/tab2/iconfont.vue",
 
