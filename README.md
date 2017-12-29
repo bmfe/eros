@@ -16,13 +16,15 @@ eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写
 * 脚手架支持同步更新模板内容。
 * 脚手架支持 weex 的 vue 入口和 js 入口两种开发方式。
 * 支持 `weex debug`
+* 支持市面上流行的组件库
+    * [weex-ui](https://github.com/alibaba/weex-ui) ( 阿里出品，eros 推荐 )
+    * [bui](https://github.com/bingo-oss/bui-weex)
 
 ## Disadvantage
 > eros 开发中也有很多限制，需要开发者自行斟酌。
 * weex 代码在浏览器端还有很多兼容性问题，所有 eros 目前不支持浏览器端
 * eros 不能使用 weex 市场，如果您有原生开发经验可以自行接入
 * 由于 eros 对 **JS Bundle** 运行机制采用了 appboard 机制来减少了 js bundle 的大小，导致 weex debug 需要特定的处理。
-* 由于目前开源的 weex ui 库都并不支持 **tree-shaking**，官方引入的 webpack 也是 1.x.x 版本，eros 脚手架即便升级了 webpack，但并未配置 tree-shaking，所以目前引入代码的方式需要限制很多写法来减少 JS Bundle 的体积，eros 后续会出对应的 UI组件库 来解决这些问题。
 * eros 打出来的包体积稍大，为解决这个问题，eros 客户端动态加载依赖正在开发中。
 * 如果遇到复杂的页面，如 IM 之类的，eros 建议用原生实现，weex 应付此类需求还是比较吃力。
 
