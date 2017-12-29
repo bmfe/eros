@@ -12,7 +12,6 @@ def common
     pod 'SSZipArchive', '1.6.2'
     pod 'YYModel', '1.0.4'
     pod 'Masonry', '1.1.0'
-    pod 'SVProgressHUD', '2.2.2'
     pod 'UMengUShare/Social/WeChat', '6.4.6'
     pod 'GTSDK', '2.0.0.0-noidfa'
     pod 'UMengAnalytics-NO-IDFA', '4.2.5'
