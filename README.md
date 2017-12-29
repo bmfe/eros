@@ -1,47 +1,52 @@
 ## Intro
 eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写法的解决方案，由于 app 开发的特殊性，eros 则更偏重关心于整个 app 项目。
-#### 优势：
-* eros 对 weex 官方进行二次封装，能及时跟进 weex 的新特性，
-* eros-cli 支持生成开发模板，更新平台相关依赖，打包等，在熟悉了 eros 之后，对于中小型 app 应用能进行快速迭代。
-* eros-cli 和 eros-publish 的搭配使用，可以搭建简易增量发布。
-* 在开发中能更少的关注 weex 版本升级和本身的兼容性问题。**（综合在一个平台，当你遇到一个兼容性问题，当 eros 修复了，就是其他人少遇到一个问题，节约的是大家的时间）**。
-* 跟 weex 一样，给 vue 开发者另一个舞台。
+## Advantage
+* 详细的文档来解决环境搭建过程中的坑。
+* 一套代码编译成 ios，android 两端原生应用。
+* 封装了大量 module，让前端开发方便进行原生的操作。
+* 提供 `appboard` 机制来减少包体积，并可以对其实时修改。
+* 内置了一套完整的 widget ，可根据业务自行修改。
+* 中介者模式来集中管理业务。
+* 提供了服务器端增量发布更新逻辑。
+* 脚手架可直接生成开发最新模板。
+* 脚手架启动服务进行实时开发效果查看和 debug 调试。
+* 脚手架更新开发平台所需 eros 依赖。
+* 脚手架支持打对应平台内置包。
+* 脚手架支持生成全量包，增量包，并内置与更新服务器交互逻辑。
+* 脚手架支持同步更新模板内容。
+* 脚手架支持 weex 的 vue 入口和 js 入口两种开发方式。
+* 支持 `weex debug`
 
-#### 不足：
-* weex debug 会出现些问题，eros 已经有方法解决，但不完美，还需要改进。
-* 由于人手不足，许多功能可能并不完善，修复可能需要大家的参与。
-* 由于 eros 本身是从公司业务中抽离出来的，有些代码冗余和不规范。
-* 客户端依赖还未做动态加载，导致包体积会稍微大一些。
-
-eros 在尽全力弥补不足。
-
-#### 功能：
-
-* 客户端拓展了数十个 module
-* 提供 appboard 机制来减少包体积
-* 内置了一套完整的 widget ，可根据业务自行修改
-* eros-publish 提供了服务器端增量发布更新逻辑
-* eros init 生成开发模板
-* eros dev 启动服务进行实时开发效果查看和 debug 调试
-* eros install 更新开发平台所需 eros 依赖
-* eros pack 打对应平台内置包
-* eros build 支持生成全量包，增量包，并内置与更新服务器交互逻辑
-* eros update 同步更新模板内容
-* 支持 vue、sass、stylus、less、babel
-* 支持 weex 的 vue 入口式开发和 js 入口式开发
-* 等等...
+## Disadvantage
+> eros 开发中也有很多限制，需要开发者自行斟酌。
+* weex 代码在浏览器端还有很多兼容性问题，所有 eros 目前不支持浏览器端
+* eros 不能使用 weex 市场，如果您有原生开发经验可以自行接入
+* 由于 eros 对 **JS Bundle** 运行机制采用了 appboard 机制来减少了 js bundle 的大小，导致 weex debug 需要特定的处理。
+* 由于目前开源的 weex ui 库都并不支持 **tree-shaking**，官方引入的 webpack 也是 1.x.x 版本，eros 脚手架即便升级了 webpack，但并未配置 tree-shaking，所以目前引入代码的方式需要限制很多写法来减少 JS Bundle 的体积，eros 后续会出对应的 UI组件库 来解决这些问题。
+* eros 打出来的包体积稍大，为解决这个问题，eros 客户端动态加载依赖正在开发中。
+* 如果遇到复杂的页面，如 IM 之类的，eros 建议用原生实现，weex 应付此类需求还是比较吃力。
 
 ## Principle
 
 ![工作原理](http://on-img.com/chart_image/59c5d743e4b0d34a18d69580.png)
 [大图地址](http://on-img.com/chart_image/59c5d743e4b0d34a18d69580.png)
 
+## Situation
+目前 `eros` 已有数十个 app 在开发中和上线的状态，其中有正在开发中的国外应用 **starLife（100+页面）**，也有国内正在开发的**蜂觅（60+ 页面）**，还有**已上线的应用都在 0-50+ 页面不等**，涉及行业分布于资讯，医疗，招商，购物，政府，办公等等。
+
+而本木医疗（京医通）技术团队本身也基于 weex 开发了三个已上线的 app，均可在苹果商店和应用宝下载：
+* 健康首都（京医通 app版，100+页面，很多功能还未开放）
+* 本木医疗助手（30+页面）
+* 本木医生助理（20+页面）
+
+所以开发者大可放心，这不是一个 KPI 项目（公司没有 KPI ），已基于 MIT 协议开源。
+## Docs
+* [eros 文档地址](https://github.com/bmfe/eros-template/wiki/eros) (持续更新中...)
 ## Required
 开发之前您需要学习 weex 知识，并且能熟练使用 vue 开发，文档地址如下。
 * [weex](http://weex.apache.org/cn/guide/)
 * [vue](https://cn.vuejs.org/v2/guide/)
-## Docs
-* [eros](https://github.com/bmfe/eros-template/wiki/eros) (持续更新中...)
+
 ## Support 
 > 跟随着 weex 的支持性，`但目前我们并不支持开发代码兼容 web 端`
 
@@ -60,13 +65,11 @@ eros 在尽全力弥补不足。
 #### 脚手架所需环境:
 darwin: 
 * Node.js (>=6.x), npm version 4+ 
-* Python 2，并配置到环境变量中
 
 windows: 
 * Git bash 
-* Python 2，并配置到环境变量中。
-* .NET Framework 2.0 SDK 或以上 （Window 10 安装4.0及以上）
-* Microsoft Visual Studio 2005 或以上
+
+> 因为脚手架依赖了`node-sass`，安装失败有很多解决办法，可自行查找。
 
 #### 脚手架安装:
 ```
@@ -86,7 +89,7 @@ $ cnpm i eros-cli -g
     * 如果以上命令报错则执行：`$ sudo gem install -n /usr/local/bin cocoapods --pre`
     * 最后执行：`$ pod setup 过程比较漫长，请耐心等待执行完成`
 
-#### darwin/windows 开发 Android:
+#### darwin/windows/linux 开发 Android:
 * 下载并安装 [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)。
 * 下载并安装 [Android Studio](https://developer.android.google.cn/studio/index.html)。
 
@@ -147,3 +150,8 @@ $ eros install
 | [eros-android-framework](https://github.com/bmfe/WeexErosFramework) | eros weex 移动解决方案安卓端框架。 |
 | [eros-android-widget](https://github.com/bmfe/BMWidget) | eros 安卓组件库。 |
 | [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端 WeexSDK。 |
+
+### 此处应有打赏，请简单粗暴地爱我们！
+![](https://github.com/bmfe/eros-template/wiki/image/shang.jpeg)
+
+帮我买杯咖啡，继续创作，谢谢大家！
