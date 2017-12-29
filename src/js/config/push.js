@@ -1,4 +1,4 @@
-var globalEvent = weex.requireModule('globalEvent')
+const globalEvent = weex.requireModule('globalEvent')
 
 
 /**

@@ -7,7 +7,7 @@
 
 <script>
 
-import buiButton  from 'bui-weex/src/components/bui-button'
+import buiButton from 'bui-weex/src/components/bui-button'
 export default {
     created() {
         this.bindEvent()

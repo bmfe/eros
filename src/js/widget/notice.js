@@ -8,7 +8,6 @@ import _isObject from 'lodash/isObject'
 Notice.install = (Vue, options) => {
     Vue.prototype.$notice = {
         alert(options){
-            console.log('==========1231===',options)
             if(options.message){
                 return new Promise((resolve, reject) => {
                     modal.alert({

@@ -161,11 +161,11 @@ export default {
       })
     },
     handle_callPhone() {
-      this.$router.toCallPhone(123123)
+      this.$router.toCallPhone(123)
     },
     handle_localIconfont() {
       this.$router.open({
-        name: 'tab3.iconfont'
+        name: 'tab2.iconfont'
       })
     },
     onappear: function (idx, e) {
