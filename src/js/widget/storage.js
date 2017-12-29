@@ -9,96 +9,51 @@ var Storage = Object.create(null)
 Storage.install = (Vue, options) => {
     Vue.prototype.$storage = {
         set(key, value, callback) {
-            value = JSON.stringify({
-                data: value
-            })
             return new Promise((resolve, reject) => {
-                storage.setData(key, value, (resData) => {
-                    if (isFunction(callback)) {
-                        callback.call(this, resData)
-                    }
-                    if (resData && resData.resCode == 0) {
-                        resolve(true)
-                    } else {
-                        reject(false)
-                    }
+                storage.setData(key.toString(), value.toString(), ({status, data, errorMsg}) => {
+                    isFunction(callback) && callback.call(this, status == 0)
+                    status == 0 ? resolve(true) : reject(false)
                 })
             })
         },
         setSync(key, value) {
-            value = JSON.stringify({
-                data: value
-            })            
-            let resData = storage.setDataSync(key, value)
-            return resData && resData.resCode == 0
+            return storage.setDataSync(key.toString(), value.toString())
         },
         get(key, callback) {
             return new Promise((resolve, reject) => {
-                storage.getData(key, (resData) => {
-                    resData.data = JSON.parse(resData.data.value || '{}')
-                    resData.data = resData.data.data
-                    if (isFunction(callback)) {
-                        callback.call(this, resData)
-                    }
-                    if (resData && resData.resCode == 0) {
-                        resolve(resData.data)
-                    } else if (resData && resData.resCode == 9) {
-                        // 如果发现值不存在则返回空字符串
-                        resolve(false)
-                    } else {
-                        reject(resData)
-                    }
+                storage.getData(key.toString(), ({status, data, errorMsg}) => {
+                    isFunction(callback) && callback.call(this, status == 0)
+                    status == 0 ?  resolve(true) : reject(false)
                 })
             })
         },
         getSync(key) {
-            let resData = storage.getDataSync(key),
-                _code = resData && resData.resCode
-
-            if (_code == 0) {
-                resData.data = JSON.parse(resData.data.value || '{}')
-                resData.data = resData.data.data                
-                return resData.data
-            }
-            if (_code == 9) {
-                return false
-            }
+            let {status, data, errorMsg} = storage.getDataSync(key.toString())
+            return status == 0 ?  JSON.parse(data) : false
         },
         delete(key, callback) {
             return new Promise((resolve, reject) => {
-                storage.deleteData(key, (resData) => {
-                    if (isFunction(callback)) {
-                        callback.call(this, resData)
-                    }
-                    if (resData && resData.resCode == 0) {
-                        resolve(true)
-                    } else {
-                        reject(false)
-                    }
+                storage.deleteData(key.toString(), ({status, data, errorMsg}) => {
+                    isFunction(callback) && callback.call(this, status == 0)
+                    status == 0 ?  resolve(true) : reject(false)
                 })
             })
         },
         deleteSync(key) {
-            let resData = storage.deleteDataSync(key)
-            return resData && resData.resCode == 0
+            let {status, data, errorMsg} = storage.deleteDataSync(key.toString())
+            return status == 0
         },
         removeAll(callback) {
             return new Promise((resolve, reject) => {
-                storage.removeData((resData) => {
-                    if (isFunction(callback)) {
-                        callback.call(this, resData)
-                    }
-                    if (resData && resData.resCode == 0) {
-                        resolve(true)
-                    } else {
-                        reject(false)
-                    }
+                storage.removeData(({status, data, errorMsg}) => {
+                    isFunction(callback) && callback.call(this, status == 0)
+                    status == 0 ?  resolve(true) : reject(false)
                 })
             })
         },
         removeAllSync() {
-            let resData = storage.removeDataSync()
-            return resData && resData.resCode == 0
+            let {status, data, errorMsg} = storage.removeDataSync()
+            return status == 0
         }
     }
 }

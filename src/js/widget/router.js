@@ -197,13 +197,6 @@ export default class Router {
                 // }
                 router.toMap(options)
             },
-            toCallPhone(phone) {
-                if (phone) {
-                    router.callPhone({
-                        phone: phone
-                    })
-                }
-            },
             finish() {
                 router.finish()
             }
