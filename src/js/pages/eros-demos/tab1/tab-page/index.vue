@@ -67,7 +67,7 @@
 <script>
   const dom = weex.requireModule('dom');
 
-  import { WxcTabPage } from 'Eros/weex-ui';
+  import { WxcTabPage } from 'weex-ui';
   import WxcItem from './wxc-item.vue';
 
   const config = require('./config');
