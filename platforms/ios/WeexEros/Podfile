@@ -17,7 +17,6 @@ def common
     pod 'GTSDK', '2.0.0.0-noidfa'
     pod 'UMengAnalytics-NO-IDFA', '4.2.5'
     pod 'TZImagePickerController', '1.9.6'
-    pod 'FDFullscreenPopGesture', '1.1'
     pod 'BMBaseLibrary', :path=>'./Benmu-iOS-Library', :subspecs=>[
         'BMDevice',
         'BMExtension',
