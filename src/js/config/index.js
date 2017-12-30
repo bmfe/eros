@@ -34,15 +34,13 @@ new Widget({
     responseHandler (options, resData, resolve, reject) {
         let {status, errorMsg, data} = resData
         if(status !== '200') {
-            modal.alert({
-                message: errorMsg,
-                okTitle: '知道了'
-            })
+            console.log(`invoke error status: ${status}`)
+            console.log(`invoke error message: ${errorMsg}`)
             reject(resData)
+        }else {
+            // 自定义请求逻辑
+            resolve(data)
         }
-
-        // 自定义请求逻辑
-        resolve(data)
 
     }
 })

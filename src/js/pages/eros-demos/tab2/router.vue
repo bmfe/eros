@@ -1,6 +1,7 @@
 <template>
     <scroller>   
         <text>这是一个新的路由页面</text>
+        <image style="width: 500px; height: 500px;" src="bmlocal://assets/test.jpeg"></image>
         <!--<bui-button @click="changeStore" value="修改 mediator-store"></bui-button>
         <text>{{store}}</text>-->
     </scroller>
