@@ -2,6 +2,7 @@
     <div class="container">
       <div class="category">
        <text class="category-text">widget</text>
+       <text>{{lat}}</text>
       </div>
       <list class="list">
         <cell class="panel" v-for="(v,i) in rows" append="tree" :index="i" :key="i"  @click="handle(v.type)" >
@@ -137,9 +138,11 @@ export default {
       this.$notice.toast( '这是一个toast' )
     },
     handle_geo() {
-      this.$geo.get((resData) => {
+      this.$geo.get().then(resData => {
           this.lat = resData.data.locationLat
           this.lng = resData.data.locationLng
+      }, error => {
+        console.log('error', error)
       })
     },
     handle_scan() {
@@ -161,7 +164,7 @@ export default {
       })
     },
     handle_callPhone() {
-      this.$router.toCallPhone(123)
+      this.$coms.call(123)
     },
     handle_localIconfont() {
       this.$router.open({

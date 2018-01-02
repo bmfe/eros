@@ -92,10 +92,10 @@ export default class Router {
                 if (this.$options.bmRouter) {
                     var bmRouter = this.$options.bmRouter
                     for (var i in bmRouter) {
-                        if (!Router[i]) {
-                            Router[i] = []
+                        if (!RouterCycle[i]) {
+                            RouterCycle[i] = []
                         }
-                        Router[i].push(bmRouter[i].bind(this))
+                        RouterCycle[i].push(bmRouter[i].bind(this))
                     }
                 }
             }
