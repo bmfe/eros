@@ -5,7 +5,7 @@
  * @Last modified time: 2017-05-08
  */
 
-import isFunction from 'lodash/isFunction'
+import _isFunction from 'lodash/isFunction'
 
 var bmFont = weex.requireModule('bmFont')
 
@@ -18,29 +18,15 @@ Font.install = (Vue, options) => {
                 bmFont.changeFontSize({
                     fontSize: options.fontSize || 'NORM'
                 }, resData => {
-                    if (isFunction(options.callback)) {
-                        options.callback.call(this, data)
-                    }
-                    if (resData && resData.resCode == 0) {
-                        resolve(resData)
-                    } else {
-                        reject(resData)
-                    }
+                    resData.status == 0 ? resolve(resData.data) : reject(resData)
                 })
             })
         },
 
-        getFontSize(callback) {
+        getFontSize() {
             return new Promise((resolve, reject) => {
                 bmFont.getFontSize((resData) => {
-                    if (isFunction(callback)) {
-                        callback.call(this, resData)
-                    }
-                    if (resData && resData.resCode == 0) {
-                        resolve(resData)
-                    } else {
-                        reject(resData)
-                    }
+                    resData.status == 0 ? resolve(resData.data) : reject(resData)
                 })
             })
         }

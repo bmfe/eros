@@ -14,17 +14,10 @@ var Pay = Object.create(null)
 
 Pay.install = (Vue, options) => {
     Vue.prototype.$pay = {
-        wechat(params, callback){
+        wechat(params){
             return new Promise((resolve, reject) => {
-                pay.payByWechat(params, (resData) => {
-                    if(isFunction(callback)){
-                        callback.call(this, resData)
-                    }
-                    if(resData && resData.resCode == 0){
-                        resolve(resData)
-                    }else{
-                        reject(resData)
-                    }
+                pay.payByWechat(params, ({status, errorMsg, data}) => {
+                    status == 0 ? resolve(data) : reject({status, errorMsg, data})
                 })
             })
         }

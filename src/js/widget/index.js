@@ -20,6 +20,8 @@ import './share.js'
 // 工具方法
 import './tools.js'
 
+import './coms.js'
+
 // 路由
 import Router from './router.js'
 // 发送请求
@@ -27,10 +29,10 @@ import Axios from './axios.js'
 
 let instance = null
 export default class Widget {
-	constructor(options) {
+	constructor({router, ajax}) {
 		if (!instance) {
-			Vue.use(new Axios(options))
-			Vue.use(new Router(options))
+			Vue.use(new Axios(ajax))
+			Vue.use(new Router(router))
 			instance = this
 		} 
         return instance
