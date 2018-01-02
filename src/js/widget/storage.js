@@ -1,8 +1,8 @@
 var storage = weex.requireModule('bmStorage'),
     modal = weex.requireModule('bmModal')
 
-import isEmpty from 'lodash/isEmpty'
-import isFunction from 'lodash/isFunction'
+import _isFunction from 'lodash/isFunction'
+import _isNumber from 'lodash/isNumber'
 
 var Storage = Object.create(null)
 
@@ -10,19 +10,21 @@ Storage.install = (Vue, options) => {
     Vue.prototype.$storage = {
         set(key, value, callback) {
             return new Promise((resolve, reject) => {
-                storage.setData(key.toString(), value.toString(), ({status, data, errorMsg}) => {
-                    isFunction(callback) && callback.call(this, status == 0)
+                _isNumber(value) && value.toString()
+                storage.setData(key.toString(), value, ({status, data, errorMsg}) => {
+                    _isFunction(callback) && callback.call(this, status == 0)
                     status == 0 ? resolve(true) : reject(false)
                 })
             })
         },
         setSync(key, value) {
-            return storage.setDataSync(key.toString(), value.toString())
+            _isNumber(value) && value.toString()
+            return storage.setDataSync(key.toString(), value)
         },
         get(key, callback) {
             return new Promise((resolve, reject) => {
                 storage.getData(key.toString(), ({status, data, errorMsg}) => {
-                    isFunction(callback) && callback.call(this, status == 0)
+                    _isFunction(callback) && callback.call(this, status == 0)
                     status == 0 ?  resolve(true) : reject(false)
                 })
             })
@@ -34,7 +36,7 @@ Storage.install = (Vue, options) => {
         delete(key, callback) {
             return new Promise((resolve, reject) => {
                 storage.deleteData(key.toString(), ({status, data, errorMsg}) => {
-                    isFunction(callback) && callback.call(this, status == 0)
+                    _isFunction(callback) && callback.call(this, status == 0)
                     status == 0 ?  resolve(true) : reject(false)
                 })
             })
@@ -46,7 +48,7 @@ Storage.install = (Vue, options) => {
         removeAll(callback) {
             return new Promise((resolve, reject) => {
                 storage.removeData(({status, data, errorMsg}) => {
-                    isFunction(callback) && callback.call(this, status == 0)
+                    _isFunction(callback) && callback.call(this, status == 0)
                     status == 0 ?  resolve(true) : reject(false)
                 })
             })

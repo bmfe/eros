@@ -8,47 +8,32 @@ export default class Axios {
         this.responseHandler = responseHandler
         return this
     }
-    install(Vue, options) {
+    install(Vue) {
         let self = this
-
         Vue.prototype.$fetch = (options) => {
-            // 不仅支持 success, error 的回调写法，还支持 promise 的写法
             return new Promise((resolve, reject) => {
                 if(_isFunction(self.requestHandler)) {
-                    self.requestHandler(options, () => {
-                         bmAxios.fetch({
-                            url: self.apis[options.name] || options.url,
-                            data: options.data || {},
-                            method: options.method || 'GET',
-                            header: options.header || {},
-                            timeout: self.timeout || 30000,
-                        }, (resData) => {
-                            // 统一的监控
-                            if(_isFunction(self.responseHandler)) {
-                                self.responseHandler(options, resData, resolve, reject)
-                            }   else {
-                                resolve(resData)
-                            }
-                        })
-                    })
-                }   else {
-                    bmAxios.fetch({
-                            url: self.apis[options.name] || options.url,
-                            data: options.data || {},
-                            method: options.method || 'GET',
-                            header: options.header || {},
-                            timeout: self.timeout || 30000,
-                        }, (resData) => {
-                            // 统一的监控
-                            if(_isFunction(self.responseHandler)) {
-                                self.responseHandler(options, resData, resolve, reject)
-                            }   else {
-                                resolve(resData)
-                            }
-                        })
+                    self.requestHandler(options, () => { self.handleAxios(options, resolve, reject) })
+                } else {
+                    self.handleAxios(options, resolve, reject)
                 }
             })
         }
     }
-
+    handleAxios({name, url, data, method, header}, resolve, reject) {
+        bmAxios.fetch({
+            url: this.apis[name] || url,
+            data: data || {},
+            method: method || 'GET',
+            header: header || {},
+            timeout: this.timeout || 30000,
+        }, (resData) => {
+            // 统一的监控
+            if(_isFunction(this.responseHandler)) {
+                this.responseHandler({name, url, data, method, header}, resData, resolve, reject)
+            }   else {
+                resolve(resData)
+            }
+        })
+    }
 }
