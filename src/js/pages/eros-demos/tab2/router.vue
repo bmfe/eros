@@ -37,7 +37,6 @@ export default {
             this.$storage.setSync('name',222)
             var resData = this.$storage.getSync('name')
             // var test = this.$storage.getSync("name")
-            // console.log(2222,test.ahhaha)
         }
     }
 }
