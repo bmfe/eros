@@ -4,7 +4,6 @@ import isFunction from 'lodash/isFunction'
 const _com = weex.requireModule('bmCommunication')
 const Coms = Object.create(null)
 
-import _isNumber from 'lodash/isNumber';
 Coms.install = (Vue, options) => {
     Vue.prototype.$coms = {
         call(number) {

@@ -7,21 +7,22 @@
               "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
           }
       }],
-      "stage-2"
+      "stage-0"
   ],
   "plugins": [
-    [
-      "component",
-      {
+    ["component",{
         "libraryName": "weex-ui",
         "libDir": "packages",
         "style": false
-      }
-    ]
+    }],
+    ["transform-runtime", {
+      "polyfill": false,
+      "helpers": false
+    }]
   ],
   "env": {
       "test": {
-          "presets": ["env", "stage-2"],
+          "presets": ["env", "stage-0"],
           "plugins": ["istanbul"]
       }
   }
