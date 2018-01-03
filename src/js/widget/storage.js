@@ -10,22 +10,20 @@ Storage.install = (Vue, options) => {
     Vue.prototype.$storage = {
         set(key, value, callback) {
             return new Promise((resolve, reject) => {
-                _isNumber(value) && value.toString()
-                storage.setData(key.toString(), value, ({status, data, errorMsg}) => {
+                storage.setData(key.toString(), JSON.stringify(value), ({status, data, errorMsg}) => {
                     _isFunction(callback) && callback.call(this, status == 0)
                     status == 0 ? resolve(true) : reject(false)
                 })
             })
         },
         setSync(key, value) {
-            _isNumber(value) && value.toString()
-            return storage.setDataSync(key.toString(), value)
+            return storage.setDataSync(key.toString(), JSON.stringify(value))
         },
         get(key, callback) {
             return new Promise((resolve, reject) => {
                 storage.getData(key.toString(), ({status, data, errorMsg}) => {
                     _isFunction(callback) && callback.call(this, status == 0)
-                    status == 0 ?  resolve(true) : reject(false)
+                    status == 0 ?  JSON.parse(data) : reject(false)
                 })
             })
         },
