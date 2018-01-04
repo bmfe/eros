@@ -17,7 +17,16 @@ module.exports = {
         "js/pages/eros-demos/tab2/iconfont.vue",
 
         "js/pages/eros-demos/tab3/demo/index.vue",
-        "js/pages/eros-demos/tab3/waterfall.vue"
+        "js/pages/eros-demos/tab3/waterfall.vue",
+
+        "js/pages/demo/index.vue",
+        "js/pages/demo/lifecycle/index.vue",
+        "js/pages/demo/allAttr/index.vue",
+        "js/pages/demo/inputExtend/index.vue",
+        "js/pages/demo/refresh/index.vue",
+        "js/pages/demo/storage/index.vue",
+        "js/pages/demo/navigator/index.vue",
+        "js/pages/demo/tools/index.vue",
     ],
     "alias": {
         "Components": "js/components",

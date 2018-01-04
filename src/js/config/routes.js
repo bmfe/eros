@@ -12,7 +12,7 @@ export default {
     'tab2.amap': {
         title: '地图页面',
         url: '/pages/eros-demos/tab2/amap.js'
-    }, 
+    },
     'tab2.iconfont': {
         title: '本地iconfont',
         url: '/pages/eros-demos/tab2/iconfont.js'
@@ -24,5 +24,39 @@ export default {
     'tab3.waterfall': {
         title: 'weex 官方瀑布流',
         url: '/pages/eros-demos/tab3/waterfall.js',
-    }
+    },
+    'demo': {
+        title: 'weex-eros demo',
+        url: '/pages/demo/index.js',
+    },
+    'demo.lifecycle': {
+        title: '生命周期',
+        url: '/pages/demo/lifecycle/index.js',
+    },
+    'demo.allAttr': {
+        title: '全局属性',
+        url: '/pages/demo/allAttr/index.js',
+    },
+    'demo.inputExtend': {
+        title: '文本框扩展',
+        url: '/pages/demo/inputExtend/index.js',
+    },
+    'demo.refresh': {
+        title: '下拉刷新',
+        url: '/pages/demo/refresh/index.js',
+    },
+    'demo.storage': {
+        title: '本地化存储',
+        url: '/pages/demo/storage/index.js',
+    },
+    'demo.navigator': {
+        title: '导航条操作',
+        url: '/pages/demo/navigator/index.js',
+    },
+    'demo.tools': {
+        title: '工具',
+        url: '/pages/demo/tools/index.js',
+    },
+    
+        
 }

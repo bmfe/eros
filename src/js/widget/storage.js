@@ -19,7 +19,7 @@ Storage.install = (Vue, options) => {
         },
         setSync(key, value) {
             _isNumber(value) && value.toString()
-            return storage.setDataSync(key.toString(), value)
+            return storage.setDataSync(key.toString(), JSON.stringify(value))
         },
         get(key, callback) {
             return new Promise((resolve, reject) => {
