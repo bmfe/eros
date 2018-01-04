@@ -227,7 +227,6 @@
 <script>
   const Utils = require('./utils');
   const expressionBinding = weex.requireModule('expressionBinding');
-  console.log('hahahhaha', expressionBinding);
   import { WxcRichText, WxcSpecialRichText } from 'weex-ui';
 
   module.exports = {

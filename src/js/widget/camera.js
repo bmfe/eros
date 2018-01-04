@@ -9,57 +9,36 @@ var camera = weex.requireModule('bmCamera'),
     browser = weex.requireModule('bmBrowserImg'),
     modal = weex.requireModule('bmModal')
 
-import isFunction from 'lodash/isFunction'
-
-var Camera = Object.create(null)
-var Image = Object.create(null)
+var Camera = Object.create(null),
+    Image = Object.create(null)
+    
 Image.install = (Vue, options) => {
     Vue.prototype.$image = {
         // 上传图片
-        upload(options, callback) {
-            var options = options || {}
-            if (isFunction(options) && !callback) {
-                callback = options
-                options = {}
-            }
+        upload(options) {
             return new Promise((resolve, reject) => {
-                camera.uploadImage({
-                    url: options.url || '',
-                    maxCount: options.maxCount || 1,
-                    imageWidth: options.imageWidth || 0,
-                    allowCrop: options.allowCrop || false,
-                    header: options.header || {},
-                    params: options.params || {},
-                }, (resData) => {
-                    if (!resData) {
-                        resData = {
-                            resCode: -1,
-                            msg: '获取信息失败，请重试',
-                            data: {}
-                        }
+                let params = {
+                        maxCount: options.maxCount || 1,
+                        imageWidth: options.imageWidth || 0,
+                        allowCrop: options.allowCrop || false,
+                        header: options.header || {},
+                        params: options.params || {},
                     }
-                    if (isFunction(callback)) {
-                        callback.call(this, resData)
-                    }
-                    resolve(resData)
+                if ( options.url ) params.url = options.url 
+                camera.uploadImage(params, ({status, errorMsg, data}) => {
+                    status == 0 ? resolve(data) : reject({status, errorMsg, data})
                 })
             })
         },
         // 浏览图片
-        browser(options, callback) {
-            var options = options || {}
-            if (isFunction(options) && !callback) {
-                callback = options
-                options = {}
-            }
-
+        browser({index, images, type}) {
             return new Promise((resolve, reject) => {
                 browser.open({
-                    index: options.index,
-                    images: options.images,
-                    type: 'network'
-                }, (resData) => {
-                    // console.log(resData)
+                    index,
+                    images,
+                    type: type || 'network'
+                }, ({status, errorMsg, data}) => {
+                    status == 0 ? resolve(data) : reject({status, errorMsg, data})
                 })
             })
         }
@@ -69,21 +48,10 @@ Image.install = (Vue, options) => {
 Camera.install = (Vue, options) => {
     Vue.prototype.$camera = {
         // 扫一扫
-        scan(callback) {
+        scan() {
             return new Promise((resolve, reject) => {
-                camera.scan((resData) => {
-                    if (!resData) {
-                        resData = {
-                            resCode: -1,
-                            msg: '获取信息失败，请重试',
-                            data: {}
-                        }
-                    }
-                    if (isFunction(callback)) {
-                        callback.call(this, resData)
-                    }
-                    // 修改默认逻辑 直接抛出最外面
-                    resolve(resData)
+                camera.scan(({status, errorMsg, data}) => {
+                   status == 0 ? resolve(data) : reject({status, errorMsg, data})
                 })
             })
         },

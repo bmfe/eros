@@ -20,7 +20,6 @@ module.exports = {
         "js/pages/eros-demos/tab3/waterfall.vue"
     ],
     "alias": {
-        "Eros": "js/components/__eros__",
         "Components": "js/components",
         "Common": "js/common",
         "Config": "js/config",
@@ -34,12 +33,8 @@ module.exports = {
     },
     "server": {
         "path": "./",
-        "port": 80
+        "port": 8889
     },
-    "proxy": [{
-        "route": "/test",
-        "target": "127.0.0.1:52077/test"
-    }],
     "mockServer": {
         "port": 52077,
         "mockDir": "./dist/mock"
