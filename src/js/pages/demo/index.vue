@@ -93,7 +93,16 @@ export default {
         handle_router() {
             this.$router.open({
                 name: 'demo.router',
-                statusBarStyle: 'LightContent'
+                type: 'PRESENT',
+                params: {
+                    text: '123'
+                },
+                statusBarStyle: 'LightContent',
+                backCallback: () => {
+                    this.$notice.toast({
+                        message: '页面返回时的回调触发了，但返回功能阻止了'
+                    })
+                },
             })
         },
         handle_axios() {

@@ -27,6 +27,7 @@ module.exports = {
         "js/pages/demo/storage/index.vue",
         "js/pages/demo/navigator/index.vue",
         "js/pages/demo/tools/index.vue",
+        "js/pages/demo/router/index.vue",
     ],
     "alias": {
         "Components": "js/components",

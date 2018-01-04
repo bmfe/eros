@@ -57,6 +57,10 @@ export default {
         title: '工具',
         url: '/pages/demo/tools/index.js',
     },
+    'demo.router': {
+        title: '路由',
+        url: '/pages/demo/router/index.js',
+    },
     
         
 }

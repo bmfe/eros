@@ -1,10 +1,12 @@
 <template>
     <div>
         <div class="wrapper">
-            <input class="layout" type="text" placeholder="请输入..." value="" />
-            <text class="button" @click="hide">收起</text>
+            <text class="button" @click="back">返回首页</text>
+            <text class="button" @click="getParams">获取参数</text>
+            <text class="button" @click="toMap">地图</text>
+            <text class="button" @click="getUrl">获取Url</text>
         </div>
-        <div class="wrapper">
+        <!-- <div class="wrapper">
             <text class="label">是否安装微信</text>
             <text class="button" @click="hasWXApp">获取</text>
         </div>
@@ -15,64 +17,52 @@
         <div class="wrapper">
             <input class="layout" type="text" placeholder="输入需要拷贝的内容" v-model="copyText" />
             <text class="button" @click="copy">拷贝</text>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
+    created() {
+        this.$notice.toast({
+            message: '进入这个页面用的就是$router.open'
+        })
+    },
     data() {
         return {
             copyText: ''
         }
     },
     methods: {
-        hide() {
-            this.$tools.resignKeyboard().then(resData => {
+        back() {
+            this.$router.back({
+                type: 'PRESENT'
+            })
+        },
+        getParams() {
+            this.$router.getParams().then(resData => {
                 this.$notice.toast({
-                    message: '收起键盘成功'
-                })
-            }, error => {
-                this.$notice.toast({
-                    message: '收起键盘失败'
+                    message: resData.text
                 })
             })
         },
-        hasWXApp() {
-            this.$tools.isInstallWXApp().then(resData => {
-                // 成功的回调，必须在eros.native.js中配置才能生效
-            }, error => {
-                this.$notice.toast({
-                    message: '获取微信失败'
-                })
+        toMap() {
+            this.$router.toMap({
+                type: 'NAVIGATION', //type类型：NAVIGATION(表现方式为：地图上添加起点终点标示大头针，终点标示上面有个导航的按钮)
+                title: '地图标题', //页面标题
+                navigationInfo: {
+                    title: '故宫博物院', //目的地名称
+                    address: '北京市东城区景山前街4号', //目的地地址
+                    longitude: '116.397026', //目的地经度
+                    latitude: '39.918058' //目的地纬度
+                }
             })
         },
-        hasCid() {
-            this.$tools.getCid().then(resData => {
-                // 成功的回调，必须在eros.native.js中配置才能生效
-            }, error => {
-                this.$notice.toast({
-                    message: '获取cid失败'
-                })
-            })
-        },
-        copy() {
-            if (this.copyText.toString() === '') {
-                this.$notice.toast({
-                    message: '拷贝内容为空'
-                })
-                return
-            }
-            this.$tools.copyString(this.copyText.toString()).then(resData => {
-                this.$notice.toast({
-                    message: '拷贝成功，请粘贴'
-                })
-            }, error => {
-                this.$notice.toast({
-                    message: '拷贝失败'
-                })
-            })
+        getUrl() {
+            debugger
+            let a = this.$router.getUrl('demo.router')
         }
+
     }
 }
 </script>
