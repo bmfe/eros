@@ -17,14 +17,15 @@ Image.install = (Vue, options) => {
         // 上传图片
         upload(options) {
             return new Promise((resolve, reject) => {
-                camera.uploadImage({
-                    url: options.url || '',
-                    maxCount: options.maxCount || 1,
-                    imageWidth: options.imageWidth || 0,
-                    allowCrop: options.allowCrop || false,
-                    header: options.header || {},
-                    params: options.params || {},
-                }, ({status, errorMsg, data}) => {
+                let params = {
+                        maxCount: options.maxCount || 1,
+                        imageWidth: options.imageWidth || 0,
+                        allowCrop: options.allowCrop || false,
+                        header: options.header || {},
+                        params: options.params || {},
+                    }
+                if ( options.url ) params.url = options.url 
+                camera.uploadImage(params, ({status, errorMsg, data}) => {
                     status == 0 ? resolve(data) : reject({status, errorMsg, data})
                 })
             })

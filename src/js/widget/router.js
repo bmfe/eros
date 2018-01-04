@@ -13,6 +13,7 @@ var modal = weex.requireModule('bmModal'),
 import isEmpty from 'lodash/isEmpty'
 import isFunction from 'lodash/isFunction'
 import _isUndefined from 'lodash/isUndefined'
+import _isNumber from 'lodash/isNumber'
 
 import ROUTES from 'Config/routes'
 // 客户端默认打开页面的动画

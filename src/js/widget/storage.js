@@ -23,13 +23,13 @@ Storage.install = (Vue, options) => {
             return new Promise((resolve, reject) => {
                 storage.getData(key.toString(), ({status, data, errorMsg}) => {
                     _isFunction(callback) && callback.call(this, status == 0)
-                    status == 0 ?  JSON.parse(data) : reject(false)
+                    status == 0 ?  resolve(JSON.parse(data)) : reject(false)
                 })
             })
         },
         getSync(key) {
             let {status, data, errorMsg} = storage.getDataSync(key.toString())
-            return status == 0 ?  JSON.parse(data) : false
+            return status == 0 ?  resolve(JSON.parse(data)) : false
         },
         delete(key, callback) {
             return new Promise((resolve, reject) => {
