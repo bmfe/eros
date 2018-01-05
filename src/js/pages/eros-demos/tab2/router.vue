@@ -1,12 +1,13 @@
 <template>
-    <scroller>   
-        <text>这是一个新的路由页面</text>
-        <image v-for="(imgUrl, index) in imgUrls" :key="index" @click="preview(index)" style="width: 500px; height: 500px;" :src="imgUrl" resize="contain"></image>
-        <WxcButton text="修改 mediator-store" @wxcButtonClicked="changeStore"></WxcButton>
-        <text>{{store}}</text> 
-        <text @click="camera">拍照</text>
-        <text @click="pick">相册</text>
-    </scroller>
+    <list style="flex-direction: column; width: 750;top: 0" ref="list" showRefresh="true" @refresh="onrefresh">
+        <cell>
+            <text>这是一个新的路由页面</text>
+            <image v-for="(imgUrl, index) in imgUrls" :key="index" @click="preview(index)" style="width: 500px; height: 500px;" :src="imgUrl" resize="contain"></image>
+            <WxcButton text="修改 mediator-store" @wxcButtonClicked="changeStore"></WxcButton>
+            <text>{{store}}</text> 
+            <text>{{contacts}}</text>
+        </cell>
+    </list>
 </template>
 
 <script>
@@ -22,7 +23,8 @@ export default {
     data(){
         return {
             store: null,
-            imgUrls: []
+            imgUrls: [],
+            contacts: null
         }
     },
     methods: {
@@ -49,6 +51,9 @@ export default {
             }, error => {
                 console.log(error)
             })
+            // this.$coms.contacts().then(data => {
+            //     this.contacts = data
+            // })
             
         },
         pick(){
@@ -63,6 +68,13 @@ export default {
             this.$image.preview({
                 index,
                 images: this.imgUrls
+            })
+        },
+        onrefresh() {
+            this.$geo.get().then(resData =>{
+                setTimeout(() => {
+                    this.$refs["list"].refreshEnd()
+                },1000)
             })
         }
     }
