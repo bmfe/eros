@@ -17,7 +17,7 @@ git clone https://github.com/bmfe/Benmu-iOS-Library.git
 
 cd Benmu-iOS-Library
 
-git checkout 1.1.1
+git checkout 1.1.0
 
 cd ../
 
