@@ -28,6 +28,9 @@ module.exports = {
         "js/pages/demo/navigator/index.vue",
         "js/pages/demo/tools/index.vue",
         "js/pages/demo/router/index.vue",
+        "js/pages/demo/event/a.vue",
+        "js/pages/demo/event/b.vue",
+        "js/pages/demo/notice/index.vue",
     ],
     "alias": {
         "Components": "js/components",

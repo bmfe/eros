@@ -106,14 +106,26 @@ export default {
             })
         },
         handle_axios() {
-            this.$router.open({
-                name: 'demo.axios',
-                statusBarStyle: 'LightContent'
+            var self = this
+            this.$fetch({
+                name: 'COMMON.getInfo',
+                data: {
+                    name: 'weex-eros'
+                }
+            }).then(resData => {
+                self.$notice.alert({
+                    title: '提示',
+                    message: '请求成功：' + resData.data,
+                    okTitle: '确定',
+                    callback: () => {
+                        self.$notice.toast('您点击了确定')
+                    }
+                })
             })
         },
         handle_event() {
             this.$router.open({
-                name: 'demo.event',
+                name: 'demo.event.a',
                 statusBarStyle: 'LightContent'
             })
         },
@@ -130,9 +142,19 @@ export default {
             })
         },
         handle_geo() {
-            this.$router.open({
-                name: 'demo.geo',
-                statusBarStyle: 'LightContent'
+            this.$geo.get().then(data => {
+                this.$notice.alert({
+                    message: '经度: ' + data.locationLng + '\r\n\r\n纬度: ' + data.locationLat,
+                    okTitle: '确认',
+                    callback() {
+                        // 点击确认按钮的回调
+                    }
+                })
+            }, error => {
+                this.$notice.toast({
+                    message: '获取位置失败'
+                })
+                console.log(error)
             })
         },
         handle_camera() {
@@ -155,29 +177,7 @@ export default {
         },
 
 
-        // handle_axios() {
-        //     var self = this
-        //     this.$fetch({
-        //         name: 'COMMON.getInfo',
-        //         data: {
-        //             name: 'weex-eros'
-        //         }
-        //     }).then(resData => {
-        //         self.$notice.alert({
-        //             title: '提示',
-        //             message: '请求成功：' + resData.data,
-        //             okTitle: '确定',
-        //             callback: () => {
-        //                 self.$notice.toast('您点击了确定')
-        //             }
-        //         })
-        //     })
-        //     // this.$service('common/getInfo', {
-        //     //   a: 2123123,
-        //     // }).then(resData => {
-        //     //   console.log(resData)
-        //     // })
-        // },
+
         // handle_router() {
         //     this.$router.open({
         //         name: 'tab2.test',

@@ -61,6 +61,20 @@ export default {
         title: '路由',
         url: '/pages/demo/router/index.js',
     },
+    'demo.event.a': {
+        title: '发布订阅-a页面',
+        url: '/pages/demo/event/a.js',
+    },
+    'demo.event.b': {
+        title: '发布订阅-b页面',
+        url: '/pages/demo/event/b.js',
+    },
+    'demo.notice': {
+        title: '弹窗通知',
+        url: '/pages/demo/notice/index.js',
+    },
+    
+    
     
         
 }

@@ -29,13 +29,13 @@ Storage.install = (Vue, options) => {
         },
         getSync(key) {
             let {status, data, errorMsg} = storage.getDataSync(key.toString())
-            return status == 0 ?  resolve(JSON.parse(data)) : false
+            return status == 0 ?  JSON.parse(data) : false
         },
         delete(key, callback) {
             return new Promise((resolve, reject) => {
                 storage.deleteData(key.toString(), ({status, data, errorMsg}) => {
                     _isFunction(callback) && callback.call(this, status == 0)
-                    status == 0 ?  resolve(true) : reject(false)
+                    status == 0 ? resolve(true) : reject(false)
                 })
             })
         },

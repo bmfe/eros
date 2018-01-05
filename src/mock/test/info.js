@@ -3,6 +3,6 @@ module.exports = [{
     "response": {
         "resCode": 0,
         "msg": null,
-        "data": "mock请求成功！"
+        "data": "这是mock数据"
     }
 }]
