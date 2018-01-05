@@ -17,16 +17,16 @@ Font.install = (Vue, options) => {
             return new Promise((resolve, reject) => {
                 bmFont.changeFontSize({
                     fontSize: options.fontSize || 'NORM'
-                }, resData => {
-                    resData.status == 0 ? resolve(resData.data) : reject(resData)
+                }, ({status, errorMsg, data}) => {
+                    status == 0 ? resolve(data) : reject({status, errorMsg, data})
                 })
             })
         },
 
         getFontSize() {
             return new Promise((resolve, reject) => {
-                bmFont.getFontSize((resData) => {
-                    resData.status == 0 ? resolve(resData.data) : reject(resData)
+                bmFont.getFontSize(({status, errorMsg, data}) => {
+                    status == 0 ? resolve(data) : reject({status, errorMsg, data})
                 })
             })
         }

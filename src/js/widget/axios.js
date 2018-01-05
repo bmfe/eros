@@ -10,7 +10,11 @@ export default class Axios {
         return this
     }
     install(Vue) {
-        //extend promise
+        /**
+         * Contributor: Eric Xiao.
+         * Description: extend promise.
+         * Eros thanks every contributor.
+         */
         Promise.prototype.finally = function (callback) {
             let P = this.constructor;
             return this.then(
@@ -37,9 +41,9 @@ export default class Axios {
             })
         }
 
-        function handleAxios({name, url, data, method, header}, resolve, reject) {
+        function handleAxios({name, url="", data, method, header}, resolve, reject) {
             bmAxios.fetch({
-                url: self.baseUrl + self.apis[name] || url,
+                url: url || (self.baseUrl + self.apis[name]),
                 data: data || {},
                 method: method || 'GET',
                 header: header || {},

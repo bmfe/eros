@@ -198,6 +198,9 @@ export default class Router {
                 // }
                 router.toMap(options)
             },
+            openBrowser(url = '') {
+                router.openBrowser(url)
+            },
             finish() {
                 router.finish()
             }

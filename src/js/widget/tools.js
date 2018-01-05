@@ -40,6 +40,14 @@ Tools.install = (Vue, options) => {
                     status == 0 ? resolve(data) : reject({status, errorMsg, data})
                 })
             })
+        },
+
+        scan() {
+            return new Promise((resolve, reject) => {
+                tools.scan(({status, errorMsg, data}) => {
+                    status == 0 ? resolve(data) : reject({status, errorMsg, data})
+                })
+            })
         }
     }
 }

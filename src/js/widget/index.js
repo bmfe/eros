@@ -7,6 +7,8 @@ import './notice.js'
 import './geo.js'
 // 获取相机信息
 import './camera.js'
+// 图片操作相关
+import './image.js'
 // 设置导航
 import './nav.js'
 // 支付相关
