@@ -13,7 +13,7 @@ var modal = weex.requireModule('bmModal'),
 import isEmpty from 'lodash/isEmpty'
 import isFunction from 'lodash/isFunction'
 import _isUndefined from 'lodash/isUndefined'
-import isPlainObject from 'lodash/isPlainObject'
+import _isNumber from 'lodash/isNumber'
 
 import ROUTES from 'Config/routes'
 // 客户端默认打开页面的动画
@@ -42,9 +42,10 @@ globalEvent.addEventListener("viewWillAppear", function(options) {
             })
         })
     } else if (options.type === 'back') {
-        storage.getData('router.backParams', (resData) => {
+        storage.getData('router.backParams', ({status,errorMsg,data}) => {
+            let result = status == 0 ? JSON.parse(data) : {status,errorMsg,data}
             RouterCycle.viewWillBackAppear.map((item) => {
-                item(JSON.parse(resData.data.value || '{}'), options)
+                item(result, options)
             })
         })
     }
@@ -58,9 +59,10 @@ globalEvent.addEventListener("viewDidAppear", function(options) {
             })
         })
     } else if (options.type === 'back') {
-        storage.getData('router.backParams', (resData) => {
+        storage.getData('router.backParams', ({status,errorMsg,data}) => {
+            let result = status == 0 ? JSON.parse(data) : {status,errorMsg,data}
             RouterCycle.viewDidBackAppear.map((item) => {
-                item(JSON.parse(resData.data.value || '{}'), options)
+                item(result, options)
             })
             storage.deleteData('router.backParams')
         })
@@ -162,9 +164,8 @@ export default class Router {
                 router.refreshWeex()
             },
             setBackParams(params) {
-                if (isPlainObject(params)) {
-                    storage.setData('router.backParams', JSON.stringify(params))
-                }
+                _isNumber(params) && params.toString()
+                storage.setData('router.backParams', JSON.stringify(params))
             },
             toWebView(params) {
                 if (!params.url) {
