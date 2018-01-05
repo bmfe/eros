@@ -10,7 +10,11 @@ export default class Axios {
         return this
     }
     install(Vue) {
-        //extend promise
+        /**
+         * Contributor: Eric Xiao.
+         * Description: extend promise.
+         * Eros thanks every contributor.
+         */
         Promise.prototype.finally = function (callback) {
             let P = this.constructor;
             return this.then(

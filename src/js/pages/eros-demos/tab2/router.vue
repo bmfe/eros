@@ -2,20 +2,20 @@
     <scroller>   
         <text>这是一个新的路由页面</text>
         <image style="width: 500px; height: 500px;" src="bmlocal://assets/test.jpeg"></image>
-        <!--<bui-button @click="changeStore" value="修改 mediator-store"></bui-button>
-        <text>{{store}}</text>-->
+        <WxcButton text="修改 mediator-store" @wxcButtonClicked="changeStore"></WxcButton>
+        <text>{{store}}</text>
     </scroller>
 </template>
 
 <script>
 
-import buiButton from 'bui-weex/src/components/bui-button'
+import { WxcButton } from 'weex-ui';
 export default {
     created() {
         this.bindEvent()
     },
     components: {
-        buiButton
+        WxcButton
     },
     data(){
         return {
@@ -32,10 +32,10 @@ export default {
             })
         },
         changeStore() {
-            var self = this
-            // this.$event.emit('store.count.add')
-            this.$storage.setSync('name',222)
-            var resData = this.$storage.getSync('name')
+            // var self = this
+            this.$event.emit('store.count.add')
+            // this.$storage.setSync('name',222)
+            // var resData = this.$storage.getSync('name')
             // var test = this.$storage.getSync("name")
         }
     }
