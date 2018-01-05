@@ -8,16 +8,16 @@ let Image = Object.create(null)
 Image.install = (Vue, options) => {
     Vue.prototype.$image = {
         // upload change to pickAndUpload
-        pickAndUpload(options) {
+        pickAndUpload({maxCount = 1, imageWidth = 0, allowCrop = false, header = {}, params = {}}) {
             return new Promise((resolve, reject) => {
                 let params = {
-                        maxCount: options.maxCount || 1,
-                        imageWidth: options.imageWidth || 0,
-                        allowCrop: options.allowCrop || false,
-                        header: options.header || {},
-                        params: options.params || {},
+                        maxCount,
+                        imageWidth,
+                        allowCrop,
+                        header,
+                        params
                     }
-                if ( options.url ) params.url = options.url 
+                if ( url ) params.url = url 
                 imageModule.uploadImage(params, ({status, errorMsg, data}) => {
                     status == 0 ? resolve(data) : reject({status, errorMsg, data})
                 })
@@ -25,48 +25,54 @@ Image.install = (Vue, options) => {
         },
         upload({url = '', params = {} , header = {}, source = []}) {
             return new Promise((resolve, reject) => {
-                axios.uploadImage({
+                bmAxios.uploadImage({
                     url, params, header	
                 }, source, ({status, errorMsg, data}) => {
                     status == 200 ? resolve(data) : reject({status, errorMsg, data})                    
                 })
             })
         },
-        // 浏览图片
-        browser({index, images, type}) {
+        
+        browser({index = 0, images = [], type = 'network'}) {
             return new Promise((resolve, reject) => {
                 browser.open({
                     index,
                     images,
-                    type: type || 'network'
+                    type
                 }, ({status, errorMsg, data}) => {
                     status == 0 ? resolve(data) : reject({status, errorMsg, data})
                 })
             })
         },
-        camera({imageWidth, allowCrop}) {
-            imageModule.camera({
-                imageWidth,            
-                allowCrop,             
-            },({status, errorMsg, data}) => {
-                status == 0 ? resolve(data) : reject({status, errorMsg, data})          
+        camera({imageWidth = 0, allowCrop = false}) {
+            return new Promise((resolve, reject) => {
+                imageModule.camera({
+                    imageWidth,            
+                    allowCrop,             
+                },({status, errorMsg, data}) => {
+                    status == 0 ? resolve(data) : reject({status, errorMsg, data})          
+                })
             })
         },
-        pick({maxCount, imageWidth, allowCrop}) {
-            imageModule.pick({
-                maxCount,
-                imageWidth,            
-                allowCrop,             
-            },({status, errorMsg, data}) => {
-                status == 0 ? resolve(data) : reject({status, errorMsg, data})          
+        pick({maxCount = 1, imageWidth = 0, allowCrop = false}) {
+            return new Promise((resolve, reject) => {
+                imageModule.pick({
+                    maxCount,
+                    imageWidth,            
+                    allowCrop,             
+                },({status, errorMsg, data}) => {
+                    status == 0 ? resolve(data) : reject({status, errorMsg, data})          
+                })
             })
         },
-        preview({index, images}) {
-            imageModule.preview({
-                index,
-                images,            
-            },({status, errorMsg, data}) => {
-                status == 0 ? resolve(data) : reject({status, errorMsg, data})          
+        preview({index = 0, images = []}) {
+            return new Promise((resolve, reject) => {
+                imageModule.preview({
+                    index,
+                    images,            
+                },({status, errorMsg, data}) => {
+                    status == 0 ? resolve(data) : reject({status, errorMsg, data})          
+                })
             })
         }
     }

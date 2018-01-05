@@ -1,12 +1,12 @@
 /**
  * @Author: songqi
- * @Date:   2017-01-11
+ * @Date:   2017-01-11e
  * @Last modified by:   songqi
  * @Last modified time: 2017-03-08
  */
 
-let camera = weex.requireModule('bmCamera')
-    Camera = Object.create(null)
+const camera = weex.requireModule('bmCamera')
+let Camera = Object.create(null)
     
 
 
