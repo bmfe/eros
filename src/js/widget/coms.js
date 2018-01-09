@@ -4,9 +4,8 @@ const Coms = Object.create(null)
 
 Coms.install = (Vue, options) => {
     Vue.prototype.$coms = {
-        call (number) {
-            number += ''
-            _com['call'](number)
+        call (to = +to, tip = true) {
+            _com['call']({ to, tip })
         },
         sms (to, content) {
             return new Promise((resolve, reject) => {
