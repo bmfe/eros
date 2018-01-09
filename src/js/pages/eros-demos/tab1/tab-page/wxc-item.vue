@@ -133,7 +133,7 @@
     font-size: 28px;
     line-height: 40px;
     color: #333333;
-    lines: 2;
+    /*lines: 2;*/
     text-overflow: ellipsis;
     overflow: hidden;
   }
@@ -141,7 +141,7 @@
   .item-sub-text {
     color: #A5A5A5;
     font-size: 24px;
-    lines: 2;
+    /*lines: 2;*/
     text-overflow: ellipsis;
     overflow: hidden;
   }
@@ -188,7 +188,7 @@
 
   .one-line {
     width: 480px;
-    lines: 1;
+    /*lines: 1;*/
     text-overflow: ellipsis;
     overflow: hidden;
   }
@@ -367,7 +367,7 @@
         }
       },
       itemClicked (url) {
-        const { ttid } = weex.config.env;
+        // const { ttid } = weex.config.env;
         if (!url || this.isPanning && this.supportSlide) {
           return;
         }

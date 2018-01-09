@@ -22,12 +22,12 @@
       }
     },
     methods: {
-      goDemo(){
+      goDemo () {
         this.$router.open({
           name: 'tab3.slider'
         })
       },
-      goWaterfall(){
+      goWaterfall () {
         this.$router.open({
           name: 'tab3.waterfall',
           params: {

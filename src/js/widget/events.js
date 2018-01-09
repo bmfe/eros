@@ -6,22 +6,21 @@
  */
 
 import _isArray from 'lodash/isArray'
-
-var event = weex.requireModule('bmEvents'),
-    globalEvent = weex.requireModule('globalEvent')
+var event = weex.requireModule('bmEvents')
+var globalEvent = weex.requireModule('globalEvent')
 
 const GlobalEvent = Object.create(null)
 const GLOBALEVENT = Object.create(null)
 
 // app 被放到后台 appWillResignActive
-globalEvent.addEventListener("appDeactive", function(options) {
+globalEvent.addEventListener('appDeactive', function (options) {
     _isArray(GLOBALEVENT['appDeactive']) && GLOBALEVENT['appDeactive'].map((item) => {
         item(options)
     })
 })
 
 // app 从后台唤起 appDidBecomeActive
-globalEvent.addEventListener("appActive", function(options) {
+globalEvent.addEventListener('appActive', function (options) {
     _isArray(GLOBALEVENT['appActive']) && GLOBALEVENT['appActive'].map((item) => {
         item(options)
     })
@@ -29,7 +28,7 @@ globalEvent.addEventListener("appActive", function(options) {
 
 GlobalEvent.install = (Vue, options) => {
     Vue.mixin({
-        beforeCreate() {
+        beforeCreate () {
             if (this.$options.globalEvent) {
                 var ev = this.$options.globalEvent
                 for (var i in ev) {
