@@ -110,12 +110,12 @@
       });
     },
     methods: {
-      getData(index) {
+      getData (index) {
         setTimeout(() => {
           this.$refs['list_' + index][0].refreshEnd()
-        },3000)
+        }, 3000)
       },
-      selected() {
+      selected () {
         console.log(111)
       },
       wxcTabPageCurrentTabSelected (e) {

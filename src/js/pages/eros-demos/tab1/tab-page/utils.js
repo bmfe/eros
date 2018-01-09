@@ -16,7 +16,7 @@ const Utils = {
    * const { env } = Utils;
    */
   isString (obj) {
-    return typeof(obj) === 'string';
+    return typeof (obj) === 'string';
   },
   isNonEmptyArray (obj = []) {
     return obj && obj.length > 0 && Array.isArray(obj) && typeof obj !== 'undefined';
@@ -33,10 +33,9 @@ const Utils = {
      * const isTaobao = env.isTaobao();
      */
     isTaobao () {
-      let { appName } = weex.config.env;
+      const { appName } = weex.config.env;
       return /(tb|taobao|淘宝)/i.test(appName);
     },
-
 
     /**
      * 是否是旅客容器
@@ -48,7 +47,7 @@ const Utils = {
      * const isTrip = env.isTrip();
      */
     isTrip () {
-      let { appName } = weex.config.env;
+      const { appName } = weex.config.env;
       return appName === 'LX';
     },
     /**
@@ -61,8 +60,8 @@ const Utils = {
      * const isWeb = env.isWeb();
      */
     isWeb () {
-      let { platform } = weex.config.env;
-      return typeof(window) === 'object' && platform.toLowerCase() === 'web';
+      const { platform } = weex.config.env;
+      return typeof (window) === 'object' && platform.toLowerCase() === 'web';
     },
     /**
      * 是否是 iOS 系统
@@ -74,7 +73,7 @@ const Utils = {
      * const isIOS = env.isIOS();
      */
     isIOS () {
-      let { platform } = weex.config.env;
+      const { platform } = weex.config.env;
       return platform.toLowerCase() === 'ios';
     },
     /**
@@ -87,7 +86,7 @@ const Utils = {
      * const isAndroid = env.isAndroid();
      */
     isAndroid () {
-      let { platform } = weex.config.env;
+      const { platform } = weex.config.env;
       return platform.toLowerCase() === 'android';
     },
 
@@ -101,7 +100,7 @@ const Utils = {
      * const isAlipay = env.isAlipay();
      */
     isAlipay () {
-      let { appName } = weex.config.env;
+      const { appName } = weex.config.env;
       return appName === 'AP';
     },
 
@@ -117,7 +116,6 @@ const Utils = {
     isAlipayWeb () {
       return Utils.env.isAlipay() && Utils.env.isWeb();
     },
-
 
     /**
      * 判断是否支持expressionBinding
@@ -170,14 +168,14 @@ const Utils = {
    * const { compareVersion } = Utils;
    * console.log(compareVersion('0.1.100', '0.1.11')); // 'true'
    */
-  compareVersion (currVer = "0.0.0", promoteVer = "0.0.0") {
+  compareVersion (currVer = '0.0.0', promoteVer = '0.0.0') {
     if (currVer === promoteVer) return true;
-    const currVerArr = currVer.split(".");
-    const promoteVerArr = promoteVer.split(".");
+    const currVerArr = currVer.split('.');
+    const promoteVerArr = promoteVer.split('.');
     const len = Math.max(currVerArr.length, promoteVerArr.length);
     for (let i = 0; i < len; i++) {
-      let proVal = ~~promoteVerArr[i];
-      let curVal = ~~currVerArr[i];
+      const proVal = ~~promoteVerArr[i];
+      const curVal = ~~currVerArr[i];
       if (proVal < curVal) {
         return true;
       } else if (proVal > curVal) {
@@ -188,7 +186,7 @@ const Utils = {
   },
   truncateString (str, len, hasDot = true) {
     let newLength = 0;
-    let newStr = "";
+    let newStr = '';
     let singleChar = '';
     const chineseRegex = /[^\x00-\xff]/g;
     const strLength = str.replace(chineseRegex, '**').length;
@@ -209,7 +207,7 @@ const Utils = {
       newStr += '...';
     }
     return newStr;
-  },
+  }
 };
 
 module.exports = Utils;

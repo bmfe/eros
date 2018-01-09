@@ -17,6 +17,7 @@ eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写
 * 脚手架支持 weex 的 vue 入口和 js 入口两种开发方式。
 * 支持 `weex debug`
 * 支持市面上流行的组件库
+
     * [weex-ui](https://github.com/alibaba/weex-ui) ( 阿里出品，eros 推荐 )
     * [bui](https://github.com/bingo-oss/bui-weex)
 
@@ -104,15 +105,19 @@ JDK 是 JAVA 开发包，AndroidStudio 是 Android开发IDE，这两项不再做
 * android 开发者可以下载 `Genymotion`
 
 ## Start
-1. 首先通过脚手架自动生成开发模板(我们不推荐用sudo来执行脚手架的任何指令)
+1. 首先通过脚手架自动生成开发模板(我们不推荐用 `sudo` 来执行脚手架的任何指令)
 ```
 $ eros init
 ```
 按提示选择模板，填写 app/项目名称和版本后在当前路径下会生成对应模板，然后 `cd` 到项目中
 
 2. 下载所需依赖
+前端依赖
 ```
 $ npm install
+```
+客户端依赖
+```
 $ eros install
 ```
 3. 安装完依赖之后:

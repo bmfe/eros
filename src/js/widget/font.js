@@ -5,28 +5,25 @@
  * @Last modified time: 2017-05-08
  */
 
-import _isFunction from 'lodash/isFunction'
-
-var bmFont = weex.requireModule('bmFont')
-
-var Font = Object.create(null)
+const bmFont = weex.requireModule('bmFont')
+const Font = Object.create(null)
 
 Font.install = (Vue, options) => {
     Vue.prototype.$font = {
-        changeFontSize(options) {
+        changeFontSize (options) {
             return new Promise((resolve, reject) => {
                 bmFont.changeFontSize({
                     fontSize: options.fontSize || 'NORM'
-                }, resData => {
-                    resData.status == 0 ? resolve(resData.data) : reject(resData)
+                }, ({ status, errorMsg, data }) => {
+                    status === 0 ? resolve(data) : reject({ status, errorMsg, data })
                 })
             })
         },
 
-        getFontSize() {
+        getFontSize () {
             return new Promise((resolve, reject) => {
-                bmFont.getFontSize((resData) => {
-                    resData.status == 0 ? resolve(resData.data) : reject(resData)
+                bmFont.getFontSize(({ status, errorMsg, data }) => {
+                    status === 0 ? resolve(data) : reject({ status, errorMsg, data })
                 })
             })
         }

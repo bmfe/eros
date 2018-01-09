@@ -12,15 +12,15 @@
 <script>
 const dom = weex.requireModule('dom')
 const MOCK_APP_MENU = [{
-    "name": "tab1"
+    'name': 'tab1'
 }, {
-    "name": "tab2",
+    'name': 'tab2'
 }, {
-    "name": "tab3"
+    'name': 'tab3'
 }, {
-    "name": "tab4"
+    'name': 'tab4'
 }, {
-    "name": "tab5"
+    'name': 'tab5'
 }]
 
 export default {
@@ -30,32 +30,32 @@ export default {
             default: 0
         }
     },
-    data() {
+    data () {
        return {
             menu: MOCK_APP_MENU,
             showRight: true
        }
     },
     watch: {
-        activeIndex(newVal, oldVal) {
-            let  scrollIndex = newVal < 1 ?  0 : newVal -1
+        activeIndex (newVal, oldVal) {
+            const scrollIndex = newVal < 1 ? 0 : newVal - 1
             this.scrollToMenu(scrollIndex)
         }
     },
     methods: {
-        activeMenu(index) {
+        activeMenu (index) {
             this.activeIndex = index
             this.$emit('change', index)
         },
-        menuScroll(e) {
+        menuScroll (e) {
 			if (this.menu.length <= 4) return
-			let menuWidth = this.$refs['menu_0'][0].style.width,
-				scrollWidth = e.contentSize.width,
-                offsetX = e.contentOffset.x
-                //最后这个1 有意思
+			const menuWidth = this.$refs['menu_0'][0].style.width
+            const scrollWidth = e.contentSize.width
+            const offsetX = e.contentOffset.x
+                // 最后这个1 有意思
 			this.showRight = scrollWidth - menuWidth * 4 + offsetX + 1 > menuWidth
         },
-        scrollToMenu(index) {
+        scrollToMenu (index) {
             dom.scrollToElement(this.$refs[`menu_${index}`][0])
         }
     }

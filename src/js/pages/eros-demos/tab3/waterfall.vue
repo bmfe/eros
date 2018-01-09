@@ -20,7 +20,7 @@
           </div>
         </div>
         <div class="bannerPhotoWrap">
-          <image class="bannerPhoto" v-for="photo in banner.photos" :src="photo.src"></image>
+          <image class="bannerPhoto" v-for="(photo, index) in banner.photos" :key="index" :src="photo.src"></image>
         </div>
       </div>
     </header>
@@ -238,84 +238,84 @@
 <script>
   export default {
     globalEvent: {
-        appActive() {
+        appActive () {
             console.log('active')
         },
-        appDeactive() {
+        appDeactive () {
             console.log('deactive')
         }
     },
-    created() {
+    created () {
       this.$router.getParams(resData => {
         console.log(resData)
       })
     },
-    data() {
+    data () {
       const items = [
         {
-          src:'https://gw.alicdn.com/tps/TB1Jl1CPFXXXXcJXXXXXXXXXXXX-370-370.jpg',
+          src: 'https://gw.alicdn.com/tps/TB1Jl1CPFXXXXcJXXXXXXXXXXXX-370-370.jpg',
           name: 'Thomas Carlyle',
-          desc:'Genius only means hard-working all one\'s life',
+          desc: 'Genius only means hard-working all one\'s life',
           behaviourName: 'Change width',
-          behaviour: 'changeColumnWidth',
+          behaviour: 'changeColumnWidth'
         },
         {
-          src:'https://gw.alicdn.com/tps/TB1Hv1JPFXXXXa3XXXXXXXXXXXX-370-370.jpg',
-          desc:'The man who has made up his mind to win will never say "impossible "',
+          src: 'https://gw.alicdn.com/tps/TB1Hv1JPFXXXXa3XXXXXXXXXXXX-370-370.jpg',
+          desc: 'The man who has made up his mind to win will never say "impossible "',
           behaviourName: 'Change gap',
           behaviour: 'changeColumnGap'
         },
         {
-          src:'https://gw.alicdn.com/tps/TB1eNKuPFXXXXc_XpXXXXXXXXXX-370-370.jpg',
-          desc:'There is no such thing as a great talent without great will - power',
+          src: 'https://gw.alicdn.com/tps/TB1eNKuPFXXXXc_XpXXXXXXXXXX-370-370.jpg',
+          desc: 'There is no such thing as a great talent without great will - power',
           behaviourName: 'Change count',
           behaviour: 'changeColumnCount'
         },
         {
-          src:'https://gw.alicdn.com/tps/TB1DCh8PFXXXXX7aXXXXXXXXXXX-370-370.jpg',
-          name:'Addison',
-          desc:'Cease to struggle and you cease to live',
+          src: 'https://gw.alicdn.com/tps/TB1DCh8PFXXXXX7aXXXXXXXXXXX-370-370.jpg',
+          name: 'Addison',
+          desc: 'Cease to struggle and you cease to live',
           behaviourName: 'Show scrollbar',
-          behaviour: 'showScrollbar',
+          behaviour: 'showScrollbar'
         },
         {
-          src:'https://gw.alicdn.com/tps/TB1ACygPFXXXXXwXVXXXXXXXXXX-370-370.jpg',
-          desc:'A strong man will struggle with the storms of fate',
+          src: 'https://gw.alicdn.com/tps/TB1ACygPFXXXXXwXVXXXXXXXXXX-370-370.jpg',
+          desc: 'A strong man will struggle with the storms of fate',
           behaviourName: 'Listen appear',
-          behaviour: 'listenAppear',
+          behaviour: 'listenAppear'
         },
         {
-          src:'https://gw.alicdn.com/tps/TB1IGShPFXXXXaqXVXXXXXXXXXX-370-370.jpg',
-          name:'Ruskin',
-          desc:'Living without an aim is like sailing without a compass',
+          src: 'https://gw.alicdn.com/tps/TB1IGShPFXXXXaqXVXXXXXXXXXX-370-370.jpg',
+          name: 'Ruskin',
+          desc: 'Living without an aim is like sailing without a compass',
           behaviourName: 'Set scrollable',
-          behaviour: 'setScrollable',
+          behaviour: 'setScrollable'
         },
         {
-          src:'https://gw.alicdn.com/tps/TB1xU93PFXXXXXHaXXXXXXXXXXX-240-240.jpg',
+          src: 'https://gw.alicdn.com/tps/TB1xU93PFXXXXXHaXXXXXXXXXXX-240-240.jpg',
           behaviourName: 'waterfall padding',
-          behaviour: 'setPadding',
+          behaviour: 'setPadding'
         },
         {
-          src:'https://gw.alicdn.com/tps/TB19hu0PFXXXXaXaXXXXXXXXXXX-240-240.jpg',
-          name:'Balzac',
-          desc:'There is no such thing as a great talent without great will - power',
+          src: 'https://gw.alicdn.com/tps/TB19hu0PFXXXXaXaXXXXXXXXXXX-240-240.jpg',
+          name: 'Balzac',
+          desc: 'There is no such thing as a great talent without great will - power',
           behaviourName: 'listen scroll',
-          behaviour: 'listenScroll',
+          behaviour: 'listenScroll'
         },
         {
-          src:'https://gw.alicdn.com/tps/TB1ux2vPFXXXXbkXXXXXXXXXXXX-240-240.jpg',
+          src: 'https://gw.alicdn.com/tps/TB1ux2vPFXXXXbkXXXXXXXXXXXX-240-240.jpg',
           behaviourName: 'Remove cell',
-          behaviour: 'removeCell',
+          behaviour: 'removeCell'
         },
         {
-          src:'https://gw.alicdn.com/tps/TB1tCCWPFXXXXa7aXXXXXXXXXXX-240-240.jpg',
+          src: 'https://gw.alicdn.com/tps/TB1tCCWPFXXXXa7aXXXXXXXXXXX-240-240.jpg',
           behaviourName: 'Move cell',
-          behaviour: 'moveCell',
+          behaviour: 'moveCell'
         }
       ]
 
-      let repeatItems = [];
+      const repeatItems = [];
       for (let i = 0; i < 3; i++) {
         repeatItems.push(...items)
       }
@@ -338,12 +338,12 @@
         // fixedRect:'',
         banner: {
           photos: [
-            {src:'https://gw.alicdn.com/tps/TB1JyaCPFXXXXc9XXXXXXXXXXXX-140-140.jpg'},
-            {src:'https://gw.alicdn.com/tps/TB1MwSFPFXXXXbdXXXXXXXXXXXX-140-140.jpg'},
-            {src:'https://gw.alicdn.com/tps/TB1U8avPFXXXXaDXpXXXXXXXXXX-140-140.jpg'},
-            {src:'https://gw.alicdn.com/tps/TB17Xh8PFXXXXbkaXXXXXXXXXXX-140-140.jpg'},
-            {src:'https://gw.alicdn.com/tps/TB1cTmLPFXXXXXRXXXXXXXXXXXX-140-140.jpg'},
-            {src:'https://gw.alicdn.com/tps/TB1oCefPFXXXXbVXVXXXXXXXXXX-140-140.jpg'}
+            { src: 'https://gw.alicdn.com/tps/TB1JyaCPFXXXXc9XXXXXXXXXXXX-140-140.jpg' },
+            { src: 'https://gw.alicdn.com/tps/TB1MwSFPFXXXXbdXXXXXXXXXXXX-140-140.jpg' },
+            { src: 'https://gw.alicdn.com/tps/TB1U8avPFXXXXaDXpXXXXXXXXXX-140-140.jpg' },
+            { src: 'https://gw.alicdn.com/tps/TB17Xh8PFXXXXbkaXXXXXXXXXXX-140-140.jpg' },
+            { src: 'https://gw.alicdn.com/tps/TB1cTmLPFXXXXXRXXXXXXXXXXXX-140-140.jpg' },
+            { src: 'https://gw.alicdn.com/tps/TB1oCefPFXXXXbVXVXXXXXXXXXX-140-140.jpg' }
           ]
         },
         items: repeatItems
@@ -351,14 +351,14 @@
     },
 
     methods: {
-      recylerScroll: function(e) {
+      recylerScroll: function (e) {
         this.contentOffset = e.contentOffset.y
       },
-      loadmore: function(e) {
+      loadmore: function (e) {
         console.log('receive loadmore event')
         // this.$refs.waterfall.resetLoadmore()
       },
-      showOrRemoveHeader: function() {
+      showOrRemoveHeader: function () {
         this.showHeader = !this.showHeader
       },
       onItemclick: function (behaviour, index) {
@@ -397,15 +397,15 @@
         }
       },
 
-      itemAppear: function(src) {
+      itemAppear: function (src) {
         this.appearImage = src;
       },
 
-      itemDisappear: function(src) {
+      itemDisappear: function (src) {
         this.disappearImage = src;
       },
 
-      changeColumnCount: function() {
+      changeColumnCount: function () {
         if (this.columnCount === 2) {
           this.columnCount = 3
         } else {
@@ -413,7 +413,7 @@
         }
       },
 
-      changeColumnGap: function() {
+      changeColumnGap: function () {
         if (this.columnGap === 12) {
           this.columnGap = 'normal'
         } else {
@@ -421,7 +421,7 @@
         }
       },
 
-      changeColumnWidth: function() {
+      changeColumnWidth: function () {
         if (this.columnWidth === 'auto') {
           this.columnWidth = 600
         } else {
@@ -429,36 +429,36 @@
         }
       },
 
-      showOrHideScrollbar: function() {
+      showOrHideScrollbar: function () {
         this.showScrollbar = !this.showScrollbar
       },
 
-      setScrollable: function() {
+      setScrollable: function () {
         this.scrollable = !this.scrollable
       },
 
-      listenAppearAndDisappear: function() {
+      listenAppearAndDisappear: function () {
         this.stickyHeaderType = (this.stickyHeaderType === 'appear' ? 'none' : 'appear')
       },
 
-      listenScrollEvent: function() {
+      listenScrollEvent: function () {
         this.stickyHeaderType = (this.stickyHeaderType === 'scroll' ? 'none' : 'scroll')
       },
 
-      scrollToNext: function() {
+      scrollToNext: function () {
         weex.requireModule('dom').scrollToElement(this.$refs.footer)
       },
 
-      setRecyclerPadding: function() {
-        this.padding = (this.padding == 0 ? 12 : 0);
+      setRecyclerPadding: function () {
+        this.padding = (this.padding === 0 ? 12 : 0);
       },
 
-      removeCell: function(index) {
+      removeCell: function (index) {
         this.items.splice(index, 1)
       },
 
-      moveCell: function(index) {
-        if (index == 0) {
+      moveCell: function (index) {
+        if (index === 0) {
           this.items.splice(this.items.length - 1, 0, this.items.splice(index, 1)[0]);
         } else {
           this.items.splice(0, 0, this.items.splice(index, 1)[0]);
@@ -467,7 +467,7 @@
 
       onrefresh (event) {
         this.refreshing = true
-        this.refreshText = "loading..."
+        this.refreshText = 'loading...'
         setTimeout(() => {
           this.refreshing = false
           this.refreshText = '↓   pull to refresh...'
