@@ -24,5 +24,62 @@ export default {
     'tab3.waterfall': {
         title: 'weex 官方瀑布流',
         url: '/pages/eros-demos/tab3/waterfall.js'
-    }
+    },
+    'demo': {
+        title: 'weex-eros demo',
+        url: '/pages/demo/index.js'
+    },
+    'demo.lifecycle': {
+        title: '生命周期',
+        url: '/pages/demo/lifecycle/index.js'
+    },
+    'demo.allAttr': {
+        title: '全局属性',
+        url: '/pages/demo/allAttr/index.js'
+    },
+    'demo.inputExtend': {
+        title: '文本框扩展',
+        url: '/pages/demo/inputExtend/index.js'
+    },
+    'demo.refresh': {
+        title: '下拉刷新',
+        url: '/pages/demo/refresh/index.js'
+    },
+    'demo.storage': {
+        title: '本地化存储',
+        url: '/pages/demo/storage/index.js'
+    },
+    'demo.navigator': {
+        title: '导航条操作',
+        url: '/pages/demo/navigator/index.js'
+    },
+    'demo.tools': {
+        title: '工具',
+        url: '/pages/demo/tools/index.js'
+    },
+    'demo.router': {
+        title: '路由',
+        url: '/pages/demo/router/index.js'
+    },
+    'demo.event.a': {
+        title: '发布订阅-a页面',
+        url: '/pages/demo/event/a.js'
+    },
+    'demo.event.b': {
+        title: '发布订阅-b页面',
+        url: '/pages/demo/event/b.js'
+    },
+    'demo.notice': {
+        title: '弹窗通知',
+        url: '/pages/demo/notice/index.js'
+    },
+    'demo.font': {
+        title: '字体',
+        url: '/pages/demo/font/index.js'
+    },
+    'demo.coms': {
+        title: '联系功能',
+        url: '/pages/demo/coms/index.js'
+    },
+
 }

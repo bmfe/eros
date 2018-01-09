@@ -16,8 +16,23 @@ module.exports = {
         'js/pages/eros-demos/tab2/amap.vue',
         'js/pages/eros-demos/tab2/iconfont.vue',
 
-        'js/pages/eros-demos/tab3/demo/index.vue',
-        'js/pages/eros-demos/tab3/waterfall.vue'
+        "js/pages/eros-demos/tab3/demo/index.vue",
+        "js/pages/eros-demos/tab3/waterfall.vue",
+
+        "js/pages/demo/index.vue",
+        "js/pages/demo/lifecycle/index.vue",
+        "js/pages/demo/allAttr/index.vue",
+        "js/pages/demo/inputExtend/index.vue",
+        "js/pages/demo/refresh/index.vue",
+        "js/pages/demo/storage/index.vue",
+        "js/pages/demo/navigator/index.vue",
+        "js/pages/demo/tools/index.vue",
+        "js/pages/demo/router/index.vue",
+        "js/pages/demo/event/a.vue",
+        "js/pages/demo/event/b.vue",
+        "js/pages/demo/notice/index.vue",
+        "js/pages/demo/font/index.vue",
+        "js/pages/demo/coms/index.vue"
     ],
     'alias': {
         'Components': 'js/components',
@@ -27,7 +42,7 @@ module.exports = {
         'Pages': 'js/pages',
         'Utils': 'js/utils'
     },
-    'eslint': false,
+    'eslint': true,
     'diff': {
         'pwd': '/Users/yangmingzhe/Work/opensource/eros-diff-folder',
         'proxy': 'https://app.weex-eros.com/source'
