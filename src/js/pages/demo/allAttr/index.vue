@@ -8,14 +8,14 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    data() {
+    data () {
         return {
             attrArr: []
         }
     },
-    created() {
+    created () {
         if (weex && weex.config && weex.config.eros) {
-            for (let i in weex.config.eros) {
+            for (const i in weex.config.eros) {
                 this.attrArr.push({
                     text: i,
                     value: weex.config.eros[i]

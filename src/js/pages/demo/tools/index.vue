@@ -21,13 +21,13 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    data() {
+    data () {
         return {
             copyText: ''
         }
     },
     methods: {
-        hide() {
+        hide () {
             this.$tools.resignKeyboard().then(resData => {
                 this.$notice.toast({
                     message: '收起键盘成功'
@@ -38,7 +38,7 @@ export default {
                 })
             })
         },
-        hasWXApp() {
+        hasWXApp () {
             this.$tools.isInstallWXApp().then(resData => {
                 // 成功的回调，必须在eros.native.js中配置才能生效
             }, error => {
@@ -47,7 +47,7 @@ export default {
                 })
             })
         },
-        hasCid() {
+        hasCid () {
             this.$tools.getCid().then(resData => {
                 // 成功的回调，必须在eros.native.js中配置才能生效
             }, error => {
@@ -56,7 +56,7 @@ export default {
                 })
             })
         },
-        copy() {
+        copy () {
             if (this.copyText.toString() === '') {
                 this.$notice.toast({
                     message: '拷贝内容为空'

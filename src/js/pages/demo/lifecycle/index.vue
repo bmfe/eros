@@ -4,31 +4,31 @@
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
     bmRouter: {
-        viewWillAppear(params, options) {
+        viewWillAppear (params, options) {
             console.log('viewWillAppear');
         },
 
-        viewDidAppear(params, options) {
+        viewDidAppear (params, options) {
             console.log('viewDidAppear');
         },
 
-        viewWillBackAppear(params, options) {
+        viewWillBackAppear (params, options) {
             console.log('viewDidAppear');
         },
 
-        viewDidBackAppear(params, options) {
+        viewDidBackAppear (params, options) {
             console.log('viewDidAppear');
         },
 
-        viewWillDisappear(options) {
+        viewWillDisappear (options) {
             console.log('viewDidAppear');
         },
 
-        viewDidDisappear(options) {
+        viewDidDisappear (options) {
             console.log('viewDidAppear');
         }
     },
-    data() {
+    data () {
         return {
 
         }

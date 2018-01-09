@@ -17,21 +17,21 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    data() {
+    data () {
         return {
             arr: [],
         }
     },
-    created() {
+    created () {
         for (let i = 0; i < 20; i++) {
             this.arr.push(i+1)
         }
     },
     methods: {
-        onrefresh() {
+        onrefresh () {
             console.log('3456789');
             setTimeout(() => {
-                this.$refs["list"].refreshEnd()
+                this.$refs['list'].refreshEnd()
             }, 1000)
         }
     }

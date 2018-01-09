@@ -18,37 +18,37 @@
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
     methods: {
-        alert() {
+        alert () {
             this.$notice.alert({
                 title: '这是一个弹窗',
                 message: '这是消息',
                 okTitle: '确认',
-                callback() {
+                callback () {
                     // 点击确认按钮的回调
                 }
             })
         },
-        confirm() {
+        confirm () {
             this.$notice.confirm({
                 title: '这是一个弹窗',
                 message: '这是消息',
                 okTitle: '确认',
                 cancelTitl: '取消',
-                okCallback() {
+                okCallback () {
                     // 点击确认按钮的回调
                 },
-                cancelCallback() {
+                cancelCallback () {
                     // 点击取消按钮的回调
                 }
             })
         },
-        loading() {
-            this.$notice.loading.show("loading展示文案")
+        loading () {
+            this.$notice.loading.show('loading展示文案')
             setTimeout(() => {
                 this.$notice.loading.hide()
             }, 1000)
         },
-        toast() {
+        toast () {
             this.$notice.toast({
                 message: '这是消息'
             })

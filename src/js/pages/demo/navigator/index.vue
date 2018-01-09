@@ -4,16 +4,16 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    data() {
+    data () {
         return {}
     },
     methods: {
-        init() {
+        init () {
             this.$navigator.setRightItem({
                 text: '右侧标题',
                 textColor: '#000',
                 fontSize: '32',
-                fontWeight: 'normal',
+                fontWeight: 'normal'
             }, () => {
                 // 点击回调
                 this.$notice.toast({
@@ -22,7 +22,7 @@ export default {
             })
         }
     },
-    created() {
+    created () {
         this.init()
     }
 }

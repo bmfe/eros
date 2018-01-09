@@ -13,7 +13,7 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    data() {
+    data () {
         return {
             resultStr: '',
             resultObj: {
@@ -22,24 +22,24 @@ export default {
         }
     },
     methods: {
-        add() {
+        add () {
             this.$storage.setSync('strKey', '123456789')
             this.$storage.setSync('jsonKey', {
                 text: '123456789'
             })
             this.get()
         },
-        del() {
+        del () {
             this.$storage.deleteSync('strKey')
             this.$storage.deleteSync('jsonKey')
             this.get()
         },
-        get() {
+        get () {
             this.resultStr = this.$storage.getSync('strKey')
             this.resultObj = this.$storage.getSync('jsonKey')
         }
     },
-    created() {
+    created () {
         this.get()
     }
 }

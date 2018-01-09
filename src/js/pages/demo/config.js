@@ -71,88 +71,88 @@
 const TYPE = [{
         id: 1,
         name: '生命周期',
-        type: 'lifecycle',
+        type: 'lifecycle'
     },
     {
         id: 2,
         name: '全局属性',
-        type: 'allAttr',
+        type: 'allAttr'
     },
     {
         id: 3,
         name: '文本框扩展',
-        type: 'inputExtend',
+        type: 'inputExtend'
     },
     {
         id: 4,
         name: '下拉刷新',
-        type: 'refresh',
+        type: 'refresh'
     },
     {
         id: 5,
         name: '本地化存储',
-        type: 'storage',
+        type: 'storage'
     },
     {
         id: 6,
         name: '导航条操作',
-        type: 'navigator',
+        type: 'navigator'
     },
     {
         id: 7,
         name: '分享',
-        type: 'share',
+        type: 'share'
     },
     {
         id: 8,
         name: '工具',
-        type: 'tools',
+        type: 'tools'
     },
     {
         id: 9,
         name: '路由',
-        type: 'router',
+        type: 'router'
     },
     {
         id: 10,
         name: '接口请求',
-        type: 'axios',
+        type: 'axios'
     },
     {
         id: 11,
         name: '发布订阅',
-        type: 'event',
+        type: 'event'
     },
     {
         id: 12,
         name: '弹窗通知',
-        type: 'notice',
+        type: 'notice'
     },
     {
         id: 13,
         name: '图片',
-        type: 'image',
+        type: 'image'
     },
     {
         id: 14,
         name: '位置获取',
-        type: 'geo',
+        type: 'geo'
     },
     {
         id: 15,
         name: '联系功能',
-        type: 'coms',
+        type: 'coms'
     },
     {
         id: 16,
         name: '支付',
-        type: 'pay',
+        type: 'pay'
     },
     {
         id: 17,
         name: '字体',
-        type: 'font',
-    },
+        type: 'font'
+    }
 ];
 
 export {

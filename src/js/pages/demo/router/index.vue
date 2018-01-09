@@ -24,30 +24,30 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    created() {
+    created () {
         this.$notice.toast({
             message: '进入这个页面用的就是$router.open'
         })
     },
-    data() {
+    data () {
         return {
             copyText: ''
         }
     },
     methods: {
-        back() {
+        back () {
             this.$router.back({
                 type: 'PRESENT'
             })
         },
-        getParams() {
+        getParams () {
             this.$router.getParams().then(resData => {
                 this.$notice.toast({
                     message: resData.text
                 })
             })
         },
-        toMap() {
+        toMap () {
             this.$router.toMap({
                 type: 'NAVIGATION',
                 title: '地图标题',
@@ -59,14 +59,14 @@ export default {
                 }
             })
         },
-        toWebView() {
+        toWebView () {
             this.$router.toWebView({
                 url: 'https://www.baidu.com',
-                title: 'WebView标题',
+                title: 'WebView标题'
             })
         },
-        getUrl() {
-            let urlData = this.$router.getUrl('demo.router')
+        getUrl () {
+            const urlData = this.$router.getUrl('demo.router')
             this.$notice.toast({
                 message: 'title: ' + urlData.title + ' \r\nurl: ' + urlData.url
             })

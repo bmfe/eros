@@ -14,19 +14,19 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    created() {
+    created () {
         this.$event.on('getParams', (params) => {
             // params 为触发该事件所传的参数
             this.paramsData = params
         });
     },
-    data() {
+    data () {
         return {
             paramsData: ''
         }
     },
     methods: {
-        toPageB() {
+        toPageB () {
             this.$router.open({
                 name: 'demo.event.b',
                 statusBarStyle: 'LightContent'

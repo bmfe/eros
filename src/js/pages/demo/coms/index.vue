@@ -15,26 +15,26 @@
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
     methods: {
-        call() {
+        call () {
             this.$coms.call(10086)
         },
-        sms() {
+        sms () {
             this.$coms.sms({
                 to: ['10086', '10010', '10001'],
                 content: '哈哈哈'
             }).then(data => {
-                console.log("发送成功")
+                console.log('发送成功')
             }, error => {
-                console.log("发送失败", error)
+                console.log('发送失败', error)
             })
         },
-        contacts() {
+        contacts () {
             this.$coms.contacts().then(data => {
-                console.log("获取联系人信息成功", data)
+                console.log('获取联系人信息成功', data)
             }, error => {
-                console.log("获取失败", error)
+                console.log('获取失败', error)
             })
-        },
+        }
     }
 }
 </script>

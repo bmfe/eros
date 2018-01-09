@@ -14,13 +14,13 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    data() {
+    data () {
         return {
             eventText: ''
         }
     },
     methods: {
-        emit() {
+        emit () {
             this.$event.emit('getParams', this.eventText)
             this.$notice.toast({
                 message: '传递成功'

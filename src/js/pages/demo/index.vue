@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'development') require('Config')
 import { TYPE } from './config'
 
 export default {
-    data: function() {
+    data: function () {
         return {
             // appearMin: 1,
             // appearMax: 1,
@@ -26,46 +26,46 @@ export default {
         }
     },
     methods: {
-        handle(type) {
+        handle (type) {
             this[`handle_${type}`]()
         },
-        handle_lifecycle() {
+        handle_lifecycle () {
             this.$router.open({
                 name: 'demo.lifecycle',
                 statusBarStyle: 'LightContent'
             })
         },
-        handle_allAttr() {
+        handle_allAttr () {
             this.$router.open({
                 name: 'demo.allAttr',
                 statusBarStyle: 'LightContent'
             })
         },
-        handle_inputExtend() {
+        handle_inputExtend () {
             this.$router.open({
                 name: 'demo.inputExtend',
                 statusBarStyle: 'LightContent'
             })
         },
-        handle_refresh() {
+        handle_refresh () {
             this.$router.open({
                 name: 'demo.refresh',
                 statusBarStyle: 'LightContent'
             })
         },
-        handle_storage() {
+        handle_storage () {
             this.$router.open({
                 name: 'demo.storage',
                 statusBarStyle: 'LightContent'
             })
         },
-        handle_navigator() {
+        handle_navigator () {
             this.$router.open({
                 name: 'demo.navigator',
                 statusBarStyle: 'LightContent'
             })
         },
-        handle_share() {
+        handle_share () {
             this.$share({
                 title: '分享出去的title',
                 content: '分享出去的内容',
@@ -84,13 +84,13 @@ export default {
                 })
             })
         },
-        handle_tools() {
+        handle_tools () {
             this.$router.open({
                 name: 'demo.tools',
                 statusBarStyle: 'LightContent'
             })
         },
-        handle_router() {
+        handle_router () {
             this.$router.open({
                 name: 'demo.router',
                 type: 'PRESENT',
@@ -105,7 +105,7 @@ export default {
                 },
             })
         },
-        handle_axios() {
+        handle_axios () {
             var self = this
             this.$fetch({
                 name: 'COMMON.getInfo',
@@ -123,13 +123,13 @@ export default {
                 })
             })
         },
-        handle_event() {
+        handle_event () {
             this.$router.open({
                 name: 'demo.event.a',
                 statusBarStyle: 'LightContent'
             })
         },
-        handle_notice() {
+        handle_notice () {
             this.$router.open({
                 name: 'demo.notice',
                 statusBarStyle: 'LightContent'
@@ -141,12 +141,12 @@ export default {
                 statusBarStyle: 'LightContent'
             })
         },
-        handle_geo() {
+        handle_geo () {
             this.$geo.get().then(data => {
                 this.$notice.alert({
                     message: '经度: ' + data.locationLng + '\r\n\r\n纬度: ' + data.locationLat,
                     okTitle: '确认',
-                    callback() {
+                    callback () {
                         // 点击确认按钮的回调
                     }
                 })
@@ -157,14 +157,13 @@ export default {
                 console.log(error)
             })
         },
-        handle_coms() {
-            debugger
+        handle_coms () {
             this.$router.open({
                 name: 'demo.coms',
                 statusBarStyle: 'LightContent'
             })
         },
-        handle_pay() {
+        handle_pay () {
             this.$pay.wechat({
                 // 微信支付所需必要参数，参考官方文档
                 sign: '',
@@ -182,13 +181,12 @@ export default {
             })
 
         },
-        handle_font() {
+        handle_font () {
             this.$router.open({
                 name: 'demo.font',
                 statusBarStyle: 'LightContent'
             })
         },
-
 
 
         // handle_router() {
@@ -301,7 +299,7 @@ export default {
         //     this.appearMax = appearIds[appearIds.length - 1];
         //     this.appearMin = appearIds[0];
         // }
-    },
+    }
 }
 </script>
 <style scoped>

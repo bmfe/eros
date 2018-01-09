@@ -42,7 +42,7 @@ module.exports = {
         'Pages': 'js/pages',
         'Utils': 'js/utils'
     },
-    'eslint': false,
+    'eslint': true,
     'diff': {
         'pwd': '/Users/yangmingzhe/Work/opensource/eros-diff-folder',
         'proxy': 'https://app.weex-eros.com/source'

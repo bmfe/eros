@@ -34,17 +34,10 @@ module.exports = {
         'iOSAppKey': '',
         'androidAppKey': ''
     },
-<<<<<<< HEAD
-    "wechat": {
-        "enabled": "true",
-        "appId": "wx57be722d460666c9",
-        "appSecret": "a6f106d4de1b08cfc6df3bb9ad787834"
-=======
     'wechat': {
         'enabled': 'false',
         'appId': '',
         'appSecret': ''
->>>>>>> 7d1dcdabcdfc8fc3eba06bc2fdc65b9c2153b994
     },
     'amap': {
         'enabled': 'true',
