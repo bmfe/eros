@@ -5,17 +5,15 @@
  * @Last modified time: 2017-04-05
  */
 
-var modal = weex.requireModule('bmModal'),
-    router = weex.requireModule('bmRouter'),
-    storage = weex.requireModule('bmStorage'),
-    globalEvent = weex.requireModule('globalEvent')
+const modal = weex.requireModule('bmModal')
+const router = weex.requireModule('bmRouter')
+const storage = weex.requireModule('bmStorage')
+const globalEvent = weex.requireModule('globalEvent')
 
-import isEmpty from 'lodash/isEmpty'
 import isFunction from 'lodash/isFunction'
 import _isUndefined from 'lodash/isUndefined'
 import _isNumber from 'lodash/isNumber'
 
-import ROUTES from 'Config/routes'
 // 客户端默认打开页面的动画
 export const DEFAULT_ANIMATETYPE = 'PUSH'
 
@@ -34,7 +32,7 @@ var RouterCycle = {
     viewDidDisappear: []
 }
 
-globalEvent.addEventListener("viewWillAppear", function(options) {
+globalEvent.addEventListener('viewWillAppear', function (options) {
     if (options.type === 'open' || options.type === 'refresh') {
         router.getParams((params) => {
             RouterCycle.viewWillAppear.map((item) => {
@@ -42,8 +40,8 @@ globalEvent.addEventListener("viewWillAppear", function(options) {
             })
         })
     } else if (options.type === 'back') {
-        storage.getData('router.backParams', ({status,errorMsg,data}) => {
-            let result = status == 0 ? JSON.parse(data) : {status,errorMsg,data}
+        storage.getData('router.backParams', ({ status, errorMsg, data }) => {
+            const result = status === 0 ? JSON.parse(data) : { status, errorMsg, data }
             RouterCycle.viewWillBackAppear.map((item) => {
                 item(result, options)
             })
@@ -51,7 +49,7 @@ globalEvent.addEventListener("viewWillAppear", function(options) {
     }
 })
 
-globalEvent.addEventListener("viewDidAppear", function(options) {
+globalEvent.addEventListener('viewDidAppear', function (options) {
     if (options.type === 'open' || options.type === 'refresh') {
         router.getParams((params) => {
             RouterCycle.viewDidAppear.map((item) => {
@@ -59,8 +57,8 @@ globalEvent.addEventListener("viewDidAppear", function(options) {
             })
         })
     } else if (options.type === 'back') {
-        storage.getData('router.backParams', ({status,errorMsg,data}) => {
-            let result = status == 0 ? JSON.parse(data) : {status,errorMsg,data}
+        storage.getData('router.backParams', ({ status, errorMsg, data }) => {
+            const result = status === 0 ? JSON.parse(data) : { status, errorMsg, data }
             RouterCycle.viewDidBackAppear.map((item) => {
                 item(result, options)
             })
@@ -69,28 +67,28 @@ globalEvent.addEventListener("viewDidAppear", function(options) {
     }
 })
 
-globalEvent.addEventListener("viewWillDisappear", function(options) {
+globalEvent.addEventListener('viewWillDisappear', function (options) {
     modal.hideLoading()
     RouterCycle.viewWillDisappear.map((item) => {
         item(options)
     })
 })
 
-globalEvent.addEventListener("viewDidDisappear", function(options) {
+globalEvent.addEventListener('viewDidDisappear', function (options) {
     RouterCycle.viewDidDisappear.map((item) => {
         item(options)
     })
 })
 
 export default class Router {
-    constructor({routes}) {
+    constructor ({ routes }) {
         this.routes = routes
         return this
     }
-    install(Vue, options) {
-        let self = this
+    install (Vue, options) {
+        const self = this
         Vue.mixin({
-            beforeCreate() {
+            beforeCreate () {
                 if (this.$options.bmRouter) {
                     var bmRouter = this.$options.bmRouter
                     for (var i in bmRouter) {
@@ -103,9 +101,9 @@ export default class Router {
             }
         })
         Vue.prototype.$router = {
-            open(options) {
+            open (options) {
                 options = options || {}
-                let currentPageInfo = this.getUrl(options.name)
+                const currentPageInfo = this.getUrl(options.name)
                 if (!currentPageInfo || !currentPageInfo.url) return
                 options.canBack = _isUndefined(options.canBack) ? true : options.canBack
                 return new Promise((resolve, reject) => {
@@ -125,7 +123,7 @@ export default class Router {
                     })
                 })
             },
-            back(options) {
+            back (options) {
                 options = options || {}
                 return new Promise((resolve, reject) => {
                     router.back({
@@ -139,7 +137,7 @@ export default class Router {
                     })
                 })
             },
-            getParams(callback) {
+            getParams (callback) {
                 return new Promise((resolve, reject) => {
                     router.getParams((params) => {
                         if (isFunction(callback)) {
@@ -149,8 +147,8 @@ export default class Router {
                     })
                 })
             },
-            getUrl(page) {
-                let currentPageInfo = self.routes[page]
+            getUrl (page) {
+                const currentPageInfo = self.routes[page]
                 if (!currentPageInfo) {
                     modal.alert({
                         message: '跳转页面不存在',
@@ -160,17 +158,15 @@ export default class Router {
                 }
                 return currentPageInfo
             },
-            refresh() {
+            refresh () {
                 router.refreshWeex()
             },
-            setBackParams(params) {
+            setBackParams (params) {
                 _isNumber(params) && params.toString()
                 storage.setData('router.backParams', JSON.stringify(params))
             },
-            toWebView(params) {
-                if (!params.url) {
-                    return
-                }
+            toWebView (params) {
+                if (!params.url) return
                 params.title = params.title || 'weex-eros'
                     // params.shareInfo = {
                     //     title: params.shareTitle,
@@ -185,7 +181,7 @@ export default class Router {
 
                 router.toWebView(params)
             },
-            toMap(options) {
+            toMap (options) {
                 // options = {
                 //     type:'NAVIGATION', //type类型：NAVIGATION(表现方式为：地图上添加起点终点标示大头针，终点标示上面有个导航的按钮)
                 //     title: '页面标题', //页面标题
@@ -198,10 +194,11 @@ export default class Router {
                 // }
                 router.toMap(options)
             },
-            openBrowser(url = '') {
+            openBrowser (url = '') {
+                if (!url) return
                 router.openBrowser(url)
             },
-            finish() {
+            finish () {
                 router.finish()
             }
         }

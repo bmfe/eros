@@ -6,20 +6,18 @@
  */
 
 const camera = weex.requireModule('bmCamera')
-let Camera = Object.create(null)
-    
-
+const Camera = Object.create(null)
 
 Camera.install = (Vue, options) => {
     Vue.prototype.$camera = {
         // 扫一扫
-        scan() {
+        scan () {
             return new Promise((resolve, reject) => {
-                camera.scan(({status, errorMsg, data}) => {
-                   status == 0 ? resolve(data) : reject({status, errorMsg, data})
+                camera.scan(({ status, errorMsg, data }) => {
+                   status === 0 ? resolve(data) : reject({ status, errorMsg, data })
                 })
             })
-        },
+        }
     }
 }
 

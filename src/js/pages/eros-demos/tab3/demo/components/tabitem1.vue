@@ -1,27 +1,26 @@
 <template>
     <div class="wrapper">
         <scroller class="scroller" @loadmore="onload" loadmoreoffset="10">
-            <div class="row" v-for="(name, index) in rows" :ref="'item'+index">
+            <div class="row" v-for="(name, index) in rows" :key="index" :ref="'item'+index">
                 <text class="text" :ref="'text'+index">{{name}}</text>
             </div>
         </scroller>
     </div>
 </template>
 <script>
-const dom = weex.requireModule('dom')
 export default {
-    data() {
+    data () {
         return {
             rows: []
         }
     },
-    created() {
+    created () {
         for (let i = 0; i < 30; i++) {
             this.rows.push('row ' + i)
         }
     },
     methods: {
-        onload() {
+        onload () {
             setTimeout(() => {
                 for (let i = 0; i < 30; i++) {
                     this.rows.push('row ' + i)

@@ -31,12 +31,12 @@ import Axios from './axios.js'
 
 let instance = null
 export default class Widget {
-	constructor({router, ajax}) {
+	constructor ({ router, ajax }) {
 		if (!instance) {
 			Vue.use(new Axios(ajax))
 			Vue.use(new Router(router))
 			instance = this
-		} 
+		}
         return instance
 	}
 }

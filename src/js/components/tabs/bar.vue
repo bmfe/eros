@@ -45,7 +45,7 @@ export default {
     selectedColor: { default: '#ff0000' },
     unselectedColor: { default: '#000000' }
   },
-  data() {
+  data () {
     return {
       selectedIndex: 0
     }
@@ -53,11 +53,11 @@ export default {
   components: {
     BarItem
   },
-  created() {
+  created () {
     this.select(this.selectedIndex);
   },
   methods: {
-    tabItemOnClick(e) {
+    tabItemOnClick (e) {
       this.selectedIndex = e.index;
       this.select(e.index);
       this.$emit('tabBarOnClick', e);
@@ -65,18 +65,17 @@ export default {
     select: function (index) {
       for (var i = 0; i < this.tabItems.length; i++) {
         var tabItem = this.tabItems[i];
-        if (i == index) {
+        if (i === index) {
           tabItem.icon = tabItem.selectedImage;
           tabItem.titleColor = this.selectedColor;
           tabItem.visibility = 'visible';
-        }
-        else {
+        } else {
           tabItem.icon = tabItem.image;
           tabItem.titleColor = this.unselectedColor;
           tabItem.visibility = 'hidden';
         }
       }
-    },
+    }
   }
 }
 </script>
