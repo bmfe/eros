@@ -140,8 +140,8 @@ const TYPE = [{
     },
     {
         id: 15,
-        name: '相机',
-        type: 'camera',
+        name: '联系功能',
+        type: 'coms',
     },
     {
         id: 16,

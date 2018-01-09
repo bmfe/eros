@@ -31,6 +31,8 @@ module.exports = {
         "js/pages/demo/event/a.vue",
         "js/pages/demo/event/b.vue",
         "js/pages/demo/notice/index.vue",
+        "js/pages/demo/font/index.vue",
+        "js/pages/demo/coms/index.vue",
     ],
     "alias": {
         "Components": "js/components",

@@ -12,7 +12,7 @@ Coms.install = (Vue, options) => {
         },
         sms(to, content) {
             return new Promise((resolve, reject) => {
-                _com.call(to, content, ({status, errorMsg, data}) => {
+                _com.sms(to, content, ({status, errorMsg, data}) => {
                     status == 0 ? resolve(data) : reject({status, errorMsg, data})
                 })
             })

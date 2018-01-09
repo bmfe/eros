@@ -73,8 +73,13 @@ export default {
         title: '弹窗通知',
         url: '/pages/demo/notice/index.js',
     },
-    
-    
-    
-        
+    'demo.font': {
+        title: '字体',
+        url: '/pages/demo/font/index.js',
+    },
+    'demo.coms': {
+        title: '联系功能',
+        url: '/pages/demo/coms/index.js',
+    },
+
 }

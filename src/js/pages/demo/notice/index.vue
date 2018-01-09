@@ -1,11 +1,5 @@
 <template>
     <scroller>
-        <!--         <div class="wrapper">
-            <text class="label">在b页面设置的数据:</text>
-        </div>
-        <div class="wrapper">
-            <text class="label">{{paramsData||'空'}}</text>
-        </div> -->
         <div class="wrapper">
             <text class="button" @click="alert">单按钮弹窗</text>
         </div>
@@ -83,13 +77,5 @@ export default {
     border-color: #0473a5;
     border-radius: 15px;
     background-color: #0473a5;
-}
-
-.label {
-    width: 500px;
-    height: 80px;
-    top: 70px;
-    font-size: 34px;
-    text-align: center;
 }
 </style>

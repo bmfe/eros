@@ -71,7 +71,7 @@ export default {
                 content: '分享出去的内容',
                 url: 'www.baidu.com',
                 image: '',
-                platforms: ['Pasteboard']
+                platforms: ['Pasteboard','WechatSession','WechatTimeLine']
             }).then(resData => {
                 // 成功的回调
                 this.$notice.toast({
@@ -157,17 +157,30 @@ export default {
                 console.log(error)
             })
         },
-        handle_camera() {
+        handle_coms() {
+            debugger
             this.$router.open({
-                name: 'demo.camera',
+                name: 'demo.coms',
                 statusBarStyle: 'LightContent'
             })
         },
         handle_pay() {
-            this.$router.open({
-                name: 'demo.pay',
-                statusBarStyle: 'LightContent'
+            this.$pay.wechat({
+                // 微信支付所需必要参数，参考官方文档
+                sign: '',
+                timestamp: '',
+                noncestr: '',
+                partnerid: '',
+                prepayid: '',
+                packageValue: ''
+            }).then(resData => {
+                // 成功的回调
+            }, error => {
+                this.$notice.toast({
+                    message: '调用支付失败'
+                })
             })
+
         },
         handle_font() {
             this.$router.open({
