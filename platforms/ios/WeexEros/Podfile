@@ -6,7 +6,7 @@ inhibit_all_warnings!
 def common
     pod 'WeexSDK', :path=>'./WeexiOSSDK/'
     pod 'WXDevtool', '0.15.3', :configurations => ['Debug']
-    pod 'SDWebImage', '3.7.5'
+    pod 'SDWebImage', '3.7.6'
     pod 'SocketRocket', '0.4.2'
     pod 'YTKNetwork', '2.0.3'
     pod 'SSZipArchive', '1.6.2'
@@ -15,7 +15,7 @@ def common
     pod 'UMengUShare/Social/WeChat', '6.4.6'
     pod 'GTSDK', '2.0.0.0-noidfa'
     pod 'UMengAnalytics-NO-IDFA', '4.2.5'
-    pod 'TZImagePickerController', '1.9.6'
+    pod 'TZImagePickerController', '1.9.8'
     pod 'BMBaseLibrary', :path=>'./Benmu-iOS-Library', :subspecs=>[
         'BMDevice',
         'BMExtension',

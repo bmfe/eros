@@ -85,14 +85,7 @@
 </style>
 
 <script>
-
-  var Amap = null;
-  try {
-    Amap = weex.requireModule('amap');
-  } catch(err) {
-    console.log(err);
-  }
-  var modal = weex.requireModule('bmModal');
+  const modal = weex.requireModule('bmModal')
   const icons = [
     'http://img1.vued.vanthink.cn/vuedae096307bfda38c9af8f5be0a80a3644.png',
     'http://img1.vued.vanthink.cn/vuedc1f33fb4f2be7d8e7698f11591c57be9.png',
@@ -113,54 +106,54 @@
       zoom: 9,
       pointArr: [
         {
-          position:[116.3944071, 39.9278548],
+          position: [116.3944071, 39.9278548],
           title: '北京市',
           events: {
-            click: function() {
+            click: function () {
               modal.alert('北京市区');
-            }  
+            }
           }
         }
-      ],
+      ]
     },
-    
+  
     methods: {
-      markerClick() {
+      markerClick () {
         modal.alert({
           message: 'marker clicked!'
         });
       },
-      
-      addMarvel() {
-        for(let i=0; i<5; i++) {
-          const coor = [115.487 + Math.random()*1, 39.7278548 + Math.random()];
+  
+      addMarvel () {
+        for (let i = 0; i < 5; i++) {
+          const coor = [115.487 + Math.random() * 1, 39.7278548 + Math.random()];
           const n = i % 5;
           const icon = icons[n]
           this.pointArr.push({
-            position:coor,
-            title:'坐标:' + coor.join(','),
-            icon:  icon
+            position: coor,
+            title: '坐标:' + coor.join(','),
+            icon: icon
           });
         }
       },
-      addDC() {
-        for(let i=0; i<5; i++) {
-          const coor = [116.487 + Math.random()*1, 39.7278548 + Math.random()];
+      addDC () {
+        for (let i = 0; i < 5; i++) {
+          const coor = [116.487 + Math.random() * 1, 39.7278548 + Math.random()];
           const n = i % 5;
           const icon = icons2[n]
           this.pointArr.push({
-            position:coor,
-            title:'坐标:' + coor.join(','),
-            icon:  icon
+            position: coor,
+            title: '坐标:' + coor.join(','),
+            icon: icon
           });
         }
       },
-      
-      removePoints() {
+  
+      removePoints () {
         if (this.pointArr.length < 2) {
           return;
         }
-        for(let i=0; i<10; i++) {
+        for (let i = 0; i < 10; i++) {
           this.pointArr.pop();
           this.pointArr = Array.from(this.pointArr);
         }

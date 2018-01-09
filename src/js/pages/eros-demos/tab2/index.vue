@@ -56,10 +56,10 @@
 
 export default {
   methods: {
-    handle(type) {
-      this[`handle_${type}`]()
+    handle (type) {
+      this[`handle${type}`]()
     },
-    handle_axios() {
+    handleAxios () {
       var self = this
       this.$fetch({
         name: 'COMMON.getInfo',
@@ -82,29 +82,29 @@ export default {
       //   console.log(resData)
       // })
     },
-    handle_router() {
+    handleRouter () {
       this.$router.open({
         name: 'tab2.test',
         statusBarStyle: 'LightContent'
       })
     },
-    handle_routerPresent() {
+    handleRouterPresent () {
       this.$router.open({
         name: 'tab2.test',
         type: 'PRESENT'
       })
     },
-    handle_routerAmap() {
+    handleRouterAmap () {
       this.$router.open({
         name: 'tab2.amap'
       })
     },
-    handle_routerWebView() {
+    handleRouterWebView () {
       this.$router.toWebView({
         url: 'https://www.baidu.com'
       })
     },
-    handle_alert() {
+    handleAlert () {
       this.$notice.alert({
         title: '提示',
         message: '这是一个弹窗',
@@ -114,30 +114,30 @@ export default {
         }
       })
     },
-    handle_confirm() {
+    handleConfirm () {
       this.$notice.confirm({
         title: '提示',
         message: '这是一个选择弹窗',
         okTitle: '确定文案',
         cancelTitle: '取消文案',
         okCallback: () => {
-          this.$notice.toast({message: '您点击了确定'})
+          this.$notice.toast({ message: '您点击了确定' })
         },
         cancelCallback: () => {
-          this.$notice.toast({message: '您点击了取消'})
+          this.$notice.toast({ message: '您点击了取消' })
         }
       })
     },
-    handle_loading() {
+    handleLoading () {
       this.$notice.loading.show('loading自定义文案')
       setTimeout(() => {
         this.$notice.loading.hide()
       }, 1000)
     },
-    handle_toast() {
-      this.$notice.toast( '这是一个toast' )
+    handleToast () {
+      this.$notice.toast('这是一个toast')
     },
-    handle_geo() {
+    handleGeo () {
       this.$geo.get().then(resData => {
           this.lat = resData.data.locationLat
           this.lng = resData.data.locationLng
@@ -145,7 +145,7 @@ export default {
         console.log('error', error)
       })
     },
-    handle_scan() {
+    handleScan () {
       this.$camera.scan(resData => {
           this.$notice.alert({
           title: '提示',
@@ -153,20 +153,22 @@ export default {
         })
       })
     },
-    handle_uploadImg() {
-      this.$image.upload({
-        maxCount: 3,
-      },resData => {
+    handleUploadImg () {
+      this.$image.pickAndUpload({
+        maxCount: 3
+      }).then(resData => {
           this.$notice.alert({
           title: '提示',
           message: resData
         })
+      }, error => {
+        console.log(error, 123)
       })
     },
-    handle_callPhone() {
+    handleCallPhone () {
       this.$coms.call(123)
     },
-    handle_localIconfont() {
+    handleLocalIconfont () {
       this.$router.open({
         name: 'tab2.iconfont'
       })
@@ -206,70 +208,70 @@ export default {
         {
           id: 1,
           name: '发送请求',
-          type: 'axios',
+          type: 'Axios'
         },
         {
           id: 2,
           name: '正常打开一个页面',
-          type: 'router',
+          type: 'Router'
         },
         {
           id: 3,
           name: '插入打开一个页面',
-          type: 'routerPresent',
+          type: 'RouterPresent'
         },
         {
           id: 3,
           name: '插入打开一个webview',
-          type: 'routerWebView',
+          type: 'RouterWebView'
         },
         {
           id: 4,
           name: '提示弹窗',
-          type: 'alert',
+          type: 'Alert'
         },
         {
           id: 5,
           name: '选择弹窗',
-          type: 'confirm',
+          type: 'Confirm'
         },
         {
           id: 6,
           name: 'loading弹窗',
-          type: 'loading',
+          type: 'Loading'
         },
         {
           id: 7,
           name: 'toast弹窗',
-          type: 'toast',
+          type: 'Toast'
         },
         {
           id: 8,
           name: '获取当前坐标',
-          type: 'geo',
+          type: 'Geo'
         },
         {
           id: 9,
           name: '扫一扫',
-          type: 'scan',
+          type: 'Scan'
         },
         {
           id: 10,
           name: '上传图片',
-          type: 'uploadImg',
+          type: 'UploadImg'
         },
         {
           id: 11,
           name: '拨打电话',
-          type: 'callPhone',
-        },{
-          id:12,
+          type: 'CallPhone'
+        }, {
+          id: 12,
           name: '地图',
-          type: 'routerAmap'
-        },{
-          id:13,
+          type: 'RouterAmap'
+        }, {
+          id: 13,
           name: '本地iconfont',
-          type: 'localIconfont'
+          type: 'LocalIconfont'
         }]
     }
   }

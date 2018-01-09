@@ -7,6 +7,8 @@ import './notice.js'
 import './geo.js'
 // 获取相机信息
 import './camera.js'
+// 图片操作相关
+import './image.js'
 // 设置导航
 import './nav.js'
 // 支付相关
@@ -29,12 +31,12 @@ import Axios from './axios.js'
 
 let instance = null
 export default class Widget {
-	constructor({router, ajax}) {
+	constructor ({ router, ajax }) {
 		if (!instance) {
 			Vue.use(new Axios(ajax))
 			Vue.use(new Router(router))
 			instance = this
-		} 
+		}
         return instance
 	}
 }

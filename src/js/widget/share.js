@@ -11,7 +11,6 @@ Share.install = (Vue, options) => {
                 image: cfg.image || '',
                 url: cfg.url || '',
                 platforms: cfg.platforms || [] // 传空的话默认全部
-                
             }, data => {
                 resolve(data)
             }, err => {

@@ -1,20 +1,24 @@
 import _isFunction from 'lodash/isFunction'
 const bmAxios = weex.requireModule('bmAxios')
 export default class Axios {
-    constructor({timeout, apis, baseUrl, requestHandler, responseHandler}) {
+    constructor ({ timeout, apis, baseUrl, requestHandler, responseHandler }) {
         this.apis = apis
-        this.timeout = timeout 
+        this.timeout = timeout
         this.baseUrl = baseUrl
         this.requestHandler = requestHandler
         this.responseHandler = responseHandler
         return this
     }
-    install(Vue) {
-        //extend promise
+    install (Vue) {
+        /**
+         * Contributor: Eric Xiao.
+         * Description: extend promise.
+         * Eros thanks every contributor.
+         */
         Promise.prototype.finally = function (callback) {
-            let P = this.constructor;
+            const P = this.constructor;
             return this.then(
-                value  => P.resolve(callback()).then(() => value),
+                value => P.resolve(callback()).then(() => value),
                 reason => P.resolve(callback()).then(() => { throw reason })
             );
         };
@@ -26,10 +30,10 @@ export default class Axios {
                 });
         };
 
-        let self = this
+        const self = this
         Vue.prototype.$fetch = (options) => {
             return new Promise((resolve, reject) => {
-                if(_isFunction(self.requestHandler)) {
+                if (_isFunction(self.requestHandler)) {
                     self.requestHandler(options, () => { handleAxios(options, resolve, reject) })
                 } else {
                     handleAxios(options, resolve, reject)
@@ -37,23 +41,22 @@ export default class Axios {
             })
         }
 
-        function handleAxios({name, url, data, method, header}, resolve, reject) {
+        function handleAxios ({ name, url = '', data, method, header }, resolve, reject) {
             bmAxios.fetch({
-                url: self.baseUrl + self.apis[name] || url,
+                url: url || (self.baseUrl + self.apis[name]),
                 data: data || {},
                 method: method || 'GET',
                 header: header || {},
-                timeout: self.timeout || 30000,
+                timeout: self.timeout || 30000
             }, (resData) => {
                 // 统一的监控
-                if(_isFunction(self.responseHandler)) {
-                    self.responseHandler({name, url, data, method, header}, resData, resolve, reject)
-                }   else {
+                if (_isFunction(self.responseHandler)) {
+                    self.responseHandler({ name, url, data, method, header }, resData, resolve, reject)
+                } else {
                     resolve(resData)
                 }
             })
         }
     }
 }
-
 

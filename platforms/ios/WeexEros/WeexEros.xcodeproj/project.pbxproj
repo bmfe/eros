@@ -12,8 +12,8 @@
 		9737F9F81F384AFD00000800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9737F9F71F384AFD00000800 /* Assets.xcassets */; };
 		9737FA031F385A2700000800 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9737FA021F385A2700000800 /* libbz2.tbd */; };
 		9774A2C01FF0D82900029216 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9774A2C21FF0D82900029216 /* Launch Screen.storyboard */; };
-		97A898E71FB55BEF0095D77C /* bundle.config in Resources */ = {isa = PBXBuildFile; fileRef = 97A898E51FB55BEF0095D77C /* bundle.config */; };
-		97A898E81FB55BEF0095D77C /* bundle.zip in Resources */ = {isa = PBXBuildFile; fileRef = 97A898E61FB55BEF0095D77C /* bundle.zip */; };
+		9781D2F11FFF1D2A00BC2C34 /* bundle.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9781D2EF1FFF1D2A00BC2C34 /* bundle.zip */; };
+		9781D2F21FFF1D2A00BC2C34 /* bundle.config in Resources */ = {isa = PBXBuildFile; fileRef = 9781D2F01FFF1D2A00BC2C34 /* bundle.config */; };
 		97A898EA1FB57A9E0095D77C /* eros.native.json in Resources */ = {isa = PBXBuildFile; fileRef = 97A898E91FB57A9D0095D77C /* eros.native.json */; };
 		E1DE85A0A42930C50BEB1245 /* libPods-WeexEros.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE25A79A3A97DFB7A3158EC /* libPods-WeexEros.a */; };
 /* End PBXBuildFile section */
@@ -33,8 +33,8 @@
 		9774A2C11FF0D82900029216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9774A2C31FF0D83500029216 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		9774A2C41FF0D88700029216 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
-		97A898E51FB55BEF0095D77C /* bundle.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bundle.config; sourceTree = "<group>"; };
-		97A898E61FB55BEF0095D77C /* bundle.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = bundle.zip; sourceTree = "<group>"; };
+		9781D2EF1FFF1D2A00BC2C34 /* bundle.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = bundle.zip; sourceTree = "<group>"; };
+		9781D2F01FFF1D2A00BC2C34 /* bundle.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bundle.config; sourceTree = "<group>"; };
 		97A898E91FB57A9D0095D77C /* eros.native.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eros.native.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,9 +104,9 @@
 		9737F9EB1F384AFD00000800 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9781D2F01FFF1D2A00BC2C34 /* bundle.config */,
+				9781D2EF1FFF1D2A00BC2C34 /* bundle.zip */,
 				97A898E91FB57A9D0095D77C /* eros.native.json */,
-				97A898E51FB55BEF0095D77C /* bundle.config */,
-				97A898E61FB55BEF0095D77C /* bundle.zip */,
 				9774A2C21FF0D82900029216 /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
@@ -182,10 +182,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9737F9F81F384AFD00000800 /* Assets.xcassets in Resources */,
-				97A898E81FB55BEF0095D77C /* bundle.zip in Resources */,
+				9781D2F21FFF1D2A00BC2C34 /* bundle.config in Resources */,
+				9781D2F11FFF1D2A00BC2C34 /* bundle.zip in Resources */,
 				97A898EA1FB57A9E0095D77C /* eros.native.json in Resources */,
 				9774A2C01FF0D82900029216 /* Launch Screen.storyboard in Resources */,
-				97A898E71FB55BEF0095D77C /* bundle.config in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +280,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

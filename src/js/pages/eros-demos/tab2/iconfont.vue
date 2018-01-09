@@ -62,26 +62,23 @@
 
 <script>
   module.exports = {
-    beforeCreate: function() {
-
+    beforeCreate: function () {
       var domModule = weex.requireModule('dom');
-      //目前支持ttf、woff文件，不支持svg、eot类型,moreItem at http://www.iconfont.cn/
-      
+      // 目前支持ttf、woff文件，不支持svg、eot类型,moreItem at http://www.iconfont.cn/
+  
       domModule.addRule('fontFace', {
-        'fontFamily': "iconfont2",
-        'src': "url('bmlocal://iconfont/font_1469606063_76593.ttf')"
+        'fontFamily': 'iconfont2',
+        'src': 'url(\'bmlocal://iconfont/font_1469606063_76593.ttf\')'
       });
       domModule.addRule('fontFace', {
-        'fontFamily': "iconfont3",
-        'src': "url('bmlocal://iconfont/font_1469606522_9417143.woff')"
+        'fontFamily': 'iconfont3',
+        'src': 'url(\'bmlocal://iconfont/font_1469606522_9417143.woff\')'
       });
-      
+  
         domModule.addRule('fontFace', {
-        'fontFamily': "iconfont4",
-        'src': "url('bmlocal://iconfont/font_zn5b3jswpofuhaor.ttf')"
+        'fontFamily': 'iconfont4',
+        'src': 'url(\'bmlocal://iconfont/font_zn5b3jswpofuhaor.ttf\')'
       });
-
-      
     }
   }
 </script>

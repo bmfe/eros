@@ -1,37 +1,36 @@
 <template>
     <div class="wrapper">
         <list class="scroller" ref="list" @loadmore="getData" loadmoreoffset="10" showRefresh="true" @refresh="getData(true)">
-            <cell class="row" v-for="(name, index) in rows" :ref="'item'+index">
+            <cell class="row" v-for="(name, index) in rows" :key="index" :ref="'item'+index">
                 <text class="text" :ref="'text'+index">{{name}}</text>
             </cell>
         </list>
     </div>
 </template>
 <script>
-const dom = weex.requireModule('dom')
 export default {
-    data() {
+    data () {
         return {
             rows: []
         }
     },
-    created() {
+    created () {
         this.getData(true)
     },
     methods: {
-        getData(isRefresh = false) {
+        getData (isRefresh = false) {
             setTimeout(() => {
-                let cache = []
+                const cache = []
                 for (let i = 0; i < 30; i++) {
                     cache.push('row ' + i)
                 }
-                if(isRefresh){
+                if (isRefresh) {
                     this.rows = cache
-                }else {
+                } else {
                     this.rows.push(cache)
                 }
 
-                isRefresh && this.$refs["list"].refreshEnd()
+                isRefresh && this.$refs['list'].refreshEnd()
             }, 500)
         }
     }

@@ -32,26 +32,26 @@ import TabItem3 from './components/tabitem3'
 
 export default {
     globalEvent: {
-        appActive() {
+        appActive () {
             console.log('active')
         },
-        appDeactive() {
+        appDeactive () {
             console.log('deactive')
         }
     },
-    data() {
+    data () {
        return {
             activeIndex: 0
        }
     },
     components: { Tab, TabItem1, TabItem2, TabItem3 },
     methods: {
-        onchange(index) {
+        onchange (index) {
             dom.scrollToElement(this.$refs[`page_${index + 1}`])
         },
-        onscroll(e) {
-            let formatOffset = Math.abs(e.contentOffset.x)
-            if( formatOffset % SCROLL_FULL_WIDTH === 0 ){
+        onscroll (e) {
+            const formatOffset = Math.abs(e.contentOffset.x)
+            if (formatOffset % SCROLL_FULL_WIDTH === 0) {
                 this.activeIndex = formatOffset / SCROLL_FULL_WIDTH
             }
         }
