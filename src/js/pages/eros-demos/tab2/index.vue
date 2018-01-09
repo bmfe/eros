@@ -156,11 +156,13 @@ export default {
     handleUploadImg () {
       this.$image.pickAndUpload({
         maxCount: 3
-      }, resData => {
+      }).then(resData => {
           this.$notice.alert({
           title: '提示',
           message: resData
         })
+      }, error => {
+        console.log(error, 123)
       })
     },
     handleCallPhone () {
