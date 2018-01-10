@@ -1,7 +1,7 @@
 import _isFunction from 'lodash/isFunction'
 const bmAxios = weex.requireModule('bmAxios')
 export default class Axios {
-    constructor ({ timeout, apis, baseUrl, requestHandler, responseHandler }) {
+    constructor ({ timeout, apis, baseUrl = '', requestHandler, responseHandler }) {
         this.apis = apis
         this.timeout = timeout
         this.baseUrl = baseUrl

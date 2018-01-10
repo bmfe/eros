@@ -6,6 +6,7 @@ Created by IDE
 .*
 !.gitignore
 !.eslintrc
+!.editorconfig
 !.babelrc
 
 docs
