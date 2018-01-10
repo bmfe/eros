@@ -198,6 +198,9 @@ export default class Router {
                 if (!url) return
                 router.openBrowser(url)
             },
+            setHomePage (url = '') {
+                router.setHomePage(url)
+            },
             finish () {
                 router.finish()
             }
