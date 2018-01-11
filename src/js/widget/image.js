@@ -9,15 +9,15 @@ Image.install = (Vue, options) => {
         // upload change to pickAndUpload
         pickAndUpload ({ maxCount = 1, imageWidth = 0, url = '', allowCrop = false, header = {}, params = {}}) {
             return new Promise((resolve, reject) => {
-                const params = {
+                var _params = {
                         maxCount,
                         imageWidth,
                         allowCrop,
                         header,
                         params
                     }
-                if (url) params.url = url
-                imageModule.uploadImage(params, ({ status, errorMsg, data }) => {
+                if (url) _params.url = url
+                imageModule.uploadImage(_params, ({ status, errorMsg, data }) => {
                     status === 0 ? resolve(data) : reject({ status, errorMsg, data })
                 })
             })
