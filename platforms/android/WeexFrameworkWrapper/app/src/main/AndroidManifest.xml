@@ -31,6 +31,7 @@
 
     <!--amap额外权限-->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
     <application
 
             android:allowBackup="true"
@@ -55,7 +56,7 @@
                 <action android:name="android.intent.action.VIEW"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.benmu.weex.example.categoty.page"/>
+                <category android:name="${APP_ID}.categoty.page"/>
 
                 <data android:scheme="http"/>
                 <data android:scheme="https"/>
@@ -90,7 +91,7 @@
                 <action android:name="android.intent.action.VIEW"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.benmu.weex.example.category.web"/>
+                <category android:name="${APP_ID}.category.web"/>
             </intent-filter>
         </activity>
 
@@ -99,11 +100,10 @@
                 <action android:name="android.intent.action.VIEW"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.benmu.weex.example.category.debug"/>
+                <category android:name="${APP_ID}.category.debug"/>
             </intent-filter>
         </activity>
 
-        <service android:name="com.benmu.framework.service.BroadcastChannelService"/>
 
         <!--wxApi-->
         <activity

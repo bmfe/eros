@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WeexEros</string>
+    <string name="umeng_socialize_female">女</string>
+    <string name="umeng_socialize_male">男</string>
 </resources>
