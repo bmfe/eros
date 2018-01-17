@@ -5,24 +5,80 @@
 //  dev.json 的 exports 需要打包的js地址，填入src的需要被打包成js bundle的地址   从src开始
 
 export default {
-    'tab2.test': {
-        title: '路由测试页',
-        url: '/pages/eros-demos/tab2/router.js'
+    'demo': {
+        title: 'weex-eros demo',
+        url: '/pages/demo/index.js'
     },
-    'tab2.amap': {
-        title: '地图页面',
-        url: '/pages/eros-demos/tab2/amap.js'
+    'demo.lifecycle': {
+        title: '生命周期',
+        url: '/pages/demo/lifecycle/index.js'
     },
-    'tab2.iconfont': {
-        title: '本地iconfont',
-        url: '/pages/eros-demos/tab2/iconfont.js'
+    'demo.assets': {
+        title: '本地资源',
+        url: '/pages/demo/assets/index.js'
     },
-    'tab3.slider': {
-        title: '手势滚动',
-        url: '/pages/eros-demos/tab3/demo/index.js'
+    'demo.globalAttr': {
+        title: '全局属性',
+        url: '/pages/demo/globalAttr/index.js'
     },
-    'tab3.waterfall': {
-        title: 'weex 官方瀑布流',
-        url: '/pages/eros-demos/tab3/waterfall.js'
+    'demo.inputExtend': {
+        title: '文本框扩展',
+        url: '/pages/demo/inputExtend/index.js'
+    },
+    'demo.refresh': {
+        title: '下拉刷新',
+        url: '/pages/demo/refresh/index.js'
+    },
+    'demo.storage': {
+        title: '本地化存储',
+        url: '/pages/demo/storage/index.js'
+    },
+    'demo.navigator': {
+        title: '导航条操作',
+        url: '/pages/demo/navigator/index.js'
+    },
+    'demo.tools': {
+        title: '工具',
+        url: '/pages/demo/tools/index.js'
+    },
+    'demo.router': {
+        title: '路由',
+        url: '/pages/demo/router/index.js'
+    },
+    'demo.event.a': {
+        title: '发布订阅-a页面',
+        url: '/pages/demo/event/a.js'
+    },
+    'demo.event.b': {
+        title: '发布订阅-b页面',
+        url: '/pages/demo/event/b.js'
+    },
+    'demo.notice': {
+        title: '弹窗通知',
+        url: '/pages/demo/notice/index.js'
+    },
+    'demo.font': {
+        title: '字体',
+        url: '/pages/demo/font/index.js'
+    },
+    'demo.coms': {
+        title: '联系功能',
+        url: '/pages/demo/coms/index.js'
+    },
+    'demo.image': {
+        title: '图片',
+        url: '/pages/demo/image/index.js'
+    },
+    'demo.bmchart': {
+        title: '图表',
+        url: '/pages/demo/bmchart/index.js'
+    },
+    'demo.bmrichtext': {
+        title: '富文本',
+        url: '/pages/demo/bmrichtext/index.js'
+    },
+    'demo.bmcalendar': {
+        title: '日期',
+        url: '/pages/demo/bmcalendar/index.js'
     }
 }
