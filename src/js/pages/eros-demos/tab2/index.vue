@@ -1,20 +1,18 @@
 <template>
-    <div class="container">
-      <div class="category">
-       <text class="category-text">widget</text>
-       <text>{{lat}}</text>
-      </div>
-      <list class="list">
+    <waterfall class="container">
+      <header class="category">
+        <text class="category-text">widget</text>
+        <text>{{lat}}</text>
+      </header>
         <cell class="panel" v-for="(v,i) in rows" append="tree" :index="i" :key="i"  @click="handle(v.type)" >
             <text class="text">{{v.name}}</text>
         </cell>
-      </list>
-    </div>
+    </waterfall>
 </template>
 
 <style scoped>
   .container {
-    background-color: #f2f3f4;
+    background-color: #EFEFEF;
   }
   .list{
     width: 750px;

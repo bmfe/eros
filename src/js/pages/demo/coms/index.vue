@@ -12,36 +12,36 @@
     </scroller>
 </template>
 <script>
-if (process.env.NODE_ENV === "development") require("Config");
+if (process.env.NODE_ENV === 'development') require('Config');
 export default {
     methods: {
-        call() {
+        call () {
             this.$coms.call('10086');
         },
-        sms() {
-            this.$coms.sms(["10086", "10010", "10001"], "哈哈哈").then(
+        sms () {
+            this.$coms.sms(['10086', '10010', '10001'], '哈哈哈').then(
                 data => {
                     this.$notice.toast({
-                        message: "发送成功"
+                        message: '发送成功'
                     });
                 },
                 error => {
                     this.$notice.toast({
-                        message: "发送失败: " + error.errorMsg
+                        message: '发送失败: ' + error.errorMsg
                     });
                 }
             );
         },
-        contacts() {
+        contacts () {
             this.$coms.contacts().then(
                 data => {
                     this.$notice.toast({
-                        message: "获取联系人成功"
+                        message: '获取联系人成功'
                     });
                 },
                 error => {
                     this.$notice.toast({
-                        message: "获取失败: " + error.errorMsg
+                        message: '获取失败: ' + error.errorMsg
                     });
                 }
             );

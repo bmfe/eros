@@ -11,35 +11,35 @@
     </scroller>
 </template>
 <script>
-if (process.env.NODE_ENV === "development") require("Config");
+if (process.env.NODE_ENV === 'development') require('Config');
 export default {
-    created() {
+    created () {
         this.get();
     },
-    data() {
+    data () {
         return {
-            resultStr: "",
+            resultStr: '',
             resultObj: {
-                text: ""
+                text: ''
             }
         };
     },
     methods: {
-        add() {
-            this.$storage.setSync("strKey", "123456789");
-            this.$storage.setSync("jsonKey", {
-                text: "123456789"
+        add () {
+            this.$storage.setSync('strKey', '123456789');
+            this.$storage.setSync('jsonKey', {
+                text: '123456789'
             });
             this.get();
         },
-        del() {
-            this.$storage.deleteSync("strKey");
-            this.$storage.deleteSync("jsonKey");
+        del () {
+            this.$storage.deleteSync('strKey');
+            this.$storage.deleteSync('jsonKey');
             this.get();
         },
-        get() {
-            this.resultStr = this.$storage.getSync("strKey");
-            this.resultObj = this.$storage.getSync("jsonKey");
+        get () {
+            this.resultStr = this.$storage.getSync('strKey');
+            this.resultObj = this.$storage.getSync('jsonKey');
         }
     }
 };

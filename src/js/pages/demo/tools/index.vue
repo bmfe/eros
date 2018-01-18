@@ -23,73 +23,73 @@
     </div>
 </template>
 <script>
-if (process.env.NODE_ENV === "development") require("Config");
+if (process.env.NODE_ENV === 'development') require('Config');
 export default {
-    data() {
+    data () {
         return {
-            copyText: ""
+            copyText: ''
         };
     },
     methods: {
-        hide() {
+        hide () {
             this.$tools.resignKeyboard().then(
                 resData => {
                     this.$notice.toast({
-                        message: "收起键盘成功"
+                        message: '收起键盘成功'
                     });
                 },
                 error => {
                     this.$notice.toast({
-                        message: "收起键盘失败"
+                        message: '收起键盘失败'
                     });
                 }
             );
         },
-        hasWXApp() {
+        hasWXApp () {
             this.$tools.isInstallWXApp().then(
                 resData => {
                     // 成功的回调，必须在eros.native.js中配置才能生效
                 },
                 error => {
                     this.$notice.toast({
-                        message: "获取微信失败"
+                        message: '获取微信失败'
                     });
                 }
             );
         },
-        hasCid() {
+        hasCid () {
             this.$tools.getCid().then(
                 resData => {
                     // 成功的回调，必须在eros.native.js中配置才能生效
                 },
                 error => {
                     this.$notice.toast({
-                        message: "获取cid失败"
+                        message: '获取cid失败'
                     });
                 }
             );
         },
-        copy() {
-            if (this.copyText.toString() === "") {
+        copy () {
+            if (this.copyText.toString() === '') {
                 this.$notice.toast({
-                    message: "拷贝内容为空"
+                    message: '拷贝内容为空'
                 });
                 return;
             }
             this.$tools.copyString(this.copyText.toString()).then(
                 resData => {
                     this.$notice.toast({
-                        message: "拷贝成功，请粘贴"
+                        message: '拷贝成功，请粘贴'
                     });
                 },
                 error => {
                     this.$notice.toast({
-                        message: "拷贝失败"
+                        message: '拷贝失败'
                     });
                 }
             );
         },
-        scan() {
+        scan () {
             this.$tools.scan().then(resData => {
                 console.log(resData);
             });
@@ -102,6 +102,7 @@ export default {
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 30px;
+    height: 150px;
 }
 
 .layout {

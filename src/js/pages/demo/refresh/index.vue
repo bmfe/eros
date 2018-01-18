@@ -1,6 +1,6 @@
 <template>
     <list ref="list" :show-scrollbar="false" :showRefresh="true" @refresh="onrefresh">
-        <cell v-for="(num,index) in arr" :index="index" class="panel">
+        <cell v-for="(num,index) in arr" :key="index" :index="index" class="panel">
             <text class="text">{{num}}</text>
         </cell>
     </list>
@@ -19,12 +19,12 @@ if (process.env.NODE_ENV === 'development') require('Config')
 export default {
     data () {
         return {
-            arr: [],
+            arr: []
         }
     },
     created () {
         for (let i = 0; i < 20; i++) {
-            this.arr.push(i+1)
+            this.arr.push(i + 1)
         }
     },
     methods: {

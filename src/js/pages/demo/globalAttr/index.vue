@@ -1,6 +1,6 @@
 <template>
     <list v-if="attrArr.length" :show-scrollbar="false">
-        <cell v-for="(attr,index) in attrArr" :index="index" class="panel">
+        <cell v-for="(attr,index) in attrArr" :key="index" :index="index" class="panel">
             <text class="text">{{attr.text}}: {{attr.value}}</text>
         </cell>
     </list>

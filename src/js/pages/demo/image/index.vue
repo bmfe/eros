@@ -18,13 +18,13 @@
     </scroller>
 </template>
 <script>
-if (process.env.NODE_ENV === "development") require("Config");
+if (process.env.NODE_ENV === 'development') require('Config');
 export default {
     methods: {
-        pickAndUpload() {
+        pickAndUpload () {
             this.$image
                 .pickAndUpload({
-                    url: "",
+                    url: '',
                     maxCount: 3,
                     imageWidth: 1000,
                     allowCrop: true,
@@ -34,21 +34,21 @@ export default {
                 .then(
                     resData => {
                         this.$notice.toast({
-                            message: "上传成功"
+                            message: '上传成功'
                         });
                         console.log(resData);
                     },
                     error => {
                         this.$notice.toast({
-                            message: "上传失败:" + error.errorMsg
+                            message: '上传失败:' + error.errorMsg
                         });
                     }
                 );
         },
-        upload() {
+        upload () {
             this.$image
                 .upload({
-                    url: "",
+                    url: '',
                     params: {},
                     header: {},
                     images: []
@@ -56,61 +56,61 @@ export default {
                 .then(
                     resData => {
                         this.$notice.toast({
-                            message: "上传成功"
+                            message: '上传成功'
                         });
                         console.log(resData); // [url1, url2...]
                     },
                     error => {
                         this.$notice.toast({
-                            message: "上传失败:" + error.errorMsg
+                            message: '上传失败:' + error.errorMsg
                         });
                     }
                 );
         },
-        camera() {
+        camera () {
             this.$image
                 .camera({
-                    imageWidth: "800",
+                    imageWidth: '800',
                     allowCrop: true
                 })
                 .then(
                     resData => {
                         this.$notice.toast({
-                            message: "拍照成功:" + resData
+                            message: '拍照成功:' + resData
                         });
                     },
                     error => {
                         this.$notice.toast({
-                            message: "拍照失败:" + error
+                            message: '拍照失败:' + error
                         });
                     }
                 );
         },
-        pick() {
+        pick () {
             this.$image
                 .pick({
                     maxCount: 1,
-                    imageWidth: "800",
+                    imageWidth: '800',
                     allowCrop: true
                 })
                 .then(
                     resData => {
                         this.$notice.toast({
-                            message: "获取成功:" + resData
+                            message: '获取成功:' + resData
                         });
                     },
                     error => {
                         this.$notice.toast({
-                            message: "获取失败:" + error
+                            message: '获取失败:' + error
                         });
                     }
                 );
         },
-        preview() {
+        preview () {
             this.$image.preview({
                 index: 1,
                 images: [
-                    "http://img.taopic.com/uploads/allimg/120727/201995-120HG1030762.jpg"
+                    'http://img.taopic.com/uploads/allimg/120727/201995-120HG1030762.jpg'
                 ]
             });
         }

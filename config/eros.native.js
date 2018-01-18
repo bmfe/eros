@@ -10,8 +10,8 @@ module.exports = {
     'page': {
         'homePage': '/pages/demo/index.js',
         'mediatorPage': '/mediator/index.js',
-        'navBarColor': '#ffffff',
-        'navItemColor': '#333'
+        'navBarColor': '#1DA1F2',
+        'navItemColor': '#ffffff'
     },
     'url': {
         'jsServer': 'http://app.weex-eros.com:8889',

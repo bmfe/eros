@@ -9,32 +9,32 @@
 </template>
 
 <script>
-import { format, setDays } from "../util";
+import { format, setDays } from '../util';
 export default {
-    created() {
-        this.startDate = format("", "YYYY-MM-DD");
-        this.endDate = format("", "YYYY-MM-DD");
-        this.minimumDate = format(setDays("", "subtract", 30), "YYYY-MM-DD");
-        this.maximumDate = format(setDays("", "add", 30), "YYYY-MM-DD");
+    created () {
+        this.startDate = format('', 'YYYY-MM-DD');
+        this.endDate = format('', 'YYYY-MM-DD');
+        this.minimumDate = format(setDays('', 'subtract', 30), 'YYYY-MM-DD');
+        this.maximumDate = format(setDays('', 'add', 30), 'YYYY-MM-DD');
     },
-    data() {
+    data () {
         return {
-            minimumDate: "",
-            maximumDate: "",
-            startDate: "",
-            endDate: ""
+            minimumDate: '',
+            maximumDate: '',
+            startDate: '',
+            endDate: ''
         };
     },
     methods: {
-        prev() {
-            this.$refs["calendar"].goPrve();
+        prev () {
+            this.$refs['calendar'].goPrve();
         },
-        next() {
-            this.$refs["calendar"].goNext();
+        next () {
+            this.$refs['calendar'].goNext();
         },
-        finish(params) {
+        finish (params) {
             this.$notice.toast({
-                message: "开始时间：" + params.startDate + "\r\n结束时间：" + params.endDate
+                message: '开始时间：' + params.startDate + '\r\n结束时间：' + params.endDate
             });
         }
     }

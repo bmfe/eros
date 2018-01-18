@@ -17,9 +17,9 @@
 </template>
 
 <script>
-if (process.env.NODE_ENV === "development") require("Config");
+if (process.env.NODE_ENV === 'development') require('Config');
 export default {
-    data() {
+    data () {
         return {};
     },
     methods: {}

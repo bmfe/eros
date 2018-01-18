@@ -6,21 +6,21 @@
     </scroller>
 </template>
 <script>
-if (process.env.NODE_ENV === "development") require("Config");
+if (process.env.NODE_ENV === 'development') require('Config');
 export default {
     methods: {
-        reset() {
-            this.$router.setHomePage("/pages/demo/index.js");
+        reset () {
+            this.$router.setHomePage('/pages/demo/index.js');
             this.$notice.toast({
-                message: "重置成功，请退出重启app"
+                message: '重置成功，请退出重启app'
             });
         }
     },
-    created() {
+    created () {
         this.$navigator.setNavigationInfo({
-                title: "首页",
+                title: '首页',
                 navShow: true,
-                statusBarStyle: "Default"
+                statusBarStyle: 'Default'
             },
             () => {}
         );
