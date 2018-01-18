@@ -11,7 +11,7 @@ export default {
         init () {
             this.$navigator.setRightItem({
                 text: '右侧标题',
-                textColor: '#000',
+                textColor: '#fff',
                 fontSize: '32',
                 fontWeight: 'normal'
             }, () => {

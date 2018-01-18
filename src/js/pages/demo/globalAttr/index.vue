@@ -1,19 +1,24 @@
 <template>
-    <list v-if="attrArr.length" :show-scrollbar="false">
-        <cell v-for="(attr,index) in attrArr" :key="index" :index="index" class="panel">
-            <text class="text">{{attr.text}}: {{attr.value}}</text>
-        </cell>
-    </list>
+    <div>
+        <list v-if="attrArr.length" :show-scrollbar="false" class="container">
+            <cell v-for="(attr,index) in attrArr" :key="index" :index="index" class="panel">
+                <text class="text">{{attr.text}}: {{attr.value}}</text>
+            </cell>
+        </list>
+        <div class="touch-bar" :style="{'height': touchBarHeight}">
+        </div>
+    </div>
 </template>
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    data () {
+    data() {
         return {
-            attrArr: []
+            attrArr: [],
+            touchBarHeight: weex.config.env.touchBarHeight ? weex.config.env.touchBarHeight : 0
         }
     },
-    created () {
+    created() {
         if (weex && weex.config && weex.config.eros) {
             for (const i in weex.config.eros) {
                 this.attrArr.push({
@@ -24,22 +29,34 @@ export default {
         }
     }
 }
+
 </script>
 <style scoped>
+.container {
+    width: 700px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
 .panel {
-    width: 750px;
+    background-color: #fff;
+    width: 700px;
     height: 100px;
-    margin-bottom: 35px;
-    flex-direction: column;
+    padding-left: 24px;
     justify-content: center;
-    border-bottom-width: 2px;
+    border-bottom-width: 1px;
+    border-bottom-color: #b9b9b9;
     border-style: solid;
-    border-color: rgb(162, 217, 192);
-    background-color: rgba(162, 217, 192, 0.2);
 }
 
 .text {
-    padding-left: 10;
-    color: #41B883;
+    color: #7d7d7d;
+    font-weight: 500;
 }
+
+.touch-bar {
+    height: 68;
+    width: 750;
+}
+
 </style>

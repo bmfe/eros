@@ -60,9 +60,9 @@ export default {
     border-width: 2px;
     border-style: solid;
     color: #fff;
-    border-color: #0473a5;
+    border-color: #1da1f2;
     border-radius: 15px;
-    background-color: #0473a5;
+    background-color: #1da1f2;
 }
 
 .label {
