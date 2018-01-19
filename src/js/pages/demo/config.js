@@ -40,7 +40,7 @@ const TYPE = [{
         type: 'router'
     },
     {
-        name: '接口请求',
+        name: '接口请求（ eros dev 可用本地mock ）',
         type: 'axios'
     },
     {

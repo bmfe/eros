@@ -175,10 +175,6 @@ export default class Router {
                     //     url: params.url || '',
                     //     platforms: params.platforms || [] // 传空的话默认全部
                     // }
-                if (params.shareInfo) {
-                    !params.shareInfo.image && (params.shareInfo.image = 'https://img.benmu-health.com/wechat/jyt100.png')
-                }
-
                 router.toWebView(params)
             },
             toMap (options) {

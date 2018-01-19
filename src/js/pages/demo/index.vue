@@ -12,10 +12,31 @@
                     </bmrichtext>
                 </div>
                 <text class="desc-info-2">二次封装 weex，让开发者用 VUE 写一个属于自己的 APP。</text>
+                <div class="desc-detail">
+                    <text class="desc-detail-item"> iOS </text>
+                    <text class="desc-detail-item"> Android </text>
+                    <text class="desc-detail-item"> VUE </text>
+                    <text class="desc-detail-item"> Widget </text>
+                    <text class="desc-detail-item"> Module </text>
+                    <text class="desc-detail-item"> Appboard </text>
+                    <text class="desc-detail-item"> Mediator </text>
+                    <text class="desc-detail-item"> BS diff </text>
+                    <text class="desc-detail-item"> eros-cli </text>
+                    <text class="desc-detail-item"> eros-publish </text>
+                    <text class="desc-detail-item"> Weex Debug </text>
+                    <text class="desc-detail-item"> support UI libs </text>
+                    <text class="desc-detail-item"> Camera </text>
+                    <text class="desc-detail-item"> Image </text>
+                    <text class="desc-detail-item"> Contacts </text>
+                    <text class="desc-detail-item"> ESlint </text>
+                </div>
+                <div class="desc-detail" style="margin-top: 100px;">
+                    <text class="desc-detail-github icon" @click="openWebView('https://github.com/bmfe/eros-template')">&#xeee2;</text>
+                    <text class="desc-detail-wiki icon" @click="openWebView('https://github.com/bmfe/eros-template/wiki')">&#xe713;</text>
+                </div>
             </header>
             <header class="header stickyHeader">
                 <text class="header-1">{{rows[0].name}}</text>
-                <text class="header-2 icon">&#xeee2;</text>
                 <text class="header-2 icon">&#xe713;</text>
             </header>
             <cell class="demo-list-cell-container">
@@ -26,7 +47,6 @@
             </cell>
             <header class="header stickyHeader">
                 <text class="header-1">{{rows[1].name}}</text>
-                <text class="header-2 icon">&#xeee2;</text>
                 <text class="header-2 icon">&#xe713;</text>
             </header>
             <cell class="demo-list-cell-container">
@@ -35,9 +55,8 @@
                     <!--<text class="icon">&#xeee2;</text>-->
                 </div>
             </cell>
-            <header class="header stickyHeader">
+            <header class="header" style="flex-direction: row;">
                 <text class="header-1">{{rows[2].name}}</text>
-                <text class="header-2 icon">&#xeee2;</text>
                 <text class="header-2 icon">&#xe713;</text>
             </header>
             <cell class="demo-list-cell-container">
@@ -52,11 +71,11 @@
 </template>
 
 <script>
-if (process.env.NODE_ENV === "development") require("Config");
-import { TYPE } from "./config";
+if (process.env.NODE_ENV === 'development') require('Config');
+import { TYPE } from './config';
 
 export default {
-    data() {
+    data () {
         return {
             // appearMin: 1,
             // appearMax: 1,
@@ -68,22 +87,27 @@ export default {
             touchBarHeight: weex.config.env.touchBarHeight ? weex.config.env.touchBarHeight : 0
         };
     },
-    beforeCreate: function() {
-        var domModule = weex.requireModule("dom");
+    beforeCreate: function () {
+        var domModule = weex.requireModule('dom');
 
-        domModule.addRule("fontFace", {
-            fontFamily: "iconfont-eros",
+        domModule.addRule('fontFace', {
+            fontFamily: 'iconfont-eros',
             src:
-                "url('https://at.alicdn.com/t/font_545350_76nuzg1ff8rm5cdi.woff')"
+                'url(\'https://at.alicdn.com/t/font_545350_76nuzg1ff8rm5cdi.woff\')'
         });
     },
-    created() {
+    created () {
         this.$navigator.setNavigationInfo({
-            statusBarStyle: "LightContent"
+            statusBarStyle: 'LightContent'
         });
     },
     methods: {
-        handle(type) {
+        openWebView (url) {
+            this.$router.toWebView({
+                url
+            })
+        },
+        handle (type) {
             this[`handle_${type}`]();
         },
         // handle_lifecycle () {
@@ -92,160 +116,160 @@ export default {
         //         statusBarStyle: 'LightContent'
         //     })
         // },
-        handle_assets() {
+        handle_assets () {
             this.$router.open({
-                name: "demo.assets",
-                statusBarStyle: "LightContent"
+                name: 'demo.assets',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_globalAttr() {
+        handle_globalAttr () {
             this.$router.open({
-                name: "demo.globalAttr",
-                statusBarStyle: "LightContent"
+                name: 'demo.globalAttr',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_inputExtend() {
+        handle_inputExtend () {
             this.$router.open({
-                name: "demo.inputExtend",
-                statusBarStyle: "LightContent"
+                name: 'demo.inputExtend',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_refresh() {
+        handle_refresh () {
             this.$router.open({
-                name: "demo.refresh",
-                statusBarStyle: "LightContent"
+                name: 'demo.refresh',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_storage() {
+        handle_storage () {
             this.$router.open({
-                name: "demo.storage",
-                statusBarStyle: "LightContent"
+                name: 'demo.storage',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_navigator() {
+        handle_navigator () {
             this.$router.open({
-                name: "demo.navigator",
-                statusBarStyle: "LightContent"
+                name: 'demo.navigator',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_share() {
+        handle_share () {
             this.$share({
-                title: "分享出去的title",
-                content: "分享出去的内容",
-                url: "www.baidu.com",
-                image: "",
-                platforms: ["Pasteboard", "WechatSession", "WechatTimeLine"]
+                title: '分享出去的title',
+                content: '分享出去的内容',
+                url: 'www.baidu.com',
+                image: '',
+                platforms: ['Pasteboard', 'WechatSession', 'WechatTimeLine']
             }).then(
                 resData => {
                     // 成功的回调
                     this.$notice.toast({
-                        message: "分享成功"
+                        message: '分享成功'
                     });
                 },
                 error => {
                     // 失败的回调
                     this.$notice.toast({
-                        message: "分享失败"
+                        message: '分享失败'
                     });
                 }
             );
         },
-        handle_tools() {
+        handle_tools () {
             this.$router.open({
-                name: "demo.tools",
-                statusBarStyle: "LightContent"
+                name: 'demo.tools',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_router() {
+        handle_router () {
             this.$router.open({
-                name: "demo.router",
-                type: "PRESENT",
+                name: 'demo.router',
+                type: 'PRESENT',
                 params: {
-                    text: "123"
+                    text: '123'
                 },
-                statusBarStyle: "LightContent",
+                statusBarStyle: 'LightContent',
                 backCallback: () => {
                     this.$notice.toast({
-                        message: "页面返回时的回调触发了，但返回功能阻止了"
+                        message: '页面返回时的回调触发了，但返回功能阻止了'
                     });
                 }
             });
         },
-        handle_axios() {
+        handle_axios () {
             var self = this;
             this.$fetch({
-                name: "COMMON.getInfo",
+                name: 'COMMON.getInfo',
                 data: {
-                    name: "weex-eros"
+                    name: 'weex-eros'
                 }
             }).then(resData => {
                 self.$notice.alert({
-                    title: "提示",
-                    message: "请求成功：" + resData.data,
-                    okTitle: "确定",
+                    title: '提示',
+                    message: '请求成功：' + resData.data,
+                    okTitle: '确定',
                     callback: () => {
-                        self.$notice.toast("您点击了确定");
+                        self.$notice.toast('您点击了确定');
                     }
                 });
             });
         },
-        handle_event() {
+        handle_event () {
             this.$router.open({
-                name: "demo.event.a",
-                statusBarStyle: "LightContent"
+                name: 'demo.event.a',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_notice() {
+        handle_notice () {
             this.$router.open({
-                name: "demo.notice",
-                statusBarStyle: "LightContent"
+                name: 'demo.notice',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_image() {
+        handle_image () {
             this.$router.open({
-                name: "demo.image",
-                statusBarStyle: "LightContent"
+                name: 'demo.image',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_geo() {
+        handle_geo () {
             this.$geo.get().then(
                 data => {
                     this.$notice.alert({
                         message:
-                            "经度: " +
+                            '经度: ' +
                             data.locationLng +
-                            "\r\n\r\n纬度: " +
+                            '\r\n\r\n纬度: ' +
                             data.locationLat,
-                        okTitle: "确认",
-                        callback() {
+                        okTitle: '确认',
+                        callback () {
                             // 点击确认按钮的回调
                         }
                     });
                 },
                 error => {
                     this.$notice.toast({
-                        message: "获取位置失败"
+                        message: '获取位置失败'
                     });
                     console.log(error);
                 }
             );
         },
-        handle_coms() {
+        handle_coms () {
             this.$router.open({
-                name: "demo.coms",
-                statusBarStyle: "LightContent"
+                name: 'demo.coms',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_pay() {
+        handle_pay () {
             this.$pay
                 .wechat({
                     // 微信支付所需必要参数，参考官方文档
-                    sign: "",
-                    timestamp: "",
-                    noncestr: "",
-                    partnerid: "",
-                    prepayid: "",
-                    packageValue: ""
+                    sign: '',
+                    timestamp: '',
+                    noncestr: '',
+                    partnerid: '',
+                    prepayid: '',
+                    packageValue: ''
                 })
                 .then(
                     resData => {
@@ -253,33 +277,33 @@ export default {
                     },
                     error => {
                         this.$notice.toast({
-                            message: "调用支付失败"
+                            message: '调用支付失败'
                         });
                     }
                 );
         },
-        handle_font() {
+        handle_font () {
             this.$router.open({
-                name: "demo.font",
-                statusBarStyle: "LightContent"
+                name: 'demo.font',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_bmchart() {
+        handle_bmchart () {
             this.$router.open({
-                name: "demo.bmchart",
-                statusBarStyle: "LightContent"
+                name: 'demo.bmchart',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_bmrichtext() {
+        handle_bmrichtext () {
             this.$router.open({
-                name: "demo.bmrichtext",
-                statusBarStyle: "LightContent"
+                name: 'demo.bmrichtext',
+                statusBarStyle: 'LightContent'
             });
         },
-        handle_bmcalendar() {
+        handle_bmcalendar () {
             this.$router.open({
-                name: "demo.bmcalendar",
-                statusBarStyle: "LightContent"
+                name: 'demo.bmcalendar',
+                statusBarStyle: 'LightContent'
             });
         }
     }
@@ -297,7 +321,7 @@ export default {
 .desc {
     margin-top: 0px;
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     text-align: center;
     background-color: #1da1f2;
     /*align-items: center;*/
@@ -314,7 +338,7 @@ export default {
     font-size: 100;
     color: white;
     margin-bottom: 30px;
-    margin-top: -180px;
+    /*margin-top: -180px;*/
 }
 .desc-info-1,
 .desc-info-2 {
@@ -322,11 +346,42 @@ export default {
     padding-left: 20px;
     padding-right: 20px;
     color: white;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 30px;
 }
 .desc-info-2 {
     margin-top: 30px;
+}
+.desc-detail {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 750px;
+}
+.desc-detail-item {
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #7d7d7d;
+    font-weight: 300;
+    font-size: 30px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 1px;
+    box-shadow: 1px 1px 2px solid grey;
+}
+.desc-detail-github, 
+.desc-detail-wiki {
+    width: 375px;
+    font-weight: 500;
+    font-size: 50px;
+}
+.desc-detail-github {
+    text-align: right;
+    padding-right: 50px;
+}
+.desc-detail-wiki {
+    text-align: left;
+    padding-left: 50px;
 }
 .desc-info-text {
     color: white;
@@ -349,7 +404,7 @@ export default {
 
 .header-1 {
     padding-left: 25px;
-    width: 550px;
+    width: 650px;
     font-weight: 600;
     font-size: 40px;
     color: white;
@@ -362,8 +417,8 @@ export default {
     color: white;
 }
 .header-3 {
-    text-align: center;
-    width: 100px;
+    text-align: right;
+    width: 200px;
     font-weight: 300;
     font-size: 40px;
     color: white;
@@ -392,7 +447,6 @@ export default {
 }
 .icon {
     color: white;
-    font-size: 36;
     font-family: iconfont-eros;
 }
 .status-bar {
