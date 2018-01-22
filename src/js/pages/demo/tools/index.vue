@@ -137,5 +137,7 @@ export default {
     top: 70px;
     left: 20px;
     font-size: 34px;
+    color: #7d7d7d;
+    font-weight: 500;
 }
 </style>

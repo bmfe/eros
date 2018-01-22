@@ -40,13 +40,14 @@ export default {
 .wrapper {
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 }
 
 .button {
     width: 400px;
     height: 90px;
-    top: 60px;
+    margin-top: 60px;
+    /*top: 60px;*/
     text-align: center;
     font-size: 34px;
     padding-top: 25px;
@@ -61,8 +62,11 @@ export default {
 .label {
     width: 500px;
     height: 80px;
-    top: 70px;
+    /*top: 70px;*/
+    margin-top: 40px;
     font-size: 34px;
     text-align: center;
+    color: #7d7d7d;
+    font-weight: 500;
 }
 </style>

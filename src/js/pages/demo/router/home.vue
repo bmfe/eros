@@ -1,7 +1,7 @@
 <template>
     <scroller>
         <div class="wrapper">
-            <text class="button button-big" @click="reset">重置启动页</text>
+            <text class="button" @click="reset">重置启动页</text>
         </div>
     </scroller>
 </template>
@@ -31,28 +31,21 @@ export default {
 .wrapper {
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 }
 
 .button {
-    width: 150px;
-    height: 60px;
-    top: 60px;
+    width: 500px;
+    height: 100px;
+    font-size: 35px;
+    padding-top: 30px;
+    margin-top: 60px;
     text-align: center;
-    font-size: 30px;
-    padding-top: 13px;
     border-width: 1px;
     border-style: solid;
     color: #fff;
     border-color: #1da1f2;
     border-radius: 15px;
     background-color: #1da1f2;
-}
-
-.button-big {
-    width: 500px;
-    height: 100px;
-    font-size: 35px;
-    padding-top: 26px;
 }
 </style>

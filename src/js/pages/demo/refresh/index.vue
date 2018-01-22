@@ -1,57 +1,67 @@
 <template>
-    <list ref="list" :show-scrollbar="false" :showRefresh="true" @refresh="onrefresh">
-        <cell v-for="(num,index) in arr" :key="index" :index="index" class="panel">
-            <text class="text">{{num}}</text>
-        </cell>
-    </list>
-    <!-- <scroller ref="list" :showRefresh="true" @refresh="onrefresh">
-        <text class="text">1234567</text>
-        <text class="text">1234567</text>
-        <text class="text">1234567</text>
-        <text class="text">1234567</text>
-        <text class="text">1234567</text>
-        <text class="text">1234567</text>
-        <text class="text">1234567</text>
-    </scroller>     -->
+    <div>
+        <list ref="list" :show-scrollbar="false" :showRefresh="true" @refresh="onrefresh" class="container">
+            <cell v-for="(num,index) in arr" :key="index" :index="index" class="panel">
+                <text class="text">{{num}}</text>
+            </cell>
+        </list>
+        <div class="touch-bar" :style="{'height': touchBarHeight}">
+        </div>
+    </div>
 </template>
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    data () {
+    data() {
         return {
-            arr: []
+            arr: [],
+            touchBarHeight: weex.config.eros.touchBarHeight ? weex.config.eros.touchBarHeight : 0
         }
     },
-    created () {
+    created() {
         for (let i = 0; i < 20; i++) {
             this.arr.push(i + 1)
         }
     },
     methods: {
-        onrefresh () {
-            console.log('3456789');
+        onrefresh() {
             setTimeout(() => {
                 this.$refs['list'].refreshEnd()
+                this.$notice.toast({
+                    message: 'refreshEnd'
+                });
             }, 1000)
         }
     }
 }
+
 </script>
 <style scoped>
+.container {
+    width: 700px;
+    margin: 25px;
+}
+
 .panel {
-    width: 750px;
+    background-color: #fff;
+    width: 700px;
     height: 100px;
-    margin-bottom: 35px;
-    flex-direction: column;
+    padding-left: 24px;
     justify-content: center;
-    border-bottom-width: 2px;
+    border-bottom-width: 1px;
+    border-bottom-color: #b9b9b9;
     border-style: solid;
-    border-color: rgb(162, 217, 192);
-    background-color: rgba(162, 217, 192, 0.2);
 }
 
 .text {
-    padding-left: 10;
-    color: #41B883;
+    font-size: 30;
+    color: #7d7d7d;
+    font-weight: 700;
 }
+
+.touch-bar {
+    height: 68;
+    width: 750;
+}
+
 </style>

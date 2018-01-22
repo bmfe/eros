@@ -85,6 +85,10 @@ const TYPE = [{
     {
         name: '日期',
         type: 'bmcalendar'
+    },
+    {
+        name: '弹窗',
+        type: 'bmmask'
     }]
 }
 ];

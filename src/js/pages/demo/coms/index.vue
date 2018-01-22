@@ -53,13 +53,12 @@ export default {
 .wrapper {
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 30px;
 }
 
 .button {
     width: 400px;
     height: 90px;
-    top: 60px;
+    margin-top: 60;
     text-align: center;
     font-size: 34px;
     padding-top: 25px;

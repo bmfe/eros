@@ -68,5 +68,7 @@ export default {
 .label {
     text-align: center;
     margin-top: 30px;
+    color: #7d7d7d;
+    font-weight: 500;
 }
 </style>

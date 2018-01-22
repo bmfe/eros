@@ -2,7 +2,8 @@
     <div>
         <list v-if="attrArr.length" :show-scrollbar="false" class="container">
             <cell v-for="(attr,index) in attrArr" :key="index" :index="index" class="panel">
-                <text class="text">{{attr.text}}: {{attr.value}}</text>
+                <text class="text arrtName">{{attr.text}}: </text>
+                <text class="text">{{attr.value || '无'}}</text>
             </cell>
         </list>
         <div class="touch-bar" :style="{'height': touchBarHeight}">
@@ -15,7 +16,7 @@ export default {
     data() {
         return {
             attrArr: [],
-            touchBarHeight: weex.config.env.touchBarHeight ? weex.config.env.touchBarHeight : 0
+            touchBarHeight: weex.config.eros.touchBarHeight ? weex.config.eros.touchBarHeight : 0
         }
     },
     created() {
@@ -34,8 +35,8 @@ export default {
 <style scoped>
 .container {
     width: 700px;
-    margin-left: 25px;
-    margin-top: 25px;
+    margin: 25px;
+    /*margin-top: 25px;*/
 }
 
 .panel {
@@ -50,8 +51,13 @@ export default {
 }
 
 .text {
+    font-size: 30;
     color: #7d7d7d;
-    font-weight: 500;
+    font-weight: 400;
+}
+
+.arrtName {
+    font-weight: 700;
 }
 
 .touch-bar {

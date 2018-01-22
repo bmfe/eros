@@ -1,10 +1,7 @@
 <template>
     <scroller>
         <div class="wrapper">
-            <div class="wrapper">
-                <input class="layout" type="text" placeholder="输入需要展示在a页面的内容" v-model="eventText" />
-                <!-- <text class="button" @click="emit">传递</text> -->
-            </div>
+            <input class="layout" type="text" placeholder="输入需要展示在a页面的内容" v-model="eventText" />
         </div>
         <div class="wrapper">
             <text class="button" @click="emit">传递</text>
@@ -14,13 +11,13 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    data () {
+    data() {
         return {
             eventText: ''
         }
     },
     methods: {
-        emit () {
+        emit() {
             this.$event.emit('getParams', this.eventText)
             this.$notice.toast({
                 message: '传递成功'
@@ -29,18 +26,18 @@ export default {
         }
     }
 }
+
 </script>
 <style scoped>
 .wrapper {
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 30px;
 }
 
 .button {
     width: 200px;
     height: 70px;
-    top: 60px;
+    margin-top: 60px;
     text-align: center;
     font-size: 30px;
     padding-top: 15px;
@@ -55,10 +52,11 @@ export default {
 .layout {
     width: 500px;
     height: 80px;
-    top: 50px;
+    margin-top: 50px;
     padding-left: 10px;
     font-size: 34px;
     border-width: 1px;
     border-radius: 12px;
 }
+
 </style>

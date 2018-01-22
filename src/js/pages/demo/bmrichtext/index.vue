@@ -29,6 +29,8 @@ export default {
 <style scoped>
 .hd-txt {
     line-height: 100;
+    color: #7d7d7d;
+    font-weight: 500;
 }
 .f-green {
     color: #07ae9c;
@@ -36,8 +38,10 @@ export default {
 .protocol-txt {
     margin-bottom: 60;
     font-size: 32;
-    color: #333;
+    /*color: #333;*/
     line-height: 62;
+    color: #7d7d7d;
+    font-weight: 500;
 }
 .underline {
   font-weight: bold;

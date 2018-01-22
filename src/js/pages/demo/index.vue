@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="status-bar" :style="{'height': statusBarHeight}"></div>
-        <waterfall class="container">
+        <waterfall class="container" :show-scrollbar="false">
             <header class="desc">
                 <text class="desc-title icon" style="font-size: 100px">&#xe618;</text>
                 <!--<text class="desc-info">eros 的定位不是仅仅是一个库，由于 app 开发的特殊性，则更偏重关心于整个 app 项目。</text>-->
@@ -35,38 +35,43 @@
                     <text class="desc-detail-wiki icon" @click="openWebView('https://github.com/bmfe/eros-template/wiki')">&#xe713;</text>
                 </div>
             </header>
-            <header class="header stickyHeader">
+            <header class="header" :class="[WXEnvironment.platform == 'iOS' ? 'stickyHeader' : '']">
                 <text class="header-1">{{rows[0].name}}</text>
-                <text class="header-2 icon">&#xe713;</text>
+                <!-- <text class="header-2 icon">&#xe713;</text> -->
             </header>
             <cell class="demo-list-cell-container">
                 <div class="demo-list-cell" v-for="(v,i) in rows[0].items" append="tree" :index="i" :key="i" @click="handle(v.type)">
                     <text class="demo-list-cell-text">{{v.name}}</text>
-                    <!--<text class="icon">&#xeee2;</text>-->
+                    <text class="demo-list-cell-icon">&#xe62d;</text>
                 </div>
             </cell>
-            <header class="header stickyHeader">
+            <header class="header" :class="[WXEnvironment.platform == 'iOS' ? 'stickyHeader' : '']">
                 <text class="header-1">{{rows[1].name}}</text>
-                <text class="header-2 icon">&#xe713;</text>
+                <!-- <text class="header-2 icon">&#xe713;</text> -->
             </header>
             <cell class="demo-list-cell-container">
                 <div class="demo-list-cell" v-for="(v,i) in rows[1].items" append="tree" :index="i" :key="i" @click="handle(v.type)">
                     <text class="demo-list-cell-text">{{v.name}}</text>
-                    <!--<text class="icon">&#xeee2;</text>-->
+                    <text class="demo-list-cell-icon">&#xe62d;</text>
                 </div>
             </cell>
             <header class="header" style="flex-direction: row;">
                 <text class="header-1">{{rows[2].name}}</text>
-                <text class="header-2 icon">&#xe713;</text>
+                <!-- <text class="header-2 icon">&#xe713;</text> -->
             </header>
             <cell class="demo-list-cell-container">
                 <div class="demo-list-cell" v-for="(v,i) in rows[2].items" append="tree" :index="i" :key="i" @click="handle(v.type)">
                     <text class="demo-list-cell-text">{{v.name}}</text>
-                    <!--<text class="icon">&#xeee2;</text>-->
+                    <text class="demo-list-cell-icon">&#xe62d;</text>
                 </div>
             </cell>
         </waterfall>
         <div class="touch-bar" :style="{'height': touchBarHeight}"></div>
+        <bmmask class="mask" animation="transition" position="top" :duration="300" ref="bmmask">
+            <bmpop class="modal-top">
+                <image style="width:550px; height:550px; margin-top:300px; margin-left:100px;" src="bmlocal://assets/demo.jpg"></image>
+            </bmpop>
+        </bmmask>
     </div>
 </template>
 
@@ -77,14 +82,10 @@ import { TYPE } from './config';
 export default {
     data () {
         return {
-            // appearMin: 1,
-            // appearMax: 1,
-            // appearIds: [],
-            // lat: '',
-            // lng: '',
             rows: TYPE,
-            statusBarHeight: weex.config.env.statusBarHeight ? weex.config.env.statusBarHeight : 40,
-            touchBarHeight: weex.config.env.touchBarHeight ? weex.config.env.touchBarHeight : 0
+            statusBarHeight: weex.config.eros.statusBarHeight ? weex.config.eros.statusBarHeight : 40,
+            touchBarHeight: weex.config.eros.touchBarHeight ? weex.config.eros.touchBarHeight : 20,
+            WXEnvironment
         };
     },
     beforeCreate: function () {
@@ -304,158 +305,11 @@ export default {
                 name: 'demo.bmcalendar',
                 statusBarStyle: 'LightContent'
             });
+        },
+        handle_bmmask () {
+            this.$refs['bmmask'].show()
         }
     }
 };
 </script>
-<style scoped>
-.stickyHeader {
-    position: sticky;
-    flex-direction: row;
-}
-.container {
-    background-color: #1da1f2;
-}
-
-.desc {
-    margin-top: 0px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-    background-color: #1da1f2;
-    /*align-items: center;*/
-    width: 750px;
-    justify-content: center;
-    border-bottom-width: 2px;
-    border-style: solid;
-    border-color: white;
-}
-.desc-title {
-    width: 750px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 100;
-    color: white;
-    margin-bottom: 30px;
-    /*margin-top: -180px;*/
-}
-.desc-info-1,
-.desc-info-2 {
-    /*padding-top: 20px;*/
-    padding-left: 20px;
-    padding-right: 20px;
-    color: white;
-    font-weight: 500;
-    font-size: 30px;
-}
-.desc-info-2 {
-    margin-top: 30px;
-}
-.desc-detail {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    width: 750px;
-}
-.desc-detail-item {
-    margin-top: 20px;
-    margin-left: 20px;
-    color: #7d7d7d;
-    font-weight: 300;
-    font-size: 30px;
-    background-color: white;
-    padding: 5px;
-    border-radius: 1px;
-    box-shadow: 1px 1px 2px solid grey;
-}
-.desc-detail-github, 
-.desc-detail-wiki {
-    width: 375px;
-    font-weight: 500;
-    font-size: 50px;
-}
-.desc-detail-github {
-    text-align: right;
-    padding-right: 50px;
-}
-.desc-detail-wiki {
-    text-align: left;
-    padding-left: 50px;
-}
-.desc-info-text {
-    color: white;
-    font-weight: 300;
-    font-size: 30px;
-}
-
-.desc-info-text-bold {
-    color: white;
-    font-weight: 600;
-    font-size: 80px;
-}
-.header {
-    padding-top: 45px;
-    width: 750px;
-    height: 117px;
-    background-color: #1da1f2;
-    color: white;
-}
-
-.header-1 {
-    padding-left: 25px;
-    width: 650px;
-    font-weight: 600;
-    font-size: 40px;
-    color: white;
-}
-.header-2 {
-    text-align: center;
-    width: 100px;
-    font-weight: 300;
-    font-size: 40px;
-    color: white;
-}
-.header-3 {
-    text-align: right;
-    width: 200px;
-    font-weight: 300;
-    font-size: 40px;
-    color: white;
-}
-.demo-list-cell-container {
-    width: 700px;
-    box-shadow: 1px 1px 2px solid grey;
-    margin-left: 25px;
-    margin-right: 25px;
-}
-.demo-list-cell {
-    background-color: white;
-    width: 700px;
-    height: 100px;
-    padding-left: 24px;
-    justify-content: center;
-    border-bottom-width: 1px;
-    border-bottom-color: #b9b9b9;
-    /*border-bottom-color: #53bbfb;*/
-    border-style: solid;
-}
-.demo-list-cell-text {
-    /*color: #53bbfb;*/
-    color: #7d7d7d;
-    font-weight: 500;
-}
-.icon {
-    color: white;
-    font-family: iconfont-eros;
-}
-.status-bar {
-    width: 750;
-    height: 40;
-    background-color: #1da1f2;
-}
-.touch-bar {
-    height: 68;
-    width: 750;
-    background-color: #1da1f2;
-}
-</style>
+<style lang="sass" src='./index.scss'></style>

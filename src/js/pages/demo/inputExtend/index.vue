@@ -15,6 +15,8 @@ export default {
     left: 20px;
     /*color: #aaa;*/
     font-size: 30px;
+    color: #7d7d7d;
+    font-weight: 500;
 }
 
 .layout {
@@ -22,7 +24,7 @@ export default {
     height: 80px;
     top: 50px;
     left: 20px;
-    font-size: 40px;
+    font-size: 38px;
     tint-color: red;
 }
 </style>

@@ -103,15 +103,14 @@ export default {
 .wrapper {
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 30px;
 }
 
 .button {
     width: 150px;
     height: 60px;
-    top: 60px;
     text-align: center;
     font-size: 30px;
+    margin-top: 30px;
     padding-top: 13px;
     border-width: 1px;
     border-style: solid;
@@ -131,8 +130,10 @@ export default {
 .label {
     width: 500px;
     height: 80px;
-    top: 70px;
+    margin-top: 40px;
     left: 20px;
     font-size: 34px;
+    color: #7d7d7d;
+    font-weight: 500;
 }
 </style>
