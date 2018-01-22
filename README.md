@@ -137,12 +137,7 @@ $ eros install
 
 于是 eros 的 demo 便能在模拟器中跑起来了。
 
-![eros-demo](http://upload.ouliu.net/i/20171212233540q8alw.gif)
-
-在 eros demo 中我们可以看到：
-* tab1 中内置了 weex-ui 的 demo
-* tab2 中有大部分 widget 使用的实例
-* tab3 中跑了官方的瀑布流例子和我们编写一个支持手势滑动的多个 List 的类似新闻的实例。
+![eros-demo](http://upload.ouliu.net/i/20180122162536pcw67.gif)
 
 > eros 的 demo 很重要，建议在开发中，首先跟随 demo 编写几个页面，并保留其代码作为使用参考。
 ## Quick Query 
@@ -159,7 +154,20 @@ $ eros install
 | [eros-android-widget](https://github.com/bmfe/BMWidget) | eros 安卓组件库。 |
 | [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端 WeexSDK。 |
 
-### 此处应有打赏，请简单粗暴地爱我们！
-![](https://github.com/bmfe/eros-template/wiki/image/shang.jpeg)
+### Group & Community
+eros 正式开源到现在已经有了一个近 300 多人的开发群 (只能通过邀请)，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
 
-帮我买杯咖啡，继续创作，谢谢大家！
+* **此并不是流量群，也并非广告群，是为了大家一起成长，保证信息的有效性，如果发黄赌毒，与学习无关的广告，推广内容，无关小程序，不会商量，直接会被踢，且不会再有入群机会。**
+* eros开发中遇到任何问题可以随时发到群里 weex开发相关可以一起讨论。
+* 如果不能及时回答也请耐心等待，群里开发丰富经验的同学会帮您一起看问题。
+* 除了 eros 自身紧急 BUG 外的问题，均需要提 issue，我们会按 issue 处理，目的是为了更好的给其他开发者参考，紧急问题请直接抛到群里，我们会直接远程帮助您调试。
+
+
+| 微信群 |
+|---------|
+|![](https://gitee.com/uploads/images/2017/1026/154652_651ba169_1595985.jpeg)|
+
+### License
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2017-present, 本木医疗
