@@ -35,6 +35,7 @@
                     <text class="desc-detail-wiki icon" @click="openWebView('https://github.com/bmfe/eros-template/wiki')">&#xe713;</text>
                 </div>
             </header>
+            <cell class="line"></cell>
             <header class="header" :class="[WXEnvironment.platform == 'iOS' ? 'stickyHeader' : '']">
                 <text class="header-1">{{rows[0].name}}</text>
                 <!-- <text class="header-2 icon">&#xe713;</text> -->

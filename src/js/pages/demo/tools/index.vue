@@ -111,6 +111,7 @@ export default {
     top: 50px;
     left: 20px;
     padding-left: 10px;
+    color: #000;
     font-size: 34px;
     border-width: 1px;
     border-radius: 12px;

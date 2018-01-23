@@ -24,6 +24,7 @@ export default {
     height: 80px;
     top: 50px;
     left: 20px;
+    color: #000;
     font-size: 38px;
     tint-color: red;
 }

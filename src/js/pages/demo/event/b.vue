@@ -54,6 +54,7 @@ export default {
     height: 80px;
     margin-top: 50px;
     padding-left: 10px;
+    color: #000;
     font-size: 34px;
     border-width: 1px;
     border-radius: 12px;
