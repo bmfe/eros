@@ -41,7 +41,7 @@ globalEvent.addEventListener('viewWillAppear', function (options) {
         })
     } else if (options.type === 'back') {
         storage.getData('router.backParams', ({ status, errorMsg, data }) => {
-            const result = status === 0 ? JSON.parse(data) : { status, errorMsg, data }
+            const result = status === 0 ? JSON.parse(data) : ''
             RouterCycle.viewWillBackAppear.map((item) => {
                 item(result, options)
             })
@@ -58,7 +58,7 @@ globalEvent.addEventListener('viewDidAppear', function (options) {
         })
     } else if (options.type === 'back') {
         storage.getData('router.backParams', ({ status, errorMsg, data }) => {
-            const result = status === 0 ? JSON.parse(data) : { status, errorMsg, data }
+            const result = status === 0 ? JSON.parse(data) : ''
             RouterCycle.viewDidBackAppear.map((item) => {
                 item(result, options)
             })
