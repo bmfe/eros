@@ -1,13 +1,13 @@
 <template>
     <scroller>
         <div class="wrapper">
-            <text class="button" @click="call">打电话</text>
+            <text class="button button-big" @click="call">打电话</text>
         </div>
         <div class="wrapper">
-            <text class="button" @click="sms">发短信</text>
+            <text class="button button-big" @click="sms">发短信</text>
         </div>
         <div class="wrapper">
-            <text class="button" @click="contacts">联系人</text>
+            <text class="button button-big" @click="contacts">联系人</text>
         </div>
     </scroller>
 </template>
@@ -49,24 +49,6 @@ export default {
     }
 };
 </script>
-<style scoped>
-.wrapper {
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.button {
-    width: 400px;
-    height: 90px;
-    margin-top: 60;
-    text-align: center;
-    font-size: 34px;
-    padding-top: 25px;
-    border-width: 1px;
-    border-style: solid;
-    color: #fff;
-    border-color: #1da1f2;
-    border-radius: 15px;
-    background-color: #1da1f2;
-}
+<style lang="sass" scoped>
+@import 'src/js/css/base';
 </style>

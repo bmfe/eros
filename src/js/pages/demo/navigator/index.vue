@@ -27,11 +27,9 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style lang="sass" scoped>
+@import 'src/js/css/base';
 .label {
-    text-align: center;
-    margin-top: 30px;
-    color: #7d7d7d;
-    font-weight: 500;
+    width: 750;
 }
 </style>

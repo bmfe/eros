@@ -36,32 +36,10 @@ export default {
 }
 
 </script>
-<style scoped>
+<style lang="sass" scoped>
+@import 'src/js/css/base';
 .container {
     width: 700px;
     margin: 25px;
 }
-
-.panel {
-    background-color: #fff;
-    width: 700px;
-    height: 100px;
-    padding-left: 24px;
-    justify-content: center;
-    border-bottom-width: 1px;
-    border-bottom-color: #b9b9b9;
-    border-style: solid;
-}
-
-.text {
-    font-size: 30;
-    color: #7d7d7d;
-    font-weight: 700;
-}
-
-.touch-bar {
-    height: 68;
-    width: 750;
-}
-
 </style>

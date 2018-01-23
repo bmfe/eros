@@ -1,19 +1,19 @@
 <template>
     <scroller>
         <div class="wrapper">
-            <text class="button" @click="pickAndUpload">选择图片上传</text>
+            <text class="button button-big" @click="pickAndUpload">选择图片上传</text>
         </div>
         <div class="wrapper">
-            <text class="button" @click="upload">通过图片路径上传</text>
+            <text class="button button-big" @click="upload">通过图片路径上传</text>
         </div>
         <div class="wrapper">
-            <text class="button" @click="camera">拍照并获取图片地址</text>
+            <text class="button button-big" @click="camera">拍照并获取图片地址</text>
         </div>
         <div class="wrapper">
-            <text class="button" @click="pick">选取本地图片并处理</text>
+            <text class="button button-big" @click="pick">选取本地图片并处理</text>
         </div>
         <div class="wrapper">
-            <text class="button" @click="preview">浏览图片</text>
+            <text class="button button-big" @click="preview">浏览图片</text>
         </div>
     </scroller>
 </template>
@@ -117,24 +117,7 @@ export default {
     }
 };
 </script>
-<style scoped>
-.wrapper {
-    flex-direction: row;
-    justify-content: space-around;
-}
+<style lang="sass" scoped>
+@import 'src/js/css/base';
 
-.button {
-    width: 400px;
-    height: 90px;
-    margin-top: 60px;
-    text-align: center;
-    font-size: 34px;
-    padding-top: 25px;
-    border-width: 1px;
-    border-style: solid;
-    color: #fff;
-    border-color: #1da1f2;
-    border-radius: 15px;
-    background-color: #1da1f2;
-}
 </style>

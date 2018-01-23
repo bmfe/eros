@@ -17,9 +17,9 @@
   padding-bottom: 50px;
   text-align: center;
   background-color: $base-color;
-  border-bottom-width: 2px;
-  border-style: solid;
-  border-color: white;
+  // border-bottom-width: 0px;
+  // border-bottom-style: dashed;
+  // border-bottom-color: white;
 }
 
 .desc-title {
@@ -87,6 +87,12 @@
   color: white;
   font-weight: 600;
   font-size: 80px;
+}
+
+.line {
+  height:2px;
+  width:700px;
+  background-color: #fff;
 }
 
 .header {
@@ -186,4 +192,11 @@
 .modal-top {
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+.image {
+  width:550px; 
+  height:550px; 
+  margin-top:300px; 
+  margin-left:100px;
 }

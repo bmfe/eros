@@ -1,16 +1,16 @@
 <template>
     <scroller>
         <div class="wrapper">
-            <text class="button" @click="alert">单按钮弹窗</text>
+            <text class="button button-big" @click="alert">单按钮弹窗</text>
         </div>
         <div class="wrapper">
-            <text class="button" @click="confirm">双按钮弹窗</text>
+            <text class="button button-big" @click="confirm">双按钮弹窗</text>
         </div>
         <div class="wrapper">
-            <text class="button" @click="loading">加载提示</text>
+            <text class="button button-big" @click="loading">加载提示</text>
         </div>
         <div class="wrapper">
-            <text class="button" @click="toast">toast提示</text>
+            <text class="button button-big" @click="toast">toast提示</text>
         </div>
     </scroller>
 </template>
@@ -57,24 +57,7 @@ export default {
     }
 }
 </script>
-<style scoped>
-.wrapper {
-    flex-direction: row;
-    justify-content: space-around;
-}
+<style lang="sass" scoped>
+@import 'src/js/css/base';
 
-.button {
-    width: 400px;
-    height: 90px;
-    margin-top: 60px;
-    text-align: center;
-    font-size: 34px;
-    padding-top: 25px;
-    border-width: 1px;
-    border-style: solid;
-    color: #fff;
-    border-color: #1da1f2;
-    border-radius: 15px;
-    background-color: #1da1f2;
-}
 </style>

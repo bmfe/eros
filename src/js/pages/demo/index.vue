@@ -13,28 +13,14 @@
                 </div>
                 <text class="desc-info-2">二次封装 weex，让开发者用 VUE 写一个属于自己的 APP。</text>
                 <div class="desc-detail">
-                    <text class="desc-detail-item"> iOS </text>
-                    <text class="desc-detail-item"> Android </text>
-                    <text class="desc-detail-item"> VUE </text>
-                    <text class="desc-detail-item"> Widget </text>
-                    <text class="desc-detail-item"> Module </text>
-                    <text class="desc-detail-item"> Appboard </text>
-                    <text class="desc-detail-item"> Mediator </text>
-                    <text class="desc-detail-item"> BS diff </text>
-                    <text class="desc-detail-item"> eros-cli </text>
-                    <text class="desc-detail-item"> eros-publish </text>
-                    <text class="desc-detail-item"> Weex Debug </text>
-                    <text class="desc-detail-item"> support UI libs </text>
-                    <text class="desc-detail-item"> Camera </text>
-                    <text class="desc-detail-item"> Image </text>
-                    <text class="desc-detail-item"> Contacts </text>
-                    <text class="desc-detail-item"> ESlint </text>
+                    <text class="desc-detail-item" v-for="(desc,index) in DESC_TYPE" :index="index"> {{desc}} </text>
                 </div>
                 <div class="desc-detail" style="margin-top: 100px;">
                     <text class="desc-detail-github icon" @click="openWebView('https://github.com/bmfe/eros-template')">&#xeee2;</text>
                     <text class="desc-detail-wiki icon" @click="openWebView('https://github.com/bmfe/eros-template/wiki')">&#xe713;</text>
                 </div>
             </header>
+            <cell class="line"></cell>
             <header class="header" :class="[WXEnvironment.platform == 'iOS' ? 'stickyHeader' : '']">
                 <text class="header-1">{{rows[0].name}}</text>
                 <!-- <text class="header-2 icon">&#xe713;</text> -->
@@ -69,7 +55,7 @@
         <div class="touch-bar" :style="{'height': touchBarHeight}"></div>
         <bmmask class="mask" animation="transition" position="top" :duration="300" ref="bmmask">
             <bmpop class="modal-top">
-                <image style="width:550px; height:550px; margin-top:300px; margin-left:100px;" src="bmlocal://assets/demo.jpg"></image>
+                <image class="image" src="bmlocal://assets/demo.jpg"></image>
             </bmpop>
         </bmmask>
     </div>
@@ -77,11 +63,12 @@
 
 <script>
 if (process.env.NODE_ENV === 'development') require('Config');
-import { TYPE } from './config';
+import { TYPE,DESC_TYPE } from './config';
 
 export default {
     data () {
         return {
+            DESC_TYPE,
             rows: TYPE,
             statusBarHeight: weex.config.eros.statusBarHeight ? weex.config.eros.statusBarHeight : 40,
             touchBarHeight: weex.config.eros.touchBarHeight ? weex.config.eros.touchBarHeight : 20,
