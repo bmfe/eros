@@ -10,8 +10,8 @@
             <text class="label">当前字体大小：{{fontSize}}</text>
         </div>
         <div class="wrapper">
-            <text class="button" :class="['size-'+fontSize]" @click="bigger">增大</text>
-            <text class="button" :class="['size-'+fontSize]" @click="samller">减小</text>
+            <text class="button button-small" :class="['size-'+fontSize]" @click="bigger">增大</text>
+            <text class="button button-small" :class="['size-'+fontSize]" @click="samller">减小</text>
         </div>
     </scroller>
 </template>
@@ -75,32 +75,11 @@ module.exports = {
     }
 }
 </script>
-<style>
-.wrapper {
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.button {
-    font-size: 32px;
-    width: 180px;
-    height: 80px;
-    text-align: center;
-    margin-top: 30px;
-    /*padding-top: 18px;*/
-    border-width: 2px;
-    border-style: solid;
-    color: #fff;
-    border-color: #1da1f2;
-    border-radius: 15px;
-    background-color: #1da1f2;
-}
+<style lang="sass" scoped>
+@import 'src/js/css/base';
 
 .label {
-    text-align: center;
-    margin-top: 30px;
-    color: #7d7d7d;
-    font-weight: 500;
+    width: 750px;
 }
 
 .size-NORM {

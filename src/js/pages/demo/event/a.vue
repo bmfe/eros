@@ -7,7 +7,7 @@
             <text class="label">{{paramsData||'空'}}</text>
         </div>
         <div class="wrapper">
-            <text class="button" @click="toPageB">进入b页面</text>
+            <text class="button button-big" @click="toPageB">进入b页面</text>
         </div>
     </scroller>
 </template>
@@ -36,37 +36,6 @@ export default {
     }
 }
 </script>
-<style scoped>
-.wrapper {
-    flex-direction: row;
-    justify-content: space-around;
-    /*margin-bottom: 30px;*/
-}
-
-.button {
-    width: 400px;
-    height: 90px;
-    margin-top: 60px;
-    /*top: 60px;*/
-    text-align: center;
-    font-size: 34px;
-    padding-top: 25px;
-    border-width: 1px;
-    border-style: solid;
-    color: #fff;
-    border-color: #1da1f2;
-    border-radius: 15px;
-    background-color: #1da1f2;
-}
-
-.label {
-    width: 500px;
-    height: 80px;
-    /*top: 70px;*/
-    margin-top: 40px;
-    font-size: 34px;
-    text-align: center;
-    color: #7d7d7d;
-    font-weight: 500;
-}
+<style lang="sass" scoped>
+@import 'src/js/css/base';
 </style>

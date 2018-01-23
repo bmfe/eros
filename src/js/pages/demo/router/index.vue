@@ -2,31 +2,31 @@
     <scroller>
         <div class="wrapper">
             <text class="label">获取上一页传递的参数</text>
-            <text class="button" @click="getParams">获取</text>
+            <text class="button button-small" @click="getParams">获取</text>
         </div>
         <div class="wrapper">
             <text class="label">获取本页Url信息</text>
-            <text class="button" @click="getUrl">获取</text>
+            <text class="button button-small" @click="getUrl">获取</text>
         </div>
         <div class="wrapper">
             <text class="label">跳转到地图</text>
-            <text class="button" @click="toMap">跳转</text>
+            <text class="button button-small" @click="toMap">跳转</text>
         </div>
         <div class="wrapper">
             <text class="label">跳转到WebView</text>
-            <text class="button" @click="toWebView">跳转</text>
+            <text class="button button-small" @click="toWebView">跳转</text>
         </div>
         <div class="wrapper">
             <text class="label">打开浏览器</text>
-            <text class="button" @click="openBrowser">打开</text>
+            <text class="button button-small" @click="openBrowser">打开</text>
         </div>
         <div class="wrapper">
             <text class="label">重新加载当前Weex页面</text>
-            <text class="button" @click="refresh">刷新</text>
+            <text class="button button-small" @click="refresh">刷新</text>
         </div>
         <div class="wrapper">
             <text class="label">设置App启动首页</text>
-            <text class="button" @click="setHomePage">设置</text>
+            <text class="button button-small" @click="setHomePage">设置</text>
         </div>
         <div class="wrapper">
             <text class="button button-big" @click="back">返回上一页</text>
@@ -99,25 +99,14 @@ export default {
     }
 }
 </script>
-<style scoped>
-.wrapper {
-    flex-direction: row;
-    justify-content: space-around;
-}
+<style lang="sass" scoped>
+@import 'src/js/css/base';
 
-.button {
+.button-small {
     width: 150px;
     height: 60px;
-    text-align: center;
     font-size: 30px;
-    margin-top: 30px;
     padding-top: 13px;
-    border-width: 1px;
-    border-style: solid;
-    color: #fff;
-    border-color: #1da1f2;
-    border-radius: 15px;
-    background-color: #1da1f2;
 }
 
 .button-big {
@@ -128,12 +117,7 @@ export default {
 }
 
 .label {
-    width: 500px;
-    height: 80px;
-    margin-top: 40px;
+    text-align: left;
     left: 20px;
-    font-size: 34px;
-    color: #7d7d7d;
-    font-weight: 500;
 }
 </style>

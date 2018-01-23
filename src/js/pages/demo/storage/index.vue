@@ -5,8 +5,8 @@
         <text class="label">{{'json数据: '+ (resultObj.text || '无')}}</text>
         <text class="label">离开本页面后再次进入查看</text>
         <div class="wrapper">
-            <text class="button" @click="add">新增</text>
-            <text class="button" @click="del">删除</text>
+            <text class="button button-small" @click="add">新增</text>
+            <text class="button button-small" @click="del">删除</text>
         </div>
     </scroller>
 </template>
@@ -44,31 +44,10 @@ export default {
     }
 };
 </script>
-<style scoped>
-.wrapper {
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.button {
-    font-size: 32px;
-    width: 180px;
-    height: 80px;
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 18px;
-    border-width: 2px;
-    border-style: solid;
-    color: #fff;
-    border-color: #1da1f2;
-    border-radius: 15px;
-    background-color: #1da1f2;
-}
+<style lang="sass" scoped>
+@import 'src/js/css/base';
 
 .label {
-    text-align: center;
-    margin-top: 30px;
-    color: #7d7d7d;
-    font-weight: 500;
+    width: 750;
 }
 </style>

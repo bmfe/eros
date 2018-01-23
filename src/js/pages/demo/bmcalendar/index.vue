@@ -1,9 +1,9 @@
 <template>
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom:0;">
+    <div class="location">
         <bmcalendar class="calendar" selectType='range' ref='calendar' @finish='finish' :startDate="startDate" :endDate="endDate" :maximumDate="maximumDate" :minimumDate="minimumDate" ></bmcalendar>
         <div class="wrapper">
-            <text class="button" @click="prev">上一月</text>
-            <text class="button" @click="next">下一月</text>
+            <text class="button button-small" @click="prev">上一月</text>
+            <text class="button button-small" @click="next">下一月</text>
         </div>
     </div>
 </template>
@@ -40,29 +40,20 @@ export default {
     }
 };
 </script>
-<style>
+
+<style lang="sass" scoped>
+@import 'src/js/css/base';
+.location {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom:0;
+}
+
 .calendar {
     height: 800px;
     background-color: white;
-    select-color: #1da1f2;
-}
-.wrapper {
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.button {
-    font-size: 32px;
-    width: 180px;
-    height: 80px;
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 18px;
-    border-width: 2px;
-    border-style: solid;
-    color: #fff;
-    border-color: #1da1f2;
-    border-radius: 15px;
-    background-color: #1da1f2;
+    select-color: $base-color;
 }
 </style>

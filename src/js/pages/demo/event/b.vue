@@ -4,7 +4,7 @@
             <input class="layout" type="text" placeholder="输入需要展示在a页面的内容" v-model="eventText" />
         </div>
         <div class="wrapper">
-            <text class="button" @click="emit">传递</text>
+            <text class="button button-small" @click="emit">传递</text>
         </div>
     </scroller>
 </template>
@@ -28,36 +28,6 @@ export default {
 }
 
 </script>
-<style scoped>
-.wrapper {
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.button {
-    width: 200px;
-    height: 70px;
-    margin-top: 60px;
-    text-align: center;
-    font-size: 30px;
-    padding-top: 15px;
-    border-width: 1px;
-    border-style: solid;
-    color: #fff;
-    border-color: #1da1f2;
-    border-radius: 15px;
-    background-color: #1da1f2;
-}
-
-.layout {
-    width: 500px;
-    height: 80px;
-    margin-top: 50px;
-    padding-left: 10px;
-    color: #000;
-    font-size: 34px;
-    border-width: 1px;
-    border-radius: 12px;
-}
-
+<style lang="sass" scoped>
+@import 'src/js/css/base';
 </style>

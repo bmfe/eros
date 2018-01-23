@@ -13,7 +13,6 @@ export default {
 .label {
     top: 50px;
     left: 20px;
-    /*color: #aaa;*/
     font-size: 30px;
     color: #7d7d7d;
     font-weight: 500;
