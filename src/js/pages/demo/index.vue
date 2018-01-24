@@ -51,6 +51,16 @@
                     <text class="demo-list-cell-icon">&#xe62d;</text>
                 </div>
             </cell>
+            <header class="header" style="flex-direction: row;">
+                <text class="header-1">{{rows[3].name}}</text>
+                <!-- <text class="header-2 icon">&#xe713;</text> -->
+            </header>
+            <cell class="demo-list-cell-container">
+                <div class="demo-list-cell" v-for="(v,i) in rows[3].items" append="tree" :index="i" :key="i" @click="handle(v.type)">
+                    <text class="demo-list-cell-text">{{v.name}}</text>
+                    <text class="demo-list-cell-icon">&#xe62d;</text>
+                </div>
+            </cell>
         </waterfall>
         <div class="touch-bar" :style="{'height': touchBarHeight}"></div>
         <bmmask class="mask" animation="transition" position="top" :duration="300" ref="bmmask">
@@ -80,7 +90,7 @@ export default {
 
         domModule.addRule('fontFace', {
             fontFamily: 'iconfont-eros',
-            src: 'url(\'https://at.alicdn.com/t/font_545350_76nuzg1ff8rm5cdi.woff\')'
+            'src': 'url(\'bmlocal://iconfont/iconfont-eros.ttf\')'
         });
     },
     created () {
@@ -295,7 +305,19 @@ export default {
         },
         handle_bmmask () {
             this.$refs['bmmask'].show()
-        }
+        },
+        handle_waterfall () {
+            this.$router.open({
+                name: 'demo.other.waterfall',
+                statusBarStyle: 'LightContent'
+            });
+        },
+        handle_weexui () {
+            this.$router.open({
+                name: 'demo.other.weex-ui',
+                statusBarStyle: 'LightContent'
+            });
+        },
     }
 };
 </script>

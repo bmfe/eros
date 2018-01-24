@@ -1,6 +1,6 @@
 <template>
     <div>
-        <text class="label">修改光标颜色为红色:</text>
+        <text class="label">修改光标颜色为绿色:</text>
         <input class="layout" type="text" placeholder="请输入..." value="" />
     </div>
 </template>
@@ -25,6 +25,6 @@ export default {
     left: 20px;
     color: #000;
     font-size: 38px;
-    tint-color: red;
+    tint-color: #4cbd34;
 }
 </style>
