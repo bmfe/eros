@@ -1,6 +1,32 @@
+<div align=center>
+
+![eros](http://upload.ouliu.net/i/20180124175551qrzlq.png)
+
+</div>
+
 ## Intro
 eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写法的解决方案，由于 app 开发的特殊性，eros 则更偏重关心于整个 app 项目。
+
+| iOS 端内置 DEMO | ios 版 | android版 |
+|---------|---------|---------|
+|![eros-demo](http://upload.ouliu.net/i/20180122162536pcw67.gif)|![ios下载](http://chuantu.biz/t6/214/1516790387x-1404793130.png)|![android 下载](http://chuantu.biz/t6/214/1516790387x-1404793130.png)|
+
+> 开发者可以扫描二维码来下载 eros app 来进行体验，iOS首次打开App需要在 **设置->通用->设备管理 信任开发证书。**
+## Your Should Know That
+**如果您是前端开发者：**
+* 一定要熟练使用 vue 开发
+* 一定要详细阅读 weex 的文档，尤其是与 web 环境，vue 开发差异的部分。
+* 在开发客户端应用中，会有遇到无数的环境问题，程序问题，代码问题，绝大多数问题都可以在网上查到对应解决方案，在提出问题或者 issue 的时候，还请先自行尝试解决，eros 的环境安装会耗费很长的时间，你懂的。
+* 需要熟悉客户端开发打包流程。
+
+> 很多前端开发者在环境问题上便半途而废了，不过 eros 会一直完善文档，开发群中也会有大量开发者为您解答，还请保持一颗有始有终的心，会有收获的。
+
+**如果您是客户端开发者：**
+
+那么环境您会迅速搭建起来，然后跟着熟读 vue，weex 的文档，因为 vue 上手非常快，最后跟着 eros 的新手教程写几个 demo 便可以开始开发，还可以轻松拓展 module。
+
 ## Advantage
+eros 提供了: 
 * 详细的文档来解决环境搭建过程中的坑。
 * 一套代码编译成 ios，android 两端原生应用。
 * 封装了大量 weex module，让前端开发方便进行原生的操作。
@@ -9,21 +35,23 @@ eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写
 * 内置了中介者服务，来进行多个页面间的交互，并可以管理业务。
 * 内置了服务器端增量发布更新逻辑，可以搭配着开源的简易增量发布系统一起使用。
 * 支持真机和模拟器通过 `weex debug` 来断点调试，程序报错均会有报错日志弹窗提示。
-* 可以通过脚手架：
-    * 直接生成开发最新模板。
-    * 启动服务进行实时开发效果查看和 debug 调试。
-    * 更新开发平台所需 eros 依赖。
-    * 直接 `pack` 对应平台内置 `JS Bundle`。
-    * 支持生成全量包，增量包，并内置与更新服务器交互逻辑。
-    * 支持同步更新模板内容。
-    * 支持 weex 的 vue 入口和 js 入口两种开发方式。
-* 支持市面上流行的组件库：
-    * [weex-ui](https://github.com/alibaba/weex-ui) ( 阿里出品，推荐使用 )
-    * [bui](https://github.com/bingo-oss/bui-weex)
+
+可以通过脚手架：
+* 直接生成开发最新模板。
+* 启动服务进行实时开发效果查看和 debug 调试。
+* 更新开发平台所需 eros 依赖。
+* 直接 `pack` 对应平台内置 `JS Bundle`。
+* 支持生成全量包，增量包，并内置与更新服务器交互逻辑。
+* 支持同步更新模板内容。
+* 支持 weex 的 vue 入口和 js 入口两种开发方式。
+
+支持市面上流行的组件库：
+* [weex-ui](https://github.com/alibaba/weex-ui) ( 阿里出品，推荐使用 )
+* [bui](https://github.com/bingo-oss/bui-weex)
 
 ## Disadvantage
 > eros 开发中也有很多限制，需要开发者自行斟酌。
-* weex 代码在浏览器端还有很多兼容性问题，所有 eros 目前不支持浏览器端
+* weex 代码在浏览器端还有很多兼容性问题，**所有 eros 目前不支持浏览器端**。
 * eros 暂时不能自动使用 weex 市场，但如果您有原生开发经验可以自行接入。
 * 由于 eros 对 **JS Bundle** 运行机制采用了 appboard 机制来减少了 js bundle 的大小，导致 weex debug 需要特定的处理。
 * eros 打出来的包体积稍大，为解决这个问题，eros 客户端依赖可配置正在开发中。
@@ -137,12 +165,9 @@ $ eros install
 
 于是 eros 的 demo 便能在模拟器中跑起来了。
 
-![eros-demo](http://upload.ouliu.net/i/20171212233540q8alw.gif)
-
-在 eros demo 中我们可以看到：
-* tab1 中内置了 weex-ui 的 demo
-* tab2 中有大部分 widget 使用的实例
-* tab3 中跑了官方的瀑布流例子和我们编写一个支持手势滑动的多个 List 的类似新闻的实例。
+| iOS 端内置 DEMO |
+|---------|
+|![eros-demo](http://upload.ouliu.net/i/20180122162536pcw67.gif)|
 
 > eros 的 demo 很重要，建议在开发中，首先跟随 demo 编写几个页面，并保留其代码作为使用参考。
 ## Quick Query 
@@ -159,7 +184,20 @@ $ eros install
 | [eros-android-widget](https://github.com/bmfe/BMWidget) | eros 安卓组件库。 |
 | [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端 WeexSDK。 |
 
-### 此处应有打赏，请简单粗暴地爱我们！
-![](https://github.com/bmfe/eros-template/wiki/image/shang.jpeg)
+## Group & Community
+eros 正式开源到现在已经有了一个近 300 多人的开发群 (只能通过邀请)，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
 
-帮我买杯咖啡，继续创作，谢谢大家！
+* **此并不是流量群，也并非广告群，是为了大家一起成长，保证信息的有效性，如果发黄赌毒，不和谐言语，与学习无关的广告，推广内容，无关小程序，不会商量，直接会被踢，且不会再有入群机会。**
+* eros开发中遇到任何问题可以随时发到群里 weex开发相关可以一起讨论。
+* 如果不能及时回答也请耐心等待，群里开发丰富经验的同学会帮您一起看问题。
+* 除了 eros 自身紧急 BUG 外的问题，均需要提 issue，我们会按 issue 处理，目的是为了更好的给其他开发者参考，紧急问题请直接抛到群里，我们会直接远程帮助您调试。
+
+
+| 微信群 |
+|---------|
+|![](https://gitee.com/uploads/images/2017/1026/154652_651ba169_1595985.jpeg)|
+
+## License
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2017-present, 本木医疗

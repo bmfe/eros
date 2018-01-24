@@ -9,10 +9,8 @@
   "author": "Zero<a2192466@163.com>",
   "license": "MIT",
   "dependencies": {
-    "bui-weex": "^0.2.0",
     "lodash": "^4.17.4",
-    "url-parse": "^1.1.9",
-    "weex-ui": "^0.3.10beta2"
+    "weex-ui": "^0.3.13beta2"
   },
   "devDependencies": {
     "babel-core": "~6.25.0",

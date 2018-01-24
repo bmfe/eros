@@ -8,16 +8,16 @@ module.exports = {
         'iOS': 'eros-template-version'
     },
     'page': {
-        'homePage': '/pages/eros-demos/index.js',
+        'homePage': '/pages/demo/index.js',
         'mediatorPage': '/mediator/index.js',
-        'navBarColor': '#ffffff',
-        'navItemColor': '#333'
+        'navBarColor': '#1DA1F2',
+        'navItemColor': '#ffffff'
     },
     'url': {
         'jsServer': 'http://app.weex-eros.com:8889',
         'image': 'https://lev-inf.benmu-health.com/test/xxx',
         'bundleUpdate': 'http://localhosts:3001/app/check',
-        'debugServer': 'ws://192.168.15.110:8088/debugProxy/native'
+        'debugServer': 'ws://app.weex-eros.com:8088/debugProxy/native'
     },
     'zipFolder': {
         'iOS': '/ios/WeexEros/WeexEros',

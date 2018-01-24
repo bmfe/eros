@@ -41,7 +41,7 @@ globalEvent.addEventListener('viewWillAppear', function (options) {
         })
     } else if (options.type === 'back') {
         storage.getData('router.backParams', ({ status, errorMsg, data }) => {
-            const result = status === 0 ? JSON.parse(data) : { status, errorMsg, data }
+            const result = status === 0 ? JSON.parse(data) : ''
             RouterCycle.viewWillBackAppear.map((item) => {
                 item(result, options)
             })
@@ -58,7 +58,7 @@ globalEvent.addEventListener('viewDidAppear', function (options) {
         })
     } else if (options.type === 'back') {
         storage.getData('router.backParams', ({ status, errorMsg, data }) => {
-            const result = status === 0 ? JSON.parse(data) : { status, errorMsg, data }
+            const result = status === 0 ? JSON.parse(data) : ''
             RouterCycle.viewDidBackAppear.map((item) => {
                 item(result, options)
             })
@@ -175,10 +175,6 @@ export default class Router {
                     //     url: params.url || '',
                     //     platforms: params.platforms || [] // 传空的话默认全部
                     // }
-                if (params.shareInfo) {
-                    !params.shareInfo.image && (params.shareInfo.image = 'https://img.benmu-health.com/wechat/jyt100.png')
-                }
-
                 router.toWebView(params)
             },
             toMap (options) {

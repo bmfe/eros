@@ -1,0 +1,86 @@
+/**
+ * 这里编写 sass 之后，可在 vue 的 style 标签中通过 @import 相对路径引入
+ * 注意 style 标签的 lang 属性需要设置为 scss/sass
+ */
+$base-color: #1da1f2;
+
+.wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.button {
+    text-align: center; 
+    border-style: solid;
+    color: #fff;
+    border-color: $base-color;
+    border-radius: 15px;
+    background-color: $base-color;
+}
+
+
+.button-big {
+    width: 400px;
+    height: 90px;
+    margin-top: 60;
+    font-size: 34px;
+    padding-top: 25px;
+    border-width: 2px;
+}
+
+.button-small {
+    width: 180px;
+    height: 80px;
+    margin-top: 30px;
+    font-size: 32px;
+    padding-top: 18px;
+    border-width: 1px;
+}
+
+.label {
+    width: 500px;
+    height: 80px;
+    /*top: 70px;*/
+    margin-top: 40px;
+    font-size: 34px;
+    text-align: center;
+    color: #7d7d7d;
+    font-weight: 500;
+}
+
+.layout {
+    width: 500px;
+    height: 80px;
+    margin-top: 50px;
+    padding-left: 10px;
+    color: #000;
+    font-size: 34px;
+    border-width: 1px;
+    border-radius: 12px;
+}
+
+.panel {
+    background-color: #fff;
+    width: 700px;
+    height: 100px;
+    padding-left: 24px;
+    justify-content: center;
+    border-bottom-width: 1px;
+    border-bottom-color: #b9b9b9;
+    border-style: solid;
+}
+
+.text {
+    font-size: 30;
+    color: #7d7d7d;
+    font-weight: 400;
+}
+
+.arrtName {
+    font-weight: 700;
+}
+
+.touch-bar {
+    height: 68;
+    width: 750;
+}
