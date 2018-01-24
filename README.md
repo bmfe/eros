@@ -9,9 +9,9 @@ eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写
 
 | iOS 端内置 DEMO | ios 版 | android版 |
 |---------|---------|---------|
-|![eros-demo](http://upload.ouliu.net/i/20180122162536pcw67.gif)|下载地址（待补充）|下载地址|
+|![eros-demo](http://upload.ouliu.net/i/20180122162536pcw67.gif)|![ios下载](http://chuantu.biz/t6/214/1516790387x-1404793130.png)|![android 下载](http://chuantu.biz/t6/214/1516790387x-1404793130.png)|
 
-> 开发者可以扫描二维码来下载 eros app 来进行体验。
+> 开发者可以扫描二维码来下载 eros app 来进行体验，iOS首次打开App需要在 **设置->通用->设备管理 信任开发证书。**
 ## Your Should Know That
 **如果您是前端开发者：**
 * 一定要熟练使用 vue 开发
