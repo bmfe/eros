@@ -80,7 +80,7 @@ export default {
 
         domModule.addRule('fontFace', {
             fontFamily: 'iconfont-eros',
-            src: 'url(\'https://at.alicdn.com/t/font_545350_76nuzg1ff8rm5cdi.woff\')'
+            src: 'url(\'https://at.alicdn.com/t/font_545350_76nuzg1ff8rm5cdi.ttf\')'
         });
     },
     created () {
