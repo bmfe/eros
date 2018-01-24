@@ -148,7 +148,7 @@
   }
   .stickyWrapper {
     flex-direction: row;
-    background-color:#00cc99;
+    background-color:#1da1f2;
     justify-content: center;
     align-items: center;
     flex:1;
@@ -201,7 +201,7 @@
   }
   .itemClickBehaviour {
     font-size:36;
-    color:#00cc99;
+    color:#1da1f2;
     line-height:36;
     text-align:center;
     margin-top: 6;
@@ -213,14 +213,14 @@
     height: 94;
     justify-content: center;
     align-items: center;
-    background-color: #00cc99;
+    background-color: #1da1f2;
   }
 
   .fixedItem {
     position: fixed;
     width:78;
     height:78;
-    background-color:#00cc99;
+    background-color:#1da1f2;
     right: 32;
     bottom: 32;
     border-radius: 39;

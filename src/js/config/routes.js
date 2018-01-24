@@ -80,5 +80,13 @@ export default {
     'demo.bmcalendar': {
         title: '日期',
         url: '/pages/demo/bmcalendar/index.js'
+    },
+    'demo.other.waterfall': {
+        title: 'weex 瀑布流',
+        url: '/pages/demo/other/waterfall.js'
+    },
+    'demo.other.weex-ui': {
+        title: 'weex-ui',
+        url: '/pages/demo/other/weex-ui/tab-page/index.js'
     }
 }

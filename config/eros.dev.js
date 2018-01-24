@@ -1,7 +1,7 @@
 // appBoard，mediator 不建议进行修改 如果修改了 也请对应修改
 module.exports = {
     'exports': [
-        // appBoard 
+        // appBoard
         'js/config/index.js',
         // mediator
         'js/mediator/index.vue',
@@ -25,7 +25,9 @@ module.exports = {
         'js/pages/demo/image/index.vue',
         'js/pages/demo/bmchart/index.vue',
         'js/pages/demo/bmrichtext/index.vue',
-        'js/pages/demo/bmcalendar/index.vue'
+        'js/pages/demo/bmcalendar/index.vue',
+        'js/pages/demo/other/waterfall.vue',
+        'js/pages/demo/other/weex-ui/tab-page/index.vue',
     ],
     'alias': {
         'Components': 'js/components',
