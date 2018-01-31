@@ -13,6 +13,10 @@ const TYPE = [{
             type: 'inputExtend'
         },
         {
+            name: '生命周期',
+            type: 'lifecycle'
+        },
+        {
             name: '下拉刷新',
             type: 'refresh'
         }]

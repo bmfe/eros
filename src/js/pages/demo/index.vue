@@ -107,12 +107,12 @@ export default {
         handle (type) {
             this[`handle_${type}`]();
         },
-        // handle_lifecycle () {
-        //     this.$router.open({
-        //         name: 'demo.lifecycle',
-        //         statusBarStyle: 'LightContent'
-        //     })
-        // },
+        handle_lifecycle () {
+            this.$router.open({
+                name: 'demo.lifecycle',
+                statusBarStyle: 'LightContent'
+            })
+        },
         handle_assets () {
             this.$router.open({
                 name: 'demo.assets',
