@@ -15,6 +15,7 @@
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
     created () {
+        
         this.$event.on('getParams', (params) => {
             // params 为触发该事件所传的参数
             this.paramsData = params
@@ -27,6 +28,7 @@ export default {
     },
     methods: {
         toPageB () {
+            console.log(">>>>>>>>>>>>createdcreated")
             this.$router.open({
                 name: 'demo.event.b',
                 statusBarStyle: 'LightContent'

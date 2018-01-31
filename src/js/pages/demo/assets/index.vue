@@ -3,6 +3,7 @@
         <image style="width:550px; height:550px;" src="bmlocal://assets/demo.jpg"></image>
         <text class="title2" style='margin-top:50px;width:500px'>本地 ttf: &#xe606;&#xe605;&#xe604;&#xe603;&#xe602;&#xe601;&#xe600;</text>
         <text class="title3" style='margin-top:50px;width:500px'>本地 woff: &#xe606;&#xe605;&#xe604;&#xe603;&#xe602;&#xe601;&#xe600;</text>
+        <text @click="send">SendParams</text>
     </div>
 </template>
 <style>
@@ -33,6 +34,7 @@
 
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
+const bmTest = weex.requireModule('bmTest')
   export default {
     beforeCreate () {
       var domModule = weex.requireModule('dom');
@@ -46,6 +48,26 @@ if (process.env.NODE_ENV === 'development') require('Config')
         'fontFamily': 'iconfont3',
         'src': 'url(\'bmlocal://iconfont/font_1469606522_9417143.woff\')'
       });
+    },
+    methods:{
+      send(){
+        var a = {
+          b: '35y',
+          c() {
+            var aaa = '1234'
+            console.log(aaa)
+          }
+        }
+        for(var i in a) {
+          // debugger
+          if(typeof a[i] == 'function') {
+            
+            a[i] = a[i].toString()
+          }
+        }
+        bmTest.test(a)
+
+      }
     }
   }
 </script>
