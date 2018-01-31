@@ -1,93 +1,102 @@
 <template>
     <div>
-        <bmchart style="width:750; height:520;" :chartInfo="chartInfo1" @finish='finish'></bmchart>
-        <bmchart style="width:750; height:520;" :chartInfo="chartInfo2" @finish='finish'></bmchart>
+        <bmchart ref="chart" :options="$format(options)" style="width:750; height:520;"  @finish='finish'></bmchart>
     </div>
 </template>
 
 <script>
+if (process.env.NODE_ENV === 'development') require('Config');
 export default {
-    data () {
-        return {
-            chartInfo2: {
-                tooltip: {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b}: {c} ({d}%)"
-                },
-                legend: {
-                    orient: 'vertical',
-                    x: 'left',
-                    data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
-                },
-                series: [
-                    {
-                        name:'访问来源',
-                        type:'pie',
-                        radius: ['50%', '70%'],
-                        avoidLabelOverlap: false,
-                        label: {
-                            normal: {
-                                show: false,
-                                position: 'center'
-                            },
-                            emphasis: {
-                                show: true,
-                                textStyle: {
-                                    fontSize: '30',
-                                    fontWeight: 'bold'
-                                }
-                            }
-                        },
-                        labelLine: {
-                            normal: {
-                                show: false
-                            }
-                        },
-                        data:[
-                            {value:335, name:'直接访问'},
-                            {value:310, name:'邮件营销'},
-                            {value:234, name:'联盟广告'},
-                            {value:135, name:'视频广告'},
-                            {value:1548, name:'搜索引擎'}
-                        ]
-                    }
-                ]
+  data() {
+    return {
+      options: {
+        backgroundColor: "#2c343c",
+
+        title: {
+          text: "Customized Pie",
+          left: "center",
+          top: 20,
+          textStyle: {
+            color: "#ccc"
+          }
+        },
+
+        tooltip: {
+          trigger: "item",
+          formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+
+        visualMap: {
+          show: false,
+          min: 80,
+          max: 600,
+          inRange: {
+            colorLightness: [0, 1]
+          }
+        },
+        series: [
+          {
+            name: "访问来源",
+            type: "pie",
+            radius: "55%",
+            center: ["50%", "50%"],
+            data: [
+              { value: 335, name: "直接访问" },
+              { value: 310, name: "邮件营销" },
+              { value: 274, name: "联盟广告" },
+              { value: 235, name: "视频广告" },
+              { value: 400, name: "搜索引擎" }
+            ].sort(function(a, b) {
+              return a.value - b.value;
+            }),
+            roseType: "radius",
+            label: {
+              normal: {
+                textStyle: {
+                  color: "rgba(255, 255, 255, 0.3)"
+                }
+              }
             },
-            chartInfo1: {
-                 color: ['#1da1f2'],
-                tooltip: {
-                    show: true
+            labelLine: {
+              normal: {
+                lineStyle: {
+                  color: "rgba(255, 255, 255, 0.3)"
                 },
-                legend: {
-                    data: ['数量（吨）']
-                },
-                xAxis: [
-                    {
-                        type: 'category',
-                        data: ['桔子', '香蕉', '苹果', '西瓜', '榴莲', '西红柿']
-                    }
-                ],
-                yAxis: [
-                    {
-                        type: 'value'
-                    }
-                ],
-                series: [
-                    {
-                        name: '数量（吨）',
-                        type: 'bar',
-                        data: [100, 200, 300, 400, 50, 350]
-                    }
-                ]
+                smooth: 0.2,
+                length: 10,
+                length2: 20
+              }
+            },
+            itemStyle: {
+              normal: {
+                color: "#c23531",
+                shadowBlur: 200,
+                shadowColor: "rgba(0, 0, 0, 0.5)"
+              }
+            },
+
+            animationType: "scale",
+            animationEasing: "elasticOut",
+            animationDelay: function(idx) {
+              var a="aaaa"
+              return 200;
             }
-        };
-    },
-    methods: {
-        finish () {
-            this.$notice.toast({
-                message: '图表渲染完毕'
-            });
-        }
+          }
+        ]
+      }
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.options.backgroundColor = "#fff";
+    }, 5000);
+  },
+  methods: {
+    finish() {
+      this.$notice.toast({
+        message: "图表渲染完毕"
+      });
     }
+  }
 };
 </script>
