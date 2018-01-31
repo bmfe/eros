@@ -1,75 +1,44 @@
 <template>
-  <wxc-tab-bar :tab-titles="tabTitles" :tab-styles="tabStyles" title-type="icon" @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
-    <!--The first page content-->
-    <div class="item-container" :style="contentStyle">
-      <text>Home</text>
+    <div style="width:750px; padding-top:100px; padding-left:100px;padding-right:100px;">
+       <text>请查看控制台打印</text>
+       <text>（这里需要注意的是，如果启用了 if (process.env.NODE_ENV === 'development') require('Config') 来进行 weex debug，在 eros dev 的时候是会执行 2 次的，pack 之后不会的。）</text>
     </div>
-
-    <!--The second page content-->
-    <div class="item-container" :style="contentStyle">
-      <text>Hot</text>
-    </div>
-
-    <!-- The third page content-->
-    <div class="item-container" :style="contentStyle">
-      <text>Message</text>
-    </div>
-
-    <!-- The fourth page content-->
-    <div class="item-container" :style="contentStyle">
-      <text>My</text>
-    </div>
-  </wxc-tab-bar>
 </template>
-
 <script>
-import { WxcTabBar, Utils } from "weex-ui";
-import Config from "./config";
-var modal = weex.requireModule("modal");
+if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-  data() {
-    return {
-      tabTitles: Config.tabTitles,
-      tabStyles: Config.tabStyles
-    };
-  },
-  created() {
-    this.$notice.toast({
-      message: "hello" // 展示内容
-    });
-    this.$navigator.setNavigationInfo({
-      statusBarStyle: "LightContent"
-    });
-    const tabPageHeight = Utils.env.getPageHeight();
-    // If the page doesn't have a navigation bar
-    // const tabPageHeight = env.deviceHeight / env.deviceWidth * 750;
-    const { tabStyles } = this;
-    this.contentStyle = { height: tabPageHeight - tabStyles.height + "px" };
-  },
-  components: { WxcTabBar },
-  methods: {
-    wxcTabBarCurrentTabSelected(e) {
-      const index = e.page;
-      console.log(e.page,'###########')
+    bmRouter: {
+        viewWillAppear (params, options) {
+            console.log('viewWillAppear');
+        },
 
-    // FIXME 崩溃
-    //   this.$notice.toast({
-    //     message: index // 展示内容
-    //   });
-      // if (index == 3) {
-      //   this.$navigator.setNavigationInfo({
-      //     statusBarStyle: "LightContent"
-      //   });
-      // }
+        viewDidAppear (params, options) {
+            console.log('viewDidAppear');
+        },
+
+        viewWillBackAppear (params, options) {
+            console.log('viewDidAppear');
+        },
+
+        viewDidBackAppear (params, options) {
+            console.log('viewDidAppear');
+        },
+
+        viewWillDisappear (options) {
+            console.log('viewDidAppear');
+        },
+
+        viewDidDisappear (options) {
+            console.log('viewDidAppear');
+        }
+    },
+    data () {
+        return {
+
+        }
+    },
+    methods: {
+
     }
-  }
-};
-</script>
-<style scoped>
-.item-container {
-  width: 750px;
-  background-color: #f2f3f4;
-  align-items: center;
-  justify-content: center;
 }
-</style>
+</script>
