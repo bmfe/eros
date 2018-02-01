@@ -31,7 +31,7 @@ then
     echo -e "$eros_prefix Run pod update and show some update detail:"
     pod update --no-ansi || error_exit 4
 
-    echo -e "$eros_prefix iOS sdk has been installed, enjoy it! "
+    echo -e "$eros_prefix \033[32miOS sdk has been updated, enjoy it! \033[0m"
     open WeexEros.xcworkspace || error_exit 5
 else
     echo -e "$eros_prefix No WeexiOSSDK or Benmu-iOS-Library file, make sure you had been run eros install."

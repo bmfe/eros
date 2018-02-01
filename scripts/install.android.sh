@@ -45,4 +45,4 @@ fi
     echo -e "$eros_prefix Eros bmwidget clone done."
 
     echo ""
-    echo -e "$eros_prefix \033[32m Android sdk has been installed, enjoy it! \033[0m"
+    echo -e "$eros_prefix \033[32mAndroid sdk has been installed, enjoy it! \033[0m"

@@ -44,6 +44,6 @@ fi
     pod update --no-ansi || error_exit 6
 
     echo ""
-    echo -e "$eros_prefix \033[32m iOS sdk has been installed, enjoy it! \033[0m"
+    echo -e "$eros_prefix \033[32miOS sdk has been installed, enjoy it! \033[0m"
 
     open WeexEros.xcworkspace || error_exit 7
