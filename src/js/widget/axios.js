@@ -41,9 +41,10 @@ export default class Axios {
             })
         }
 
-        function handleAxios ({ name, url = '', data, method, header }, resolve, reject) {
+        function handleAxios ({ name, url = '', data, method, header, params = {} }, resolve, reject) {
+            let requestPath = name && pathFormater(name, params)
             bmAxios.fetch({
-                url: url || (self.baseUrl + self.apis[name]),
+                url: url || (self.baseUrl + requestPath),
                 data: data || {},
                 method: method || 'GET',
                 header: header || {},
@@ -56,6 +57,20 @@ export default class Axios {
                     resolve(resData)
                 }
             })
+        }
+
+        function pathFormater ( name, params ) {
+            let _path = self.apis[name],
+                matcher = _path.match(/[^{][a-zA-Z0-9]+(?=\})/g)
+
+            if( matcher && matcher.length ) {
+                matcher.forEach(item => {
+                    if( !params[item] ) throw new Error(`you had use dynamic params, but ${item} not existed in your params`)
+                    _path = _path.replace(`{${item}}`, params[item] || 'undefined')
+                })
+            }
+
+            return _path
         }
     }
 }
