@@ -1,6 +1,6 @@
 #!/bin/bash
 
-eros_prefix="[\033[36meros\033[0m]"
+eros_prefix="[\033[34meros\033[0m]"
 start_time=$(date + %s)
 function error_exit {
     echo "--------------------------------------------"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-eros_prefix="[\033[36meros\033[0m]"
+eros_prefix="[\033[34meros\033[0m]"
 
 function error_exit {
     echo "--------------------------------------------"
@@ -19,6 +19,7 @@ function error_exit {
 
 cd platforms/ios/WeexEros/ || \
 error_exit 1
+echo -e "$eros_prefix \033[33mtips: make sure xcode had been closed.\033[0m"
 echo -e "$eros_prefix Enter ios project"
 
 if [ -e WeexiOSSDK/ ] || [ -e Benmu-iOS-Library/ ]
@@ -35,10 +36,7 @@ fi
     error_exit 4
     echo -e "$eros_prefix Weex sdk clone done."
 
-    git clone https://github.com/bmfe/Benmu-iOS-Library.git -q --depth=1 && \
-    cd Benmu-iOS-Library && \
-    git checkout 1.1.4 -q && \
-    cd ../ || \
+    git clone https://github.com/bmfe/Benmu-iOS-Library.git -q || \
     error_exit 5
     echo -e "$eros_prefix Eros sdk clone done." 
 
