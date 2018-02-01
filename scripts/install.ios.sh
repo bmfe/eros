@@ -36,7 +36,7 @@ fi
     error_exit 4
     echo -e "$eros_prefix Weex sdk clone done."
 
-    git clone https://github.com/bmfe/Benmu-iOS-Library.git -q || \
+    git clone https://github.com/bmfe/Benmu-iOS-Library.git -q --depth=1 || \
     error_exit 5
     echo -e "$eros_prefix Eros sdk clone done." 
 
