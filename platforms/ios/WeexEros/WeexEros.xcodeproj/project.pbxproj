@@ -146,7 +146,7 @@
 				TargetAttributes = {
 					9737F9E71F384AFD00000800 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = ZZGYR626VG;
+						DevelopmentTeam = 25KVQ5BY97;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -280,7 +280,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -410,7 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WeexEros/WeexEros.entitlements;
-				DEVELOPMENT_TEAM = ZZGYR626VG;
+				DEVELOPMENT_TEAM = 25KVQ5BY97;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = WeexEros/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -503,7 +503,7 @@
 					"-weak_framework",
 					"\"UserNotifications\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.benmu-health.eros";
+				PRODUCT_BUNDLE_IDENTIFIER = com.benmu.WeexEros;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -515,7 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WeexEros/WeexEros.entitlements;
-				DEVELOPMENT_TEAM = ZZGYR626VG;
+				DEVELOPMENT_TEAM = 25KVQ5BY97;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = WeexEros/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -608,7 +608,7 @@
 					"-weak_framework",
 					"\"UserNotifications\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.benmu-health.eros";
+				PRODUCT_BUNDLE_IDENTIFIER = com.benmu.WeexEros;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
