@@ -4,11 +4,11 @@ rm -r wxframework/
 rm -r sdk/
 rm -r bmwidget/
 
-git clone https://github.com/bmfe/WeexErosFramework.git "wxframework" --depth=1 -q
+git clone https://github.com/bmfe/WeexErosFramework.git "wxframework" --depth=1
 
-git clone https://github.com/bmfe/WeexSDK.git "sdk" --depth=1 -q
+git clone https://github.com/bmfe/WeexSDK.git "sdk" --depth=1
 
-git clone https://github.com/bmfe/BMWidget.git "bmwidget" --depth=1 -q
+git clone https://github.com/bmfe/BMWidget.git "bmwidget" --depth=1
 
 cd ../
 

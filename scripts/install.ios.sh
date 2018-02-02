@@ -21,6 +21,7 @@ cd platforms/ios/WeexEros/ || \
 error_exit 1
 echo -e "$eros_prefix \033[33mtips: make sure xcode had been closed.\033[0m"
 echo -e "$eros_prefix Enter ios project"
+
 if [ -e WeexiOSSDK/ ] || [ -e Benmu-iOS-Library/ ]
 then
     echo -e "$eros_prefix WeexiOSSDK and Benmu-iOS-Library is existed, remove old sdk."
