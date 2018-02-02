@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 echo "开始更新依赖库"
-rm -rf wxframework/
-rm -rf sdk/
-rm -rf bmwidget/
+rm -r wxframework/
+rm -r sdk/
+rm -r bmwidget/
 
 git clone https://github.com/bmfe/WeexErosFramework.git "wxframework" --depth=1
 
