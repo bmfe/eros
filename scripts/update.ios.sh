@@ -23,14 +23,11 @@ echo -e "$eros_prefix Enter ios project"
 if [ -e WeexiOSSDK/ ] && [ -e Benmu-iOS-Library/ ]
 then
     echo -e "$eros_prefix Start to updating."
-
     cd WeexiOSSDK/ && git pull || error_exit 2
     cd ../Benmu-iOS-Library/ && git pull || error_exit 3
     cd ..
-
     echo -e "$eros_prefix Run pod update and show some update detail:"
     pod update --no-ansi || error_exit 4
-
     echo -e "$eros_prefix \033[32miOS sdk has been updated, enjoy it! \033[0m"
     open WeexEros.xcworkspace || error_exit 5
 else

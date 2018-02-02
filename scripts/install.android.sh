@@ -1,7 +1,6 @@
 #!/bin/bash
 
 eros_prefix="[\033[34meros\033[0m]"
-start_time=$(date + %s)
 function error_exit {
     echo "--------------------------------------------"
     echo -e "\033[31m Error code is $1 \033[0m" 1>&2
@@ -20,7 +19,6 @@ function error_exit {
 cd platforms/android/WeexFrameworkWrapper/ || \
 error_exit 1
 echo -e "$eros_prefix Enter android project"
-
 if [ -e wxframework/ ] || [ -e sdk/ ] || [ -e bmwidget/ ]
 then
     echo -e "$eros_prefix mwxframework, sdk or bmwidget has been existed, remove old sdk."
@@ -31,18 +29,14 @@ else
     echo -e "$eros_prefix No eros devDependencies, we will start to clone new sdk..."
 fi
     echo -e "$eros_prefix \033[36mMay spend a lo""t of time, please wait patiently. \033[0m"
-
     git clone https://github.com/bmfe/WeexErosFramework.git wxframework --depth=1 -q || \
     error_exit 5
     echo -e "$eros_prefix Eros wxframework clone done."
-
     git clone https://github.com/bmfe/WeexSDK.git sdk --depth=1 -q || \
     error_exit 6
     echo -e "$eros_prefix Weex sdk clone done."
-
     git clone https://github.com/bmfe/BMWidget.git bmwidget --depth=1 -q || \
     error_exit 7
     echo -e "$eros_prefix Eros bmwidget clone done."
-
     echo ""
     echo -e "$eros_prefix \033[32mAndroid sdk has been installed, enjoy it! \033[0m"

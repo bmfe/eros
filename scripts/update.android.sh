@@ -17,16 +17,13 @@ function error_exit {
 cd platforms/android/WeexFrameworkWrapper/ || \
 error_exit 1
 echo -e "$eros_prefix Enter android project"
-
 if [ -e wxframework/ ] || [ -e sdk/ ] || [ -e bmwidget/ ]
 then
     echo -e "$eros_prefix Start to updating."
-
     cd wxframework/ && git pull || error_exit 2
     cd ../sdk/ && git pull || error_exit 3
     cd ../bmwidget/ && git pull || error_exit 4
     cd ..
-
     echo -e "$eros_prefix \033[32mAndroid sdk has been updated, enjoy it! \033[0m"
 else
     echo -e "$eros_prefix No wxframework, sdk or bmwidget file, make sure you had been run eros install."
