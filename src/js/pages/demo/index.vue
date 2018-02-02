@@ -78,6 +78,9 @@ import { TYPE,DESC_TYPE } from './config';
 export default {
     data () {
         return {
+            curHomeBackTriggerTimes: 1,
+            maxHomeBackTriggerTimes: 5,
+
             DESC_TYPE,
             rows: TYPE,
             statusBarHeight: weex.config.eros.statusBarHeight ? weex.config.eros.statusBarHeight : 40,
@@ -97,8 +100,19 @@ export default {
         this.$navigator.setNavigationInfo({
             statusBarStyle: 'LightContent'
         });
+
+        // 安卓自定义退出 app 
+        this.androidFinishApp()
     },
     methods: {
+        androidFinishApp () {
+            const globalEvent = weex.requireModule('globalEvent')
+            globalEvent.addEventListener('homeBack', options => {
+                (this.curHomeBackTriggerTimes === this.maxHomeBackTriggerTimes) && this.$router.finish()
+                this.curHomeBackTriggerTimes++
+                this.$notice.toast({ message: `点击返回${this.maxHomeBackTriggerTimes}次之后，会关闭应用，当前点击第${this.curHomeBackTriggerTimes}次` })
+            })
+        },
         openWebView (url) {
             this.$router.toWebView({
                 url
