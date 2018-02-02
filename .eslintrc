@@ -24,8 +24,5 @@
     "handle-callback-err": 0,
     "camelcase": 0,
     "no-return-assign": [ 2, "except-parens" ]
-  },
-  "extends": [
-    "vue"
-  ]
+  }
 }

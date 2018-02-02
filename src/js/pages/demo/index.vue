@@ -13,7 +13,7 @@
                 </div>
                 <text class="desc-info-2">二次封装 weex，让开发者用 VUE 写一个属于自己的 APP。</text>
                 <div class="desc-detail">
-                    <text class="desc-detail-item" v-for="(desc,index) in DESC_TYPE" :index="index"> {{desc}} </text>
+                    <text class="desc-detail-item" v-for="(desc,index) in DESC_TYPE" :key="index"> {{desc}} </text>
                 </div>
                 <div class="desc-detail" style="margin-top: 100px;">
                     <text class="desc-detail-github icon" @click="openWebView('https://github.com/bmfe/eros-template')">&#xeee2;</text>
