@@ -25,7 +25,7 @@ Storage.install = (Vue, options) => {
             })
         },
         getSync (key) {
-            const { status, data, errorMsg } = storage.getDataSync(key.toString())
+            const { status, data } = storage.getDataSync(key.toString())
             return status === 0 ? JSON.parse(data) : ''
         },
         delete (key, callback) {
@@ -37,7 +37,7 @@ Storage.install = (Vue, options) => {
             })
         },
         deleteSync (key) {
-            const { status, data, errorMsg } = storage.deleteDataSync(key.toString())
+            const { status } = storage.deleteDataSync(key.toString())
             return status === 0
         },
         removeAll (callback) {
@@ -49,7 +49,7 @@ Storage.install = (Vue, options) => {
             })
         },
         removeAllSync () {
-            const { status, data, errorMsg } = storage.removeDataSync()
+            const { status } = storage.removeDataSync()
             return status === 0
         }
     }

@@ -12,19 +12,19 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    data() {
+    data () {
         return {
             arr: [],
             touchBarHeight: weex.config.eros.touchBarHeight ? weex.config.eros.touchBarHeight : 0
         }
     },
-    created() {
+    created () {
         for (let i = 0; i < 20; i++) {
             this.arr.push(i + 1)
         }
     },
     methods: {
-        onrefresh() {
+        onrefresh () {
             setTimeout(() => {
                 this.$refs['list'].refreshEnd()
                 this.$notice.toast({

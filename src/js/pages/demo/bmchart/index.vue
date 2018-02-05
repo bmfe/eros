@@ -7,7 +7,7 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config');
 export default {
-  data() {
+  data () {
     return {
       options: {
         backgroundColor: '#2c343c',
@@ -46,7 +46,7 @@ export default {
               { value: 274, name: '联盟广告' },
               { value: 235, name: '视频广告' },
               { value: 400, name: '搜索引擎' }
-            ].sort(function(a, b) {
+            ].sort(function (a, b) {
               return a.value - b.value;
             }),
             roseType: 'radius',
@@ -77,8 +77,7 @@ export default {
 
             animationType: 'scale',
             animationEasing: 'elasticOut',
-            animationDelay: function(idx) {
-              var a='aaaa'
+            animationDelay: function (idx) {
               return 200;
             }
           }
@@ -86,13 +85,13 @@ export default {
       }
     };
   },
-  mounted() {
+  mounted () {
     setTimeout(() => {
       this.options.backgroundColor = '#fff';
     }, 5000);
   },
   methods: {
-    finish() {
+    finish () {
       this.$notice.toast({
         message: '图表渲染完毕'
       });

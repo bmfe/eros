@@ -27,7 +27,7 @@ module.exports = {
         'js/pages/demo/bmrichtext/index.vue',
         'js/pages/demo/bmcalendar/index.vue',
         'js/pages/demo/other/waterfall.vue',
-        'js/pages/demo/other/weex-ui/tab-page/index.vue',
+        'js/pages/demo/other/weex-ui/tab-page/index.vue'
     ],
     'alias': {
         'Components': 'js/components',

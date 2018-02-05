@@ -37,7 +37,7 @@ if (process.env.NODE_ENV === 'development') require('Config')
     beforeCreate () {
       var domModule = weex.requireModule('dom');
       // 目前支持ttf、woff文件，不支持svg、eot类型,moreItem at http://www.iconfont.cn/
-  
+
       domModule.addRule('fontFace', {
         'fontFamily': 'iconfont2',
         'src': 'url(\'bmlocal://iconfont/font_1469606063_76593.ttf\')'

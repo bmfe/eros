@@ -41,8 +41,30 @@ export default class Axios {
             })
         }
 
-        function handleAxios ({ name, url = '', data, method, header, params = {} }, resolve, reject) {
-            let requestPath = name && pathFormater(name, params)
+        Vue.prototype.$get = (options) => {
+            options.method = 'GET'
+            return new Promise((resolve, reject) => {
+                if (_isFunction(self.requestHandler)) {
+                    self.requestHandler(options, () => { handleAxios(options, resolve, reject) })
+                } else {
+                    handleAxios(options, resolve, reject)
+                }
+            })
+        }
+
+        Vue.prototype.$post = (options) => {
+            options.method = 'POST'
+            return new Promise((resolve, reject) => {
+                if (_isFunction(self.requestHandler)) {
+                    self.requestHandler(options, () => { handleAxios(options, resolve, reject) })
+                } else {
+                    handleAxios(options, resolve, reject)
+                }
+            })
+        }
+
+        function handleAxios ({ name, url = '', data, method, header, params = {}}, resolve, reject) {
+            const requestPath = name && pathFormater(name, params)
             bmAxios.fetch({
                 url: url || (self.baseUrl + requestPath),
                 data: data || {},
@@ -59,13 +81,13 @@ export default class Axios {
             })
         }
 
-        function pathFormater ( name, params ) {
-            let _path = self.apis[name],
-                matcher = _path.match(/[^{][a-zA-Z0-9]+(?=\})/g)
+        function pathFormater (name, params) {
+            let _path = self.apis[name]
+            const matcher = _path.match(/[^{][a-zA-Z0-9]+(?=\})/g)
 
-            if( matcher && matcher.length ) {
+            if (matcher && matcher.length) {
                 matcher.forEach(item => {
-                    if( !params[item] ) throw new Error(`you had use dynamic params, but ${item} not existed in your params`)
+                    if (!params[item]) throw new Error(`you are using dynamic params, but ${item} not existed in your params`)
                     _path = _path.replace(`{${item}}`, params[item] || 'undefined')
                 })
             }

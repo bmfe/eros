@@ -73,7 +73,7 @@
 
 <script>
 if (process.env.NODE_ENV === 'development') require('Config');
-import { TYPE,DESC_TYPE } from './config';
+import { TYPE, DESC_TYPE } from './config';
 
 export default {
     data () {
@@ -85,7 +85,7 @@ export default {
             rows: TYPE,
             statusBarHeight: weex.config.eros.statusBarHeight ? weex.config.eros.statusBarHeight : 40,
             touchBarHeight: weex.config.eros.touchBarHeight ? weex.config.eros.touchBarHeight : 20,
-            WXEnvironment
+            WXEnvironment: weex.config.eros
         };
     },
     beforeCreate: function () {
@@ -101,7 +101,7 @@ export default {
             statusBarStyle: 'LightContent'
         });
 
-        // 安卓自定义退出 app 
+        // 安卓自定义退出 app
         this.androidFinishApp()
     },
     methods: {
@@ -331,7 +331,7 @@ export default {
                 name: 'demo.other.weex-ui',
                 statusBarStyle: 'LightContent'
             });
-        },
+        }
     }
 };
 </script>
