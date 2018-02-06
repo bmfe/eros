@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify-copy-code/styles.css">
+  <script src="//unpkg.com/docsify-copy-code/index.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="#/en-us/">EN</a>
+    <a href="#/zh-cn/">中文</a>
+  </nav>
+   <div data-app id="main">Please wait...</div>
+  <script>
+    window.$docsify = {
+      el: '#main',
+      loadNavbar: true,
+      loadSidebar: true,
+      // alias: {
+      //   '/.*/_sidebar.md': '/_sidebar.md'
+      // },
+      name: 'EROS 文档',
+      repo: '',
+      coverpage: true,
+      auto2top: true,
+      themeColor: '#1da1f2',
+      subMaxLevel: 2,
+      plugins: [
+        window.DocsifyCopyCodePlugin.init()
+      ]
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+</body>
+</html>

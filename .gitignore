@@ -9,8 +9,6 @@ Created by IDE
 !.editorconfig
 !.babelrc
 
-docs
-
 # Node
 logs
 *.log
