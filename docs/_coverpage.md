@@ -1,9 +1,9 @@
 # **EROS**
 
-> 基于 weex, 用 vue 的写法构建 **iOS/Android 原生应用**.
-
+> 一套 JS 代码，两端原生应用。
 
 [GitHub](https://github.com/bmfe/eros-template)
-[Get Started](#Intro)
+[Get Started](#介绍)
 
-![color](#f0f0f0)
+
+![color](#f8f8f8)

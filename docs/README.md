@@ -1,5 +1,5 @@
 
-# Intro
+# 介绍
 **eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写法的解决方案，由于 app 开发的特殊性，eros 则更偏重关心于整个 app 项目。**
 
 | iOS 端内置 DEMO | ios 版下载 | android版下载 |
@@ -12,7 +12,7 @@
 
 > 开发者可以扫描二维码来下载 eros app 来进行体验，iOS首次打开App需要在 **设置->通用->设备管理 信任开发证书。**
 
-# Your Should Know That
+# 开发之前你需要知道
 **如果您是前端开发者：**
 * 一定要熟练使用 vue 开发
 * 一定要详细阅读 weex 的文档，尤其是与 web 环境，vue 开发差异的部分。
@@ -25,19 +25,19 @@
 
 那么环境您会迅速搭建起来，然后跟着熟读 vue，weex 的文档，因为 vue 上手非常快，最后跟着 eros 的新手教程写几个 demo 便可以开始开发，还可以轻松拓展 module。
 
-## Required
+# 必备知识
 开发之前您需要学习 weex 知识，并且能熟练使用 vue 开发，文档地址如下。
 * [weex](http://weex.apache.org/cn/guide/)
 * [vue](https://cn.vuejs.org/v2/guide/)
 
-## Support 
+# 支持性 
 > 跟随着 weex 的支持性，`但目前我们并不支持开发代码兼容 web 端`
 
 * Android 4.1 (API 16)
 * iOS 8.0+ 
 * WebKit 534.30+ 
 
-# Advantage
+# eros 优点
 eros 提供了: 
 * 详细的文档来解决环境搭建过程中的坑。
 * 一套代码编译成 ios，android 两端原生应用。
@@ -62,7 +62,7 @@ eros 提供了:
 * [weex-ui](https://github.com/alibaba/weex-ui) ( 阿里出品，推荐使用 )
 * [bui](https://github.com/bingo-oss/bui-weex)
 
-# Disadvantage
+# eros 不足
 > eros 开发中也有很多限制，需要开发者自行斟酌。
 
 * 尽管 weex 支持编译三端，**但 eros 目前不支持浏览器端**，目前只会专注于原生。
@@ -70,12 +70,12 @@ eros 提供了:
 * 由于 eros 对 **JS Bundle** 运行机制采用了 appboard 机制来减少了 js bundle 的大小，导致 weex debug 需要特定的处理。
 * 如果遇到复杂的页面，如 IM 之类的，eros 建议用原生实现，weex 应付此类需求还是比较吃力。
 
-# Principle
+# 原理视图
 
 ![工作原理](http://on-img.com/chart_image/59c5d743e4b0d34a18d69580.png)
 [大图地址](http://on-img.com/chart_image/59c5d743e4b0d34a18d69580.png)
 
-# Situation
+# 开源现状
 目前 `eros` 已有数十个 app 在开发中和上线的状态，其中有正在开发中的国外应用 **starLife（100+页面）**，也有国内正在开发的**蜂觅（60+ 页面）**，还有**已上线的应用都在 0-50+ 页面不等**，涉及行业分布于资讯，医疗，招商，购物，政府，办公等等。
 
 而本木医疗（京医通）技术团队本身也基于 weex 开发了三个已上线的 app，均可在苹果商店和应用宝下载：
@@ -83,10 +83,10 @@ eros 提供了:
 * 本木医疗助手（30+页面）
 * 本木医生助理（20+页面）
 
-所以开发者大可放心，这不是一个 KPI 项目（公司没有 KPI ），已基于 MIT 协议开源。
+后续版本中会陆续展示优秀项目到首页，所以开发者大可放心，这不是一个 KPI 项目（公司没有 KPI ），已基于 MIT 协议开源。
 
 
-## Ecosystem
+# 周边系统
 | Project | Description |
 |---------|-------------|
 | [eros-cli](https://github.com/bmfe/eros-cli) | 简单的 eros 项目构建工具，可以提供搭建，开发，调试和发布等功能。 |
@@ -97,7 +97,13 @@ eros 提供了:
 | [eros-android-widget](https://github.com/bmfe/BMWidget) | eros 安卓组件库。 |
 | [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端 WeexSDK。 |
 
-## Group & Community
+# 社区贡献
+* [eros 网易严选](https://github.com/bmfe/eros-yanxuan-demo-v2)
+* [weex-eros-book 书籍阅读 app](https://github.com/wennjie/weex-book)
+* [lygtq-eros-publish 服务器增量发布逻辑](https://github.com/hodgevk/lygtq-eros-publish)
+* [eros-node-server 服务器增量发布逻辑](https://github.com/shawn-tangsc/eros-node-server)
+
+# 讨论组
 eros 正式开源到现在已经有了一个近 300 多人的开发群 (只能通过邀请)，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
 
 * **此并不是流量群，也并非广告群，是为了大家一起成长，保证信息的有效性，如果发黄赌毒，不和谐言语，与学习无关的广告，推广内容，无关小程序，不会商量，直接会被踢，且不会再有入群机会。**
@@ -110,7 +116,7 @@ eros 正式开源到现在已经有了一个近 300 多人的开发群 (只能�
 |---------|
 |![](https://gitee.com/uploads/images/2017/1026/154652_651ba169_1595985.jpeg)|
 
-## License
+# License
 [MIT](https://opensource.org/licenses/MIT)
 
 Copyright (c) 2017-present, 本木医疗
