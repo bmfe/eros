@@ -1,5 +1,8 @@
-- [主页](/)
-- [入门教程](/zh-cn/入门教程.md)
+- 
+	- [主页](/zh-cn/)
+
+- [ 教程 ]
+	- [入门](/zh-cn/tutorial)
 
 - [ 基础 ]
 	- [环境搭建](/zh-cn/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA)
@@ -16,11 +19,10 @@
 	- [eros-component](/zh-cn/component)
 
 - [ 安卓 开发相关 ]
-	- [Android二次开发](/zh-cn/androiddev)
-	- [Android环境配置](/zh-cn/Android-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA)
-	- [Android变更日志](/zh-cn/%E7%89%88%E6%9C%AC%E5%8F%98%E6%9B%B4%E6%97%A5%E5%BF%97)
-	- [Android配置](/zh-cn/Android配置)
-	- [Android发布打包](/zh-cn/%E5%8F%91%E5%B8%83%E6%89%93%E5%8C%85)
+	- [配置](/zh-cn/androidConfig)
+	- [二次开发](/zh-cn/androiddev)
+	- [环境配置](/zh-cn/Android-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA)
+	- [发布打包](/zh-cn/%E5%8F%91%E5%B8%83%E6%89%93%E5%8C%85)
 
 - [ iOS 开发相关 ]
 	- [图片相关配置](/zh-cn/%E5%9B%BE%E7%89%87%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE)
@@ -29,7 +31,7 @@
 - [ Q & A ]
 - [问题集合](/zh-cn/QA)
 
-- [更新日志]
+- [ 更新日志 ]
 	- [汇总](/zh-cn/update-all)
 	- [eros-ios-sdk](/zh-cn/update-ios)
 	- [eros-android-sdk](/zh-cn/update-android)

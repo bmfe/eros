@@ -1,11 +1,5 @@
-与其一堆原理，倒不如先直接介绍他到底是能干什么的：
-> [eros](https://github.com/bmfe/eros-template/wiki/eros) 是**基于 weex 的**，他可以让前端同学通过 **vue 的语法和 api** 来写出 **iOS/Android 原生应用**。
+# 由来
 
-学习 weex 或者 [eros](https://github.com/bmfe/eros-template/wiki/eros) 之前，请您一定要熟练使用 vue2 进行开发。
-
-[vue 官方文档](https://cn.vuejs.org/v2/guide/)
-
-## eros 是怎么来的
 我们需要先从 weex 说起 ，我们直接看原理图：
 ![weex原理](http://upload.ouliu.net/i/20171212234224psphf.jpeg)
 
@@ -23,7 +17,7 @@ weex 原理图中分为了 Server 和 Client 两部分。
 
 所以这块之所以叫 **server**，也就是这些静态资源文件可以在远端服务器打包生成，被客户端访问到并下载解析。
 
-### Client
+#### Client
 引用 weex 官网上的话。
 > Weex 的 iOS 和 Android 客户端中都会运行一个 JavaScript 引擎，来执行 JS bundle，同时向各端的渲染层发送规范化的指令，调度客户端的渲染和其它各种能力。我们在 iOS 下选择了 JavaScriptCore 内核，而在 Android 下选择了 UC 提供的 v8 内核。无论是从性能还是稳定性方面都提供了强有力的保障。
 
@@ -35,19 +29,12 @@ weex 原理图中分为了 Server 和 Client 两部分。
 
 [weex 官方文档](http://weex.apache.org/cn/guide/)
 
-## eros 介绍
-eros 是基于 weex 封装面向前端的 vue 写法的解决方案，由于 app 开发的特殊性，eros 则更偏重关心于整个 app 项目，当熟练使用了 eros 之后，您能快速通过 vue 暴露出来的方法快速构建原生 app 应用。
-
-eros 流程图如下：
-![eros原理](https://camo.githubusercontent.com/84b8ac29818c0259a3d3b2c4aa81c5194f02e0c2/687474703a2f2f6f6e2d696d672e636f6d2f63686172745f696d6167652f3539633564373433653462306433346131386436393538302e706e67)
-
-
-### 支持性
+# 支持性
 * Android 4.1 (API 16)
 * iOS 8.0+
 * WebKit 534.30+
 
-## 开始 eros
+# 环境搭建
 ### 脚手架安装:
 ```
 $ npm i eros-cli -g
@@ -81,7 +68,7 @@ JDK 是 JAVA 开发包，AndroidStudio 是 Android开发IDE，这两项不再做
 * ios 开发中 xcode 已经自带了模拟器。
 * android 开发者可以下载 `Genymotion`。
 
-### 模板生成
+# 模板生成
 1. 首先通过脚手架自动生成开发模板(我们不推荐用sudo来执行)。
 ```
 $ eros init
@@ -126,7 +113,7 @@ eros install 会让你选择下载依赖：
 
 > eros 的 demo 很重要，建议在开发中，首先跟随 demo 编写几个页面，并保留其代码作为使用参考。
 
-### 开发前
+# 开发前
 我们先来介绍 eros 开发中需要知道的点：
 
 ##### Server JS Bundle
@@ -199,7 +186,7 @@ iOS 模拟器比较特殊，是因为 iOS 模拟器和 Mac 共用一套网络设
 * **eros.dev.js** 中如果改变，**这是如果你在跑着 `eros dev` 服务，需要断开，让脚手架重新读取配置文件。**（开发中会经常添加新的打包入口）
 * **eros.native.js** 是**客户端读取的配置文件，目前是客户端在开启 app 的时候统一从内置包中读取**，所以当此文件变动的时候，需要重新打内置包 eros pack，重新运行下 app，即可生效。
 
-### Hello Eros
+# Hello Eros
 我们来简单开发一个 Hello World：
 
 1. 首先**关闭调试中的拦截器**，让 app 访问服务包，这时候刷新页面肯定是空白的，因为都没有服务。
@@ -356,7 +343,7 @@ eros 还有 demo 是根据网易严选 demo 进行改编的（感谢 [zwwill](ht
 
 最后开发者需要自行修改原生项目中的一些信息，就可以发 app 正式版本，对外使用了，发布的方法网上有很多介绍，就不过多赘述。
 
-### 增量发布
+# 增量发布
 具体更新逻辑可以[点击这里](https://github.com/bmfe/eros-template/wiki/%E5%8F%91%E5%B8%83%E6%9B%B4%E6%96%B0)，这里写下简单的说明。
 
 app 发布有两种情况：
@@ -382,6 +369,3 @@ $ eros build -d
 * [eros-node-server](https://github.com/shawn-tangsc/eros-node-server)
 
 并开源，非常感谢社区开发者的贡献。
-
-### 总结
-就如官方文档中所说，在熟悉了 eros 之后可以快速开发中小型 app 应用，但 eros 还有很多的不足，需要更多的人加入进来完善他，最终是想给 vue 开发者们另一个舞台。
