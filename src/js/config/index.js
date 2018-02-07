@@ -1,7 +1,7 @@
-import './push'
-import Widget from 'Widget'
+import Widget from 'eros-widget'
 import apis from './apis'
 import routes from './routes'
+import './push'
 
 new Widget({
     router: {

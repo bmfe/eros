@@ -3,6 +3,8 @@ Created by IDE
 .idea/
 *.iml
 
+docs
+
 .*
 !.gitignore
 !.eslintrc
