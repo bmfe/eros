@@ -86,7 +86,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
+        <activity android:name="com.benmu.framework.activity.ResultActivity" />
         <activity android:name="com.benmu.framework.activity.GlobalWebViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
