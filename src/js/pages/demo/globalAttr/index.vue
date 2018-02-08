@@ -13,13 +13,13 @@
 <script>
 if (process.env.NODE_ENV === 'development') require('Config')
 export default {
-    data() {
+    data () {
         return {
             attrArr: [],
             touchBarHeight: weex.config.eros.touchBarHeight ? weex.config.eros.touchBarHeight : 0
         }
     },
-    created() {
+    created () {
         if (weex && weex.config && weex.config.eros) {
             for (const i in weex.config.eros) {
                 this.attrArr.push({

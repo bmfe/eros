@@ -13,7 +13,7 @@
                 </div>
                 <text class="desc-info-2">二次封装 weex，让开发者用 VUE 写一个属于自己的 APP。</text>
                 <div class="desc-detail">
-                    <text class="desc-detail-item" v-for="(desc,index) in DESC_TYPE" :index="index"> {{desc}} </text>
+                    <text class="desc-detail-item" v-for="(desc,index) in DESC_TYPE" :key="index"> {{desc}} </text>
                 </div>
                 <div class="desc-detail" style="margin-top: 100px;">
                     <text class="desc-detail-github icon" @click="openWebView('https://github.com/bmfe/eros-template')">&#xeee2;</text>
@@ -73,7 +73,7 @@
 
 <script>
 if (process.env.NODE_ENV === 'development') require('Config');
-import { TYPE,DESC_TYPE } from './config';
+import { TYPE, DESC_TYPE } from './config';
 
 export default {
     data () {
@@ -85,7 +85,7 @@ export default {
             rows: TYPE,
             statusBarHeight: weex.config.eros.statusBarHeight ? weex.config.eros.statusBarHeight : 40,
             touchBarHeight: weex.config.eros.touchBarHeight ? weex.config.eros.touchBarHeight : 20,
-            WXEnvironment
+            WXEnvironment: weex.config.eros
         };
     },
     beforeCreate: function () {
@@ -101,7 +101,7 @@ export default {
             statusBarStyle: 'LightContent'
         });
 
-        // 安卓自定义退出 app 
+        // 安卓自定义退出 app
         this.androidFinishApp()
     },
     methods: {
@@ -331,7 +331,7 @@ export default {
                 name: 'demo.other.weex-ui',
                 statusBarStyle: 'LightContent'
             });
-        },
+        }
     }
 };
 </script>

@@ -100,7 +100,7 @@ const TYPE = [{
         items: [{
             name: 'weex 瀑布流',
             type: 'waterfall'
-        },{
+        }, {
             name: 'weex-ui',
             type: 'weexui'
         }]
