@@ -5,7 +5,10 @@
 </div>
 
 ## Intro
+[文档地址](https://bmfe.github.io/eros-docs/)
+
 **eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写法的解决方案，由于 app 开发的特殊性，eros 则更偏重关心于整个 app 项目。**
+
 
 | iOS 端内置 DEMO | ios 版下载 | android版下载 |
 |---------|---------|---------|
@@ -89,104 +92,28 @@ eros 提供了:
 * iOS 8.0+ 
 * WebKit 534.30+ 
 
-## Environment
-以下为不同 OS 开发不同客户端所需环境。
-
-#### hosts
-为了真机调试，我们推荐配置 `hosts` 文件，添加如下地址，当然您也可以默认为公司固定资源文件访问地址，这样通过证书还能进行线上抓包分析问题。
-```
-127.0.0.1   app.weex-eros.com
-```
-#### 脚手架所需环境:
-darwin: 
-* Node.js (>=6.x), npm version 4+ 
-
-windows: 
-* Git bash 
-
-> 因为脚手架依赖了`node-sass`，安装失败有很多解决办法，可自行查找。
-
-#### 脚手架安装:
-```
-$ npm i eros-cli -g
-```
-如果你在中国地区，我们还是推荐您使用 [cnpm](https://npm.taobao.org/) 安装或者直接修改为`淘宝源`。
-```
-$ cnpm i eros-cli -g 
-```
-#### darwin 开发 iOS:
-* Xcode
-* CocoaPods
-    * 升级 Ruby 环境：`$ sudo gem update --system`
-    * 移除现有 Ruby 镜像：`$ gem sources --remove https://rubygems.org/`
-    * 添加ruby-china镜像：`$ gem source -a https://gems.ruby-china.org/`
-    * 安装 CocoaPods：`$ sudo gem install cocoapods`
-    * 如果以上命令报错则执行：`$ sudo gem install -n /usr/local/bin cocoapods --pre`
-    * 最后执行：`$ pod setup 过程比较漫长，请耐心等待执行完成`
-
-#### darwin/windows/linux 开发 Android:
-* 下载并安装 [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)。
-* 下载并安装 [Android Studio](https://developer.android.google.cn/studio/index.html)。
-
-JDK 是 JAVA 开发包，AndroidStudio 是 Android开发IDE，这两项不再做过多介绍。
-
-> 如果您使用虚拟机进行跨平台开发，也需要配置好对应平台的所需环境。
-
-### 模拟器安装
-* ios 开发中 xcode 已经自带了模拟器
-* android 开发者推荐下载 `Genymotion`模拟器
-
->当然市面上的如 `夜神模拟器` 也是可以的，[调试教程](http://blog.csdn.net/qq_34653571/article/details/53007044?locationNum=14&fps=1)，但是在 weex 0.17 中会出现 weex 实例化失败的问题，所以还是推荐 `Genymotion`。
-
-## Start
-1. 首先通过脚手架自动生成开发模板(我们不推荐用 `sudo` 来执行脚手架的任何指令)
-```
-$ eros init
-```
-按提示选择模板，填写 app/项目名称和版本后在当前路径下会生成对应模板，然后 `cd` 到项目中
-
-2. 下载所需依赖
-前端依赖
-```
-$ npm install
-```
-客户端依赖
-```
-$ eros install
-```
-3. 安装完依赖之后:
-* iOS: 会自动打开 `Xcode` ，然后选择一个模拟器，点击左上角的播放(运行)按钮，即可看到内置包中已经内置好的 eros demo.
-
-* Android:开发者需要多几个步骤:
-1. 点击AndroidStudio上方的 **File---&gt;New---&gt;Import Project。**
-![](https://img.benmu-health.com/gitbook/1505963461481.jpg)
-2. 找到eros在你本地的地址，选择 **platforms/android/WeexFrameworkWrapper** ,点击**OK。**
-![](https://img.benmu-health.com/gitbook/1505963624252.jpg)
-3. 待项目构建完成，点击 AndroidStudio 上方工具栏的 **Run** ，即可运行项目。![](https://img.benmu-health.com/gitbook/1505963683163.jpg)
-
-注意：
-> 第一次打开 AndroidStuido 时，由于本地环境未配置好，AndroidStuido 会提示错误，按照 IDE 提示，大部分环境问题都可以解决。
-
-于是 eros 的 demo 便能在模拟器中跑起来了。
-
-| iOS 端内置 DEMO |
-|---------|
-|![eros-demo](http://upload.ouliu.net/i/20180122162536pcw67.gif)|
-
-> eros 的 demo 很重要，建议在开发中，首先跟随 demo 编写几个页面，并保留其代码作为使用参考。
 ## Quick Query 
-* [Hello World](https://github.com/bmfe/eros-template/wiki/eros-%7C-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97)
-* [更新总览](https://github.com/bmfe/eros-template/wiki/update-all)
+* [Hello World](https://bmfe.github.io/eros-docs/#/zh-cn/tutorial_newcomer)
+* [更新总览](https://bmfe.github.io/eros-docs/#/zh-cn/update_all)
 ## Ecosystem
+
 | Project | Description |
 |---------|-------------|
 | [eros-cli](https://github.com/bmfe/eros-cli) | 简单的 eros 项目构建工具，可以提供搭建，开发，调试和发布等功能。 |
 | [eros-publish](https://github.com/bmfe/eros-publish) | 简单的服务器差分包更新逻辑，需要和脚手架搭配使用。 |
+| [eros-widget](https://github.com/bmfe/eros-widget) | 二次封装 module。 |
 | [eros-ios-library](https://github.com/bmfe/Benmu-iOS-Library) | eros ios Weex 项目依赖库。 |
 | [eros-ios-sdk](https://github.com/bmfe/WeexiOSSDK) | eros ios Weex sdk。 |
 | [eros-android-framework](https://github.com/bmfe/WeexErosFramework) | eros weex 移动解决方案安卓端框架。 |
 | [eros-android-widget](https://github.com/bmfe/BMWidget) | eros 安卓组件库。 |
 | [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端 WeexSDK。 |
+
+## Community
+* [eros 网易严选](https://github.com/bmfe/eros-yanxuan-demo-v2)
+* [weex-eros-book 书籍阅读 app](https://github.com/wennjie/weex-book)
+* [lygtq-eros-publish 服务器增量发布逻辑](https://github.com/hodgevk/lygtq-eros-publish)
+* [eros-node-server 服务器增量发布逻辑](https://github.com/shawn-tangsc/eros-node-server)
+
 
 ## Group & Community
 eros 正式开源到现在已经有了一个近 300 多人的开发群 (只能通过邀请)，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：

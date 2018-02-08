@@ -16,8 +16,7 @@ module.exports = {
     'url': {
         'jsServer': 'http://app.weex-eros.com:8889',
         'image': 'https://lev-inf.benmu-health.com/test/xxx',
-        'bundleUpdate': 'http://localhosts:3001/app/check',
-        'debugServer': 'ws://app.weex-eros.com:8088/debugProxy/native'
+        'bundleUpdate': 'http://localhosts:3001/app/check'
     },
     'zipFolder': {
         'iOS': '/ios/WeexEros/WeexEros',

@@ -1,3 +1,3 @@
 export default {
-    'COMMON.getInfo': '/test/info'
+    'COMMON.getInfo': '/test/info/'
 }
