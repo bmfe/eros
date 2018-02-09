@@ -5,7 +5,6 @@
 </div>
 
 ## Intro
-[文档地址](https://bmfe.github.io/eros-docs/)
 
 **eros 是基于 [weex](https://weex-project.io/cn/) 封装面向前端的 vue 写法的解决方案，由于 app 开发的特殊性，eros 则更偏重关心于整个 app 项目。**
 
@@ -78,8 +77,9 @@ eros 提供了:
 * 本木医生助理（20+页面）
 
 所以开发者大可放心，这不是一个 KPI 项目（公司没有 KPI ），已基于 MIT 协议开源。
+
 ## Docs
-* [eros 文档地址](https://github.com/bmfe/eros-template/wiki/eros) (持续更新中...)
+* [eros 文档地址](https://bmfe.github.io/eros-docs/) (持续更新中...)。[帮助我们完善和翻译文档](https://github.com/bmfe/eros-docs)
 ## Required
 开发之前您需要学习 weex 知识，并且能熟练使用 vue 开发，文档地址如下。
 * [weex](http://weex.apache.org/cn/guide/)
@@ -94,7 +94,8 @@ eros 提供了:
 
 ## Quick Query 
 * [Hello World](https://bmfe.github.io/eros-docs/#/zh-cn/tutorial_newcomer)
-* [更新总览](https://bmfe.github.io/eros-docs/#/zh-cn/update_all)
+* [更新总览](https://bmfe.github.io/eros-docs/#/zh-cn/update_log_all)
+
 ## Ecosystem
 
 | Project | Description |
