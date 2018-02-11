@@ -1,11 +1,11 @@
 <template>
   <div class="wrapper">
     <embed v-for="(item , i) in tabItems" 
-            :src="item.src" 
-            :key="i" 
-            type="weex" 
-            :style="{ visibility: item.visibility, marginBottom: barHeight }" 
-            class="content"></embed> 
+           :src="item.src" 
+           :key="i" 
+           type="weex" 
+           :style="{ visibility: item.visibility, marginBottom: barHeight }" 
+           class="content"></embed> 
             
     <div class="tabbar" append="tree" :style="{ height: barHeight }">
       <bar-item v-for="item in tabItems" 
