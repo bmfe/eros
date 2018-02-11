@@ -1,8 +1,20 @@
 <template>
   <div class="wrapper">
-     <embed v-for="(item , i) in tabItems" :src="item.src" :key="i" type="weex" :style="{ visibility: item.visibility }" class="content"></embed> 
-    <div class="tabbar" append="tree">
-      <BarItem v-for="item in tabItems" :key="item.index" :index="item.index" :icon="item.icon" :title="item.title" :titleColor="item.titleColor" @tabItemOnClick="tabItemOnClick"></BarItem>
+     <embed v-for="(item , i) in tabItems" 
+            :src="item.src" 
+            :key="i" 
+            type="weex" 
+            :style="{ visibility: item.visibility, marginBottom: barHeight }" 
+            class="content"></embed> 
+            
+    <div class="tabbar" append="tree" :style="{ height: barHeight }">
+      <bar-item v-for="item in tabItems" 
+                :key="item.index" 
+                :index="item.index" 
+                :icon="item.icon" 
+                :title="item.title" 
+                :titleColor="item.titleColor" 
+                @tabItemOnClick="tabItemOnClick"></bar-item>
     </div>
   </div>
 </template>
@@ -24,7 +36,7 @@
   right: 0;
   bottom: 0;
   margin-top: 0;
-  margin-bottom: 100;
+  /*margin-bottom: 100;*/
 }
 
 .tabbar {
@@ -33,12 +45,13 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100;
+  /*height: 100;*/
 }
 </style>
 
 <script>
 import BarItem from './item.vue'
+
 export default {
   props: {
     tabItems: { default: [] },
@@ -52,6 +65,12 @@ export default {
   },
   components: {
     BarItem
+  },
+  computed: {
+    barHeight: function () {
+      const val = weex.config.eros.touchBarHeight
+      return val ? (100 + val) : 100;
+    }
   },
   created () {
     this.select(this.selectedIndex);
