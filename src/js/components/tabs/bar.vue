@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-     <embed v-for="(item , i) in tabItems" 
+    <embed v-for="(item , i) in tabItems" 
             :src="item.src" 
             :key="i" 
             type="weex" 
