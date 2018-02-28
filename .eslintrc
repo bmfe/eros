@@ -27,5 +27,6 @@
   },
   "extends": [
     "vue"
-  ]
+  ],
+  "parser": "babel-eslint"
 }
