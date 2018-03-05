@@ -6,27 +6,38 @@
 <script>
 export default {
     eros: {
+        appActive() {
+            console.log('appActive');
+        },
+        appDeactive() {
+            console.log('appDeactive');
+        },
         beforeAppear (params, options) {
+            console.log(params, options)
             console.log('beforeAppear');
         },
-
         beforeBackAppear (params, options) {
+            console.log(params, options)
             console.log('beforeBackAppear');
         },
 
         appeared (params, options) {
+            console.log(params, options)
             console.log('appeared');
         },
 
         backAppeared (params, options) {
+            console.log(params, options)
             console.log('backAppeared');
         },
 
-        disappear (options) {
-            console.log('disappear');
+        beforeDisappear (options) {
+            console.log(options)
+            console.log('beforeDisappear');
         },
 
         disappeared (options) {
+            console.log(options)
             console.log('disappeared');
         }
     },
