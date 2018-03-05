@@ -72,7 +72,6 @@
 </template>
 
 <script>
-if (process.env.NODE_ENV === 'development') require('Config');
 import { TYPE, DESC_TYPE } from './config';
 
 export default {
