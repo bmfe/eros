@@ -18,7 +18,6 @@
     </scroller>
 </template>
 <script>
-if (process.env.NODE_ENV === 'development') require('Config');
 export default {
     methods: {
         pickAndUpload () {

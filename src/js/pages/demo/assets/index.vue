@@ -32,7 +32,6 @@
 </style>
 
 <script>
-if (process.env.NODE_ENV === 'development') require('Config')
   export default {
     beforeCreate () {
       var domModule = weex.requireModule('dom');
