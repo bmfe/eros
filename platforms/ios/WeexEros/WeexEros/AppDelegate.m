@@ -8,23 +8,20 @@
 
 #import "AppDelegate.h"
 
-#import "BMConfigManager.h"
-#import "BMMediatorManager.h"
+#import <BMBaseLibrary/BMConfigManager.h>
+#import <BMBaseLibrary/BMMediatorManager.h>
+#import <BMBaseLibrary/BMPushMessageManager.h>
 
-#import "BMPushMessageManager.h"
-
-#import <GeTuiSdk.h>
+#import <GTSDK/GeTuiSdk.h>
 #import <WXApi.h>
 
-#import "BMRouterManager.h"
-#import "WeexMarketPlugins.h"
-#import "BMBaseViewController.h"
-#import "BMNavigationController.h"
-#import "BMAppResource.h"
-#import "BMDefine.h"
-#import "HYGuideView.h"
-
-
+#import <BMBaseLibrary/BMRouterManager.h>
+#import <BMBaseLibrary/WeexMarketPlugins.h>
+#import <BMBaseLibrary/BMBaseViewController.h>
+#import <BMBaseLibrary/BMNavigationController.h>
+#import <BMBaseLibrary/BMAppResource.h>
+#import <BMBaseLibrary/BMDefine.h>
+#import <BMBaseLibrary/HYGuideView.h>
 
 @interface AppDelegate ()
 {

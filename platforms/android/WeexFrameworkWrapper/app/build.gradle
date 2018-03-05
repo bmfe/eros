@@ -5,7 +5,7 @@ android {
     buildToolsVersion '26.0.2'
     flavorDimensions 'default'
     defaultConfig {
-        applicationId "com.benmu.wx"
+        applicationId APPLICATION_ID
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
@@ -103,7 +103,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:support-v4:23.1.1'
+    compile "com.android.support:support-v4:${PROJECT_SUPPORTLIBVERSION}"
     testCompile 'junit:junit:4.12'
     compile project(':wxframework')
 }

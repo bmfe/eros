@@ -1,0 +1,32 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true,
+    "browser": true
+  },
+  "plugins": [
+    "html"
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "globals": {
+    "weex": true,
+    "Vue": true
+  },
+  "rules": {
+    "semi": "off",
+    "indent": 0,
+    "quotes": [ "error", "single" ],
+    "no-control-regex": 0,
+    "no-extend-native": 0,
+    "handle-callback-err": 0,
+    "camelcase": 0,
+    "no-return-assign": [ 2, "except-parens" ]
+  },
+  "extends": [
+    "vue"
+  ],
+  "parser": "babel-eslint"
+}

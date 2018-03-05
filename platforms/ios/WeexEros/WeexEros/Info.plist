@@ -40,13 +40,14 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>需要访问您的相机</string>
+	<key>NSContactsUsageDescription</key>
+	<string>需要访问您的通讯录</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>需要访问您的位置信息</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>需要访问您的相册</string>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>fetch</string>
 		<string>remote-notification</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>

@@ -1,4 +1,29 @@
 {
-    "plugins": ["transform-runtime"],
-    "presets": ["es2015", "stage-0"]
+  "presets": [
+      ["env", {
+          "targets": {
+              "modules": false,
+              "loose": true,
+              "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+          }
+      }],
+      "stage-0"
+  ],
+  "plugins": [
+    ["component",{
+        "libraryName": "weex-ui",
+        "libDir": "packages",
+        "style": false
+    }],
+    ["transform-runtime", {
+      "polyfill": false,
+      "helpers": false
+    }]
+  ],
+  "env": {
+      "test": {
+          "presets": ["env", "stage-0"],
+          "plugins": ["istanbul"]
+      }
+  }
 }

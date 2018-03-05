@@ -3,12 +3,13 @@ Created by IDE
 .idea/
 *.iml
 
+docs
+
 .*
 !.gitignore
 !.eslintrc
+!.editorconfig
 !.babelrc
-
-docs
 
 # Node
 logs
