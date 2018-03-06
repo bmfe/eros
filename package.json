@@ -9,7 +9,7 @@
   "author": "Zero<a2192466@163.com>",
   "license": "MIT",
   "dependencies": {
-    "eros-widget": "1.0.1",
+    "eros-widget": "^1.0.1-beta.1",
     "weex-ui": "^0.3.13beta2"
   },
   "devDependencies": {
