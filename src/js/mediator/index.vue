@@ -3,7 +3,6 @@
 </template>
 
 <script>
-    if (process.env.NODE_ENV === 'development') require('Config')
     // 这个vue的实例我们在app启动的时候就执行并常驻app内存，在app关闭时候销毁，所以data中的数据每次重启都会被初始化
     // 而我们在app运行期间都可以任意改变data中的数据，然后推送给订阅者
 

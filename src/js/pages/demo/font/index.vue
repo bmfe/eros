@@ -16,7 +16,6 @@
     </scroller>
 </template>
 <script>
-if (process.env.NODE_ENV === 'development') require('Config')
 
 module.exports = {
     bmRouter: {

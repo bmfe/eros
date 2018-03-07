@@ -21,7 +21,7 @@
                 </div>
             </header>
             <cell class="line"></cell>
-            <header class="header" :class="[WXEnvironment.platform == 'iOS' ? 'stickyHeader' : '']">
+            <header class="header">
                 <text class="header-1">{{rows[0].name}}</text>
                 <!-- <text class="header-2 icon">&#xe713;</text> -->
             </header>
@@ -31,7 +31,7 @@
                     <text class="demo-list-cell-icon">&#xe62d;</text>
                 </div>
             </cell>
-            <header class="header" :class="[WXEnvironment.platform == 'iOS' ? 'stickyHeader' : '']">
+            <header class="header">
                 <text class="header-1">{{rows[1].name}}</text>
                 <!-- <text class="header-2 icon">&#xe713;</text> -->
             </header>
@@ -72,7 +72,6 @@
 </template>
 
 <script>
-if (process.env.NODE_ENV === 'development') require('Config');
 import { TYPE, DESC_TYPE } from './config';
 
 export default {

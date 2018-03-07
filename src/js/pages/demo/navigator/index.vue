@@ -2,7 +2,6 @@
     <text class="label">可点击右上角标题</text>
 </template>
 <script>
-if (process.env.NODE_ENV === 'development') require('Config')
 export default {
     data () {
         return {}

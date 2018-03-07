@@ -12,6 +12,7 @@ docs
 !.babelrc
 
 # Node
+eros-widget/
 logs
 *.log
 npm-debug.log*
