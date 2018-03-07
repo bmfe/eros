@@ -9,6 +9,7 @@
 **eros 不是框架，是基于 [weex](https://weex-project.io/cn/) 封装、面向前端的 [vue](https://cn.vuejs.org/v2/guide/) 写法的一整套 app 解决方案。**
 
 
+
 | iOS 端内置 DEMO | ios 版下载 | android版下载 |
 |---------|---------|---------|
 |![eros-demo](http://upload.ouliu.net/i/20180122162536pcw67.gif)|![ios下载](http://chuantu.biz/t6/214/1516790387x-1404793130.png)|![android 下载](http://upload.ouliu.net/i/201801241911376ee1z.png)|
@@ -18,7 +19,6 @@
 
 
 > 开发者可以扫描二维码来下载 eros app 来进行体验，iOS首次打开App需要在 **设置->通用->设备管理 信任开发证书。**
-## Your Should Know That
 **如果您是前端开发者：**
 
 > eros 开发有一定的门槛，不适合零基础开发。
@@ -30,15 +30,15 @@
 
 **如果您是客户端开发者：**
 
-那么环境您会迅速搭建起来，然后跟着熟读 vue，weex 的文档，因为 vue 上手非常快，最后跟着 eros 的新手教程写几个 demo 便可以开始开发，还可以轻松拓展 module。
+那么环境您会迅速搭建起来，然后熟读 vue，weex 文档，因为 vue 上手非常快，然后跟着 eros 的新手教程写几个 demo 便可以开始开发，还可以轻松拓展 module。
 
 ## Advantage
-eros 提供了: 
+eros 提供了:
 * 详细的文档来解决环境搭建过程中的坑。
 * 一套代码编译成 ios，android 两端原生应用。
 * 封装了大量 weex module，让前端开发方便进行原生的操作。
 * 可以通过 `appboard` 机制来减少多页面项目中的代码冗余，减少包体积，并可以对其实时修改。
-* 内置了一套完整的 JS 二次封装 module (widget) ，直接通过 vue 插件系统注入，直接在 `this` 上调用，可根据业务自行修改。
+* 内置了一套完整的 JS 二次封装 module (widget) ，通过 vue 插件系统注入，直接在 `this` 上调用，可根据业务自行修改。
 * 内置了中介者服务，来进行多个页面间的交互，并可以管理业务。
 * 内置了服务器端增量发布更新逻辑，可以搭配着开源的简易增量发布系统一起使用。
 * 支持真机和模拟器通过 `weex debug` 来断点调试，程序报错均会有报错日志弹窗提示。
@@ -77,14 +77,14 @@ eros 提供了:
 * [weex](http://weex.apache.org/cn/guide/)
 * [vue](https://cn.vuejs.org/v2/guide/)
 
-## Support 
+## Support
 > 跟随着 weex 的支持性，`但目前我们并不支持开发代码兼容 web 端`
 
 * Android 4.1 (API 16)
-* iOS 8.0+ 
-* WebKit 534.30+ 
+* iOS 8.0+
+* WebKit 534.30+
 
-## Quick Query 
+## Quick Query
 * [Hello World](https://bmfe.github.io/eros-docs/#/zh-cn/tutorial_newcomer)
 * [更新总览](https://bmfe.github.io/eros-docs/#/zh-cn/update_log_all)
 
@@ -112,7 +112,7 @@ eros 提供了:
 eros 正式开源到现在已经有了一个 300+ 开发者的开发群 (只能通过邀请)，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
 
 * **此并不是流量群，也并非广告群，是为了大家一起成长，保证信息的有效性，如果发黄赌毒，不和谐言语，与学习无关的广告，推广内容，无关小程序，不会商量，直接会被踢，且不会再有入群机会。**
-* eros开发中遇到任何问题可以随时发到群里 weex开发相关可以一起讨论。
+* eros 开发中遇到任何问题可以随时发到群里 weex 开发相关可以一起讨论。
 * 如果不能及时回答也请耐心等待，群里开发丰富经验的同学会帮您一起看问题。
 * 除了 eros 自身紧急 BUG 外的问题，均需要提 issue，我们会按 issue 处理，目的是为了更好的给其他开发者参考，紧急问题请直接抛到群里，我们会直接远程帮助您调试。
 
