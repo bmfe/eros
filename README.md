@@ -89,7 +89,8 @@ eros 提供了:
 * [更新总览](https://bmfe.github.io/eros-docs/#/zh-cn/update_log_all)
 
 ## Ecosystem
-以下项目，全部开源：
+> 以下项目，全部开源：
+
 | Project | Description |
 |---------|-------------|
 | [eros-cli](https://github.com/bmfe/eros-cli) | 简单的 eros 项目构建工具，可以提供搭建，开发，调试和发布等功能。 |
