@@ -38,7 +38,7 @@ fi
     error_exit 5
     echo -e "$eros_prefix Eros sdk clone done." 
     echo -e "$eros_prefix Run pod update and show some update detail:"
-    pod install --no-ansi || error_exit 6
+    pod update --no-ansi || error_exit 6
     echo ""
     echo -e "$eros_prefix \033[32miOS sdk has been installed, enjoy it! \033[0m"
     open WeexEros.xcworkspace || error_exit 7
