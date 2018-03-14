@@ -2,13 +2,16 @@
 echo "开始更新依赖库"
 rm -r wxframework/
 rm -r sdk/
-rm -r bmwidget/
+rm -r nexus/
+rm -r ErosPluginAmap/
 
 git clone https://github.com/bmfe/WeexErosFramework.git "wxframework" --depth=1
 
 git clone https://github.com/bmfe/WeexSDK.git "sdk" --depth=1
 
-git clone https://github.com/bmfe/BMWidget.git "bmwidget" --depth=1
+git clone https://github.com/bmfe/eros-nexus.git "nexus" --depth=1
+
+git clone https://github.com/bmfe/eros-plugin-android-amap.git "ErosPluginAmap" --depth=1
 
 cd ../
 
