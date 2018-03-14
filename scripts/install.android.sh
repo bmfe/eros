@@ -34,7 +34,7 @@ else
     echo -e "$eros_prefix No eros devDependencies, we will start to clone new sdk..."
 fi
     echo -e "$eros_prefix \033[36mMay spend a lot of time, please wait patiently. \033[0m"
-    git clone https://github.com/bmfe/WeexErosFramework.git wxframework w || \
+    git clone https://github.com/bmfe/WeexErosFramework.git wxframework --depth=1 -q || \
     error_exit 6
     echo -e "$eros_prefix Eros wxframework clone done."
     git clone https://github.com/bmfe/WeexSDK.git sdk --depth=1 -q || \
