@@ -59,7 +59,7 @@
   .footer {
     width:680px;
     height:90px;
-    background-color: #fff;
+    background-color: #ffffff;
     align-items:center;
     justify-content:flex-end;
     padding-right:25px;
@@ -72,7 +72,7 @@
   
   .desc {
     font-size:32;
-    color:#fff;
+    color:#ffffff;
     padding-left:24px;
   }
   
@@ -87,7 +87,7 @@
   }
   
   .username {
-    color:#fff;
+    color:#ffffff;
     font-size:32;
   }
   

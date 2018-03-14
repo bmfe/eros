@@ -91,6 +91,6 @@ export default {
     },
     'demo.other.weex-ui': {
         title: 'weex-ui',
-        url: '/pages/demo/other/weex-ui/tab-page/index.js'
+        url: '/pages/demo/other/weexui.js'
     }
 }

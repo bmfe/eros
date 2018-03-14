@@ -26,7 +26,7 @@
   }
 
   .title4 {
-    color: #fff;
+    color: #ffffff;
     font-size: 36;
     font-family: iconfont4;
   }

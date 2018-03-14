@@ -22,7 +22,7 @@ export default {
     height: 80px;
     top: 50px;
     left: 20px;
-    color: #000;
+    color: #000000;
     font-size: 38px;
     tint-color: #4cbd34;
 }
