@@ -2,8 +2,8 @@
     <div>
         <div class="status-bar" :style="{'height': statusBarHeight}"></div>
         <waterfall class="container" :show-scrollbar="false">
-            <header class="desc">
-                <text class="desc-title icon" style="font-size: 100px">&#xe618;</text>
+            <header class="desc" ref="profile">
+                <text class="desc-title icon" ref="logo" style="font-size: 100px">&#xe618;</text>
                 <!--<text class="desc-info">eros 的定位不是仅仅是一个库，由于 app 开发的特殊性，则更偏重关心于整个 app 项目。</text>-->
                 <div class="desc-info-1">
                     <bmrichtext style="height: 100px;">
@@ -122,44 +122,37 @@ export default {
         },
         handle_lifecycle () {
             this.$router.open({
-                name: 'demo.lifecycle',
-                statusBarStyle: 'LightContent'
+                name: 'demo.lifecycle'
             })
         },
         handle_assets () {
             this.$router.open({
-                name: 'demo.assets',
-                statusBarStyle: 'LightContent'
+                name: 'demo.assets'
             });
         },
         handle_globalAttr () {
             this.$router.open({
-                name: 'demo.globalAttr',
-                statusBarStyle: 'LightContent'
+                name: 'demo.globalAttr'
             });
         },
         handle_inputExtend () {
             this.$router.open({
-                name: 'demo.inputExtend',
-                statusBarStyle: 'LightContent'
+                name: 'demo.inputExtend'
             });
         },
         handle_refresh () {
             this.$router.open({
-                name: 'demo.refresh',
-                statusBarStyle: 'LightContent'
+                name: 'demo.refresh'
             });
         },
         handle_storage () {
             this.$router.open({
-                name: 'demo.storage',
-                statusBarStyle: 'LightContent'
+                name: 'demo.storage'
             });
         },
         handle_navigator () {
             this.$router.open({
-                name: 'demo.navigator',
-                statusBarStyle: 'LightContent'
+                name: 'demo.navigator'
             });
         },
         handle_share () {
@@ -186,8 +179,7 @@ export default {
         },
         handle_tools () {
             this.$router.open({
-                name: 'demo.tools',
-                statusBarStyle: 'LightContent'
+                name: 'demo.tools'
             });
         },
         handle_router () {
@@ -197,7 +189,6 @@ export default {
                 params: {
                     text: '123'
                 },
-                statusBarStyle: 'LightContent',
                 backCallback: () => {
                     this.$notice.toast({
                         message: '页面返回时的回调触发了，但返回功能阻止了'
@@ -225,20 +216,17 @@ export default {
         },
         handle_event () {
             this.$router.open({
-                name: 'demo.event.a',
-                statusBarStyle: 'LightContent'
+                name: 'demo.event.a'
             });
         },
         handle_notice () {
             this.$router.open({
-                name: 'demo.notice',
-                statusBarStyle: 'LightContent'
+                name: 'demo.notice'
             });
         },
         handle_image () {
             this.$router.open({
-                name: 'demo.image',
-                statusBarStyle: 'LightContent'
+                name: 'demo.image'
             });
         },
         handle_geo () {
@@ -266,8 +254,7 @@ export default {
         },
         handle_coms () {
             this.$router.open({
-                name: 'demo.coms',
-                statusBarStyle: 'LightContent'
+                name: 'demo.coms'
             });
         },
         handle_pay () {
@@ -294,26 +281,22 @@ export default {
         },
         handle_font () {
             this.$router.open({
-                name: 'demo.font',
-                statusBarStyle: 'LightContent'
+                name: 'demo.font'
             });
         },
         handle_bmchart () {
             this.$router.open({
-                name: 'demo.bmchart',
-                statusBarStyle: 'LightContent'
+                name: 'demo.bmchart'
             });
         },
         handle_bmrichtext () {
             this.$router.open({
-                name: 'demo.bmrichtext',
-                statusBarStyle: 'LightContent'
+                name: 'demo.bmrichtext'
             });
         },
         handle_bmcalendar () {
             this.$router.open({
-                name: 'demo.bmcalendar',
-                statusBarStyle: 'LightContent'
+                name: 'demo.bmcalendar'
             });
         },
         handle_bmmask () {
@@ -321,14 +304,17 @@ export default {
         },
         handle_waterfall () {
             this.$router.open({
-                name: 'demo.other.waterfall',
-                statusBarStyle: 'LightContent'
+                name: 'demo.other.waterfall'
             });
         },
         handle_weexui () {
             this.$router.open({
-                name: 'demo.other.weex-ui',
-                statusBarStyle: 'LightContent'
+                name: 'demo.other.weex-ui'
+            });
+        },
+        handle_bindingx () {
+            this.$router.open({
+                name: 'demo.other.bindingx'
             });
         }
     }
