@@ -85,8 +85,12 @@ export default {
         title: 'weex 瀑布流',
         url: '/pages/demo/other/waterfall.js'
     },
+    'demo.other.bindingx': {
+        title: 'bindingX',
+        url: '/pages/demo/other/bindingx.js'
+    },
     'demo.other.weex-ui': {
         title: 'weex-ui',
-        url: '/pages/demo/other/weex-ui/tab-page/index.js'
+        url: '/pages/demo/other/weexui.js'
     }
 }

@@ -13,23 +13,13 @@
     export default {
         data () {
             return {
-                count: 0
-            }
-        },
-        watch: {
-            count (newVal, oldVal) {
-                // 每当值改变的时候都会推送给订阅 store 变化的事件
-                this.$event.emit('store.change', {
-                    newVal,
-                    oldVal
-                })
+
             }
         },
         methods: {
             bindEvent () {
-                this.$event.on('store.count.add', resData => {
-                    console.log(this.count)
-                    this.count++
+                this.$event.on('refresh', resData => {
+                  this.$router.refresh()
                 })
             }
         },

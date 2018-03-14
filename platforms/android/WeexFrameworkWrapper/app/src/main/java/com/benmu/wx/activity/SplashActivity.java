@@ -50,7 +50,7 @@ public class SplashActivity extends Activity {
     }
 
     private void toHome() {
-        String homePage = BMWXEnvironment.mPlatformConfig.getPage().getHomePage();
+        String homePage = BMWXEnvironment.mPlatformConfig.getPage().getHomePage(this);
         String NavigationColor = BMWXEnvironment.mPlatformConfig.getPage().getNavBarColor();
         RouterModel router = new RouterModel(homePage, Constant.ACTIVITIES_ANIMATION
                 .ANIMATION_PUSH, null, null, false, null);

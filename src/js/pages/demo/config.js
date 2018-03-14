@@ -103,6 +103,9 @@ const TYPE = [{
         }, {
             name: 'weex-ui',
             type: 'weexui'
+        }, {
+            name: 'bindingx',
+            type: 'bindingx'
         }]
     }
 ];

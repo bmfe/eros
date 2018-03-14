@@ -9,7 +9,7 @@
   "author": "Zero<a2192466@163.com>",
   "license": "MIT",
   "dependencies": {
-    "eros-widget": "^1.0.1-beta.1",
+    "eros-widget": "^1.0.1-beta.5",
     "weex-ui": "^0.3.13beta2"
   },
   "devDependencies": {
@@ -22,6 +22,7 @@
     "babel-register": "^6.22.0",
     "eslint": "^4.17.0",
     "eslint-plugin-html": "^4.0.2",
-    "eslint-plugin-vue": "^4.2.2"
+    "eslint-plugin-vue": "^4.2.2",
+    "bindingx-parser": "0.0.x"
   }
 }
