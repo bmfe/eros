@@ -1,3 +1,6 @@
+## 2018-03-14
+* 模板更新： 更新 weex-ui demo
+* 模板更新： 添加 bindindx demo
 ## 2018-03-05
 * 模板更新： 删除所有if (process.env.NODE_ENV === 'development') require('Config');
 * 模板更新： 添加 ios 项目 schemes，platforms/ios/WeexEros/WeexEros.xcodeproj/xcshareddata/
