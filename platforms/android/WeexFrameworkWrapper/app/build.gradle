@@ -6,7 +6,7 @@ android {
     flavorDimensions 'default'
     defaultConfig {
         applicationId APPLICATION_ID
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
