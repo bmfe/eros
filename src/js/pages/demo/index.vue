@@ -314,7 +314,8 @@ export default {
         },
         handle_bindingx () {
             this.$router.open({
-                name: 'demo.other.bindingx'
+                name: 'demo.other.bindingx',
+                gesBack: false
             });
         }
     }
