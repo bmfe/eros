@@ -18,16 +18,16 @@
 <script>
 
 module.exports = {
-    bmRouter: {
-        viewWillDisappear (options) {
-            // 离开页面时将字体置为NORM
-            this.$font.changeFontSize({
-                fontSize: 'NORM'
-            }).then(resData => {
+    // bmRouter: {
+    //     viewWillDisappear (options) {
+    //         // 离开页面时将字体置为NORM
+    //         this.$font.changeFontSize({
+    //             fontSize: 'NORM'
+    //         }).then(resData => {
 
-            }, error => {})
-        }
-    },
+    //         }, error => {})
+    //     }
+    // },
     created () {
         this.getFontSize()
     },

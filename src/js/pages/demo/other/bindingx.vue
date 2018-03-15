@@ -63,7 +63,7 @@
     align-items:center;
     justify-content:flex-end;
     padding-right:25px;
-    flex-direction:row
+    flex-direction:row;
   }
   .action {
     font-size:35;
@@ -95,6 +95,11 @@
 
 <script>
   export default {
+    created() {
+        this.$notice.toast({
+            message: "iOS 端防止手势冲突，通过 gesBack 禁用手势返回功能。"
+        })
+    },
     data () {
       return {
         x: 0,

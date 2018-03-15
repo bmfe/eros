@@ -1,16 +1,20 @@
 <template>
     <div>
-        <list ref="list" :show-scrollbar="false" :showRefresh="true" @refresh="onrefresh" class="container">
-            <cell v-for="(num,index) in arr" :key="index" :index="index" class="panel">
-                <text class="text">{{num}}</text>
-            </cell>
-        </list>
+        <scroller ref="list" :show-scrollbar="false" :showRefresh="true" @refresh="onrefresh">
+            <wxc-cell :title="`这是第${num}条数据`"
+                v-for="(num, index) in arr" :key="index" :index="index"
+                :has-arrow="false"
+                @wxcCellClicked="wxcCellClicked"
+                :has-top-border="true"></wxc-cell>
+        </scroller>
         <div class="touch-bar" :style="{'height': touchBarHeight}">
         </div>
     </div>
 </template>
 <script>
+import { WxcCell } from 'weex-ui'
 export default {
+    components: { WxcCell },
     data () {
         return {
             arr: [],

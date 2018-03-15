@@ -28,10 +28,6 @@ const TYPE = [{
             type: 'storage'
         },
         {
-            name: '导航条操作',
-            type: 'navigator'
-        },
-        {
             name: '分享',
             type: 'share'
         },
@@ -44,7 +40,7 @@ const TYPE = [{
             type: 'router'
         },
         {
-            name: '接口请求（ eros dev 可用本地mock ）',
+            name: '接口请求（ eros dev 可用本地 mock ）',
             type: 'axios'
         },
         {
@@ -110,9 +106,7 @@ const TYPE = [{
     }
 ];
 
-const DESC_TYPE = ['iOS', 'Android', 'VUE', 'Widget', 'Module', 'Appboard', 'Mediator', 'BS diff', 'eros-cli', 'eros-publish', 'Weex Debug', 'support UI libs', 'Camera', 'Image', 'Contacts', 'ESlint']
 
 export {
-    TYPE,
-    DESC_TYPE
+    TYPE
 }

@@ -1,17 +1,26 @@
 <template>
     <div>
-        <list v-if="attrArr.length" :show-scrollbar="false" class="container">
-            <cell v-for="(attr,index) in attrArr" :key="index" :index="index" class="panel">
+        <scroller v-if="attrArr.length" :show-scrollbar="false">
+            <!--<cell v-for="(attr,index) in attrArr" :key="index" :index="index" class="panel">
                 <text class="text arrtName">{{attr.text}}: </text>
                 <text class="text">{{attr.value || '无'}}</text>
-            </cell>
-        </list>
-        <div class="touch-bar" :style="{'height': touchBarHeight}">
-        </div>
+            </cell>-->
+             <wxc-cell :title="attr.text"
+                :desc="attr.value || '无'"
+                v-for="(attr,index) in attrArr" :key="index" :index="index"
+                :has-arrow="false"
+                @wxcCellClicked="wxcCellClicked"
+                :has-top-border="true"></wxc-cell>
+        </scroller>
+       
+        <div class="touch-bar" :style="{'height': touchBarHeight}"></div>
     </div>
 </template>
 <script>
+import { WxcCell } from 'weex-ui'
+
 export default {
+    components: { WxcCell },
     data () {
         return {
             attrArr: [],

@@ -33,14 +33,6 @@ export default {
         title: '本地化存储',
         url: '/pages/demo/storage/index.js'
     },
-    'demo.navigator': {
-        title: '导航条操作',
-        url: '/pages/demo/navigator/index.js'
-    },
-    'demo.tools': {
-        title: '工具',
-        url: '/pages/demo/tools/index.js'
-    },
     'demo.router': {
         title: '路由',
         url: '/pages/demo/router/index.js'
@@ -61,10 +53,10 @@ export default {
         title: '字体',
         url: '/pages/demo/font/index.js'
     },
-    'demo.coms': {
-        title: '联系功能',
-        url: '/pages/demo/coms/index.js'
-    },
+    // 'demo.coms': {
+    //     title: '联系功能',
+    //     url: '/pages/demo/coms/index.js'
+    // },
     'demo.image': {
         title: '图片',
         url: '/pages/demo/image/index.js'
