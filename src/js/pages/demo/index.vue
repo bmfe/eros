@@ -5,7 +5,6 @@
             <eros-profile></eros-profile>
             <cell class="line"></cell>
             
-            <!--// TODO 字体-->
             <eros-core></eros-core>
             <eros-native></eros-native>
             <eros-three></eros-three>
@@ -29,7 +28,6 @@
 </template>
 
 <script>
-import { TYPE } from './config';
 import ErosCore from './components/core'
 import ErosNotice from './components/notice'
 import ErosNative from './components/native'
@@ -52,10 +50,8 @@ export default {
             curHomeBackTriggerTimes: 1,
             maxHomeBackTriggerTimes: 5,
 
-            rows: TYPE,
             statusBarHeight: weex.config.eros.statusBarHeight ? weex.config.eros.statusBarHeight : 40,
-            touchBarHeight: weex.config.eros.touchBarHeight ? weex.config.eros.touchBarHeight : 20,
-            WXEnvironment: weex.config.eros
+            touchBarHeight: weex.config.eros.touchBarHeight ? weex.config.eros.touchBarHeight : 20
         };
     },
     beforeCreate: function () {
@@ -85,13 +81,8 @@ export default {
                 this.curHomeBackTriggerTimes++
                 this.$notice.toast({ message: `点击返回${this.maxHomeBackTriggerTimes}次之后，会关闭应用，当前点击第${this.curHomeBackTriggerTimes}次` })
             })
-        },
-        handle_font () {
-            this.$router.open({
-                name: 'demo.font'
-            });
         }
     }
-};
+}
 </script>
 <style lang="sass" src='./index.scss'></style>
