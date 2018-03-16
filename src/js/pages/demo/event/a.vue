@@ -1,18 +1,21 @@
 <template>
     <scroller>
-        <div class="wrapper">
-            <text class="label">在b页面设置的数据:</text>
-        </div>
-        <div class="wrapper">
-            <text class="label">{{paramsData||'空'}}</text>
-        </div>
-        <div class="wrapper">
-            <text class="button button-big" @click="toPageB">进入b页面</text>
-        </div>
+        <title title="订阅"></title>
+        <category title="$event.on"></category>
+        <wxc-cell title="进入下一个页面，发布一个事件"
+            :desc="`订阅的数据为：${paramsData||'空'}`"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="toPageB">
+        </wxc-cell>
     </scroller>
 </template>
 <script>
+import { WxcCell } from 'weex-ui'
+import Title from '../_mods/title'
+import Category from '../_mods/category'
 export default {
+    components: { WxcCell, Title, Category }, 
     created () {
         this.$event.on('getParams', (params) => {
             // params 为触发该事件所传的参数
@@ -25,16 +28,11 @@ export default {
         }
     },
     methods: {
-        toPageB () {
+         toPageB () {
             this.$router.open({
-                name: 'demo.event.b',
-                statusBarStyle: 'LightContent'
+                name: 'demo.event.b'
             })
         }
-
     }
 }
 </script>
-<style lang="sass" scoped>
-@import 'src/js/css/base';
-</style>

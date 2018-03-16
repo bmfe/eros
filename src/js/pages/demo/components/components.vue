@@ -39,8 +39,8 @@ export default {
             })
         },
         showMask () {
-            this.$refs['bmmask'].show()
-        },
+            this.$event.emit('popBmMask')
+        }
     }
 }
 </script>

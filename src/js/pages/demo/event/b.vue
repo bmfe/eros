@@ -1,15 +1,26 @@
+
 <template>
-    <scroller>
-        <div class="wrapper">
-            <input class="layout" type="text" placeholder="输入需要展示在a页面的内容" v-model="eventText" />
-        </div>
-        <div class="wrapper">
-            <text class="button button-small" @click="emit">传递</text>
-        </div>
-    </scroller>
+    <div>
+        <title title="发布"></title>
+        <category title="$event.emit"></category>
+        <wxc-cell label="写入"
+           >
+            <input type="text" placeholder="Input Text" class="input" :autofocus="true" v-model="eventText"/>
+        </wxc-cell>
+       
+        </wxc-cell>
+         <wxc-button text="传递数据"
+              style="margin-left: 24px;margin-top: 20px;"
+              type="normal"
+              @wxcButtonClicked="emit"></wxc-button>
+    </div>
 </template>
 <script>
+import { WxcCell, WxcButton } from 'weex-ui'
+import Title from '../_mods/title'
+import Category from '../_mods/category'
 export default {
+    components: { WxcCell, WxcButton, Title, Category }, 
     data () {
         return {
             eventText: ''
@@ -25,8 +36,12 @@ export default {
         }
     }
 }
-
 </script>
-<style lang="sass" scoped>
-@import 'src/js/css/base';
+<style scoped>
+.input {
+    width: 500px;
+    height: 100px;
+    margin-left: 10px;
+}
 </style>
+

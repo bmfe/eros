@@ -71,6 +71,9 @@ export default {
             statusBarStyle: 'LightContent'
         });
 
+        this.$event.on('popBmMask', () => {
+            this.$refs['bmmask'].show()
+        })
         // 安卓自定义退出 app
         this.androidFinishApp()
     },

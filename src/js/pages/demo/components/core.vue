@@ -23,7 +23,7 @@
             desc="$event 可以在不同页面之间进行交互。"
             :has-arrow="true"
             :has-top-border="true"
-            @wxcCellClicked="jump('event')">
+            @wxcCellClicked="jump('event.a')">
         </wxc-cell>
         <wxc-cell title="发送请求 (开发模式才有效果)"
             desc="$fetch 支持 restful 标准, 高度自定义，支持 cookie 等。"
@@ -48,8 +48,11 @@ export default {
                 },
                 backCallback: () => {
                     this.$notice.toast({
-                        message: '页面返回时的回调触发了，但返回功能阻止了'
-                    });
+                        message: '页面返回时的回调触发了，但是返回事件被覆盖了，我们需要重写'
+                    })
+                    this.$router.back({
+                        type: 'PRESENT'
+                    })
                 }
             });
         },

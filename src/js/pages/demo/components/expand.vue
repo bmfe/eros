@@ -25,6 +25,12 @@
             :has-top-border="true"
             @wxcCellClicked="jump('refresh')">
         </wxc-cell>
+        <wxc-cell title="修改字体大小"
+            desc="$font 来修改字体大小。"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="jump('font')">
+        </wxc-cell>
     </cell>
 </template>
 <script>

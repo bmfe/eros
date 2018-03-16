@@ -1,33 +1,39 @@
+
 <template>
-    <scroller>
-        <div class="wrapper">
-            <text class="label">ABCDEFG</text>
+    <div>
+        <title title="字体设置"></title>
+        <category title="大小"></category>
+        <wxc-cell title="字母"
+            desc="ABCDEFG"
+            :has-top-border="true">
+        </wxc-cell>
+        <wxc-cell title="混合"
+            desc="用 VUE 写一个属于自己的 APP。 "
+            :has-top-border="true">
+        </wxc-cell>
+        <wxc-cell title="当前字体大小"
+            :desc="fontSize"
+            :has-top-border="true">
+            <input class="input" style="tint-color: #1da1f2;" type="text" placeholder="请输入..." value="" />
+        </wxc-cell>
+        <div class="item-container">
+            <wxc-button text="+"
+                type="normal"
+                style="width: 100px;"
+                @wxcButtonClicked="bigger"></wxc-button>
+            <wxc-button text="-"
+                type="normal"
+                style="width: 100px;margin-left:40px;"
+                @wxcButtonClicked="samller"></wxc-button>
         </div>
-        <div class="wrapper">
-            <text class="label">红鲤鱼与绿鲤鱼与驴</text>
-        </div>
-        <div class="wrapper">
-            <text class="label">当前字体大小：{{fontSize}}</text>
-        </div>
-        <div class="wrapper">
-            <text class="button button-small" :class="['size-'+fontSize]" @click="bigger">增大</text>
-            <text class="button button-small" :class="['size-'+fontSize]" @click="samller">减小</text>
-        </div>
-    </scroller>
+    </div>
 </template>
 <script>
-
-module.exports = {
-    // bmRouter: {
-    //     viewWillDisappear (options) {
-    //         // 离开页面时将字体置为NORM
-    //         this.$font.changeFontSize({
-    //             fontSize: 'NORM'
-    //         }).then(resData => {
-
-    //         }, error => {})
-    //     }
-    // },
+import { WxcCell, WxcButton } from 'weex-ui'
+import Title from '../_mods/title'
+import Category from '../_mods/category'
+export default {
+    components: { WxcCell, WxcButton, Title, Category }, 
     created () {
         this.getFontSize()
     },
@@ -74,13 +80,7 @@ module.exports = {
     }
 }
 </script>
-<style lang="sass" scoped>
-@import 'src/js/css/base';
-
-.label {
-    width: 750px;
-}
-
+<style scoped>
 .size-NORM {
     padding-top: 18px;
 }
@@ -91,5 +91,13 @@ module.exports = {
 
 .size-EXTRALARGE {
     padding-top: 14px;
+}
+.item-container {
+    margin-top: 40px;
+    width: 750px;
+    background-color: #f2f3f4;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row;
 }
 </style>

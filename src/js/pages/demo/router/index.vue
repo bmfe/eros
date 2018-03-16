@@ -51,17 +51,29 @@
             @wxcCellClicked="back">
         </wxc-cell>
         <category title="原生导航相关"></category>
-        <wxc-cell title="设置原生导航中间文本及事件"
-            desc="$navigator.setCenterItem()"
+        <wxc-cell title="设置原生导航条/状态栏的部分属性"
+            desc="$navigator.setNavigationInfo()"
             :has-arrow="true"
             :has-top-border="true"
-            @wxcCellClicked="setCenterItem">
+            @wxcCellClicked="setNavigationInfo">
+        </wxc-cell>
+        <wxc-cell title="设置原生导航左侧文本及事件"
+            desc="$navigator.setLeftItem()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="setLeftItem">
         </wxc-cell>
         <wxc-cell title="设置原生导航中间文本及事件"
             desc="$navigator.setCenterItem()"
             :has-arrow="true"
             :has-top-border="true"
             @wxcCellClicked="setCenterItem">
+        </wxc-cell>
+        <wxc-cell title="设置原生导航右侧文本及事件"
+            desc="$navigator.setRightItem()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="setRightItem">
         </wxc-cell>
     </scroller>
 </template>
@@ -76,25 +88,55 @@ export default {
             this.$notice.toast({
                 message: `从上个页面传递了: ${text}`
             })
-            this.$navigator.setRightItem({
-                text: '右侧',
+        }
+    },
+    data () {
+        return {
+            tapBackTime: 0,
+            navShow: true,
+            statusBarStyle: 'LightContent'
+        }
+    },
+    methods: {
+        setNavigationInfo() {
+            const _navShow = !this.navShow
+            const _statusBarStyle = this.statusBarStyle === 'LightContent' ? 'Default' : 'LightContent'
+
+            this.$navigator.setNavigationInfo({
+                title: 'setNavigationInfo',
+                navShow: _navShow,                   
+                statusBarStyle: _statusBarStyle      
+            })
+            this.navShow = _navShow
+            this.statusBarStyle = _statusBarStyle
+             this.$notice.toast({
+                message: `
+导航条 ${_navShow ? '显示': '隐藏'}
+
+状态栏变更为 ${_statusBarStyle}
+
+导航条名称变为 setNavigationInfo
+`
+            })
+        },
+        setLeftItem() {
+            this.$notice.toast({
+                message: '导航条左侧名称已修改为 返回'
+            })
+            this.$navigator.setLeftItem({
+                text: '返回',
                 textColor: '#fff',
                 fontSize: '32',
                 fontWeight: 'normal'
             }, () => {
                 // 点击回调
+                if(this.tapBackTime === 2) this.back()
                 this.$notice.toast({
-                    message: '您点击了导航条右侧区域'
+                    message: '重写了返回事件，再点一次即可返回。'
                 })
+                this.tapBackTime ++
             })
-        }
-    },
-    data () {
-        return {
-            copyText: ''
-        }
-    },
-    methods: {
+        },
         setCenterItem() {
             this.$notice.toast({
                 message: '导航条名称已修改为 eros，并给予了点击事件。'
@@ -106,6 +148,22 @@ export default {
                 // 点击回调
                 this.$notice.toast({
                     message: '您点击了 eros'
+                })
+            })
+        },
+        setRightItem (){
+            this.$notice.toast({
+                message: '导航条右侧名称已修改为 right，并给予了点击事件。'
+            })
+            this.$navigator.setRightItem({
+                text: 'right',
+                textColor: '#fff',
+                fontSize: '32',
+                fontWeight: 'normal'
+            }, () => {
+                // 点击回调
+                this.$notice.toast({
+                    message: '您点击了导航条右侧区域'
                 })
             })
         },
@@ -151,7 +209,7 @@ export default {
         setHomePage () {
             this.$router.setHomePage('/pages/demo/router/home.js')
             this.$notice.toast({
-                message: '设置成功，请退出重启app'
+                message: '设置成功'
             })
         },
         refresh () {
