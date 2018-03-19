@@ -38,5 +38,6 @@ export default {
     width: 500px;
     height: 100px;
     margin-left: 10px;
+    color: #6a737d;
 }
 </style>

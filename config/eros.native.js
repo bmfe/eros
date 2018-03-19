@@ -3,6 +3,7 @@ module.exports = {
     'appBoard': '/config/index.js',
     // android 监听全局事件homeBack 如果为true 安卓端需要自行调用router.finish方法来关闭应用
     'androidIsListenHomeBack': 'true',
+    'hotRefresh': 'true',
     'version': {
         'android': 'eros-template-version',
         'iOS': 'eros-template-version'
@@ -14,7 +15,6 @@ module.exports = {
         'navItemColor': '#ffffff'
     },
     'url': {
-        'jsServer': 'http://app.weex-eros.com:8889',
         'image': 'https://lev-inf.benmu-health.com/test/xxx',
         'bundleUpdate': 'http://localhosts:3001/app/check'
     },

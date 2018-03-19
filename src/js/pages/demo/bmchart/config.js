@@ -129,9 +129,9 @@ export const lineChartInfo = {
     }],
     series: [
         {
-            name:'模拟数据',
-            type:'line',
-            smooth:true,
+            name: '模拟数据',
+            type: 'line',
+            smooth: true,
             symbol: 'none',
             sampling: 'average',
             itemStyle: {
@@ -144,8 +144,6 @@ export const lineChartInfo = {
     ]
 };
 
-
-
 export const barChartInfo = {
     color: ['#3398DB'],
     backgroundColor: '#ffffff',
@@ -157,10 +155,10 @@ export const barChartInfo = {
         color: '#ccc'
         }
     },
-    tooltip : {
+    tooltip: {
         trigger: 'axis',
-        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
         }
     },
     grid: {
@@ -169,26 +167,26 @@ export const barChartInfo = {
         bottom: '3%',
         containLabel: true
     },
-    xAxis : [
+    xAxis: [
         {
-            type : 'category',
-            data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             axisTick: {
                 alignWithLabel: true
             }
         }
     ],
-    yAxis : [
+    yAxis: [
         {
-            type : 'value'
+            type: 'value'
         }
     ],
-    series : [
+    series: [
         {
-            name:'直接访问',
-            type:'bar',
+            name: '直接访问',
+            type: 'bar',
             barWidth: '60%',
-            data:[10, 52, 200, 334, 390, 330, 220]
+            data: [10, 52, 200, 334, 390, 330, 220]
         }
     ]
 };
@@ -206,26 +204,26 @@ export const radarChartInfo = {
            }
         },
         indicator: [
-           { name: 'sales', max: 6500},
-           { name: 'Administration', max: 16000},
-           { name: 'Information Techology', max: 30000},
-           { name: 'Customer Support', max: 38000},
-           { name: 'Development', max: 52000},
-           { name: 'Marketing', max: 25000}
+           { name: 'sales', max: 6500 },
+           { name: 'Administration', max: 16000 },
+           { name: 'Information Techology', max: 30000 },
+           { name: 'Customer Support', max: 38000 },
+           { name: 'Development', max: 52000 },
+           { name: 'Marketing', max: 25000 }
         ]
     },
     series: [{
         name: '预算 vs 开销（Budget vs spending）',
         type: 'radar',
         // areaStyle: {normal: {}},
-        data : [
+        data: [
             {
-                value : [4300, 10000, 28000, 35000, 50000, 19000],
-                name : '预算分配（Allocated Budget）'
+                value: [4300, 10000, 28000, 35000, 50000, 19000],
+                name: '预算分配（Allocated Budget）'
             },
              {
-                value : [5000, 14000, 28000, 31000, 42000, 21000],
-                name : '实际开销（Actual Spending）'
+                value: [5000, 14000, 28000, 31000, 42000, 21000],
+                name: '实际开销（Actual Spending）'
             }
         ]
     }]

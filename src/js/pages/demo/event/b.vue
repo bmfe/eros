@@ -39,6 +39,7 @@ export default {
 </script>
 <style scoped>
 .input {
+    color: #6a737d;
     width: 500px;
     height: 100px;
     margin-left: 10px;

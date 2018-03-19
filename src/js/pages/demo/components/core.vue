@@ -70,6 +70,7 @@ export default {
         handle_axios() {
             this.$fetch({
                 name: 'COMMON.getInfo',
+                method: 'get',
                 data: {
                     name: 'weex-eros'
                 }

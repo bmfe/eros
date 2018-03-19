@@ -47,5 +47,8 @@ module.exports = {
     'mockServer': {
         'port': 52077,
         'mockDir': './dist/mock'
+    },
+    'socketServer': {
+        'port': 8890
     }
 }
