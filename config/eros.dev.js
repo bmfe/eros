@@ -1,5 +1,7 @@
 // appBoard，mediator 不建议进行修改 如果修改了 也请对应修改
 module.exports = {
+    'eslint': false,
+    'webpackWarnings': false,
     'exports': [
         // appBoard
         'js/config/index.js',
@@ -34,8 +36,6 @@ module.exports = {
         'Pages': 'js/pages',
         'Utils': 'js/utils'
     },
-    'eslint': false,
-    'webpackWarning': false,
     'diff': {
         'pwd': '/Users/yangmingzhe/Work/opensource/eros-diff-folder',
         'proxy': 'https://app.weex-eros.com/source'

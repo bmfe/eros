@@ -8,16 +8,9 @@
                 <bmspan class="desc-info-text" value=" 是什么？"></bmspan>
             </bmrichtext>
         </div>
-        <text class="desc-info-2">二次封装 weex，让开发者用 VUE 写一个属于自己的 APP。</text>
+        <text class="desc-info-2">二次封装 weex，用 Vue 写一个属于自己的 APP。</text>
         <div class="desc-detail">
             <text class="desc-detail-item" v-for="(desc,index) in DESC_TYPE" :key="index"> {{desc}} </text>
-        <!--<wxc-tag type="hollow"
-            class="desc-detail-item"
-            style="width: 150px"
-            tag-color="#ffffff"
-            font-color="#1da1f2"
-            v-for="(desc,index) in DESC_TYPE" :key="index"
-            :value="desc"></wxc-tag>-->
         </div>
         <div class="desc-detail" style="margin-top: 100px;">
             <text class="desc-detail-github icon" @click="openWebView('https://github.com/bmfe/eros-template')">&#xeee2;</text>
@@ -75,7 +68,7 @@ export default {
 }
 
 .desc-info-2 {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .desc-detail {
