@@ -2,7 +2,6 @@
  * 这里编写 sass 之后，可在 vue 的 style 标签中通过 @import 相对路径引入
  * 注意 style 标签的 lang 属性需要设置为 scss/sass
  */
-$base-color: #1da1f2;
 
 .wrapper {
     flex-direction: row;
@@ -13,9 +12,9 @@ $base-color: #1da1f2;
     text-align: center; 
     border-style: solid;
     color: #ffffff;
-    border-color: $base-color;
+    border-color: #1da1f2;
     border-radius: 15px;
-    background-color: $base-color;
+    background-color: #1da1f2;
 }
 
 

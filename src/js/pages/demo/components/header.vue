@@ -12,13 +12,12 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-$base-color: #1da1f2;
+<style scoped>
 .header {
   padding-top: 45px;
   width: 750px;
   height: 117px;
-  background-color: $base-color;
+  background-color: #1da1f2;
   color: #FFFFFF;
 }
 

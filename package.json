@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "eros-widget": "^1.0.1-beta.5",
-    "weex-ui": "^0.3.13beta2"
+    "weex-ui": "^0.3.13"
   },
   "devDependencies": {
     "babel-core": "~6.25.0",

@@ -23,7 +23,6 @@ module.exports = {
         'js/pages/demo/bmchart/index.vue',
         'js/pages/demo/bmrichtext/index.vue',
         'js/pages/demo/bmcalendar/index.vue',
-        'js/pages/demo/other/waterfall.vue',
         'js/pages/demo/other/bindingx.vue',
         'js/pages/demo/other/weexui.vue'
     ],
@@ -36,6 +35,7 @@ module.exports = {
         'Utils': 'js/utils'
     },
     'eslint': false,
+    'webpackWarning': false,
     'diff': {
         'pwd': '/Users/yangmingzhe/Work/opensource/eros-diff-folder',
         'proxy': 'https://app.weex-eros.com/source'
@@ -49,6 +49,7 @@ module.exports = {
         'mockDir': './dist/mock'
     },
     'socketServer': {
-        'port': 8890
+        'port': 8890,
+        'switch': true
     }
 }

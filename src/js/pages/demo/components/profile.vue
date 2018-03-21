@@ -50,4 +50,81 @@ export default {
     }
 }
 </script>
-<style lang="sass" src='../index.scss'></style>
+<style scoped>
+.desc {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: #1da1f2;
+}
+
+.desc-title {
+  width: 700px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 100;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.desc-info-1,
+.desc-info-2 {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.desc-info-2 {
+  margin-top: 50px;
+}
+
+.desc-detail {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 750px;
+}
+
+.desc-detail-item {
+  margin-top: 20px;
+  margin-right: 20px;
+  color: #7d7d7d;
+  font-weight: 300;
+  font-size: 30px;
+  background-color: #FFFFFF;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.desc-detail-github,
+.desc-detail-wiki {
+  width: 375px;
+  font-weight: 500;
+  font-size: 50px;
+}
+
+.desc-detail-github {
+  text-align: right;
+  padding-right: 50px;
+}
+
+.desc-detail-wiki {
+  padding-left: 50px;
+}
+
+.desc-info-text {
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.desc-info-text-bold {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 80px;
+}
+
+.icon {
+  color: #FFFFFF;
+  font-family: iconfont-eros;
+}
+</style>

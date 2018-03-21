@@ -94,7 +94,7 @@ export default {
 }
 .calendar {
     height: 800px;
-    background-color: white;
+    background-color: #FFFFFF;
     select-color: #1da1f2;
 }
 </style>
