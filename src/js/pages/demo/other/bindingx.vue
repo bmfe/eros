@@ -63,7 +63,7 @@
     align-items:center;
     justify-content:flex-end;
     padding-right:25px;
-    flex-direction:row
+    flex-direction:row;
   }
   .action {
     font-size:35;
@@ -95,6 +95,11 @@
 
 <script>
   export default {
+    created() {
+        this.$notice.toast({
+            message: "iOS 端防止手势冲突，通过 gesBack 禁用手势返回功能。"
+        })
+    },
     data () {
       return {
         x: 0,
@@ -145,7 +150,7 @@
         // 开始执行动画
         this.isInAnimation = true
 
-	      let boxRef = this.$refs.box.ref
+          let boxRef = this.$refs.box.ref
         // 改变的 x 坐标，最终的 x 坐标，最终的透明值，位移 x 原点的表达式
         let changed_x, final_x, final_opacity, translate_x_origin
         // 通过一个变量来判断是否已经滑出
@@ -174,26 +179,26 @@
           final_opacity = 0      // 透明度变回 0
           translate_x_origin = `easeOutExpo(t,${this.x},${changed_x},1000)` // 运动曲线为easeOutExpo 生成位移到 750px 表达式 1s内执行
         }
-       
+
       //  运动曲线为linear 计算出透明度表达式 1s内执行
-       let opacity_origin = `linear(t,${this.opacity},${final_opacity - this.opacity},1000)`
-	     let result = this.$bindingx.bind({
+        let opacity_origin = `linear(t,${this.opacity},${final_opacity - this.opacity},1000)`
+        let result = this.$bindingx.bind({
           eventType:'timing',       // 结束的时候是没有任何监听的 用 timing 来做定时的动画
           exitExpression:"t>1000",  // 当时间超过 10000ms 结束动画
           props: [
               {element:boxRef, property:'transform.translateX',expression:translate_x_origin},
               {element:boxRef, property:'opacity',expression:opacity_origin}
             ]
-          
+
         },(e) => {
             if(e.state === 'end' || e.state === 'exit') {
               // reset x
               this.x = final_x
               this.opacity= final_opacity
               this.isInAnimation = false
-              
+
               shouldDismiss && this.dismissCallback()
-                
+
             }
         })
       }

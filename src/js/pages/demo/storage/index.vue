@@ -1,35 +1,33 @@
 <template>
     <div>
-        <list ref="list" :show-scrollbar="false" :showRefresh="true" @refresh="onrefresh" class="container">
-            <cell class="panel">
-                 <text class="text arrtName">本地存储字符串数据:  </text>
-                <text class="text">{{resultStr || '无'}}</text>
-            </cell>
-            <cell class="panel">
-                <text class="text arrtName">本地存储 json 数据:</text>
-                <text class="text">{{resultObj.text || '无'}}</text>
-            </cell>
-            <cell class="wrapper">
-                <text class="button button-small" @click="add">新增</text>
-                <text class="button button-small" @click="del">删除</text>
-            </cell>
-        </list>
+        <scroller ref="list" :show-scrollbar="false">
+            <wxc-cell title="本地存储字符串数据: "
+                :desc="resultStr || '无'"
+                :has-arrow="false"
+                :has-top-border="true"></wxc-cell>
+            <wxc-cell title="本地存储 json 数据: "
+                :desc="resultObj.text || '无'"
+                :has-arrow="false"
+                :has-top-border="true"></wxc-cell>
+            <div style="padding-left: 24px;">
+                <wxc-button text="新增"
+                    type="normal"
+                    style="margin-top:40px"
+                    @wxcButtonClicked="add"></wxc-button>
+                <wxc-button text="删除"
+                    type="normal"
+                    style="margin-top:40px"
+                    @wxcButtonClicked="del"></wxc-button>
+            </div>
+        </scroller>
         <div class="touch-bar" :style="{'height': touchBarHeight}">
         </div>
     </div>
-    <!--<scroller>
-        <text class="label">本地存储数据：</text>
-        <text class="label">{{'字符串数据: '+ (resultStr || '无')}}</text>
-        <text class="label">{{'json数据: '+ (resultObj.text || '无')}}</text>
-        <text class="label">离开本页面后再次进入查看</text>
-        <div class="wrapper">
-            <text class="button button-small" @click="add">新增</text>
-            <text class="button button-small" @click="del">删除</text>
-        </div>
-    </scroller>-->
 </template>
 <script>
+import { WxcCell, WxcButton } from 'weex-ui'
 export default {
+    components: { WxcCell, WxcButton },
     created () {
         this.get();
     },
@@ -61,11 +59,3 @@ export default {
     }
 };
 </script>
-<style lang="sass" scoped>
-@import 'src/js/css/base';
-.container {
-    width: 700px;
-    margin: 25px;
-    margin-bottom: 100px;
-}
-</style>

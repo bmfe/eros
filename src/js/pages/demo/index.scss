@@ -6,121 +6,17 @@
 }
 
 .container {
-  background-color: $base-color;
+  background-color: #1da1f2;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 25px;
   width:750px;
 }
 
-.desc {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-  background-color: $base-color;
-}
-
-.desc-title {
-  width: 700px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 100;
-  color: white;
-  margin-bottom: 30px;
-}
-
-.desc-info-1,
-.desc-info-2 {
-  color: white;
-  font-weight: 500;
-  font-size: 30px;
-}
-
-.desc-info-2 {
-  margin-top: 50px;
-}
-
-.desc-detail {
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 750px;
-}
-
-.desc-detail-item {
-  margin-top: 20px;
-  margin-right: 20px;
-  color: #7d7d7d;
-  font-weight: 300;
-  font-size: 30px;
-  background-color: white;
-  padding: 5px;
-  border-radius: 6px;
-}
-
-.desc-detail-github,
-.desc-detail-wiki {
-  width: 375px;
-  font-weight: 500;
-  font-size: 50px;
-}
-
-.desc-detail-github {
-  text-align: right;
-  padding-right: 50px;
-}
-
-.desc-detail-wiki {
-  text-align: left;
-  padding-left: 50px;
-}
-
-.desc-info-text {
-  color: white;
-  font-weight: 300;
-  font-size: 30px;
-}
-
-.desc-info-text-bold {
-  color: white;
-  font-weight: 600;
-  font-size: 80px;
-}
-
 .line {
   height:2px;
   width:700px;
-  background-color: #fff;
-}
-
-.header {
-  padding-top: 45px;
-  width: 750px;
-  height: 117px;
-  background-color: $base-color;
-  color: white;
-}
-
-.header-1 {
-  width: 650px;
-  font-weight: 600;
-  font-size: 40px;
-  color: white;
-}
-
-.header-2 {
-  text-align: center;
-  width: 100px;
-  font-weight: 300;
-  font-size: 40px;
-  color: white;
-}
-
-.header-3 {
-  text-align: right;
-  width: 200px;
-  font-weight: 300;
-  font-size: 40px;
-  color: white;
+  background-color: #ffffff;
 }
 
 .demo-list-cell-container {
@@ -129,7 +25,7 @@
 }
 
 .demo-list-cell {
-  background-color: white;
+  background-color: #FFFFFF;
   width: 700px;
   height: 100px;
   padding-left: 25px;
@@ -159,21 +55,18 @@
   font-family: iconfont-eros;
 }
 
-.icon {
-  color: white;
-  font-family: iconfont-eros;
-}
+
 
 .status-bar {
   width: 750;
   height: 40;
-  background-color: $base-color;
+  background-color: #1da1f2;
 }
 
 .touch-bar {
   height: 68;
   width: 750;
-  background-color: $base-color;
+  background-color: #1da1f2;
 }
 
 .mask {
@@ -187,7 +80,6 @@
 
 .modal-top {
   align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .image {

@@ -1,6 +1,6 @@
 {
   "name": "eros-template-name",
-  "version": "1.0.1-beta.1",
+  "version": "1.0.1-beta.2",
   "description": "a weex project",
   "main": "index.js",
   "keywords": [
@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "eros-widget": "^1.0.1-beta.5",
-    "weex-ui": "^0.3.13beta2"
+    "weex-ui": "^0.6.0-beta"
   },
   "devDependencies": {
     "babel-core": "~6.25.0",
@@ -20,9 +20,9 @@
     "babel-preset-env": "~1.5.2",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.22.0",
+    "bindingx-parser": "0.0.x",
     "eslint": "^4.17.0",
     "eslint-plugin-html": "^4.0.2",
-    "eslint-plugin-vue": "^4.2.2",
-    "bindingx-parser": "0.0.x"
+    "eslint-plugin-vue": "^4.3.0"
   }
 }

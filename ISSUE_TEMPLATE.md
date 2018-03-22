@@ -1,18 +1,18 @@
-### 简略的描述你的问题。
-> 例：图片上传导致系统崩溃。
-### 环境信息 
-> 例子：
-> * 开发平台：darwin\/windows/linux
-> * node 版本：8.x.x
-> * npm 版本：5.x.x
-> * 调试类型：模拟器/真机
-> * 调试系统版本: ios 8
-> * 开发工具及其版本 xcode 9
+### Your questions.
+-
+-
+### Environment. 
+- Mobile model: iphoneX
+- Mobile system: iOS 8
+- Dev platform: darwin\/windows/linux
+- Node: 8.x.x
+- Npm: 5.x.x
 
-### 尽可能写下你对问题的分析，你觉得可能是由于什么造成的。
-> 例：bmImage module 中不支持传递参数的类型，导致的崩溃。
-### 什么场景下会复现这个问题，复现率是多少。
-> 例：百分百复现，调用即复现。
 
-### 详细的描述下你的 issue, 最好能有截图。（复杂的问题请一定仔细填写此项）
-> 答：
+
+### What do you think may be caused by the analysis of the problem.
+- 
+- 
+
+### Reappearance of the problem (It's best to have a screenshot).
+- 

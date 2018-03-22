@@ -1,5 +1,7 @@
 // appBoard，mediator 不建议进行修改 如果修改了 也请对应修改
 module.exports = {
+    'eslint': false,
+    'webpackWarnings': false,
     'exports': [
         // appBoard
         'js/config/index.js',
@@ -13,20 +15,16 @@ module.exports = {
         'js/pages/demo/inputExtend/index.vue',
         'js/pages/demo/refresh/index.vue',
         'js/pages/demo/storage/index.vue',
-        'js/pages/demo/navigator/index.vue',
-        'js/pages/demo/tools/index.vue',
         'js/pages/demo/router/index.vue',
         'js/pages/demo/router/home.vue',
         'js/pages/demo/event/a.vue',
         'js/pages/demo/event/b.vue',
         'js/pages/demo/notice/index.vue',
         'js/pages/demo/font/index.vue',
-        'js/pages/demo/coms/index.vue',
         'js/pages/demo/image/index.vue',
         'js/pages/demo/bmchart/index.vue',
         'js/pages/demo/bmrichtext/index.vue',
         'js/pages/demo/bmcalendar/index.vue',
-        'js/pages/demo/other/waterfall.vue',
         'js/pages/demo/other/bindingx.vue',
         'js/pages/demo/other/weexui.vue'
     ],
@@ -38,7 +36,6 @@ module.exports = {
         'Pages': 'js/pages',
         'Utils': 'js/utils'
     },
-    'eslint': false,
     'diff': {
         'pwd': '/Users/yangmingzhe/Work/opensource/eros-diff-folder',
         'proxy': 'https://app.weex-eros.com/source'
@@ -50,5 +47,9 @@ module.exports = {
     'mockServer': {
         'port': 52077,
         'mockDir': './dist/mock'
+    },
+    'socketServer': {
+        'port': 8890,
+        'switch': true
     }
 }

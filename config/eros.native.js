@@ -14,7 +14,6 @@ module.exports = {
         'navItemColor': '#ffffff'
     },
     'url': {
-        'jsServer': 'http://app.weex-eros.com:8889',
         'image': 'https://lev-inf.benmu-health.com/test/xxx',
         'bundleUpdate': 'http://localhosts:3001/app/check'
     },
