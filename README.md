@@ -10,13 +10,14 @@
 
 
 ## Demo
-| Eros iOS | Eros Android |
-|---------|---------|---------|
-|![eros-demo](https://bmfe.github.io/eros-docs/zh-cn/image/show.gif)|![eros-demo](https://bmfe.github.io/eros-docs/zh-cn/image/androidDemo.gif)|
+
+| Eros iOS gif | Eros Android gif |
+|---------|---------|
+|[eros-demo](https://bmfe.github.io/eros-docs/zh-cn/image/show.gif)|[eros-demo](https://bmfe.github.io/eros-docs/zh-cn/image/androidDemo.gif)|
 
 ## Download
-| iOS download QR code | Android download QR qrcode |
-|---------|---------|---------|
+| iOS download QR code | Android download QR code |
+|---------|---------|
 |![ios下载](https://bmfe.github.io/eros-docs/zh-cn/image/iosqr.png)|![android 下载](http://upload.ouliu.net/i/201801241911376ee1z.png)|
 
 - [iOS download link](http://fir.im/eros)
