@@ -1,199 +1,106 @@
-<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
-<!-- Created by Tw93 on 17/07/31. -->
 
 <template>
-  <div class="wxc-demo">
-    <scroller class="scroller">
-      <div class="button-list">
-        <text class="button-text">normal</text>
-        <wxc-button text="确定"
-                    type="normal"
-                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">highlight</text>
-        <wxc-button text="确定"
-                    type="highlight"
-                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">red</text>
-        <wxc-button text="确定"
-                    type="red"
-                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">yellow</text>
-        <wxc-button text="确定"
-                    type="yellow"
-                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">disabled</text>
-        <wxc-button text="确定"
-                    :disabled="true"
-                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-      </div>
-      <wxc-cell :has-top-border="false" title="按钮的文字">
-        <input class="input"
-               slot="value"
-               placeholder="文字"
-               :value="text"
-               @input="text=$event.value"/>
-      </wxc-cell>
-      <wxc-cell :has-top-border="false" title="是否禁用">
-        <switch :checked="disabled"
-                slot="value"
-                @change="disabled = !disabled"></switch>
-      </wxc-cell>
-
-      <wxc-cell :has-top-border="false" title="按钮宽度">
-        <input class="input"
-               slot="value"
-               placeholder="自定义样式实现, 默认宽度702px"
-               :value="width"
-               @input="width=$event.value"/>
-      </wxc-cell>
-      <wxc-cell :has-top-border="false" title="按钮高度">
-        <input class="input"
-               slot="value"
-               placeholder="自定义样式实现, 默认高度88px"
-               :value="height"
-               @input="height=$event.value"/>
-      </wxc-cell>
-      <wxc-cell :has-top-border="false" title="背景颜色">
-        <input class="input"
-               slot="value"
-               placeholder="自定义样式实现"
-               :value="backgroundColor"
-               @input="backgroundColor=$event.value"/>
-      </wxc-cell>
-      <wxc-cell :has-top-border="false" title="边框颜色">
-        <input class="input"
-               slot="value"
-               placeholder="自定义样式实现"
-               :value="borderColor"
-               @input="borderColor=$event.value"/>
-      </wxc-cell>
-      <wxc-cell :has-top-border="false" title="边框圆角">
-        <input class="input"
-               slot="value"
-               placeholder="自定义样式实现,默认12px"
-               :value="borderRadius"
-               @input="borderRadius=$event.value"/>
-      </wxc-cell>
-      <div class="demo">
-        <wxc-button :text="text"
-                    :type="type"
-                    :disabled="disabled"
-                    :btn-style="btnStyle"
-                    :text-style="textStyle"
-                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-      </div>
-    </scroller>
-  </div>
+  <wxc-tab-page ref="wxc-tab-page"
+                :tab-titles="tabTitles"
+                :tab-styles="tabStyles"
+                title-type="icon"
+                :needSlider="needSlider"
+                :is-tab-view="isTabView"
+                :tab-page-height="tabPageHeight"
+                :spm-c="4307989"
+                @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
+    <list v-for="(v,index) in tabList"
+          :key="index"
+          class="item-container"
+          :style="{ height: (tabPageHeight - tabStyles.height) + 'px' }">
+      <cell class="border-cell"></cell>
+      <cell v-for="(demo,key) in v"
+            class="cell"
+            :key="key"
+            :accessible="true"
+            aria-label="卡片测试｜四川成都出发到九寨沟牟尼沟 温泉3天2晚纯玩跟团旅游,价格219元">
+        <wxc-pan-item url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
+                      @wxcPanItemPan="wxcPanItemPan">
+          <wxc-item image="https://gw.alicdn.com/i1/2935198750/TB26GMgeOC9MuFjSZFoXXbUzFXa_!!2935198750.jpg"
+                    :image-text="tabTitles[index].title"
+                    title="卡片测试｜四川成都出发到九寨沟牟尼沟 温泉3天2晚纯玩跟团旅游"
+                    :desc="desc"
+                    :tags="tags"
+                    price="666"
+                    price-desc="月售58笔｜999+条评论"/>
+        </wxc-pan-item>
+      </cell>
+    </list>
+  </wxc-tab-page>
 </template>
 
 <style scoped>
-  .wxc-demo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+  .item-container {
+    width: 750px;
+    background-color: #f2f3f4;
+  }
+  .border-cell {
+    background-color: #f2f3f4;
+    width: 750px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: #e0e0e0;
+  }
+  .cell {
     background-color: #ffffff;
   }
-
-  .button-list {
-    padding-left: 24px;
-  }
-
-  .button-text {
-    margin-top: 40px;
-    margin-left: 8px;
-    margin-bottom: 16px;
-  }
-
-  .scroller {
-    flex: 1;
-  }
-
-  .demo {
-    align-items: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  .input {
-    width: 500px;
-    text-align: right;
-    font-size: 28px;
-  }
 </style>
-
 <script>
-  import { WxcButton, WxcCell } from 'weex-ui';
-
-  const modal = weex.requireModule('modal');
+  const dom = weex.requireModule('dom');
+  import { WxcTabPage, WxcPanItem, Utils } from 'weex-ui';
+  import WxcItem from './wxc-item.vue';
+  import Config from './config'
   export default {
-    components: { WxcButton, WxcCell },
+    components: { WxcTabPage, WxcPanItem, WxcItem },
     data: () => ({
-      type: 'red',
-      text: '按钮文字',
-      width: '702px',
-      height: '88px',
-      disabled: false,
-      backgroundColor: '#FF5000',
-      borderColor: '#FF5000',
-      borderRadius: '12px',
-      fontSize: '36px',
-      color: '#FFFFFF'
+      tabTitles: Config.tabTitles,
+      tabStyles: Config.tabStyles,
+      tabList: [],
+      needSlider: true,
+      demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      supportSlide: true,
+      isTabView: true,
+      tabPageHeight: 1334,
+      desc: [{
+        type: 'text',
+        value: '特价机票|班期:清明 3/27-4/2等',
+        theme: 'gray'
+      }],
+      tags: [{
+        type: 'tag',
+        value: '满100减20测试',
+        theme: 'yellow'
+      }]
     }),
-    computed: {
-      btnStyle () {
-        const { width, height, backgroundColor, borderColor, borderRadius } = this;
-        const customStyle = {};
-
-        if (width) {
-          customStyle.width = width;
-        }
-
-        if (height) {
-          customStyle.height = height;
-          customStyle.lineHeight = height;
-        }
-
-        if (backgroundColor) {
-          customStyle.backgroundColor = backgroundColor;
-        }
-
-        if (borderColor) {
-          customStyle.borderColor = borderColor;
-          customStyle.borderWidth = '1px';
-          customStyle.borderStyle = 'solid';
-        }
-
-        if (borderRadius) {
-          customStyle.borderRadius = borderRadius;
-        }
-        return customStyle;
-      },
-      textStyle () {
-        const { fontSize, color } = this;
-        const customStyle = {};
-        if (fontSize) {
-          customStyle.fontSize = fontSize;
-        }
-        if (color) {
-          customStyle.color = color;
-        }
-        return {
-          fontSize, color
-        }
-      }
-    },
     created () {
-      setTitle('Button');
+      this.tabPageHeight = Utils.env.getPageHeight();
+      this.tabList = [...Array(this.tabTitles.length).keys()].map(i => []);
+      Vue.set(this.tabList, 0, this.demoList);
     },
     methods: {
-      wxcButtonClicked (e) {
-        const { type, disabled } = e;
-        modal.toast({
-          message: disabled ? `disabled=${disabled}` : `type=${type}`
-        })
+      wxcTabPageCurrentTabSelected (e) {
+        const self = this;
+        const index = e.page;
+        /* 未加载tab模拟数据请求 */
+        if (!Utils.isNonEmptyArray(self.tabList[index])) {
+          setTimeout(() => {
+            Vue.set(self.tabList, index, self.demoList);
+          }, 100);
+        }
+      },
+      wxcPanItemPan (e) {
+        if (Utils.env.supportsEBForAndroid()) {
+          this.$refs['wxc-tab-page'].bindExp(e.element);
+        }
       }
     }
-  }
+  };
 </script>
