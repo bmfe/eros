@@ -11,8 +11,8 @@ git clone https://github.com/bmfe/WeexiOSSDK.git
 #cd ../
 
 git clone https://github.com/bmfe/Benmu-iOS-Library.git
-cd Benmu-iOS-Library
-git checkout 1.1.8
+#cd Benmu-iOS-Library
+#git checkout 1.1.8
 
 pod update
 
