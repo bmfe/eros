@@ -8,6 +8,7 @@
                 :is-tab-view="isTabView"
                 :tab-page-height="tabPageHeight"
                 :spm-c="4307989"
+                style="overflow: hidden;"
                 @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
     <list v-for="(v,index) in tabList"
           :key="index"

@@ -1,6 +1,6 @@
 {
   "name": "eros-template-name",
-  "version": "1.0.1-beta.1",
+  "version": "1.0.1-beta.2",
   "description": "a weex project",
   "main": "index.js",
   "keywords": [
@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "eros-widget": "^1.0.1-beta.5",
-    "weex-ui": "^0.5.4beta-1"
+    "weex-ui": "^0.6.0-beta"
   },
   "devDependencies": {
     "babel-core": "~6.25.0",
