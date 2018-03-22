@@ -6,79 +6,92 @@
 
 ## Intro
 
-**eros 不是框架，是基于 [weex](https://weex-project.io/cn/) 封装、面向前端的 [vue](https://cn.vuejs.org/v2/guide/) 写法的一整套 app 解决方案。**
+**Eros is not a framework, it is a whole set of APP solutions based on [Weex](https://weex-project.io/cn/) encapsulation and front-end [Vue](https://cn.vuejs.org/v2/guide/) writing.**
 
 
-
-| iOS 端内置 DEMO | ios 版下载 | android版下载 |
+## Demo
+| Eros iOS | Eros Android |
 |---------|---------|---------|
-|![eros-demo](http://upload.ouliu.net/i/20180122162536pcw67.gif)|![ios下载](http://chuantu.biz/t6/214/1516790387x-1404793130.png)|![android 下载](http://upload.ouliu.net/i/201801241911376ee1z.png)|
+|![eros-demo](https://bmfe.github.io/eros-docs/zh-cn/image/show.gif)|![eros-demo](https://bmfe.github.io/eros-docs/zh-cn/image/androidDemo.gif)|
 
-* [iOS 下载链接](http://fir.im/eros)
-* [Android 下载链接](https://fir.im/weexerosandroid)
+## Download
+| iOS download QR code | Android download QR qrcode |
+|---------|---------|---------|
+|![ios下载](https://bmfe.github.io/eros-docs/zh-cn/image/iosqr.png)|![android 下载](http://upload.ouliu.net/i/201801241911376ee1z.png)|
+
+- [iOS download link](http://fir.im/eros)
+- [Android download link](https://fir.im/weexerosandroid)
 
 
-> 开发者可以扫描二维码来下载 eros app 来进行体验，iOS首次打开App需要在 **设置->通用->设备管理 信任开发证书。**
-**如果您是前端开发者：**
+> Developers can scan the QR code to download the Eros app experience, iOS App needs to first open the settings - > General > equipment management development certificate trust in
 
-> eros 开发有一定的门槛，不适合零基础开发。
-
-* 一定要熟练使用 vue 开发。
-* 一定要详细阅读 weex 的文档，尤其是与 web 环境，vue 开发差异的部分。
-* 在开发客户端应用中，会有遇到无数的环境问题，程序问题，代码问题，绝大多数问题都可以在网上查到对应解决方案，在提出问题或者 issue 的时候，还请先自行尝试解决，eros 的环境安装会耗费很长的时间，你懂的。
-* 需要熟悉客户端开发打包流程。
-
-**如果您是客户端开发者：**
-
-那么环境您会迅速搭建起来，然后熟读 vue，weex 文档，因为 vue 上手非常快，然后跟着 eros 的新手教程写几个 demo 便可以开始开发，还可以轻松拓展 module。
-
-## Advantage
-eros 提供了:
-* 详细的文档来解决环境搭建过程中的坑。
-* 一套代码编译成 ios，android 两端原生应用。
-* 封装了大量 weex module，让前端开发方便进行原生的操作。
-* 可以通过 `appboard` 机制来减少多页面项目中的代码冗余，减少包体积，并可以对其实时修改。
-* 内置了一套完整的 JS 二次封装 module (widget) ，通过 vue 插件系统注入，直接在 `this` 上调用，可根据业务自行修改。
-* 内置了中介者服务，来进行多个页面间的交互，并可以管理业务。
-* 内置了服务器端增量发布更新逻辑，可以搭配着开源的简易增量发布系统一起使用。
-* 支持真机和模拟器通过 `weex debug` 来断点调试，程序报错均会有报错日志弹窗提示。
-
-可以通过脚手架：
-* 直接生成开发最新模板。
-* 启动服务进行实时开发效果查看和 debug 调试。
-* 更新开发平台所需 eros 依赖。
-* 直接 `pack` 对应平台内置 `JS Bundle`。
-* 支持生成全量包，增量包，并内置与更新服务器交互逻辑。
-* 支持同步更新模板内容。
-* 支持 weex 的 vue 入口和 js 入口两种开发方式。
-
-支持市面上流行的组件库：
-* [weex-ui](https://github.com/alibaba/weex-ui) ( 阿里出品，推荐使用 )
-* [bui](https://github.com/bingo-oss/bui-weex)
-
-## Disadvantage
-> eros 开发中也有很多限制，需要开发者自行斟酌。
-* weex 代码在浏览器端还有很多兼容性问题，**所有 eros 目前不支持浏览器端**。
-* eros 暂时不能自动使用 weex 市场，但如果您有原生开发经验可以自行接入。
-* eros 打出来的包体积稍大，为解决这个问题，eros 客户端依赖可配置正在开发中。
-
-## Principle
+## Flow Chart
 
 ![工作原理](http://on-img.com/chart_image/59c5d743e4b0d34a18d69580.png)
 [大图地址](http://on-img.com/chart_image/59c5d743e4b0d34a18d69580.png)
 
-## Situation
-目前 `eros` 已有大量 app 在开发中和上线的状态，其中有正在开发中的国外大型应用 **starLife（100+页面）**，也有国内正在开发的**蜂觅（60+ 页面）**，还有**已上线的应用都在 0-50+ 页面不等**，涉及行业分布于区块链、资讯、医疗、招商、购物、政府、办公、直播等，后续我们会陆续在首页进行展示。
-
 ## Docs
-* [eros 文档地址](https://bmfe.github.io/eros-docs/) (持续更新中...)。[帮助我们完善和翻译文档](https://github.com/bmfe/eros-docs)
+- [中文文档](https://bmfe.github.io/eros-docs/)
+- [English document](https://bmfe.github.io/eros-docs/#/en-us/)
+
+[Help us to improve and translate documents.](https://github.com/bmfe/eros-docs)
+
+## Before Start
+
+> Eros development has a certain threshold, which is not suitable for zero base development.
+
+**front-end developer:**
+
+- must be `skilled in the use of Vue development`.
+- be sure to `read the documents of the weex` in detail, **especially the parts of the Vue development that are different from the web environment**.
+- most of the problems can be found on the Internet to the corresponding solutions, and please try to solve it by yourself. The Eros environment installation will take a long time.
+- you need to be familiar with the `client development packaging process`.
+
+**Native APP developer：**
+
+For you, the environment is not a problem, then read Vue, weex documents, and then follow the Eros [tutorial]((https://bmfe.github.io/eros-docs/#/zh-cn/tutorial_newcomer)) to write a few demo can begin to develop, but also easy to expand `module/components`.
+
+## Eros Provided
+### Development
+- Useful [eros-cli](https://github.com/bmfe/eros-cli).
+    - init the newest develop template.
+    - [simple and fast update dependency.](https://bmfe.github.io/eros-docs/#/zh-cn/base_dependencies)
+    - support generated built-in packages, full packages, incremental packages.
+    - support synchronous update template
+    - support weex's Vue entry and JS entry.
+    - built-in update server interaction logic.
+
+ 
+- Detailed documents.
+- **Simulator/real hot refresh.**
+- A set of code is compiled into IOS/Android native applications.
+- A large number of weex [module](https://bmfe.github.io/eros-docs/#/zh-cn/eros_sdk_module) are encapsulated.
+- The `appboard JS bundle` can be used to reduce code redundancy in multiple page projects, reduce packet volume, and modify in fact time.
+- [A complete set of JS two encapsulation module](https://bmfe.github.io/eros-docs/#/zh-cn/eros_widget?id=axios%EF%BC%88%E8%AF%B7%E6%B1%82%EF%BC%89) is built, which is called directly on `this`.
+- A lot of useful [global events](https://bmfe.github.io/eros-docs/#/zh-cn/eros_widget?id=%E9%A1%B5%E9%9D%A2%E5%85%A8%E5%B1%80%E4%BA%8B%E4%BB%B6) have been expanded
+- The mediator service is built into the interaction between multiple pages and can manage the business
+
+### Hot Release
+- Because of the weex mechanism, we can publish the code to the far end for heat release, and we open open the update back end project simply. [eros-publish](https://github.com/bmfe/eros-publish)
+
+### UI Libraries
+Support:
+* [alibaba/weex-ui](https://github.com/alibaba/weex-ui)
+* [bui](https://github.com/bingo-oss/bui-weex)
+
+## Eros Cannot Provide
+- Does not support browsers at present.
+- Eros cannot automatically use the weex market, but if you have native development experience, you can access it on its own.
+- the JS bundle package size of the Eros is slightly larger, the Eros client component system is in development to solve this problem.
+
 ## Required
-开发之前您需要学习 weex 知识，并且能熟练使用 vue 开发，文档地址如下。
-* [weex](http://weex.apache.org/cn/guide/)
-* [vue](https://cn.vuejs.org/v2/guide/)
+Before you develop, you need to learn weex knowledge and be able to use Vue development skillfully, and the document address is as follows:
+
+- [weex](http://weex.apache.org/cn/guide/)
+- [vue](https://cn.vuejs.org/v2/guide/)
 
 ## Support
-> 跟随着 weex 的支持性，`但目前我们并不支持开发代码兼容 web 端`
+Following the support of weex, **but at present we do not support the development of code compatible web side.**
 
 * Android 4.1 (API 16)
 * iOS 8.0+
@@ -86,39 +99,41 @@ eros 提供了:
 
 ## Quick Query
 * [Hello World](https://bmfe.github.io/eros-docs/#/zh-cn/tutorial_newcomer)
-* [更新总览](https://bmfe.github.io/eros-docs/#/zh-cn/update_log_all)
-
+* [Update Logs](https://bmfe.github.io/eros-docs/#/zh-cn/update_log_all)
+* [eros 改造网易严选](https://github.com/bmfe/eros-yanxuan-demo-v2)
 ## Ecosystem
-> 以下项目，全部开源：
+The following projects are all open source:
+
 
 | Project | Description |
 |---------|-------------|
-| [eros-cli](https://github.com/bmfe/eros-cli) | 简单的 eros 项目构建工具，可以提供搭建，开发，调试和发布等功能。 |
-| [eros-publish](https://github.com/bmfe/eros-publish) | 简单的服务器差分包更新逻辑，需要和脚手架搭配使用。 |
-| [eros-widget](https://github.com/bmfe/eros-widget) | 二次封装 module。 |
-| [eros-ios-library](https://github.com/bmfe/Benmu-iOS-Library) | eros ios Weex 项目依赖库。 |
-| [eros-ios-sdk](https://github.com/bmfe/WeexiOSSDK) | eros ios Weex sdk。 |
-| [eros-android-framework](https://github.com/bmfe/WeexErosFramework) | eros weex 移动解决方案安卓端框架。 |
-| [eros-android-widget](https://github.com/bmfe/BMWidget) | eros 安卓组件库。 |
-| [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端 WeexSDK。 |
+| [eros-cli](https://github.com/bmfe/eros-cli) | A simple Eros project building tool that provides the capabilities of building, developing, debugging, and publishing. |
+| [eros-publish](https://github.com/bmfe/eros-publish) | The simple server differential update logic needs to be used with the eros-cli. |
+| [eros-widget](https://github.com/bmfe/eros-widget) | Two encapsulation eros module.|
+| [eros-ios-library](https://github.com/bmfe/Benmu-iOS-Library) | eros ios framework. |
+| [eros-ios-sdk](https://github.com/bmfe/WeexiOSSDK) | eros ios Weex sdk. |
+| [eros-android-framework](https://github.com/bmfe/WeexErosFramework) | eros Android framework. |
+| [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros Android Weex sdk.。 |
 
-## Community
-* [eros 网易严选](https://github.com/bmfe/eros-yanxuan-demo-v2)
-* [weex-eros-book 书籍阅读 app](https://github.com/wennjie/weex-book)
-* [lygtq-eros-publish 服务器增量发布逻辑](https://github.com/hodgevk/lygtq-eros-publish)
-* [eros-node-server 服务器增量发布逻辑](https://github.com/shawn-tangsc/eros-node-server)
+## Situation
+> At present, there are a lot of APP in the development of `eros` and on-line state, which is a large foreign application in the development of starLife (100+ page), are also developing domestic bee foraging (60+ page), and application of on-line in the 0-50+ page range, involving industry chain, distribution in the block information, medical, business, shopping, government, office, live, we will continue to follow at the home show.
+
+
 
 
 ## Group & Community
-eros 正式开源到现在已经有了一个 300+ 开发者的开发群 (只能通过邀请)，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
+Eros is officially open source. Now there is a development group of 400 + developers (only by invitation). A large number of developers already have Eros products in development and online. In order to maintain a good environment, please know the following rules.
 
-* **此并不是流量群，也并非广告群，是为了大家一起成长，保证信息的有效性，如果发黄赌毒，不和谐言语，与学习无关的广告，推广内容，无关小程序，不会商量，直接会被踢，且不会再有入群机会。**
-* eros 开发中遇到任何问题可以随时发到群里 weex 开发相关可以一起讨论。
-* 如果不能及时回答也请耐心等待，群里开发丰富经验的同学会帮您一起看问题。
-* 除了 eros 自身紧急 BUG 外的问题，均需要提 issue，我们会按 issue 处理，目的是为了更好的给其他开发者参考，紧急问题请直接抛到群里，我们会直接远程帮助您调试。
+- This not the traffic group, is not advertising group, is for everyone to grow together, guarantee the validity of the information, if yellow bet poison, not harmonious speech, has nothing to do with learning advertising, promotional content, independent of small procedures, not to directly get kicked, and there will be no chance. * *
+
+- Eros development encountered any problem can be sent to the group weex development related can be discussed together.
+
+- If you can't answer the answer in time, please be patient and wait. The students with rich experience in the group will help you to see the problem together.
+
+- in addition to Eros's own urgent BUG problem, we need to mention issue. We will process it according to issue, in order to better refer to other developers, and throw it into the group directly, so we will directly help you to debug it remotely.
 
 
-| 微信群 |
+| Wechat Group |
 |---------|
 |![](https://gitee.com/uploads/images/2017/1026/154652_651ba169_1595985.jpeg)|
 
