@@ -1,5 +1,9 @@
+## 1.0.1-beta.3
+* [optimize] support bui-weex.
+
 ## 2018-03-22
 * 模板更新： 全新 demo
+
 ## 2018-03-14
 * 模板更新： 更新 weex-ui demo
 * 模板更新： 添加 bindindx demo

@@ -10,11 +10,15 @@
       "stage-0"
   ],
   "plugins": [
-    ["component",{
+    ["import",[{
         "libraryName": "weex-ui",
-        "libDir": "packages",
+        "libraryDirectory": "packages",
         "style": false
-    }],
+    }, {
+        "libraryName": "bui-weex",
+        "libraryDirectory": "src/components",
+        "style": false
+    }]],
     ["transform-runtime", {
       "polyfill": false,
       "helpers": false

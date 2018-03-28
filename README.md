@@ -9,7 +9,7 @@
 
 **eros 不是框架，是基于 [weex](https://weex-project.io/cn/) 封装、面向前端的 [vue](https://cn.vuejs.org/v2/guide/) 写法的一整套 APP 开源解决方案。**
 
-> 简单来说，在 Weex 提供的强大支持下，用一份 Vue 写法的代码，编译成 iOS/Android 两端原生 APP。
+> 简单来说，在 weex 提供的强大支持下，用一份 vue 写法的代码，编译成 iOS/Android 两端原生 APP。
 
 ## 文档
 - [中文文档](https://bmfe.github.io/eros-docs/)
@@ -117,6 +117,7 @@ EROS 在进行组件化的开发，争取做到插件可配置，让原生开发
 
 ## 快速开始
 * [EROS 入门指南](https://bmfe.github.io/eros-docs/#/zh-cn/tutorial_newcomer)
+* [EROS 网易严选](https://github.com/bmfe/eros-yanxuan-demo-v2)
 * [EROS 更新日志](https://bmfe.github.io/eros-docs/#/zh-cn/update_log_all)
 
 ## 周边系统
@@ -135,24 +136,28 @@ EROS 在进行组件化的开发，争取做到插件可配置，让原生开发
 | [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端 WeexSDK。 |
 
 ## 社区
-* [eros 网易严选](https://github.com/bmfe/eros-yanxuan-demo-v2)
 * [weex-eros-book 书籍阅读 app](https://github.com/wennjie/weex-book)
 * [lygtq-eros-publish 服务器增量发布逻辑](https://github.com/hodgevk/lygtq-eros-publish)
 * [eros-node-server 服务器增量发布逻辑](https://github.com/shawn-tangsc/eros-node-server)
 
 
-## 讨论组
-eros 正式开源到现在已经有了一个 300+ 开发者的开发群 (只能通过邀请)，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
+# 讨论组
+eros 正式开源到现在已经有了一个拥有大量开发者的微信群 (只能通过邀请)，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
 
 * **此并不是流量群，也并非广告群，是为了大家一起成长，保证信息的有效性，如果发黄赌毒，不和谐言语，与学习无关的广告，推广内容，无关小程序，不会商量，直接会被踢，且不会再有入群机会。**
-* eros 开发中遇到任何问题可以随时发到群里 weex 开发相关可以一起讨论。
+* eros开发中遇到任何问题可以随时发到群里 weex开发相关可以一起讨论。
 * 如果不能及时回答也请耐心等待，群里开发丰富经验的同学会帮您一起看问题。
 * 除了 eros 自身紧急 BUG 外的问题，均需要提 issue，我们会按 issue 处理，目的是为了更好的给其他开发者参考，紧急问题请直接抛到群里，我们会直接远程帮助您调试。
 
 
-| QQ 群 |
-|---------|
-|![](https://gitee.com/uploads/images/2017/1026/154652_651ba169_1595985.jpeg) |
+QQ群:  
+
+<img src="https://bmfe.github.io/eros-docs/zh-cn/image/eros-qq-qrcode.png" width="auto" height="200px">
+
+微信群: 
+
+<img src="https://gitee.com/uploads/images/2017/1026/154652_651ba169_1595985.jpeg" width="auto" height="200px">
+
 
 ## License
 [MIT](https://opensource.org/licenses/MIT)

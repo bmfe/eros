@@ -1,6 +1,6 @@
 {
   "name": "eros-template-name",
-  "version": "1.0.1-beta.2",
+  "version": "1.0.1-beta.3",
   "description": "a weex project",
   "main": "index.js",
   "keywords": [
@@ -15,7 +15,7 @@
   "devDependencies": {
     "babel-core": "~6.25.0",
     "babel-eslint": "^8.2.2",
-    "babel-plugin-component": "^1.1.0",
+    "babel-plugin-import": "^1.6.7",
     "babel-plugin-transform-runtime": "~6.23.0",
     "babel-preset-env": "~1.5.2",
     "babel-preset-stage-0": "^6.24.1",
