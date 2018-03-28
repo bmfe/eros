@@ -1,12 +1,14 @@
 @import 'src/js/css/base';
 
+$base-color: #1da1f2;
+
 .stickyHeader {
   position: sticky;
   flex-direction: row;
 }
 
 .container {
-  background-color: #1da1f2;
+  background-color: $base-color;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 25px;
@@ -60,13 +62,13 @@
 .status-bar {
   width: 750;
   height: 40;
-  background-color: #1da1f2;
+  background-color: $base-color;
 }
 
 .touch-bar {
   height: 68;
   width: 750;
-  background-color: #1da1f2;
+  background-color: $base-color;
 }
 
 .mask {
