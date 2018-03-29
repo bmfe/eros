@@ -38,12 +38,14 @@ import ErosProfile from './components/profile'
 import ErosComponents from './components/components'
 import ErosUilib from './components/uilib'
 import ErosAdvanced from './components/advanced'
+import { buiButton } from 'bui-weex';
+
 export default {
     components: { 
         ErosCore, ErosTools, ErosNative, 
         ErosProfile, ErosExpand, ErosNotice, 
         ErosThree, ErosComponents, ErosUilib,
-        ErosAdvanced
+        ErosAdvanced, buiButton
     },
     data () {
         return {
