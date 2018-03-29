@@ -84,5 +84,9 @@ export default {
     'demo.other.weex-ui': {
         title: 'weex-ui',
         url: '/pages/demo/other/weexui.js'
+    },
+    'demo.other.bui': {
+        title: 'bui',
+        url: '/pages/demo/other/bui.js'
     }
 }
