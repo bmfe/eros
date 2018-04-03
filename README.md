@@ -19,7 +19,9 @@
 > 图片较大，耐心等候
 
 <div align=center>
+    
 ![eros-demos](https://s18.postimg.org/zby0h08p5/eros-list-big.gif)
+
 </div>
 
 [大图地址](https://postimg.org/image/bxq152qrp/)
