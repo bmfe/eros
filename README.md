@@ -10,18 +10,20 @@
 
 > 简单来说，在 weex 提供的强大支持下，用一份 vue 写法的代码，编译成 iOS/Android 两端原生 APP。
 
-## 作品轮播
-> 图片较大，耐心等候
-![eros-list-big.gif](https://postimg.org/image/bxq152qrp/)
-
-## 文档
+## 文档 
+> [帮助我们完善和翻译文档](https://github.com/bmfe/eros-docs)
 - [中文文档](https://bmfe.github.io/eros-docs/)
 - [English document](https://bmfe.github.io/eros-docs/#/en-us/)
 
-[帮助我们完善和翻译文档](https://github.com/bmfe/eros-docs)
+## 作品轮播
+> 图片较大，耐心等候
+
+[![eros-list-big.gif](https://s18.postimg.org/zby0h08p5/eros-list-big.gif)](https://postimg.org/image/bxq152qrp/)
+
+[大图地址](https://postimg.org/image/bxq152qrp/)
 ## Demo
 
- 开发者可以扫描二维码来下载 eros app 来进行体验，iOS首次打开App需要在 **设置->通用->设备管理 信任开发证书。**
+ > 开发者可以扫描二维码来下载 eros app 来进行体验，iOS首次打开App需要在 **设置->通用->设备管理 信任开发证书。**
  
 | Eros iOS demo | Eros Android demo |
 |---------|---------|
@@ -138,7 +140,7 @@ EROS 在进行组件化的开发，争取做到插件可配置，让原生开发
 | [eros-android-widget](https://github.com/bmfe/BMWidget) | eros 安卓组件库。 |
 | [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端 WeexSDK。 |
 
-## 社区
+## 社区贡献
 * [weex-eros-book 书籍阅读 app](https://github.com/wennjie/weex-book)
 * [lygtq-eros-publish 服务器增量发布逻辑](https://github.com/hodgevk/lygtq-eros-publish)
 * [eros-node-server 服务器增量发布逻辑](https://github.com/shawn-tangsc/eros-node-server)
