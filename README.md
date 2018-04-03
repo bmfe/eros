@@ -4,12 +4,15 @@
 
 </div>
 
-
 ## 介绍
 
 **eros 不是框架，是基于 [weex](https://weex-project.io/cn/) 封装、面向前端的 [vue](https://cn.vuejs.org/v2/guide/) 写法的一整套 APP 开源解决方案。**
 
 > 简单来说，在 weex 提供的强大支持下，用一份 vue 写法的代码，编译成 iOS/Android 两端原生 APP。
+
+## 作品轮播
+> 图片较大，耐心等候
+![eros-list-big.gif](https://postimg.org/image/bxq152qrp/)
 
 ## 文档
 - [中文文档](https://bmfe.github.io/eros-docs/)
