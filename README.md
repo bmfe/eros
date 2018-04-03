@@ -18,9 +18,12 @@
 ## 作品轮播
 > 图片较大，耐心等候
 
-![eros-list-big.gif](https://s18.postimg.org/zby0h08p5/eros-list-big.gif)
+<div align=center>
+![eros-demos](https://s18.postimg.org/zby0h08p5/eros-list-big.gif)
+</div>
 
 [大图地址](https://postimg.org/image/bxq152qrp/)
+
 ## Demo
 
  > 开发者可以扫描二维码来下载 eros app 来进行体验，iOS首次打开App需要在 **设置->通用->设备管理 信任开发证书。**
