@@ -18,7 +18,7 @@
 ## 作品轮播
 > 图片较大，耐心等候
 
-[![eros-list-big.gif](https://s18.postimg.org/zby0h08p5/eros-list-big.gif)](https://postimg.org/image/bxq152qrp/)
+![eros-list-big.gif](https://s18.postimg.org/zby0h08p5/eros-list-big.gif)
 
 [大图地址](https://postimg.org/image/bxq152qrp/)
 ## Demo
