@@ -37,6 +37,10 @@ export default {
         title: '路由',
         url: '/pages/demo/router/index.js'
     },
+    'demo.map': {
+        title: '地图',
+        url: '/pages/demo/components/map.js'
+    },
     'demo.event.a': {
         title: '发布订阅-a页面',
         url: '/pages/demo/event/a.js'

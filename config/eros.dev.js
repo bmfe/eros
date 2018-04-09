@@ -27,7 +27,9 @@ module.exports = {
         'js/pages/demo/bmcalendar/index.vue',
         'js/pages/demo/other/bindingx.vue',
         'js/pages/demo/other/weexui.vue',
-        'js/pages/demo/other/bui.vue'
+        'js/pages/demo/other/bui.vue',
+
+        'js/pages/demo/components/map.vue'
     ],
     'alias': {
         'Components': 'js/components',

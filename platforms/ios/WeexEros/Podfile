@@ -30,9 +30,11 @@ def common
         'BMHandler',
         'BMCustomUI',
         'BMModel',
-        'WeexPlugins',
         'BMTransition',
     ]
+    pod 'ErosPluginAmap', '0.0.1'
+#    pod 'ErosPluginAmap',:git => 'https://github.com/bmfe/eros-plugin-ios-amap.git'
+#    pod 'ErosPluginAmap', :path=>'./eros-plugin-ios-amap/'
 #    pod 'Bugtags'
     pod 'MJRefresh', '3.1.12'
    end

@@ -40,16 +40,10 @@ export default {
     components: { WxcCell, ErosHeader }, 
     methods: {
         toMap () {
-            this.$router.toMap({
-                type: 'NAVIGATION',
-                title: '地图标题',
-                navigationInfo: {
-                    title: '故宫博物院',
-                    address: '北京市东城区景山前街4号',
-                    longitude: '116.397026',
-                    latitude: '39.918058'
-                }
-            })
+            this.$router.open({
+                name: 'demo.map',
+                type: 'PUSH'
+            });
         },
          toWebView () {
             this.$router.toWebView({
