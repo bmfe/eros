@@ -81,6 +81,10 @@ export default {
         title: 'bindingX',
         url: '/pages/demo/other/bindingx.js'
     },
+    'demo.other.eros-ui': {
+        title: 'eros-ui',
+        url: '/pages/demo/other/eros-ui/index.js'
+    },
     'demo.other.weex-ui': {
         title: 'weex-ui',
         url: '/pages/demo/other/weexui.js'

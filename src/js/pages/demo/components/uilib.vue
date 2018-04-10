@@ -1,7 +1,13 @@
 <template>
     <cell>
         <eros-header title="UI 组件库"></eros-header>
-        <wxc-cell title="weex-ui"
+        <wxc-cell title="eros-ui"
+            desc="eros-ui。"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="jump('eros-ui')">
+        </wxc-cell>
+         <wxc-cell title="weex-ui"
             desc="支持 weex-ui。"
             :has-arrow="true"
             :has-top-border="true"

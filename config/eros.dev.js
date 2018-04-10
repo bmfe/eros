@@ -27,6 +27,7 @@ module.exports = {
         'js/pages/demo/bmcalendar/index.vue',
         'js/pages/demo/other/bindingx.vue',
         'js/pages/demo/other/weexui.vue',
+        'js/pages/demo/other/eros-ui/index.vue',
         'js/pages/demo/other/bui.vue'
     ],
     'alias': {
@@ -35,11 +36,12 @@ module.exports = {
         'Config': 'js/config',
         'Widget': 'js/widget',
         'Pages': 'js/pages',
+        'eros-ui': 'js/eros-ui',
         'Utils': 'js/utils'
     },
     'diff': {
         'pwd': '/Users/yangmingzhe/Work/opensource/eros-diff-folder',
-        'proxy': 'https://app.weex-eros.com/source'
+        'proxy': 'https://localhost:3001/static/eros-demo/dist/js/'
     },
     'server': {
         'path': './',
