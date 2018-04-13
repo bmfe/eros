@@ -32,7 +32,6 @@
 <img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new6.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new7.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new8.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new8.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 </p>
 <br>
 <h4 align="center">
