@@ -13,8 +13,6 @@ def common
     pod 'YYModel', '1.0.4'
     pod 'Masonry', '1.1.0'
     pod 'UMengUShare/Social/WeChat', '6.4.6'
-    pod 'GTSDK', '2.0.0.0-noidfa'
-    pod 'UMengAnalytics-NO-IDFA', '4.2.5'
     pod 'TZImagePickerController', '1.9.8'
     pod 'BMBaseLibrary', :path=>'./Benmu-iOS-Library', :subspecs=>[
         'BMDevice',
@@ -32,8 +30,8 @@ def common
         'BMModel',
         'BMTransition',
     ]
-#    pod 'ErosPluginAmap', '0.0.1'
-     pod 'ErosPluginAmap', :git => 'https://github.com/bmfe/eros-plugin-ios-amap.git', :tag => '0.0.1'
+    pod 'ErosPluginAmap', :git => 'https://github.com/bmfe/eros-plugin-ios-amap.git', :tag => '0.0.1'
+    pod 'ErosPluginGeTui', :git => 'https://github.com/bmfe/eros-plugin-ios-getui.git', :tag => '0.0.1'
     pod 'MJRefresh', '3.1.12'
    end
 
