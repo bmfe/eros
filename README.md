@@ -1,8 +1,98 @@
-<div align=center>
+<h1 align="center">
+  <br>
+  <a href="https://github.com/bmfe/eros-template">
+  <img src="http://upload.ouliu.net/i/20180124175551qrzlq.png" alt="Markdownify" width="200"></a>
+  <br>
+  WEEX-EROS
+  <br>
+</h1>
 
-![eros](http://upload.ouliu.net/i/20180124175551qrzlq.png)
+<h4 align="center">
+  :iphone: 一套 Vue 代码，两端原生应用。
+  <br><br>
+  Based in Weex and Vue.
+</h4>
 
-</div>
+<br>
+<h3 align="center">
+  eros 作品演示
+</h3>
+
+<h4 align="center">
+  star life new.(内测)
+</h4>
+
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new1.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new2.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new3.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new4.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new5.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new6.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new7.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new8.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star-new8.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+<br>
+<h4 align="center">
+  star life old.(内测)
+</h4>
+
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star1.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star2.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star3.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star4.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star5.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star6.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star7.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star8.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star9.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+<br>
+<h4 align="center">
+  赢商大数据(iOS/Android 市场均可下载，前端开发者独立完成)
+</h4>
+
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/wins.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/wins1.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/wins2.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/wins3.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/wins4.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+<br>
+<h4 align="center">
+  蜂觅（Android 公司自用）
+</h4>
+
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/蜂觅.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/蜂觅2.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/蜂觅3.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/蜂觅4.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/蜂觅5.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+<br>
+<h4 align="center">
+  其他 app 集合（还有很多，后续会慢慢添加）
+</h4>
+
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/jex.png" width="100" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/jex1.png" width="100" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/jex2.png" width="100" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/jex3.png" width="100" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/连云港政协.jpg" width="100" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/连云港政协2.jpg" width="100" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/慧生活.png" width="100" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+<h5 align="center">
+  感谢上述 app 开发者帮忙支持宣传！
+  同时也不必再怀疑，无论使用 eros 还是 weex ，都是可以开发出一整套 APP 的。
+</h5>
 
 ## 介绍
 
@@ -15,16 +105,6 @@
 - [中文文档](https://bmfe.github.io/eros-docs/)
 - [English document](https://bmfe.github.io/eros-docs/#/en-us/)
 
-## 作品轮播
-> 图片较大，耐心等候
-
-<div align=center>
-    
-![eros-demos](https://s18.postimg.org/3n8tb3fhl/soogif1.gif)
-
-</div>
-
-[大图地址](https://postimg.org/image/bxq152qrp/)
 
 ## Demo
 
@@ -101,7 +181,7 @@
 EROS 在进行组件化的开发，争取做到插件可配置，让原生开发者专注拓展原生能力，前端开发者专注与业务逻辑，极力打造一个可共享的插件社区。
 
 ## 开源现状
-在 EROS 开源的半年时间，已帮助近百位开发者开发了属于自己的原生应用，这里先简单列举几个，后续会征求同意来展示：
+在 EROS 开源的半年时间，已帮助近百位开发者开发了属于自己的原生应用：
 
 * StarLife 
 * 赢商大数据 
@@ -160,13 +240,13 @@ eros 正式开源到现在已经有了一个拥有大量开发者的微信群 (�
 * 除了 eros 自身紧急 BUG 外的问题，均需要提 issue，我们会按 issue 处理，目的是为了更好的给其他开发者参考，紧急问题请直接抛到群里，我们会直接远程帮助您调试。
 
 
-QQ群:  
 
-<img src="https://bmfe.github.io/eros-docs/zh-cn/image/eros-qq-qrcode.png" width="auto" height="200px">
-
+<p align="center">
+QQ群: 
+<img src="https://bmfe.github.io/eros-docs/zh-cn/image/eros-qq-qrcode.png" width="200" style="margin-right:5px; border: 1px solid #ccc;" />
 微信群: 
-
-<img src="https://gitee.com/uploads/images/2017/1026/154652_651ba169_1595985.jpeg" width="auto" height="200px">
+<img src="https://gitee.com/uploads/images/2017/1026/154652_651ba169_1595985.jpeg" width="200" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
 
 
 ## License
