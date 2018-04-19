@@ -1,7 +1,7 @@
 {
-  "name": "eros-template-name",
-  "version": "1.0.1-beta.3",
-  "description": "a weex project",
+  "name": "eros",
+  "version": "1.0.0",
+  "description": "Eros can help developers build app quickly.",
   "main": "index.js",
   "keywords": [
     "weex"

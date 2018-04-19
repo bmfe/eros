@@ -1,0 +1,3 @@
+[submodule "template"]
+	path = template
+	url = https://github.com/bmfe/eros-template
