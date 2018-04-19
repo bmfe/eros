@@ -1,5 +1,5 @@
 <template>
-    <div style="background-color:white">
+    <!-- <div style="background-color:white">
         <eros-button class="mg-tp-20 mg-lf-25" circle text="default" raised></eros-button>
         <eros-button class="mg-tp-20 mg-lf-25" circle type="primary" text="primary"></eros-button>
         <eros-button class="mg-tp-20 mg-lf-25" type="danger" text="danger"></eros-button>
@@ -18,16 +18,30 @@
             <eros-button class="mg-lf-25" style="width: 88px;" icon="back" type="default" circle @click="clicked" raised></eros-button>
             <eros-button class="mg-lf-25" style="width: 88px;" icon="success" type="success" circle hollow @click="clicked"></eros-button>
         </div>
-    </div>
+    </div> -->
+    <cell>
+        <wxc-cell title="checkBox" desc="checkBox。" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('checkBox')">
+        </wxc-cell>
+        <wxc-cell title="checkBox-list" desc="checkBox-list。" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('checkBox-list')">
+        </wxc-cell>
+        <wxc-cell title="radio" desc="radio。" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('radio')">
+        </wxc-cell>
+        <wxc-cell title="input" desc="input" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('input')">
+        </wxc-cell>
+        <wxc-cell title="search" desc="search" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('search')">
+        </wxc-cell>
+    </cell>
 </template>
 
 <script>
-import ErosButton from 'eros-ui/components/eros-button'
-import ErosIcon from 'eros-ui/components/eros-icon'
+import { WxcCell } from 'weex-ui'
+// import ErosButton from 'eros-ui/components/eros-button'
+// import ErosIcon from 'eros-ui/components/eros-icon'
 export default {
     components: {
-        ErosButton,
-        ErosIcon
+        // ErosButton,
+        // ErosIcon,
+        WxcCell
     },
     data() {
         return {
@@ -37,6 +51,11 @@ export default {
     methods: {
         clicked() {
             this.$notice.toast("clicked")
+        },
+        jump(name) {
+            this.$router.open({
+                name: `demo.other.${name}`
+            })
         }
     }
 }

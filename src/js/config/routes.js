@@ -89,6 +89,26 @@ export default {
         title: 'weex-ui',
         url: '/pages/demo/other/weexui.js'
     },
+    'demo.other.input': {
+        title: 'weex-ui.input',
+        url: '/pages/demo/other/eros-ui/input/index.js'
+    },
+    'demo.other.search': {
+        title: 'weex-ui.search',
+        url: '/pages/demo/other/eros-ui/search/index.js'
+    },
+    'demo.other.checkBox': {
+        title: 'weex-ui.checkBox',
+        url: '/pages/demo/other/eros-ui/checkBox/index.js'
+    },
+    'demo.other.checkBox-list': {
+        title: 'weex-ui.checkBox-list',
+        url: '/pages/demo/other/eros-ui/checkBox-list/index.js'
+    },
+    'demo.other.radio': {
+        title: 'weex-ui.radio',
+        url: '/pages/demo/other/eros-ui/radio/index.js'
+    },
     'demo.other.bui': {
         title: 'bui',
         url: '/pages/demo/other/bui.js'

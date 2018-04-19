@@ -28,6 +28,11 @@ module.exports = {
         'js/pages/demo/other/bindingx.vue',
         'js/pages/demo/other/weexui.vue',
         'js/pages/demo/other/eros-ui/index.vue',
+        'js/pages/demo/other/eros-ui/input/index.vue',
+        'js/pages/demo/other/eros-ui/search/index.vue',
+        'js/pages/demo/other/eros-ui/radio/index.vue',
+        'js/pages/demo/other/eros-ui/checkBox/index.vue',
+        'js/pages/demo/other/eros-ui/checkBox-list/index.vue',
         'js/pages/demo/other/bui.vue'
     ],
     'alias': {
@@ -48,7 +53,8 @@ module.exports = {
         'port': 8889
     },
     'mockServer': {
-        'port': 52077,
+        'port': 42077,
+        // 'port': 52077,
         'mockDir': './dist/mock'
     },
     'socketServer': {
