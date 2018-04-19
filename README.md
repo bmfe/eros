@@ -78,7 +78,7 @@
 </p>
 <br>
 <h4 align="center">
-  蜂觅（Android 公司自用）
+  蜂觅（企业级 app）
 </h4>
 
 <p align="center">
@@ -89,6 +89,20 @@
 <img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/蜂觅5.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 </p>
 <br>
+
+<h4 align="center">
+  某企业级 app (c 端 app 开发中)
+</h4>
+
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/shawn2.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/shawn3.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/shawn4.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/shawn5.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/shawn6.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+<br>
+
 <h4 align="center">
   其他 app 集合（还有很多，后续会慢慢添加）
 </h4>
