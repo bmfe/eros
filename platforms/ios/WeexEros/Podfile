@@ -4,35 +4,13 @@ platform :ios, '8.0'
 inhibit_all_warnings!
 
 def common
-    pod 'WeexSDK', :path=>'./WeexiOSSDK/'
+    pod 'WeexSDK', :git => 'https://github.com/bmfe/WeexiOSSDK.git', :branch => 'master'
     pod 'WXDevtool', '0.15.3', :configurations => ['Debug']
-    pod 'SDWebImage', '3.7.6'
-    pod 'SocketRocket', '0.4.2'
-    pod 'YTKNetwork', '2.0.3'
-    pod 'SSZipArchive', '1.6.2'
-    pod 'YYModel', '1.0.4'
-    pod 'Masonry', '1.1.0'
-    pod 'UMengUShare/Social/WeChat', '6.4.6'
-    pod 'TZImagePickerController', '1.9.8'
-    pod 'BMBaseLibrary', :path=>'./Benmu-iOS-Library', :subspecs=>[
-        'BMDevice',
-        'BMExtension',
-        'BMWeexExtension',
-        'BMDebug',
-        'BMComponent',
-        'BMController',
-        'BMNetwork',
-        'BMModule',
-        'ErosApp',
-        'BMManager',
-        'BMHandler',
-        'BMCustomUI',
-        'BMModel',
-        'BMTransition',
-    ]
-    pod 'ErosPluginAmap', :git => 'https://github.com/bmfe/eros-plugin-ios-amap.git', :tag => '0.0.1'
-    pod 'ErosPluginGeTui', :git => 'https://github.com/bmfe/eros-plugin-ios-getui.git', :tag => '0.0.1'
-    pod 'MJRefresh', '3.1.12'
+    pod 'BMBaseLibrary', :git => 'https://github.com/bmfe/Benmu-iOS-Library.git', :tag => '1.2.0'
+#    pod 'ErosPluginWXShare', :git => 'https://github.com/bmfe/eros-plugin-ios-wxshare.git', :tag => '0.0.1'
+#    pod 'ErosPluginWXPay', :git => 'https://github.com/bmfe/eros-plugin-ios-wxpay.git', :tag => '0.0.1'
+#    pod 'ErosPluginAmap', :git => 'https://github.com/bmfe/eros-plugin-ios-amap.git', :tag => '0.0.1'
+#    pod 'ErosPluginGeTui', :git => 'https://github.com/bmfe/eros-plugin-ios-getui.git', :tag => '0.0.1'
    end
 
 target 'WeexEros' do

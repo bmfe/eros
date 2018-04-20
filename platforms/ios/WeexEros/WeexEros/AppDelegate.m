@@ -10,10 +10,16 @@
 #import <BMBaseLibrary/BMConfigManager.h>
 #import <BMBaseLibrary/BMMediatorManager.h>
 
-#import <WXApi.h>
-
 #import <BMBaseLibrary/BMRouterManager.h>
 #import <BMBaseLibrary/BMDefine.h>
+
+#ifdef BM_SHARE
+#import <UMCShare/UMShare/UMShare.h>
+#endif
+
+#ifdef BM_WXPAY
+#import <ErosPluginWXPay/BMPayManager.h>
+#endif
 
 #ifdef BM_PUSH
 #import <ErosPluginGeTui/BMPushMessageManager.h>
@@ -41,8 +47,6 @@
 #endif
     
     if (_isLoad == NO) {
-        _isLoad = YES;
-        
         [self startApp];
     }
     
@@ -67,13 +71,29 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    if (_isLoad == NO) {
+    if (!_isLoad) {
         [self startApp];
     }
 #ifdef BM_PUSH
     [[BMPushMessageManager shareInstance] setIsLaunchedByNotification:NO];
 #endif
-    return [BMRouterManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+    
+  
+    BOOL result = NO;
+#ifdef BM_Share
+    /* 友盟sdk回调 */
+    result = [[UMSocialManager defaultManager] handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
+#endif
+    
+#ifdef BM_WXPAY
+    if (!result && [url.host isEqualToString:@"pay"]) {
+        //微信支付
+        return [[BMPayManager shareInstance] applicationOpenURL:url];
+    }
+#endif
+    
+    result = [BMRouterManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+    return result;
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
