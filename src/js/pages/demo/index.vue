@@ -7,9 +7,9 @@
             
             <eros-core></eros-core>
             <eros-native></eros-native>
-            <eros-three></eros-three>
             <eros-notice></eros-notice>
             <eros-tools></eros-tools>
+            <eros-three></eros-three>
             
             <eros-expand></eros-expand>
 
@@ -39,7 +39,6 @@ import ErosComponents from './components/components'
 import ErosUilib from './components/uilib'
 import ErosAdvanced from './components/advanced'
 import { buiButton } from 'bui-weex';
-
 
 export default {
     components: { 

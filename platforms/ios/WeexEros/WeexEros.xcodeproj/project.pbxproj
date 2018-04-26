@@ -150,7 +150,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Push = {
 								enabled = 1;
@@ -218,6 +218,8 @@
 				"${PODS_ROOT}/BMBaseLibrary/Source/BMComponent/Calendar/Resources/CalendarLeftArrows@3x.png",
 				"${PODS_ROOT}/BMBaseLibrary/Source/BMComponent/Calendar/Resources/CalendarReightArrows@2x.png",
 				"${PODS_ROOT}/BMBaseLibrary/Source/BMComponent/Calendar/Resources/CalendarReightArrows@3x.png",
+				"${PODS_ROOT}/BMBaseLibrary/Source/BMComponent/Chart/Resources/bm-chart.html",
+				"${PODS_ROOT}/BMBaseLibrary/Source/BMComponent/Chart/Resources/echarts.min.js",
 				"${PODS_ROOT}/BMBaseLibrary/Source/BMModule/Modal/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/BMBaseLibrary/Source/BMWeexExtension/Resources/arrowInKeyboard@2x.png",
 				"${PODS_ROOT}/BMBaseLibrary/Source/BMWeexExtension/Resources/bm-base.js",
@@ -232,6 +234,8 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarLeftArrows@3x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarReightArrows@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarReightArrows@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bm-chart.html",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/echarts.min.js",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrowInKeyboard@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bm-base.js",

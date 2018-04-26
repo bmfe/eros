@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BMBaseLibrary/BMAppDelegate.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (nonatomic, strong) UIWindow *window;
+@interface AppDelegate : BMAppDelegate
 
 @end
 

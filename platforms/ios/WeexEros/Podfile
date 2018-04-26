@@ -4,13 +4,19 @@ platform :ios, '8.0'
 inhibit_all_warnings!
 
 def common
-    pod 'WeexSDK', :git => 'https://github.com/bmfe/WeexiOSSDK.git', :branch => 'master'
+    #WeexSDK
+    pod 'WeexSDK', :git => 'https://github.com/bmfe/WeexiOSSDK.git', :tag => '0.18'
+    #Weex debugger 调试工具，只在开发模式集成
     pod 'WXDevtool', '0.15.3', :configurations => ['Debug']
-    pod 'BMBaseLibrary', :git => 'https://github.com/bmfe/Benmu-iOS-Library.git', :tag => '1.2.0'
-#    pod 'ErosPluginWXShare', :git => 'https://github.com/bmfe/eros-plugin-ios-wxshare.git', :tag => '0.0.1'
-#    pod 'ErosPluginWXPay', :git => 'https://github.com/bmfe/eros-plugin-ios-wxpay.git', :tag => '0.0.1'
-#    pod 'ErosPluginAmap', :git => 'https://github.com/bmfe/eros-plugin-ios-amap.git', :tag => '0.0.1'
-#    pod 'ErosPluginGeTui', :git => 'https://github.com/bmfe/eros-plugin-ios-getui.git', :tag => '0.0.1'
+    #Eros iOS 基础库
+    pod 'BMBaseLibrary', :git => 'https://github.com/bmfe/Benmu-iOS-Library.git', :tag => '1.2.1'
+    
+    #Eros Plugins
+#    pod 'ErosPluginWXShare', :git => 'https://github.com/bmfe/eros-plugin-ios-wxshare.git', :tag => '1.0.0'
+#    pod 'ErosPluginWXPay', :git => 'https://github.com/bmfe/eros-plugin-ios-wxpay.git', :tag => '1.0.0'
+#    pod 'ErosPluginAmap', :git => 'https://github.com/bmfe/eros-plugin-ios-amap.git', :tag => '1.0.0'
+#    pod 'ErosPluginGeTui', :git => 'https://github.com/bmfe/eros-plugin-ios-getui.git', :tag => '1.0.0'
+
    end
 
 target 'WeexEros' do

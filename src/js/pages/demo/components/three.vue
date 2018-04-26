@@ -1,8 +1,8 @@
 <template>
     <cell>
-        <eros-header title="插件 | 三方"></eros-header>
-        <wxc-cell title="地图"
-            desc="$router.toMap() 跳转高德地图。"
+        <eros-header title="插件 | 三方（选择集成）"></eros-header>
+        <wxc-cell title="高德地图"
+            desc="高德地图插件 weex-amap，点击查看集成及使用方法"
             :has-arrow="true"
             :has-top-border="true"
             @wxcCellClicked="toMap">
@@ -14,20 +14,20 @@
             @wxcCellClicked="handle_geo">
         </wxc-cell>
         <wxc-cell title="个推"
-            desc="内置了个推，iOS、Android 均保持返回一致。"
+            desc="个推推送插件 bmPush，点击查看集成及使用方法"
             :has-arrow="true"
             :has-top-border="true"
             @wxcCellClicked="toWebView">
         </wxc-cell>
-        <wxc-cell title="支付"
-            desc="$pay，目前仅支持微信支付，后续会支持其他。"
+        <wxc-cell title="微信支付"
+            desc="微信支付插件 bmWXPay，点击查看集成及使用方法"
             :has-arrow="true"
             :has-top-border="true"
             @wxcCellClicked="handle_pay">
         </wxc-cell>
-         <wxc-cell title="分享 "
-            desc="$share 目前仅支持微信相关分享。"
-            :has-arrow="false"
+         <wxc-cell title="微信分享、授权登录 "
+            desc="微信分享插件 bmWXShare，点击查看集成及使用方法"
+            :has-arrow="true"
             :has-top-border="true"
             @wxcCellClicked="handle_share">
         </wxc-cell>
@@ -40,15 +40,15 @@ export default {
     components: { WxcCell, ErosHeader }, 
     methods: {
         toMap () {
-            this.$router.open({
-                name: 'demo.map',
-                type: 'PUSH'
-            });
+            this.$router.toWebView({
+                url: 'https://bmfe.github.io/eros-docs/#/zh-cn/plugin_amap',
+                title: '集成使用个推'
+            })
         },
          toWebView () {
             this.$router.toWebView({
-                url: 'https://bmfe.github.io/eros-docs/#/zh-cn/3d_getui',
-                title: 'eros 使用个推'
+                url: 'https://bmfe.github.io/eros-docs/#/zh-cn/plugin_getui_push',
+                title: '集成使用个推'
             })
         },
          handle_geo () {
@@ -75,47 +75,16 @@ export default {
             );
         },
         handle_pay () {
-            this.$pay.wechat({
-                // 微信支付所需必要参数，参考官方文档
-                sign: '',
-                timestamp: '',
-                noncestr: '',
-                partnerid: '',
-                prepayid: '',
-                packageValue: ''
+            this.$router.toWebView({
+                url: 'https://bmfe.github.io/eros-docs/#/zh-cn/plugin_wx_pay',
+                title: '集成使用微信支付 bmWXPay'
             })
-            .then(
-                resData => {
-                    // 成功的回调
-                },
-                error => {
-                    this.$notice.toast({
-                        message: '调用支付失败'
-                    });
-                }
-            );
         },
          handle_share () {
-            this.$share({
-                title: '分享出去的title',
-                content: '分享出去的内容',
-                url: 'www.baidu.com',
-                image: '',
-                platforms: ['Pasteboard', 'WechatSession', 'WechatTimeLine']
-            }).then(
-                resData => {
-                    // 成功的回调
-                    this.$notice.toast({
-                        message: '分享成功'
-                    });
-                },
-                error => {
-                    // 失败的回调
-                    this.$notice.toast({
-                        message: '分享失败'
-                    });
-                }
-            );
+             this.$router.toWebView({
+                url: 'https://bmfe.github.io/eros-docs/#/zh-cn/plugin_wx_share',
+                title: '集成使用微信分享、微信登录 bmWXShare'
+            })
         }
     }
 };
