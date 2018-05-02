@@ -1,3 +1,6 @@
 [submodule "template"]
 	path = template
 	url = https://github.com/bmfe/eros-template
+[submodule "src/js/widgets"]
+	path = src/js/widgets
+	url = https://github.com/bmfe/eros-widget.git
