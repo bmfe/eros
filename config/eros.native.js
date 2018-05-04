@@ -26,20 +26,5 @@ module.exports = {
         'appId': '',
         'appKey': '',
         'appSecret': ''
-    },
-    'umeng': {
-        'enabled': 'false',
-        'iOSAppKey': '',
-        'androidAppKey': ''
-    },
-    'wechat': {
-        'enabled': 'false',
-        'appId': '',
-        'appSecret': ''
-    },
-    'amap': {
-        'enabled': 'true',
-        'iOSAppKey': '623c0396a9b879461c971a14baa678fb',
-        'androidAppKey': ''
     }
 }

@@ -11,7 +11,7 @@
         </wxc-cell>
          <wxc-button text="传递数据"
               style="margin-left: 24px;margin-top: 20px;"
-              type="normal"
+              type="blue"
               @wxcButtonClicked="emit"></wxc-button>
     </div>
 </template>

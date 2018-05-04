@@ -7,9 +7,9 @@
             
             <eros-core></eros-core>
             <eros-native></eros-native>
-            <eros-three></eros-three>
             <eros-notice></eros-notice>
             <eros-tools></eros-tools>
+            <eros-three></eros-three>
             
             <eros-expand></eros-expand>
 

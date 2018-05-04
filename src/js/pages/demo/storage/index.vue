@@ -11,11 +11,11 @@
                 :has-top-border="true"></wxc-cell>
             <div style="padding-left: 24px;">
                 <wxc-button text="新增"
-                    type="normal"
+                    type="blue"
                     style="margin-top:40px"
                     @wxcButtonClicked="add"></wxc-button>
                 <wxc-button text="删除"
-                    type="normal"
+                    type="red"
                     style="margin-top:40px"
                     @wxcButtonClicked="del"></wxc-button>
             </div>

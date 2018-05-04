@@ -123,8 +123,8 @@
 				9737F9E41F384AFD00000800 /* Sources */,
 				9737F9E51F384AFD00000800 /* Frameworks */,
 				9737F9E61F384AFD00000800 /* Resources */,
-				7C8C7D724196AF2127FE5A05 /* [CP] Embed Pods Frameworks */,
 				3BD915CA46C2120DF93B6216 /* [CP] Copy Pods Resources */,
+				38DA6008E3F696B1792DEF64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,7 +150,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Push = {
 								enabled = 1;
@@ -192,105 +192,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3BD915CA46C2120DF93B6216 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-resources.sh",
-				"${PODS_ROOT}/AMap3DMap-NO-IDFA/MAMapKit.framework/AMap.bundle",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMComponent/Calendar/Resources/CalendarLeftArrows@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMComponent/Calendar/Resources/CalendarLeftArrows@3x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMComponent/Calendar/Resources/CalendarReightArrows@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMComponent/Calendar/Resources/CalendarReightArrows@3x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMComponent/Chart/Resources/bm-chart.html",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMComponent/Chart/Resources/echarts.min.js",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMController/Resources/decrease@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMController/Resources/endPoint@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMController/Resources/endPoint@3.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMController/Resources/gpsStat1@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMController/Resources/increase@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMController/Resources/navIcon@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMController/Resources/navIcon@3x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMController/Resources/startPoint@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMController/Resources/startPoint@3x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/actionFontSize@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/actionFontSize@3x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/actionIcon@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/actionIcon@3x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/feedback@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/feedback@3x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/share_icon@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/share_icon@3x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/share_pasteboard@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/share_pasteboard@3x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/share_wechatSession@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/share_wechatSession@3x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/share_wechatTimeLine@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMManager/Resources/share_wechatTimeLine@3x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMModule/Modal/SVProgressHUD/SVProgressHUD.bundle",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMWeexExtension/Resources/bm-base.js",
-				"${PODS_ROOT}/../Benmu-iOS-Library/BMWeexExtension/Resources/arrowInKeyboard@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/Weexplugin/Resources/greenPin.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/Weexplugin/Resources/greenPin@2x.png",
-				"${PODS_ROOT}/../Benmu-iOS-Library/Weexplugin/Resources/greenPin@3x.png",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
-				"${PODS_ROOT}/../WeexiOSSDK/WeexSDK/Resources/native-bundle-main.js",
-				"${PODS_ROOT}/../WeexiOSSDK/WeexSDK/Resources/wx_load_error@3x.png",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarLeftArrows@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarLeftArrows@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarReightArrows@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarReightArrows@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bm-chart.html",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/echarts.min.js",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/decrease@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/endPoint@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/endPoint@3.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gpsStat1@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/increase@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/navIcon@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/navIcon@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/startPoint@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/startPoint@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/actionFontSize@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/actionFontSize@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/actionIcon@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/actionIcon@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/feedback@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/feedback@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/share_icon@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/share_icon@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/share_pasteboard@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/share_pasteboard@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/share_wechatSession@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/share_wechatSession@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/share_wechatTimeLine@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/share_wechatTimeLine@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bm-base.js",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrowInKeyboard@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/greenPin.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/greenPin@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/greenPin@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/native-bundle-main.js",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/wx_load_error@3x.png",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7C8C7D724196AF2127FE5A05 /* [CP] Embed Pods Frameworks */ = {
+		38DA6008E3F696B1792DEF64 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,6 +205,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BD915CA46C2120DF93B6216 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-resources.sh",
+				"${PODS_ROOT}/BMBaseLibrary/Source/BMComponent/Calendar/Resources/CalendarLeftArrows@2x.png",
+				"${PODS_ROOT}/BMBaseLibrary/Source/BMComponent/Calendar/Resources/CalendarLeftArrows@3x.png",
+				"${PODS_ROOT}/BMBaseLibrary/Source/BMComponent/Calendar/Resources/CalendarReightArrows@2x.png",
+				"${PODS_ROOT}/BMBaseLibrary/Source/BMComponent/Calendar/Resources/CalendarReightArrows@3x.png",
+				"${PODS_ROOT}/BMBaseLibrary/Source/BMComponent/Chart/Resources/bm-chart.html",
+				"${PODS_ROOT}/BMBaseLibrary/Source/BMComponent/Chart/Resources/echarts.min.js",
+				"${PODS_ROOT}/BMBaseLibrary/Source/BMModule/Modal/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/BMBaseLibrary/Source/BMWeexExtension/Resources/arrowInKeyboard@2x.png",
+				"${PODS_ROOT}/BMBaseLibrary/Source/BMWeexExtension/Resources/bm-base.js",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
+				"${PODS_ROOT}/WeexSDK/WeexSDK/Resources/native-bundle-main.js",
+				"${PODS_ROOT}/WeexSDK/WeexSDK/Resources/wx_load_error@3x.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarLeftArrows@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarLeftArrows@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarReightArrows@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarReightArrows@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bm-chart.html",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/echarts.min.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrowInKeyboard@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bm-base.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/native-bundle-main.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/wx_load_error@3x.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9DE0048A6664627058926D93 /* [CP] Check Pods Manifest.lock */ = {
@@ -467,11 +411,8 @@
 					"-l\"Realm\"",
 					"-l\"SDWebImage\"",
 					"-l\"SSZipArchive\"",
-					"-l\"SocialWeChat\"",
 					"-l\"SocketRocket\"",
 					"-l\"TZImagePickerController\"",
-					"-l\"UMSocialLog\"",
-					"-l\"WeChatSDK\"",
 					"-l\"WeexSDK\"",
 					"-l\"YTKNetwork\"",
 					"-l\"YYModel\"",
@@ -484,8 +425,6 @@
 					"-l\"stdc++\"",
 					"-l\"stdc++.6.0.9\"",
 					"-l\"z\"",
-					"-framework",
-					"\"AMapFoundationKit\"",
 					"-framework",
 					"\"AVFoundation\"",
 					"-framework",
@@ -519,8 +458,6 @@
 					"-framework",
 					"\"JavaScriptCore\"",
 					"-framework",
-					"\"MAMapKit\"",
-					"-framework",
 					"\"MediaPlayer\"",
 					"-framework",
 					"\"MobileCoreServices\"",
@@ -534,12 +471,6 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
-					"-framework",
-					"\"UMMobClick\"",
-					"-framework",
-					"\"UMSocialCore\"",
-					"-framework",
-					"\"UMSocialNetwork\"",
 					"-weak_framework",
 					"\"UserNotifications\"",
 				);
@@ -572,11 +503,8 @@
 					"-l\"Realm\"",
 					"-l\"SDWebImage\"",
 					"-l\"SSZipArchive\"",
-					"-l\"SocialWeChat\"",
 					"-l\"SocketRocket\"",
 					"-l\"TZImagePickerController\"",
-					"-l\"UMSocialLog\"",
-					"-l\"WeChatSDK\"",
 					"-l\"WeexSDK\"",
 					"-l\"YTKNetwork\"",
 					"-l\"YYModel\"",
@@ -589,8 +517,6 @@
 					"-l\"stdc++\"",
 					"-l\"stdc++.6.0.9\"",
 					"-l\"z\"",
-					"-framework",
-					"\"AMapFoundationKit\"",
 					"-framework",
 					"\"AVFoundation\"",
 					"-framework",
@@ -624,8 +550,6 @@
 					"-framework",
 					"\"JavaScriptCore\"",
 					"-framework",
-					"\"MAMapKit\"",
-					"-framework",
 					"\"MediaPlayer\"",
 					"-framework",
 					"\"MobileCoreServices\"",
@@ -639,12 +563,6 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
-					"-framework",
-					"\"UMMobClick\"",
-					"-framework",
-					"\"UMSocialCore\"",
-					"-framework",
-					"\"UMSocialNetwork\"",
 					"-weak_framework",
 					"\"UserNotifications\"",
 				);
