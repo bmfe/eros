@@ -10,7 +10,6 @@
 		9737F9ED1F384AFD00000800 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9737F9EC1F384AFD00000800 /* main.m */; };
 		9737F9F01F384AFD00000800 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9737F9EF1F384AFD00000800 /* AppDelegate.m */; };
 		9737F9F81F384AFD00000800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9737F9F71F384AFD00000800 /* Assets.xcassets */; };
-		9737FA031F385A2700000800 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9737FA021F385A2700000800 /* libbz2.tbd */; };
 		9774A2C01FF0D82900029216 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9774A2C21FF0D82900029216 /* Launch Screen.storyboard */; };
 		9781D2F11FFF1D2A00BC2C34 /* bundle.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9781D2EF1FFF1D2A00BC2C34 /* bundle.zip */; };
 		9781D2F21FFF1D2A00BC2C34 /* bundle.config in Resources */ = {isa = PBXBuildFile; fileRef = 9781D2F01FFF1D2A00BC2C34 /* bundle.config */; };
@@ -29,7 +28,6 @@
 		9737F9EF1F384AFD00000800 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9737F9F71F384AFD00000800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9737F9FC1F384AFD00000800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9737FA021F385A2700000800 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		9774A2C11FF0D82900029216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9774A2C31FF0D83500029216 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		9774A2C41FF0D88700029216 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
@@ -43,7 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9737FA031F385A2700000800 /* libbz2.tbd in Frameworks */,
 				E1DE85A0A42930C50BEB1245 /* libPods-WeexEros.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,7 +60,6 @@
 		0E1742F2182AEBB6EEFE92C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9737FA021F385A2700000800 /* libbz2.tbd */,
 				5EE25A79A3A97DFB7A3158EC /* libPods-WeexEros.a */,
 			);
 			name = Frameworks;
@@ -124,7 +120,6 @@
 				9737F9E51F384AFD00000800 /* Frameworks */,
 				9737F9E61F384AFD00000800 /* Resources */,
 				3BD915CA46C2120DF93B6216 /* [CP] Copy Pods Resources */,
-				38DA6008E3F696B1792DEF64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,21 +187,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		38DA6008E3F696B1792DEF64 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3BD915CA46C2120DF93B6216 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
