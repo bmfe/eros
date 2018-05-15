@@ -263,7 +263,7 @@ EROS 在进行组件化的开发，争取做到插件可配置，让原生开发
 
 
 # 讨论组
-eros 正式开源到现在已经有了一个拥有大量开发者的微信群 (只能通过邀请)，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
+eros 正式开源到现在已经有了一个拥有大量开发者的群，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
 
 * **此并不是流量群，也并非广告群，是为了大家一起成长，保证信息的有效性，如果发黄赌毒，不和谐言语，与学习无关的广告，推广内容，无关小程序，不会商量，直接会被踢，且不会再有入群机会。**
 * eros开发中遇到任何问题可以随时发到群里 weex开发相关可以一起讨论。
@@ -275,9 +275,6 @@ eros 正式开源到现在已经有了一个拥有大量开发者的微信群 (�
 <p align="center">
 QQ群: 
 <img src="https://bmfe.github.io/eros-docs/zh-cn/image/eros-qq-qrcode.png" width="200" style="margin-right:5px; border: 1px solid #ccc;" />
-微信群: 
-<img src="https://gitee.com/uploads/images/2017/1026/154652_651ba169_1595985.jpeg" width="200" style="margin-right:5px; border: 1px solid #ccc;" />
-</p>
 
 
 ## License
