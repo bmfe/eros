@@ -14,7 +14,7 @@
     "weex-ui": "^0.6.0beta-2"
   },
   "devDependencies": {
-    "babel-core": "~6.25.0",
+    "babel-core": "6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-plugin-import": "^1.6.7",
     "babel-plugin-transform-runtime": "~6.23.0",
