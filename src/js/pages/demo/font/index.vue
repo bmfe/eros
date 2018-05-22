@@ -18,11 +18,11 @@
         </wxc-cell>
         <div class="item-container">
             <wxc-button text="+"
-                type="normal"
+                type="red"
                 style="width: 100px;"
                 @wxcButtonClicked="bigger"></wxc-button>
             <wxc-button text="-"
-                type="normal"
+                type="blue"
                 style="width: 100px;margin-left:40px;"
                 @wxcButtonClicked="samller"></wxc-button>
         </div>

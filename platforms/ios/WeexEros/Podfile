@@ -4,37 +4,15 @@ platform :ios, '8.0'
 inhibit_all_warnings!
 
 def common
-    pod 'WeexSDK', :path=>'./WeexiOSSDK/'
+    #WeexSDK
+    pod 'WeexSDK', :git => 'https://github.com/bmfe/WeexiOSSDK.git', :tag => '0.18'
+    #Weex debugger 调试工具，只在开发模式集成
     pod 'WXDevtool', '0.15.3', :configurations => ['Debug']
-    pod 'SDWebImage', '3.7.6'
-    pod 'SocketRocket', '0.4.2'
-    pod 'YTKNetwork', '2.0.3'
-    pod 'SSZipArchive', '1.6.2'
-    pod 'YYModel', '1.0.4'
-    pod 'Masonry', '1.1.0'
-    pod 'UMengUShare/Social/WeChat', '6.4.6'
-    pod 'GTSDK', '2.0.0.0-noidfa'
-    pod 'UMengAnalytics-NO-IDFA', '4.2.5'
-    pod 'TZImagePickerController', '1.9.8'
-    pod 'BMBaseLibrary', :path=>'./Benmu-iOS-Library', :subspecs=>[
-        'BMDevice',
-        'BMExtension',
-        'BMWeexExtension',
-        'BMDebug',
-        'BMComponent',
-        'BMController',
-        'BMNetwork',
-        'BMModule',
-        'ErosApp',
-        'BMManager',
-        'BMHandler',
-        'BMCustomUI',
-        'BMModel',
-        'WeexPlugins',
-        'BMTransition',
-    ]
-#    pod 'Bugtags'
-    pod 'MJRefresh', '3.1.12'
+    #Eros iOS 基础库
+    pod 'BMBaseLibrary', :git => 'https://github.com/bmfe/Benmu-iOS-Library.git', :tag => '1.2.2'
+
+    #Other Plugins
+
    end
 
 target 'WeexEros' do

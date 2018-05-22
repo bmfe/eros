@@ -89,6 +89,7 @@ DerivedData
 *.hmap
 WeexiOSSDK
 Benmu-iOS-Library
+ErosiOSPlugin
 
 #CocoaPods
 Pods
