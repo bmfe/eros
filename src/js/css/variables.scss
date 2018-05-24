@@ -1,0 +1,48 @@
+@charset "utf-8";
+/**
+* eros全局颜色变量定义
+*/
+//文本色 
+$base-color: 		   #333333;
+$base-gray:            #999999;
+$base-red:             #ff6d6e;
+$base-orange:          #ff9000;
+$base-yellow:          #fffde8;
+$base-green:           #44bcbc;
+$base-blue:            #32ace4;
+$border-color:         #eeeeee;
+$disabled-color:       #cccccc;
+$placeholder-color:    #999999;
+$text-color:           #888888;
+$text-sub:             #555555;
+// 状态色
+$default:              #6d6d72;
+$primary:              #0e90d2;
+$secondary:            #3bb4f2;
+$success:              #5eb95e;
+$warning:              #f37b1d;
+$danger:               #dd514c;
+$dark:                 #393939;
+$white:                #ffffff;
+$gray-light:           #c7ced4;
+
+/*
+*eros全局基础字号设置
+*/
+ $fs10: 10;
+ $fs12: 12;
+ $fs13: 13;
+ $fs14: 14;
+ $fs15: 15;
+ $fs16: 16;
+ $fs17: 17;
+ $fs18: 18;
+ $fs20: 20;
+ $fs22: 22;
+ $fs24: 24;
+ $fs30: 30;
+
+ $base: (
+     // font-path:  "https://img.benmu-health.com/iconfont/wechatV2/1.4.8/",
+    // image-path: "//img.benmu-health.com/wechatV2/img/",
+ );

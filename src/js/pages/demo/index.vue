@@ -63,6 +63,10 @@ export default {
             fontFamily: 'iconfont-eros',
             'src': 'url(\'bmlocal://iconfont/iconfont-eros.ttf\')'
         });
+         domModule.addRule('fontFace', {
+            fontFamily: 'eros-icon',
+            'src': 'url(\'bmlocal://iconfont/eros-iconfont.ttf\')'
+        });
     },
     created () {
         this.$navigator.setNavigationInfo({

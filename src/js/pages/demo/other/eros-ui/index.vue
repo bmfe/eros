@@ -20,6 +20,12 @@
         </div>
     </div> -->
     <cell>
+        <wxc-cell title="cell" desc="cell" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('cell')">
+        </wxc-cell>
+        <wxc-cell title="tab-bar" desc="tab-bar" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('tab-bar')">
+        </wxc-cell>
+        <wxc-cell title="carousel" desc="轮播图" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('carousel')">
+        </wxc-cell>
         <wxc-cell title="checkBox" desc="checkBox。" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('checkBox')">
         </wxc-cell>
         <wxc-cell title="checkBox-list" desc="checkBox-list。" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('checkBox-list')">

@@ -1,0 +1,599 @@
+@charset "utf-8";
+/**
+ * eros-ui框架全局基础方法
+ */
+
+/**
+ * @module 功能
+ * @description 给需要的属性加厂家前缀
+ * @method _prefix
+ * @param {String} $property 指定属性 
+ * @param {String} $value 指定属性值 
+ */
+@mixin _prefix($property, $value) {
+    // 老式浏览器
+    // 是否开启厂商前缀支持
+    @if map-get($setting, is-vendor-prefix) {
+        // 遍历输出厂商代码
+        @each $vendor in map-get($setting, vendor-prefix) {
+            #{$vendor}#{$property}: $value;
+        }
+    }
+    // 现代浏览器（支持最新草案）
+    #{$property}: $value;
+}
+%dir-row {
+    flex-direction: row;
+}
+%dir-col {
+    flex-direction: column;
+}
+%flex-align{
+    align-items: center;
+    justify-content: center;
+}
+%row-start {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+%row-end {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+}
+%row-center {
+    flex-direction: row;
+    @extend %flex-align;
+}
+%row-between {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+%column-between {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/**
+ * @module 功能
+ * @description 生成全屏方法
+ * @method fullscreen
+ * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute 
+ */
+ @mixin fullscreen($position: absolute) {
+    position: $position;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+@mixin abs-pos($top: 0, $right: 0, $bottom: 0, $left: 0){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+@mixin ellipsis ( $lines: 1, $ellipsis: ellipsis,$width: 550) {
+    width: $width;
+    lines: $lines;
+    text-overflow: $ellipsis;
+
+    @if $lines == 1 {
+        flex: 1;
+    }
+}
+
+/*
+定义边框
+单边框 border-single
+双边框 border-double
+全边框 border 
+*/
+@mixin border-single($direction: top,$border-color:$border-color,$border-style: solid,$border-width: 1){
+    border-#{$direction}: {
+        style: $border-style;
+        width: $border-width;
+        color: $border-color;
+    }
+}
+@mixin border-double($direction-both1: top,$direction-both2: bottom,$border-style: solid,$border-width-top: 1,$border-width-bottom: 1,$border-color:$border-color){
+    border-#{$direction-both1}-style: $border-style;
+    border-#{$direction-both1}-width: $border-width-top;
+    border-#{$direction-both1}-color: $border-color;
+    border-#{$direction-both2}-style: $border-style;
+    border-#{$direction-both2}-width: $border-width-bottom;
+    border-#{$direction-both2}-color: $border-color;
+}
+/*
+定义方向圆角
+*/
+@mixin rounded($vert, $horz, $radius: 10) {
+　　border-#{$vert}-#{$horz}-radius: $radius;
+}
+
+/**
+ * @module 背景与边框
+ * @description 为元素添加边框（包括1px边框）
+ * @method border
+ * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 
+ * @param {String} $border-color 指定边框颜色 
+ * @param {String} $border-style 指定边框样式 
+ * @param {String} $radius 指定边框圆角半径，默认值：null 
+ * @param {String} $width-percent 指定宽度百分比，默认值：100% (安卓低版本下多边框显示不全)
+ */
+ @mixin border($border-width: 1px, $border-color:$border-color, $border-style: solid, $radius: null, $width-percent: 100%) {
+    // 用以解决边框layer遮盖内容
+    pointer-events: none;
+    @if $border-width == null {
+        $border-width: 0;
+    }
+    border-color: $border-color;
+    border-style: $border-style;
+    border-width: $border-width;
+    border-radius: $radius;
+}
+
+/**
+ * @module 按钮设置
+ * @description 设定通用按钮
+ */
+@mixin btn($background-color: $btn-bg,$color: #fff,$border-color:$base-color,$font-size:36,$font-weight: bold,$btn-radius: 8){
+    @include align();
+    @include border($border-color);
+    background-color: $background-color;
+    border-radius: $btn-radius;
+    > .btn-text {
+        color: $color;
+        font-weight: $font-weight;
+        font-size: $font-size;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/**
+ * @module 功能
+ * @description 元素在包含块中的对齐方式，默认为水平垂直对齐
+ * @method align
+ * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text 
+ * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center 
+ * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center 
+ * @example
+ * <div class="demo">
+ *      <img class="item" alt="未知尺寸图片居中" />
+ * </div>
+ * .demo {@include align;}
+ */
+@mixin align( $type: text, $justify-content: center, $align-items: center) {
+    @include justify-content($justify-content);
+    @include align-items($align-items);
+    @if $type == text {
+        @include wrap;
+    }
+}
+
+/**
+ * @module 功能
+ * @description 定义文档根节点是否允许滚动
+ * @method root-scroll
+ * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false
+ */
+@mixin root-scroll($is-scroll: false) {
+    html,
+    body {
+        @if $is-scroll {
+            overflow: visible;
+            height: auto;
+        } @else {
+            overflow: hidden;
+            height: 100%;
+        }
+    }
+}
+
+/**
+ * @module 功能
+ * @description 定义是否有滚动条
+ * @method overflow
+ * @param {String} $overflow 取值与最新原生语法一致，默认值：auto 
+ */
+@mixin overflow($overflow: auto) {
+    @if $overflow == auto {
+        overflow: auto;
+        // 该规则可能引起iOS8.0+ webview崩溃
+        -webkit-overflow-scrolling: touch;
+    } @else {
+        overflow: $overflow;
+    }
+}
+
+/**
+ * @module 背景与边框
+ * @description 定义渐变色值
+ * @method gradient
+ * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial 
+ * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle 
+ * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 
+ */
+@mixin gradient($type, $dir, $color-stop...) {
+    // 最新草案：当方向为top,right,bottom,left时需要使用关键字to
+    $dir-new: to;
+    $dir-x: right left;
+    $dir-y: top bottom;
+
+    @if map-get($setting, is-vendor-prefix) {
+        @each $vendor in map-get($setting, vendor-prefix) {
+            background-image: $vendor$type#{-gradient($dir, $color-stop)};
+        }
+    }
+    @each $direction in $dir {
+        @if index($dir-x, $direction) != null {
+            $dir-new: append($dir-new, remove($dir-x, $direction), space);
+        } @else if index($dir-y, $direction) != null {
+            $dir-new: append($dir-new, remove($dir-y, $direction), space);
+        } @else {
+            $dir-new: $direction;
+        }
+    }
+
+    background-image: $type#{-gradient($dir-new, $color-stop)};
+}
+
+
+/**
+ * @module 背景与边框
+ * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况
+ * @method border-radius
+ * @param {Length} $border-radius 指定元素的圆角半径
+ */
+@mixin border-radius($border-radius...) {
+    border-radius: $border-radius;
+}
+
+/**
+ * @module Transform
+ * @description 定义简单变换
+ * @method transform
+ * @param {String} $transform 取值范围与`transform`属性一致 
+ */
+@mixin transform($transform...) {
+    @include _prefix(transform, $transform);
+}
+
+/**
+ * @module Transform
+ * @description 定义变换原点
+ * @method transform-origin
+ * @param {Length | Percentage | Keywords(top/left/right/bottom)} $transform-origin 取值范围与`transform-origin`属性一致 
+ */
+@mixin transform-origin($transform-origin) {
+    @include _prefix(transform-origin, $transform-origin);
+}
+
+/**
+ * @module Transform
+ * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化
+ * @method transform-style
+ * @param {String} $transform-style 取值范围与`transform-style`属性一致 
+ */
+@mixin transform-style($transform-style) {
+    @include _prefix(transform-style, $transform-style);
+}
+
+/**
+ * @module Transition
+ * @description 定义补间
+ * @method transition
+ * @param {String} $transition 取值与原生语法一致 
+ */
+@mixin transition($transition...){
+    $prefix-properties: transform, transform-origin;
+    $vendor-list: ();
+
+    @if map-get($setting, is-vendor-prefix) {
+        @each $vendor in map-get($setting, vendor-prefix) {
+            @for $i from 1 through length($transition) {
+                @if index($prefix-properties, nth(nth($transition, $i), 1)) {
+                    $vendor-list: join($vendor-list, #{$vendor}#{nth($transition, $i)}, comma);
+                } @else {
+                    $vendor-list: join($vendor-list, #{nth($transition, $i)}, comma);
+                }
+            }
+            #{$vendor}transition: $vendor-list;
+        }
+    }
+
+    transition: $transition;
+}
+
+/**
+ * @module Flexbox
+ * @description 定义伸缩盒子元素如何分配空间
+ * @method flex
+ * @param {Number} $flex 取值与`flex`属性一致，默认值：1 
+ * @param {String} $direction 默认值: row，可选值：row | column 
+ */
+@mixin flex($flex: 1, $direction: row) {
+    // 老式浏览器（实验性质支持3个阶段草案）
+    // 原始版本box-flex并不是复合属性，所以只有一个为数字的值
+    @if map-get($setting, is-vendor-prefix) {
+        @each $vendor in map-get($setting, vendor-prefix) {
+            @if $vendor != -ms- {
+                // 当厂商前缀不为`-ms-`时输出原始和最新草案厂商前缀版
+                #{$vendor}box-flex: $flex;
+                #{$vendor}flex: $flex;
+            } @else {
+                // 当厂商前缀为`-ms-`时输出过渡草案厂商前缀版
+                #{$vendor}flex: $flex;
+            }
+        }
+    }
+    // 现代浏览器（支持最新草案）
+    flex: $flex;
+}
+
+/**
+ * @module Flexbox
+ * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)
+ * @method flex-flow
+ * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap 
+ */
+@mixin flex-flow($flex-flow: row nowrap) {
+    // 老式浏览器（实验性质支持过渡和最新2个阶段草案）+ 现代浏览器
+    @include _prefix(flex-flow, $flex-flow);
+}
+
+/**
+ * @module Flexbox
+ * @description 定义伸缩盒子元素的流动方向
+ * @method flex-direction
+ * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row 
+ */
+@mixin flex-direction($flex-direction: row) {
+    // 老式浏览器（实验性质支持原始草案）
+    // 当厂商前缀不为`-ms-`时输出原始草案厂商前缀版
+    @if $flex-direction == row {
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    #{$vendor}box-orient: horizontal;
+                    #{$vendor}box-direction: normal;
+                }
+            }
+        }
+    } @else if $flex-direction == column {
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    #{$vendor}box-orient: vertical;
+                    #{$vendor}box-direction: normal;
+                }
+            }
+        }
+    } 
+    // 老式浏览器（实验性质支持过渡及最新草案）
+    @if map-get($setting, is-vendor-prefix) {
+        @each $vendor in map-get($setting, vendor-prefix) {
+            // `flex-direction`属性在过渡和最新草案中语法一致
+            #{$vendor}flex-direction: $flex-direction;
+        }
+    }
+    // 现代浏览器（支持最新草案）
+    flex-direction: $flex-direction;
+}
+
+/**
+ * @module Flexbox
+ * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)
+ * @method flex-wrap
+ * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap 
+ */
+@mixin flex-wrap($flex-wrap: nowrap) {
+    // 老式浏览器（实验性质支持过渡和最新2个阶段草案）+ 现代浏览器
+    // 原始草案有`box-lines`对应本属性，不过虽然被webkit实验性质支援，但却未被任何浏览器实现（等同于未实现）
+    @include _prefix(flex-wrap, $flex-wrap);
+}
+
+/**
+ * @module Flexbox
+ * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)
+ * @method justify-content
+ * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center 
+ */
+@mixin justify-content($justify-content: center) {
+    // 老式浏览器（实验性质支持3个阶段草案）
+    @if $justify-content == center {
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    // 当厂商前缀不为`-ms-`时输出原始和最新草案厂商前缀版
+                    #{$vendor}box-pack: $justify-content;
+                    #{$vendor}justify-content: $justify-content;
+                } @else {
+                    // 当厂商前缀为`-ms-`时输出过渡草案厂商前缀版
+                    #{$vendor}flex-pack: $justify-content;
+                }
+            }
+        }
+    } @else if $justify-content == flex-start {
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    // 当厂商前缀不为`-ms-`时输出原始和最新草案厂商前缀版
+                    #{$vendor}box-pack: start;
+                    #{$vendor}justify-content: $justify-content;
+                } @else {
+                    // 当厂商前缀为`-ms-`时输出过渡草案厂商前缀版
+                    #{$vendor}flex-pack: start;
+                }
+            }
+        }
+    } @else if $justify-content == flex-end {
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    // 当厂商前缀不为`-ms-`时输出原始和最新草案厂商前缀版
+                    #{$vendor}box-pack: end;
+                    #{$vendor}justify-content: $justify-content;
+                } @else {
+                    // 当厂商前缀为`-ms-`时输出过渡草案厂商前缀版
+                    #{$vendor}flex-pack: end;
+                }
+            }
+        }
+    } @else if $justify-content == space-between {
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    // 当厂商前缀不为`-ms-`时输出原始和最新草案厂商前缀版
+                    #{$vendor}box-pack: justify;
+                    #{$vendor}justify-content: $justify-content;
+                } @else {
+                    // 当厂商前缀为`-ms-`时输出过渡草案厂商前缀版
+                    #{$vendor}flex-pack: justify;
+                }
+            }
+        }
+    }
+    // 现代浏览器（支持最新草案）
+    justify-content: $justify-content;
+}
+
+/**
+ * @module Flexbox
+ * @description 定义单行弹性容器侧轴对齐方式
+ * @method align-items
+ * @param {String} $align-items 取值与`align-items`属性一致，默认值：center 
+ */
+@mixin align-items($align-items: center) {
+    // 老式浏览器（实验性质支持3个阶段草案）
+    @if $align-items == flex-start {
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    // 当厂商前缀不为`-ms-`时输出原始和最新草案厂商前缀版
+                    #{$vendor}box-align: start;
+                    #{$vendor}align-items: $align-items;
+                } @else {
+                    // 当厂商前缀为`-ms-`时输出过渡草案厂商前缀版
+                    #{$vendor}flex-align: start;
+                }
+            }
+        }
+    } @else if $align-items == flex-end {
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    // 当厂商前缀不为`-ms-`时输出原始和最新草案厂商前缀版
+                    #{$vendor}box-align: end;
+                    #{$vendor}align-items: $align-items;
+                } @else {
+                    // 当厂商前缀为`-ms-`时输出过渡草案厂商前缀版
+                    #{$vendor}flex-align: end;
+                }
+            }
+        }
+    } @else {
+        // 取值为center | baseline | stretch时，3个阶段草案均相同
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    // 当厂商前缀不为`-ms-`时输出原始和最新草案厂商前缀版
+                    #{$vendor}box-align: $align-items;
+                    #{$vendor}align-items: $align-items;
+                } @else {
+                    // 当厂商前缀为`-ms-`时输出过渡草案厂商前缀版
+                    #{$vendor}flex-align: $align-items;
+                }
+            }
+        }
+    }
+    // 现代浏览器（支持最新草案）
+    align-items: $align-items;
+}
+
+/**
+ * @module Flexbox
+ * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)
+ * @method align-self
+ * @param {String} $align-self 取值与`align-self`属性一致，默认值：center 
+ */
+@mixin align-self($align-self: center) {
+    // 老式浏览器（实验性质支持3个阶段草案）
+    @if $align-self == flex-start {
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    // 当厂商前缀不为`-ms-`时输最新草案厂商前缀版（原始草案没有类似属性）
+                    #{$vendor}align-self: $align-self;
+                } @else {
+                    // 当厂商前缀为`-ms-`时输出过渡草案厂商前缀版
+                    #{$vendor}flex-item-align: start;
+                }
+            }
+        }
+    } @else if $align-self == flex-end {
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    // 当厂商前缀不为`-ms-`时输最新草案厂商前缀版（原始草案没有类似属性）
+                    #{$vendor}align-self: $align-self;
+                } @else {
+                    // 当厂商前缀为`-ms-`时输出过渡草案厂商前缀版
+                    #{$vendor}flex-item-align: end;
+                }
+            }
+        }
+    } @else if $align-self == auto or $align-self == center or $align-self == baseline or $align-self == stretch {
+        @if map-get($setting, is-vendor-prefix) {
+            @each $vendor in map-get($setting, vendor-prefix) {
+                @if $vendor != -ms- {
+                    // 当厂商前缀不为`-ms-`时输最新草案厂商前缀版（原始草案没有类似属性）
+                    #{$vendor}align-self: $align-self;
+                } @else {
+                    // 当厂商前缀为`-ms-`时输出过渡草案厂商前缀版
+                    #{$vendor}flex-item-align: $align-self;
+                }
+            }
+        }
+    }
+    // 现代浏览器（支持最新草案）
+    align-self: $align-self;
+}
+
+/**
+ * @module 形状
+ * @description 生成矩形方法
+ * @method rect
+ * @param {Length} $width 定义矩形的长度 
+ * @param {Length} $height 定义矩形的高度
+ */
+@mixin rect($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+/**
+ * @module 形状
+ * @description 生成正方形方法
+ * @method square
+ * @param {Length} $size 定义正方形的边长 
+ */
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+/**
+ * @module 形状
+ * @description 生成圆形方法
+ * @method circle
+ * @param {Length} $size 定义圆的半径长度 
+ * @param {Length} $radius 定义圆的圆角半径长度 
+ */
+@mixin circle($size, $radius: 50%) {
+    @include square($size);
+    @include border-radius($radius);
+}

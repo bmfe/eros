@@ -1,0 +1,90 @@
+@charset "utf-8";
+@import "variables";
+@import "mixin";
+
+/*
+*定义全局颜色占位符*
+*/ 
+%c-base {
+    color: $base-color;
+}
+%c-default {
+    color: $default;
+}
+%c-primary {
+    color: $primary;
+}
+%c-secondary {
+    color: $secondary;
+}
+%c-success {
+    color: $success;
+}
+%c-warning {
+    color: $warning;
+}
+%c-danger {
+    color: $danger;
+}
+%c-dark {
+    color: $dark;
+}
+%c-white {
+    color: $white;
+}
+%c-border {
+    color: $border-color;
+}
+%c-gray-light {
+    color: $gray-light;
+}
+%c-gray {
+    color: $base-gray;
+}
+%c-text {
+    color: $text-color;
+}
+
+
+/*
+*定义全局背景色占位符
+*/ 
+%bg-default {
+    background-color: $default;
+}
+%bg-primary {
+    background-color: $primary;
+}
+%bg-secondary {
+    background-color: $secondary;
+}
+%bg-success {
+    background-color: $success;
+}
+%bg-warning {
+    background-color: $warning;
+}
+%bg-danger {
+    background-color: $danger;
+}
+%bg-dark {
+    background-color: $dark;
+}
+%bg-white {
+    background-color: $white;
+}
+%bg-gray-light {
+    background-color: $gray-light;
+}
+ 
+/*
+*定义字体占位符
+*/
+ %fs24 {font-size: 24;}
+
+/*
+*定义border占位符
+*/
+%border-top {
+    @include border-single();
+}

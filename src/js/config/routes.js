@@ -89,6 +89,18 @@ export default {
         title: 'weex-ui',
         url: '/pages/demo/other/weexui.js'
     },
+    'demo.other.cell': {
+        title: 'eros-ui.cell',
+        url: '/pages/demo/other/eros-ui/cell/index.js'
+    },
+    'demo.other.carousel': {
+        title: 'eros-ui.carousel',
+        url: '/pages/demo/other/eros-ui/carousel/index.js'
+    },
+    'demo.other.tab-bar': {
+        title: 'eros-ui.tab-bar',
+        url: '/pages/demo/other/eros-ui/tab-bar/index.js'
+    },
     'demo.other.input': {
         title: 'weex-ui.input',
         url: '/pages/demo/other/eros-ui/input/index.js'

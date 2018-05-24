@@ -1,0 +1,36 @@
+@import "mixin";
+/*list*/
+/*公用文字截断*/
+.limit-one{
+    @include ellipsis();
+}
+.limit-two{
+    @include ellipsis( $lines: 2);
+}
+.limit-three{
+    @include ellipsis( $lines: 3);
+}
+.limit-four {
+    @include ellipsis( $lines: 4);
+}
+.unlimit{
+    @include ellipsis( $lines: 0);
+}
+.tc{
+    text-align: center;
+}
+.tr{
+    text-align: right;
+}
+.tl {
+    text-align: left;
+}
+.font-b{
+    font-weight: bold;
+}
+.font-normal{
+    font-weight: normal;
+}
+.text-underline{
+    text-decoration: underline;
+}
