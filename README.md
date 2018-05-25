@@ -13,11 +13,6 @@
   Based in Weex and Vue.
 </h4>
 
-<br>
-<h3 align="center">
-  eros 作品演示
-</h3>
-
 <h4 align="center">
   star life new.(内测)
 </h4>
@@ -126,9 +121,18 @@
 
 ## 介绍
 
-**eros 不是框架，是基于 [weex](https://weex-project.io/cn/) 封装、面向前端的 [vue](https://cn.vuejs.org/v2/guide/) 写法的一整套 APP 开源解决方案。**
+**eros 不是框架，是基于 [weex](https://weex-project.io/cn/) 封装、面向前端的 [vue](https://cn.vuejs.org/v2/guide/) 写法的一整套 APP 开源解决方案，是由[本木医疗大前端团队](https://github.com/bmfe)经过大量实践沉淀而出。**
 
-> 简单来说，在 weex 提供的强大支持下，用一份 vue 写法的代码，编译成 iOS/Android 两端原生 APP。
+> 简单来说，在 weex 提供的强大支持下，用一份 vue 写法的代码，编译成 iOS/Android 两端原生 APP，并且通过我们内置的热更新逻辑和开源的服务器逻辑，可以使开发者以极快的速度开发 APP ，并赋予 APP 热更新能力(不用经过 appStore/android market 市场审核)。
+
+那么 eros 开发有多快呢？我们收集了一些问卷，**在复杂度不高，首次使用 eros 开发的**某些场景下：
+
+|页数|开发周期统计|
+|--------|---------------|
+|0 - 50| 最晚一个月开发完成|
+|50 - 100| 最晚两个半月开发完成|
+
+当然，这都得益于 weex 和 vue 。
 
 ## 文档 
 > [帮助我们完善和翻译文档](https://github.com/bmfe/eros-docs)
@@ -145,6 +149,13 @@
 |![【ios 下载】](https://bmfe.github.io/eros-docs/zh-cn/image/iosqr.png)|![【android 下载】](http://upload.ouliu.net/i/201801241911376ee1z.png)|
 |[【预览录屏】](https://bmfe.github.io/eros-docs/zh-cn/image/show.gif)|[【预览录屏】](https://bmfe.github.io/eros-docs/zh-cn/image/androidDemo.gif)|
 |[【下载链接】](http://fir.im/eros)|[【下载链接】](https://fir.im/weexerosandroid)|
+
+## 使用之前
+
+- **虽然 weex 支持三端，但 eros 只支持两端 `iOS/Android`，意味着你不可以像开发 Web 那样开发 APP。**
+- **开发者必须熟练开发 Vue，熟悉 Weex 文档，遇到问题要善于 google 和`stackoverflow`**
+- **weex 虽然提供了 `weex run android/ios` 等指令让开发者不打开对应开发者工具(AndroidStudio, xcode)来直接运行模拟器，打包到真机上开发，但 eros 并没有做相关功能，原因是每次修改 `eros.native.js` 配置文件也好，每次添加客户端三方插件也好，包括各种日志(特别崩溃日志)等使得开发者不得不操作开发者工具来进行打包和调试，而如若没有详细的日志，在出了问题之后也无法搜寻或者向我们反馈。**
+
 
 ## 选择了 EROS 可以得到什么？
 ### 原生能力
@@ -163,23 +174,28 @@
 - 拨打电话
 - 发短信
 - 选择联系人
-- 地图
+- 地图(插件)
 - 定位
-- 个推
-- 支付
-- 分享
+- 个推(插件)
+- 支付(插件)
+- 分享(插件)
 - 原生弹窗
 - 拷贝
 - 扫一扫
 - Echart
 - 日历
 - Bindingx
+- 手势解锁
 - ...
+
+> 而在纯净(pure)的开发模板中，是没有地图，个推等三方插件的，eros 有自己的插件体系，使得开发者在需要的时候，写入几行代码即可，不引用就不打包，减少安装包的大小，**pure 版本只有 10 MB 出头**。
+
+- [eros 为什么要插件化，现有插件列表](https://github.com/bmfe/eros-plugins)
 
 ### 开发过程中
  
 - 详细的文档
-- **iOS/Android 模拟器/真机热刷新**
+- **iOS/Android 模拟器/真机热刷新**(区别于热更新，热刷新是保存即刷新 APP)
 - 支持 `weex debug`
 - 一套 Vue 代码，两端原生应用
 - 通过 `appboard JS bundle` 极大的减少了公共代码冗余
@@ -205,10 +221,7 @@
 使用 UI 库，开发效率也会大大提升：
 * [alibaba/weex-ui](https://github.com/alibaba/weex-ui)
 * [bui](https://github.com/bingo-oss/bui-weex)
-
-
-## EROS 正在做什么?
-EROS 在进行组件化的开发，争取做到插件可配置，让原生开发者专注拓展原生能力，前端开发者专注与业务逻辑，极力打造一个可共享的插件社区。
+* eros-ui (开发中)
 
 ## 开源现状
 在 EROS 开源的半年时间，已帮助近百位开发者开发了属于自己的原生应用：
@@ -256,20 +269,18 @@ EROS 在进行组件化的开发，争取做到插件可配置，让原生开发
 | [eros-android-widget](https://github.com/bmfe/BMWidget) | eros 安卓组件库。 |
 | [eros-android-sdk](https://github.com/bmfe/WeexSDK) | eros 安卓移动解决方案安卓端 WeexSDK。 |
 
-## 社区贡献
-* [weex-eros-book 书籍阅读 app](https://github.com/wennjie/weex-book)
-* [lygtq-eros-publish 服务器增量发布逻辑](https://github.com/hodgevk/lygtq-eros-publish)
+> 你还可以尝试其他开发者贡献的服务器增量发布逻辑：
 * [eros-node-server 服务器增量发布逻辑](https://github.com/shawn-tangsc/eros-node-server)
+* [lygtq-eros-publish 服务器增量发布逻辑](https://github.com/hodgevk/lygtq-eros-publish)
 
 
 # 讨论组
-eros 正式开源到现在已经有了一个拥有大量开发者的群，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
+eros 正式开源到现在已经有了一个拥有大量开发者的群(微信群已满)，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
 
 * **此并不是流量群，也并非广告群，是为了大家一起成长，保证信息的有效性，如果发黄赌毒，不和谐言语，与学习无关的广告，推广内容，无关小程序，不会商量，直接会被踢，且不会再有入群机会。**
 * eros开发中遇到任何问题可以随时发到群里 weex开发相关可以一起讨论。
 * 如果不能及时回答也请耐心等待，群里开发丰富经验的同学会帮您一起看问题。
 * 除了 eros 自身紧急 BUG 外的问题，均需要提 issue，我们会按 issue 处理，目的是为了更好的给其他开发者参考，紧急问题请直接抛到群里，我们会直接远程帮助您调试。
-
 
 
 <p align="center">
