@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import ErosCore from './components/core'
 import ErosNotice from './components/notice'
 import ErosNative from './components/native'
@@ -46,6 +47,9 @@ export default {
         ErosProfile, ErosExpand, ErosNotice, 
         ErosThree, ErosComponents, ErosUilib,
         ErosAdvanced, buiButton
+    },
+    computed: {
+        ...mapGetters('common', ['userId'])
     },
     data () {
         return {
@@ -74,6 +78,7 @@ export default {
         })
         // 安卓自定义退出 app
         this.androidFinishApp()
+
     },
     methods: {
         androidFinishApp () {

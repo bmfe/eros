@@ -6,7 +6,7 @@ module.exports = {
         // appBoard
         'js/config/index.js',
         // mediator
-        'js/mediator/index.vue',
+        'js/mediator/index.js',
         // home
         'js/pages/demo/index.vue',
         'js/pages/demo/lifecycle/index.vue',

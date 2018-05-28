@@ -11,6 +11,7 @@
   "dependencies": {
     "bui-weex": "^0.2.5",
     "eros-widget": "^1.0.1-beta.5",
+    "vuex": "^3.0.1",
     "weex-ui": "^0.6.0beta-2"
   },
   "devDependencies": {
