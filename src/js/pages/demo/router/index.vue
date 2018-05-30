@@ -189,7 +189,7 @@ export default {
             this.$router.openBrowser('https://www.baidu.com')
         },
         setHomePage () {
-            this.$router.setHomePage('/pages/demo/router/home.js')
+            this.$router.setHomePage('tabBar')
             this.$notice.toast({
                 message: '设置成功'
             })

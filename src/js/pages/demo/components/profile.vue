@@ -8,7 +8,7 @@
                 <bmspan class="desc-info-text" value=" 是什么？"></bmspan>
             </bmrichtext>
         </div>
-        <text class="desc-info-2">二次封装 weex，用 Vue 写一个属于自己的 APP。</text>
+        <text class="desc-info-2">二次封装 weex 用 Vue 写一个属于自己的 APP。</text>
         <div class="desc-detail">
             <text class="desc-detail-item" v-for="(desc,index) in DESC_TYPE" :key="index"> {{desc}} </text>
         </div>

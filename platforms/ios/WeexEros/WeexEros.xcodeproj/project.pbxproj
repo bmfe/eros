@@ -120,6 +120,7 @@
 				9737F9E51F384AFD00000800 /* Frameworks */,
 				9737F9E61F384AFD00000800 /* Resources */,
 				3BD915CA46C2120DF93B6216 /* [CP] Copy Pods Resources */,
+				7E8B791561CFA42B4D1EDF8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,7 +146,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.Push = {
 								enabled = 1;
@@ -227,6 +228,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E8B791561CFA42B4D1EDF8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9DE0048A6664627058926D93 /* [CP] Check Pods Manifest.lock */ = {

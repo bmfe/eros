@@ -1,19 +1,13 @@
 <template>
-  <wxc-tab-bar :tab-titles="tabTitles"
-               :tab-styles="tabStyles"
-               title-type="icon"
-               @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
+  <div>
     <div class="item-container-home" :style="contentStyle">
         <text> 可以重启 app 来查看变更效果</text>
           <wxc-button text="重置主页"
-              style="margin-top: 20px;"
-              type="normal"
+              style="margin-top: 20px; width: 250px;"
+              type="blue"
               @wxcButtonClicked="reset"></wxc-button>
     </div>
-    <div class="item-container" :style="contentStyle"><text>特别推荐</text></div>
-    <div class="item-container" :style="contentStyle"><text>消息中心</text></div>
-    <div class="item-container" :style="contentStyle"><text>我的主页</text></div>
-  </wxc-tab-bar>
+  </div>
 </template>
 
 <style scoped>
@@ -41,15 +35,14 @@
       tabStyles: Config.tabStyles
     }),
     created () {
+      this.$navigator.setNavigationInfo({
+            statusBarStyle: 'LightContent'
+      });
       const tabPageHeight = Utils.env.getPageHeight();
       const { tabStyles } = this;
       this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
     },
     methods: {
-      wxcTabBarCurrentTabSelected (e) {
-        const index = e.page;
-        // console.log(index);
-      },
       reset () {
             this.$router.setHomePage('/pages/demo/index.js');
             this.$notice.toast({

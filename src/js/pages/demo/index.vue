@@ -58,13 +58,14 @@ export default {
     },
     beforeCreate: function () {
         var domModule = weex.requireModule('dom');
-
+    
         domModule.addRule('fontFace', {
             fontFamily: 'iconfont-eros',
             'src': 'url(\'bmlocal://iconfont/iconfont-eros.ttf\')'
         });
     },
     created () {
+
         this.$navigator.setNavigationInfo({
             statusBarStyle: 'LightContent'
         });
