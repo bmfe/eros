@@ -1,5 +1,7 @@
 <template>
     <div>
+        <text>{{userName}}</text>
+        <text>{{userId}}</text>
         <div class="status-bar" :style="{'height': statusBarHeight}"></div>
         <waterfall class="container" :show-scrollbar="false">
             <eros-profile></eros-profile>
@@ -9,7 +11,7 @@
             <eros-native></eros-native>
             <eros-notice></eros-notice>
             <eros-tools></eros-tools>
-            <eros-three></eros-three>
+            <!-- <eros-three></eros-three> -->
             
             <eros-expand></eros-expand>
 
@@ -28,7 +30,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import ErosCore from './components/core'
 import ErosNotice from './components/notice'
 import ErosNative from './components/native'
@@ -39,17 +40,16 @@ import ErosProfile from './components/profile'
 import ErosComponents from './components/components'
 import ErosUilib from './components/uilib'
 import ErosAdvanced from './components/advanced'
-import { buiButton } from 'bui-weex';
+import { buiButton } from 'bui-weex'
+import Store from 'Mediator/common'
 
 export default {
     components: { 
         ErosCore, ErosTools, ErosNative, 
         ErosProfile, ErosExpand, ErosNotice, 
-        ErosThree, ErosComponents, ErosUilib,
-        ErosAdvanced, buiButton
-    },
-    computed: {
-        ...mapGetters('common', ['userId'])
+        ErosComponents, ErosUilib,
+        ErosAdvanced, buiButton,
+        ErosThree
     },
     data () {
         return {
@@ -79,8 +79,15 @@ export default {
         // 安卓自定义退出 app
         this.androidFinishApp()
 
+        Store.commit('userInfo/setWXConfigInfo', {
+            userName: 'Zero',
+            userId: 1
+        })
+        // console.log(00000000, Store.commit)
+        console.log(1111111111, Store.state)
     },
     methods: {
+        // ...mapActions(),
         androidFinishApp () {
             const globalEvent = weex.requireModule('globalEvent')
             globalEvent.addEventListener('homeBack', options => {

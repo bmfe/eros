@@ -34,6 +34,7 @@ module.exports = {
         'Common': 'js/common',
         'Config': 'js/config',
         'Widget': 'js/widget',
+        'Mediator': 'js/mediator',
         'Pages': 'js/pages',
         'Utils': 'js/utils'
     },

@@ -1,17 +1,17 @@
 const state = {
-    userId: '',
-    openId: ''
+    userName: '',
+    userId: ''
 }
 
 const getters = {
-    userId: state => state.userId,
-    openId: state => state.openId
+    userName: state => state.userName,
+    userId: state => state.userId
 }
 
 const mutations = {
-    ['setWXConfigInfo'](state, { userId, openId}) {
+    setWXConfigInfo(state, { userName, userId}) {
+        userName && (state.userName = userName);
         userId && (state.userId = userId);
-        openId && (state.openId = openId);
     }
 }
 

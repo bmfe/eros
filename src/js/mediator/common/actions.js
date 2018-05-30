@@ -1,4 +1,4 @@
-const fetch = wx.requireModule('bmAxios')
+const fetch = weex.requireModule('bmAxios')
 
 export default {
     getUserInfo({ commit }) {

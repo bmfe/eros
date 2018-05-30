@@ -75,6 +75,7 @@
 import { WxcCell } from 'weex-ui'
 import Title from '../_mods/title'
 import Category from '../_mods/category'
+import Store from 'Mediator/common'
 export default {
     components: { WxcCell, Title, Category }, 
     eros: {
@@ -83,6 +84,9 @@ export default {
                 message: `从上个页面传递了: ${text}`
             })
         }
+    },
+    created() {
+        console.log(2222222222, Store.state)
     },
     data () {
         return {
