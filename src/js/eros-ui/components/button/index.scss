@@ -1,0 +1,92 @@
+@import "src/js/css/base.scss";
+@import 'src/js/css/variables.scss';
+
+.btn-container {
+  width: 700px;
+  height: 88px;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  border-width: 3px;
+}
+
+.btn-text {
+  text-overflow: ellipsis;
+  lines: 1;
+  font-size: 36px;
+  color: #FFFFFF;
+}
+
+.btn-raised {
+  box-shadow: $box-shadow-raised;
+}
+
+.btn-circle {
+  border-radius: 88px;
+}
+
+.btn-background-default {
+  background-color: $color-default;
+}
+
+.btn-background-primary {
+  background-color: $color-primary;
+}
+
+.btn-background-warning {
+  background-color: $color-warning;
+}
+
+.btn-background-danger {
+  background-color: $color-danger;
+}
+
+.btn-background-success {
+  background-color: $color-success;
+}
+
+.btn-border-default {
+  border-color: $color-default;
+}
+
+.btn-border-primary {
+  border-color: $color-primary;
+}
+
+.btn-border-warning {
+  border-color: $color-warning;
+}
+
+.btn-border-danger {
+  border-color: $color-danger;
+}
+
+.btn-border-success {
+  border-color: $color-success;
+}
+
+.btn-color-default {
+  border-color: $color-default;
+}
+
+.btn-color-default {
+  color: $color-default;
+}
+
+.btn-color-primary {
+  color: $color-primary;
+}
+
+.btn-color-warning {
+  color: $color-warning;
+}
+
+.btn-color-danger {
+  color: $color-danger;
+}
+
+.btn-color-success {
+  color: $color-success;
+}

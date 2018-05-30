@@ -1,4 +1,4 @@
-import ErosButton from './components/eros-button'
+import ErosButton from './components/button'
 
 export default {
     ErosButton

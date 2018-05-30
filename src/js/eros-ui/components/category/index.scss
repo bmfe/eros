@@ -1,0 +1,55 @@
+@import "src/js/css/reset.scss";
+.category {
+    margin-top: 20px;
+    padding-left: 30pxw;
+    width: 750px;
+    height: 60px;
+    background-color: $white;
+    justify-content: center;
+}
+.category-text {
+    @extend %c-white;
+    font-size: 26;
+}
+.title-default {
+    color: $default;
+}
+.title-white {
+    color: $white;
+}
+.title-dark {
+    color: $dark;
+}
+.title-primary {
+    color: $primary;
+}
+.title-secondary {
+    color: $secondary;
+}
+.title-success {
+    color: $success;
+}
+.title-warning {
+    color: $warning;
+}
+.title-danger {
+    color: $danger;
+}
+.category-default {
+    background-color: $default;
+}
+.category-primary {
+    background-color: $primary;
+}
+.category-secondary {
+    background-color: $secondary;
+}
+.category-warning {
+    background-color: $warning;
+}
+.category-danger {
+    background-color: $danger;
+}
+.category-success {
+    background-color: $success;
+}

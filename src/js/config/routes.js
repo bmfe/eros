@@ -89,6 +89,10 @@ export default {
         title: 'weex-ui',
         url: '/pages/demo/other/weexui.js'
     },
+    'demo.other.button': {
+        title: 'eros-ui.button',
+        url: '/pages/demo/other/eros-ui/button/index.js'
+    },
     'demo.other.cell': {
         title: 'eros-ui.cell',
         url: '/pages/demo/other/eros-ui/cell/index.js'

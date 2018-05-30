@@ -1,0 +1,69 @@
+@import "src/js/css/reset.scss";
+.eros-list {
+  @extend %bg-white;
+}
+
+.cell-item {
+  position: relative;
+  @extend %row-start;
+  @extend %bg-white;
+  padding-right: 30;
+  margin-left: 30;
+  height: 90;
+}
+
+.bor-top {
+  @extend %border-top;
+}
+
+.cell-label {
+  width: 180;
+  font-size: 30;
+  @extend %c-text;
+}
+
+.cell-flex {
+  flex: 1;
+  font-size: 30;
+  @extend %c-base;
+  justify-content: flex-end;
+}
+
+.row-end {
+  text-align: right;
+}
+
+.cell-title {
+  flex: 1;
+}
+
+.cell-label-text {
+  font-size: 30;
+  color: #666666;
+  width: 188;
+  margin-right: 10;
+}
+
+.cell-arrow-icon {
+  width: 22;
+  height: 22;
+}
+
+.cell-content {
+  color: #333333;
+  font-size: 30;
+  line-height: 40;
+}
+
+.cell-desc-text {
+  color: #999999;
+  @extend %fs24;
+  line-height: 30;
+  margin-top: 4;
+}
+
+.extra-content-text {
+  font-size: 28;
+  color: #999999;
+  margin-right: 4;
+}

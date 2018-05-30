@@ -1,0 +1,16 @@
+@import "src/js/css/reset.scss";
+.indicator {
+	position: absolute;
+	right: 0;
+	left: 0;
+	item-color: #ceced9;
+	item-selected-color: #07ae9c;
+	item-size: 14px;
+	height: 6;
+	/* border-radius: 6; */
+	bottom: 16;
+ }
+.set-center {
+	align-items: center;
+	width: 750;
+}

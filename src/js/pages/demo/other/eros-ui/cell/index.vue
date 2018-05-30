@@ -8,6 +8,8 @@
                       :desc="index.descripe"
                       :title="index.descripe"
                       ></erosCell>
+            <erosCell label="只有标题"></erosCell>
+            <erosCell label="有箭头" has-arrow></erosCell>
             <category title="列表cell展示" type="danger"></category>
             <erosCell label="标题" title="具体描述" :border="false"></erosCell>
             <erosCell label="标题" title="具体描述"  has-arrow></erosCell>
@@ -21,8 +23,8 @@
 </template>
 
 <script>
-    import Category from '../../_mods/category.vue';
-    import ErosCell from '../../_mods/eros-cell.vue';
+    import Category from 'eros-ui/components/category';
+    import ErosCell from 'eros-ui/components/cell';
     export default {
         components: { 
             Category, 
