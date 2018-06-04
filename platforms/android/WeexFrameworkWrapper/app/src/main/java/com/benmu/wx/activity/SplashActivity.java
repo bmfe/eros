@@ -6,14 +6,14 @@ import android.os.Handler;
 
 import com.benmu.framework.BMWXEnvironment;
 import com.benmu.framework.constant.Constant;
-import com.benmu.framework.constant.WXConstant;
+import com.benmu.framework.constant.WXEventCenter;
 import com.benmu.framework.manager.ManagerFactory;
 import com.benmu.framework.manager.impl.ParseManager;
 import com.benmu.framework.manager.impl.VersionManager;
 import com.benmu.framework.manager.impl.dispatcher.DispatchEventManager;
 import com.benmu.framework.model.RouterModel;
-import com.benmu.framework.model.TitleModel;
 import com.benmu.framework.model.WeexEventBean;
+import com.benmu.framework.proxy.SplashActivityProxy;
 import com.benmu.wx.R;
 
 /**
@@ -21,47 +21,49 @@ import com.benmu.wx.R;
  */
 
 public class SplashActivity extends Activity {
-    private Handler mHandler = new Handler();
+    private SplashActivityProxy activityProxy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        init();
+        activityProxy = new SplashActivityProxy();
+        activityProxy.onCreateInit(this);
     }
 
-    private void init() {
-        final VersionManager versionManager = ManagerFactory.getManagerService(VersionManager
-                .class);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                long prepareTime = versionManager.prepareJsBundle(SplashActivity.this);
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        toHome();
-                    }
-                }, 2000 - prepareTime);
-            }
-        }).start();
-
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        activityProxy.onStart(this);
     }
 
-    private void toHome() {
-        String homePage = BMWXEnvironment.mPlatformConfig.getPage().getHomePage(this);
-        String NavigationColor = BMWXEnvironment.mPlatformConfig.getPage().getNavBarColor();
-        RouterModel router = new RouterModel(homePage, Constant.ACTIVITIES_ANIMATION
-                .ANIMATION_PUSH, null, null, false, null);
-        DispatchEventManager dispatchEventManager = ManagerFactory.getManagerService
-                (DispatchEventManager.class);
-        WeexEventBean eventBean = new WeexEventBean();
-        eventBean.setKey(WXConstant.WXEventCenter.EVENT_OPEN);
-        eventBean.setJsParams(ManagerFactory.getManagerService(ParseManager.class).toJsonString
-                (router));
-        eventBean.setContext(this);
-        dispatchEventManager.getBus().post(eventBean);
-        finish();
+    @Override
+    protected void onResume() {
+        super.onResume();
+        activityProxy.onResume(this);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        activityProxy.onRestart(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        activityProxy.onPause(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        activityProxy.onStop(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        activityProxy.onDestroy(this);
     }
 }

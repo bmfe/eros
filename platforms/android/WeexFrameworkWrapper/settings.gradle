@@ -1,1 +1,9 @@
-include ':app', ':wxframework', ':sdk', ':nexus', ':ErosPluginAmap'
+include ':app', ':wxframework' , ':sdk', ':nexus',':ErosPluginAmap',':erosplugingt',':erospluginwxpay',':erospluginumeng'
+
+project(':wxframework').projectDir = new File(settingsDir,'/wxframework/eros-framework')
+project(':sdk').projectDir = new File(settingsDir,'/nexus/sdk')
+project(':nexus').projectDir = new File(settingsDir,'/nexus/nexus')
+project(':ErosPluginAmap').projectDir = new File(settingsDir,'/ErosPluginAmap/ErosPluginAmap')
+project(':erosplugingt').projectDir = new File(settingsDir,'/erosplugingt/erosplugingt')
+project(':erospluginwxpay').projectDir = new File(settingsDir,'/erospluginwxpay/library-wxpay')
+project(':erospluginumeng').projectDir = new File(settingsDir,'/erospluginumeng/library-wxshare')

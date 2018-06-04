@@ -44,15 +44,9 @@
             >
 
 
-        <meta-data
-                android:name="UMENG_APPKEY"
-                android:value="${UMENG_APP_KEY}"/>
-        <meta-data
-                android:name="UMENG_CHANNEL"
-                android:value="${UMENG_CHANNEL_VALUE}"/>
 
-
-        <activity android:name="com.benmu.wx.activity.MainActivity">
+        <activity android:name="com.benmu.framework.activity.MainActivity"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
 
@@ -78,7 +72,7 @@
 
         <activity
                 android:name=".activity.SplashActivity"
-                android:theme="@style/FullscreenTheme"
+                android:theme="@style/WelcomeStyle"
                 >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -86,7 +80,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.benmu.framework.activity.ResultActivity" />
         <activity android:name="com.benmu.framework.activity.GlobalWebViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -130,98 +123,23 @@
 
         <service android:name="com.amap.api.location.APSService"></service>
         <!--amap finish-->
-
-        <!--个推-->
-        <!-- 自定义权限 -->
-        <permission
-                android:name="getui.permission.GetuiService.${APP_ID}"
-                android:protectionLevel="normal"/>
-
         <meta-data
-                android:name="PUSH_APPID"
-                android:value="${GETUI_APP_ID}"/>
+            android:name="PUSH_APPID"
+            android:value="${GETUI_APP_ID}"/>
         <meta-data
-                android:name="PUSH_APPKEY"
-                android:value="${GETUI_APP_KEY}"/>
+            android:name="PUSH_APPKEY"
+            android:value="${GETUI_APP_KEY}"/>
         <meta-data
-                android:name="PUSH_APPSECRET"
-                android:value="${GETUI_APP_SECRET}"/>
-
-        <!-- 配置SDK核心服务 -->
-        <service
-                android:name="com.igexin.sdk.PushService"
-                android:exported="true"
-                android:label="NotificationCenter"
-                android:process=":pushservice">
-            <intent-filter>
-                <action android:name="com.igexin.sdk.action.service.message"/>
-            </intent-filter>
-        </service>
-        <service
-                android:name="com.igexin.sdk.PushServiceUser"
-                android:exported="true"
-                android:label="NotificationCenterUser">
-        </service>
-
-        <receiver android:name="com.igexin.sdk.PushReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-                <action android:name="android.intent.action.USER_PRESENT"/>
-                <action android:name="com.igexin.sdk.action.refreshls"/>
-                <!-- 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 -->
-                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
-                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
-            </intent-filter>
-        </receiver>
-        <receiver
-                android:name="com.igexin.sdk.PushManagerReceiver"
-                android:exported="false">
-            <intent-filter>
-                <action android:name="com.igexin.sdk.action.pushmanager"/>
-            </intent-filter>
-        </receiver>
-
-        <activity
-                android:name="com.igexin.sdk.PushActivity"
-                android:excludeFromRecents="true"
-                android:exported="false"
-                android:process=":pushservice"
-                android:taskAffinity="com.igexin.sdk.PushActivityTask"
-                android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <activity
-                android:name="com.igexin.sdk.GActivity"
-                android:excludeFromRecents="true"
-                android:exported="true"
-                android:process=":pushservice"
-                android:taskAffinity="com.igexin.sdk.PushActivityTask"
-                android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-
-        <service
-                android:name="com.igexin.download.DownloadService"
-                android:process=":pushservice"/>
-
-        <receiver android:name="com.igexin.download.DownloadReceiver">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-            </intent-filter>
-        </receiver>
-
-        <provider
-                android:name="com.igexin.download.DownloadProvider"
-                android:authorities="downloads.${APP_ID}"
-                android:exported="true"
-                android:process=":pushservice"/>
+            android:name="PUSH_APPSECRET"
+            android:value="${GETUI_APP_SECRET}"/>
 
         <receiver
-                android:name="com.benmu.framework.receiver.GTPushReceiver"
-                android:exported="false">
+            android:name="com.benmu.erosplugingt.GTPushReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.${GETUI_APP_ID}"/>
             </intent-filter>
         </receiver>
-        <!-- 个推SDK配置结束 -->
 
     </application>
 

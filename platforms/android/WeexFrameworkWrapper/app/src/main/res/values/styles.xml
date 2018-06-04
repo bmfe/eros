@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="WelcomeStyle" parent="FullscreenTheme">
+        <item name="android:windowBackground">@drawable/ic_splash</item>
+    </style>
+
 </resources>

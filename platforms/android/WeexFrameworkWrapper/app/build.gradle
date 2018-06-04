@@ -16,6 +16,7 @@ android {
             abiFilters "x86"
             abiFilters "armeabi"
         }
+        javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true
     }
 
     signingConfigs {
