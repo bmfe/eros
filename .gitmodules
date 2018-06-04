@@ -4,3 +4,6 @@
 [submodule "src/js/widgets"]
 	path = src/js/widgets
 	url = https://github.com/bmfe/eros-widget.git
+[submodule "platforms/android/WeexFrameworkWrapper/wxframework"]
+	path = platforms/android/WeexFrameworkWrapper/wxframework
+	url = https://github.com/bmfe/WeexErosFramework.git
