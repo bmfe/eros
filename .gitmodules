@@ -7,3 +7,18 @@
 [submodule "platforms/android/WeexFrameworkWrapper/wxframework"]
 	path = platforms/android/WeexFrameworkWrapper/wxframework
 	url = https://github.com/bmfe/WeexErosFramework.git
+[submodule "platforms/android/WeexFrameworkWrapper/nexus"]
+	path = platforms/android/WeexFrameworkWrapper/nexus
+	url = https://github.com/bmfe/eros-nexus.git
+[submodule "platforms/android/WeexFrameworkWrapper/ErosPluginAmap"]
+	path = platforms/android/WeexFrameworkWrapper/ErosPluginAmap
+	url = https://github.com/bmfe/eros-plugin-android-amap.git
+[submodule "platforms/android/WeexFrameworkWrapper/erosplugingt"]
+	path = platforms/android/WeexFrameworkWrapper/erosplugingt
+	url = https://github.com/bmfe/eros-plugin-android-getui.git
+[submodule "platforms/android/WeexFrameworkWrapper/erospluginwxpay"]
+	path = platforms/android/WeexFrameworkWrapper/erospluginwxpay
+	url = https://github.com/bmfe/eros-plugin-android-wxpay.git
+[submodule "platforms/android/WeexFrameworkWrapper/erospluginumeng"]
+	path = platforms/android/WeexFrameworkWrapper/erospluginumeng
+	url = https://github.com/bmfe/eros-plugin-android-wxshare.git
