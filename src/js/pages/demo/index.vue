@@ -4,13 +4,13 @@
         <waterfall class="container" :show-scrollbar="false">
             <eros-profile></eros-profile>
             <cell class="line"></cell>
-            
+
             <eros-core></eros-core>
             <eros-native></eros-native>
             <eros-notice></eros-notice>
             <eros-tools></eros-tools>
             <eros-three></eros-three>
-            
+
             <eros-expand></eros-expand>
 
             <eros-components></eros-components>
@@ -21,7 +21,7 @@
         <div class="touch-bar" :style="{'height': touchBarHeight}"></div>
         <bmmask class="mask" animation="transition" position="top" :duration="300" ref="bmmask">
             <bmpop class="modal-top">
-                <image class="image" src="bmlocal://assets/demo.jpg"></image>
+                <image class="image" src="bmlocal://assets/demo.jpg">
             </bmpop>
         </bmmask>
     </div>
@@ -41,9 +41,9 @@ import ErosAdvanced from './components/advanced'
 import { buiButton } from 'bui-weex';
 
 export default {
-    components: { 
-        ErosCore, ErosTools, ErosNative, 
-        ErosProfile, ErosExpand, ErosNotice, 
+    components: {
+        ErosCore, ErosTools, ErosNative,
+        ErosProfile, ErosExpand, ErosNotice,
         ErosThree, ErosComponents, ErosUilib,
         ErosAdvanced, buiButton
     },
@@ -63,7 +63,7 @@ export default {
             fontFamily: 'iconfont-eros',
             'src': 'url(\'bmlocal://iconfont/iconfont-eros.ttf\')'
         });
-         domModule.addRule('fontFace', {
+        domModule.addRule('fontFace', {
             fontFamily: 'eros-icon',
             'src': 'url(\'bmlocal://iconfont/eros-iconfont.ttf\')'
         });

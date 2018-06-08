@@ -1,20 +1,9 @@
 <template>
-    <slider v-if="show"
-            :auto-play="autoPlay"
-            :interval="interval"
-            :style="{ height: height  + 'px'}"
-
-            >
-        <div class="set-center" v-for="(v,index) in options"
-            :style="{ height: height  + 'px'}"
-            :key="index">
-            <image  resize="cover"
-                    :src="v.imgUrl"
-                    :style= "{ height: height + 'px', width: width  + 'px'} " 
-                    @click="carouselImgClicked(v.linkUrl)"></image>
+    <slider v-if="show" :auto-play="autoPlay" :interval="interval" :style="{ height: height  + 'px'}" @change="change">
+        <div class="set-center" v-for="(v,index) in options" :style="{ height: height  + 'px'}" :key="index">
+            <image  resize="cover" :src="v.imgUrl" :style= "{ height: height + 'px', width: width  + 'px'} "  @click="carouselImgClicked(index)">
         </div>
-        <indicator v-if="options.length > 1" class="indicator"
-                    :style="indicatorStyle" style="align-self: center"></indicator>
+        <indicator v-if="options.length > 1" class="indicator" style="align-self: center" :style="indicatorStyle"></indicator>
     </slider>
 </template>
 
@@ -56,16 +45,19 @@ export default {
     computed: {
         indicatorStyle() {
             return {
-            "item-color": "#ceced9",
-            "item-selected-color": "#0e90d2",
-            "item-size": "14px",
-            ...this.indicatorColor
+                "item-color": "#ceced9",
+                "item-selected-color": "#0e90d2",
+                "item-size": "14px",
+                ...this.indicatorColor
             };
         }
     },
     methods: {
-        carouselImgClicked(url) {
-            this.$emit("carouselImgClicked", url);
+        carouselImgClicked(index) {
+            this.$emit("click", index);
+        },
+        change(e) {
+            this.$emit('change',e.index)
         }
     }
 };

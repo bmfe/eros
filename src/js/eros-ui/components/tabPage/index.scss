@@ -1,0 +1,124 @@
+@import "src/js/css/reset";
+.wrap-bg {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.group {
+    margin-top: 20;
+    margin-bottom: 20;
+}
+/*滚动tab*/
+.scroller {
+    width: 750;
+    height: 110;
+    flex-direction: row;
+}
+.tabbar-scroll {
+    flex: 1;
+    position: relative;
+    width: 750;
+    height: 110;
+    margin-top: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    @extend %bg-white;
+    overflow-x: scroll;
+}
+.tabs-scroll-shadow {
+    box-shadow: 3px 0 5px #ebf0f5;
+}
+.segment-line {
+  width: 1;
+  height: 30;
+  @extend %bg-default;
+}
+.tabbar-item-shrink {
+    position: relative;
+    min-width: 150;
+    // max-width: 250;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100;
+}
+.tabbar {
+    flex-direction: row;
+    padding-right: 30;
+    padding-left: 30;
+    overflow: hidden;
+    @extend %bg-white;
+}
+.tabbar-item {
+    position: relative;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100;
+    opacity: 0.8;
+}
+.tabbar-border {
+    @include border-single($direction: bottom,$border-color:#fff,$border-style: solid,$border-width: 8px);
+}
+.tabbar-border-primary {
+    @include border-single($direction: bottom,$border-color:$primary,$border-style: solid,$border-width: 8px);
+}
+.active {
+    opacity: 1;
+    font-weight: bold;
+}
+.tabbar-icon {
+    font-size: 40;
+    @extend %c-dark;
+}
+.tabbar-label {
+    font-size: 32;
+    font-weight: normal;
+    @extend %c-dark;
+    opacity: 0.8;
+}
+.label-ink {
+    @extend %c-base;
+}
+.active-ink {
+    @extend %c-primary;
+    font-weight: bold;
+}
+.badge {
+    position: absolute;
+    right: 50%;
+    top: 2;
+    padding-top: 4;
+    padding-right: 10;
+    padding-bottom: 4;
+    padding-left: 10;
+    @extend %fs24;
+    @extend %c-white;
+}
+.badge-rounded {
+    border-radius: 200;
+}
+.badge-danger {
+    @extend %bg-danger;
+}
+.tabbar-white {
+    @extend %bg-white;
+}
+.tabbar-primary {
+    @extend %bg-primary;
+}
+.tabbar-secondary {
+    @extend %bg-secondary;
+}
+.tabbar-success {
+    @extend %bg-success;
+}
+.tabbar-warning {
+    @extend %bg-warning;
+}
+.tabbar-danger {
+    @extend %bg-danger;
+}
+.tabbar-dark {
+    @extend %bg-dark;
+}

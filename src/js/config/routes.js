@@ -98,7 +98,7 @@ export default {
         url: '/pages/demo/other/eros-ui/cell/index.js'
     },
     'demo.other.carousel': {
-        title: 'eros-ui.carousel',
+        title: 'eros-ui.轮播图',
         url: '/pages/demo/other/eros-ui/carousel/index.js'
     },
     'demo.other.tab-bar': {
