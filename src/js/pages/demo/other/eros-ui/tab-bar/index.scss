@@ -32,7 +32,7 @@
   width: 1;
   height: 30;
   @extend %bg-default;
-} 
+}
 .tabbar-item-shrink {
     position: relative;
     min-width: 150;
@@ -121,4 +121,7 @@
 }
 .tabbar-dark {
     @extend %bg-dark;
+}
+page {
+  width: 750;
 }

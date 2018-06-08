@@ -3,7 +3,17 @@
         <div class="group">
             <category title="默认" type="primary"></category>
             <div class="group-body">
-                <uiTabBar :options="options"></uiTabBar>
+                <uiTabBar :options="options">
+                    <div class="page">
+                        <text>1</text>
+                    </div>
+                    <div class="page">
+                        <text>2</text>
+                    </div>
+                    <div class="page">
+                        <text>3</text>
+                    </div>
+                </uiTabBar>
             </div>
         </div>
     </scroller>
@@ -26,7 +36,7 @@ export default {
                     type: "text",
                     text: "我的",
                     // icon: '&#xe75e;'
-                    icon: '\ue75e'
+                    icon: "\ue75e"
                 },
                 {
                     type: "icon",
