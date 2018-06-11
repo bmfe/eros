@@ -1,5 +1,5 @@
 <template>
-    <list class="scroller">
+    <!-- <list class="scroller">
         <cell>
             <div class="tabbar-scroll tabbar-white">
                 <div class="tabbar-item-shrink active tabbar-border-primary">
@@ -31,71 +31,42 @@
                 </div>
             </div>
         </cell>
-    </list>
-</template>
-
-<script>
-export default {
-    props: {
-        activeColor: {
-            type: String,
-            default: "#32ace4"
-        }
-    },
-    computed: {
-        indicatorStyle() {
-            return {
-                "item-color": "#ceced9",
-                "item-selected-color": "#0e90d2",
-                "item-size": "14px",
-                ...this.indicatorColor
-            };
-        }
-    },
-    methods: {
-        carouselImgClicked(index) {
-            this.$emit("click", index);
-        },
-        change(e) {
-            this.$emit("change", e.index);
-        }
-    }
-};
-</script>
-
-<style lang="sass" src="./index.scss"></style>
-ext>
-                                </div>
-                                <text class="segment-line"></text>
-                                <div class="tabbar-item-shrink">
-                                    <text class="tabbar-label label-ink">设置</text>
-                                </div>
-                                <text class="segment-line"></text>
-                                <div class="tabbar-item-shrink">
-                                    <text class="tabbar-label label-ink">信息4</text>
-                                </div>
-                                <text class="segment-line"></text>
-                                <div class="tabbar-item-shrink">
-                                    <text class="tabbar-label label-ink">信息5</text>
-                                </div>
-                            </div>
-                        </cell>
-                    </list>
-                </div>
-            </div>
-            <div class="group">
-                <category title="图标+文字+Badge" type="primary"></category>
-                <div class="group-body">
-                    <uiTabBar></uiTabBar>
-                </div>
+    </list> -->
+    <div>
+        <div class="tabbar" :style="{'background-color': bgColor}">
+            <!-- primary secondary success warning danger dark -->
+            <div class="tabbar-item" :class="[index == activeIndex ? 'active' : '']" :style="{'border-color': index == activeIndex ? activeColor : bgColor}" v-for="(item,index) in options" :key="index" @click="setCurrentPage(index)">
+                <text v-if="item.type == 'iconFont' || item.type == 'icon'" class="eros-icon tabbar-icon" :class="[index == activeIndex ? 'active' : '']" :style="{color: index == activeIndex ? activeColor : fontColor}">{{item.icon}}</text>
+                <text class="badge badge-danger badge-rounded" v-if="item.badge">{{item.badge}}</text>
+                <text v-if="item.type == 'iconFont' || item.type == 'text'" class="tabbar-label" :class="[index == activeIndex ? 'active' : '']" :style="{color: index == activeIndex ? activeColor : fontColor}">{{item.text}}</text>
             </div>
         </div>
-    </scroller>
+        <scroller append="tree" class="scroller" paging-enabled="true" scroll-direction="horizontal" @scroll="onscroll" offset-accuracy="0">
+            <div ref="pageContainer" style="flex-wrap: wrap;">
+                <slot></slot>
+            </div>
+        </scroller>
+    </div>
 </template>
 
 <script>
 export default {
     props: {
+        activeIndex: {
+            type: Number,
+            default: 0
+        },
+        options: {
+            type: Array
+        },
+        bgColor: {
+            type: String,
+            default: "#ffffff"
+        },
+        fontColor: {
+            type: String,
+            default: "#393939"
+        },
         activeColor: {
             type: String,
             default: "#32ace4"
@@ -112,13 +83,38 @@ export default {
         }
     },
     methods: {
-        carouselImgClicked(index) {
-            this.$emit("click", index);
+        setCurrentPage(index) {
+            this.activeIndex = index;
+            // dom.scrollToElement(this.$refs[`page_${index}`], {
+            //     animated: false
+            // });
+
+            const animation = weex.requireModule("animation");
+            const containerEl = this.$refs[`pageContainer`];
+            const dist = index * 750;
+            animation.transition(
+                containerEl,
+                {
+                    styles: {
+                        transform: `translateX(${-dist}px)`
+                    },
+                    duration: "0.00001",
+                    timingFunction: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                    delay: 0
+                },
+                () => {}
+            );
         },
-        change(e) {
-            this.$emit("change", e.index);
+        onscroll(e) {
+            let formatOffset = Math.abs(e.contentOffset.x);
+            if (formatOffset % SCROLL_FULL_WIDTH === 0) {
+                let index = formatOffset / SCROLL_FULL_WIDTH;
+                if (this.activeIndex === index) return;
+                this.setCurrentPage(index);
+            }
         }
     }
 };
 </script>
+
 <style lang="sass" src="./index.scss"></style>

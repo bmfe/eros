@@ -122,6 +122,7 @@
 .tabbar-dark {
     @extend %bg-dark;
 }
-page {
+.page {
   width: 750;
+  background-color: red;
 }

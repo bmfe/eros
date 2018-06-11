@@ -31,12 +31,14 @@ module.exports = {
         'js/pages/demo/other/eros-ui/button/index.vue',
         'js/pages/demo/other/eros-ui/cell/index.vue',
         'js/pages/demo/other/eros-ui/tab-bar/index.vue',
+        'js/pages/demo/other/eros-ui/tab-page/index.vue',
         'js/pages/demo/other/eros-ui/carousel/index.vue',
         'js/pages/demo/other/eros-ui/input/index.vue',
         'js/pages/demo/other/eros-ui/search/index.vue',
         'js/pages/demo/other/eros-ui/radio/index.vue',
         'js/pages/demo/other/eros-ui/checkBox/index.vue',
         'js/pages/demo/other/eros-ui/checkBox-list/index.vue',
+        'js/pages/demo/other/eros-ui/container/index.vue',
         'js/pages/demo/other/bui.vue'
     ],
     'alias': {

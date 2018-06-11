@@ -9,7 +9,7 @@
 /*滚动tab*/
 .scroller {
     width: 750;
-    height: 110;
+    height: 500;
     flex-direction: row;
 }
 .tabbar-scroll {
@@ -56,13 +56,11 @@
     justify-content: center;
     height: 100;
     opacity: 0.8;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 8px
 }
-.tabbar-border {
-    @include border-single($direction: bottom,$border-color:#fff,$border-style: solid,$border-width: 8px);
-}
-.tabbar-border-primary {
-    @include border-single($direction: bottom,$border-color:$primary,$border-style: solid,$border-width: 8px);
-}
+
 .active {
     opacity: 1;
     font-weight: bold;

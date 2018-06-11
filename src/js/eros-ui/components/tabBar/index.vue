@@ -1,12 +1,10 @@
 <template>
     <div>
-        <!-- scroller -->
         <scroller append="tree" class="scroller" paging-enabled="true" scroll-direction="horizontal" @scroll="onscroll" offset-accuracy="0">
             <div ref="pageContainer" style="flex-wrap: wrap;">
                 <slot></slot>
             </div>
         </scroller>
-        <!-- tab -->
         <div class="tabbar" :style="{'background-color': bgColor}">
             <!-- primary secondary success warning danger dark -->
             <div class="tabbar-item active" :class="[index == activeIndex ? 'active' : '']" v-for="(item,index) in options" :key="index" @click="setCurrentPage(index)">
