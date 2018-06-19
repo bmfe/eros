@@ -1,10 +1,9 @@
 <template>
     <scroller class="bg-white">
-        <!--tab切换-->
         <div class="group">
             <category title="默认" type="primary"></category>
             <div class="group-body">
-                <uiTabBar :options="options">
+                <uiTabPage :options="options">
                     <div class="page">
                         <text>1</text>
                     </div>
@@ -14,7 +13,7 @@
                     <div class="page">
                         <text>3</text>
                     </div>
-                </uiTabBar>
+                </uiTabPage>
             </div>
         </div>
     </scroller>
@@ -22,9 +21,9 @@
 
 <script>
 import Category from "eros-ui/components/category";
-import tabBar from "eros-ui/components/tabBar";
+import tabPage from "eros-ui/components/tabPage";
 export default {
-    components: { Category, uiTabBar: tabBar },
+    components: { Category, uiTabPage: tabPage },
     data() {
         return {
             options: [

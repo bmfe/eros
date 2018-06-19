@@ -7,6 +7,8 @@
             </wxc-cell>
             <wxc-cell title="tab-bar" desc="tab-bar" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('tab-bar')">
             </wxc-cell>
+            <wxc-cell title="tab-page" desc="tab-page" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('tab-page')">
+            </wxc-cell>
             <wxc-cell title="carousel" desc="轮播图" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('carousel')">
             </wxc-cell>
             <wxc-cell title="checkBox" desc="checkBox。" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('checkBox')">
@@ -18,6 +20,8 @@
             <wxc-cell title="input" desc="input" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('input')">
             </wxc-cell>
             <wxc-cell title="search" desc="search" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('search')">
+            </wxc-cell>
+            <wxc-cell title="container" desc="兼容iPhone X" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('container')">
             </wxc-cell>
         </cell>
     </list>
@@ -32,7 +36,7 @@ export default {
     },
     data() {
         return {
-            
+
         }
     },
     methods: {

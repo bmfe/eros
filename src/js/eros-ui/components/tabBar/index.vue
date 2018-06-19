@@ -1,20 +1,10 @@
 <template>
     <div>
-        <!-- scroller -->
         <scroller append="tree" class="scroller" paging-enabled="true" scroll-direction="horizontal" @scroll="onscroll" offset-accuracy="0">
-            <!-- <div ref="pageContainer" style="lex-direction: row;"> -->
-                <div class="page" ref="page_0">
-                    <text>1</text>
-                </div>
-                <div class="page" ref="page_1">
-                    <text>2</text>
-                </div>
-                <div class="page" ref="page_2">
-                    <text>3</text>
-                </div>
-            <!-- </div> -->
+            <div ref="pageContainer" style="flex-wrap: wrap;">
+                <slot></slot>
+            </div>
         </scroller>
-        <!-- tab -->
         <div class="tabbar" :style="{'background-color': bgColor}">
             <!-- primary secondary success warning danger dark -->
             <div class="tabbar-item active" :class="[index == activeIndex ? 'active' : '']" v-for="(item,index) in options" :key="index" @click="setCurrentPage(index)">
@@ -70,25 +60,25 @@ export default {
     methods: {
         setCurrentPage(index) {
             this.activeIndex = index;
-            dom.scrollToElement(this.$refs[`page_${index}`], {
-                animated: false
-            });
+            // dom.scrollToElement(this.$refs[`page_${index}`], {
+            //     animated: false
+            // });
 
-            // const animation = weex.requireModule("animation");
-            // const containerEl = this.$refs[`pageContainer`];
-            // const dist = index * 750;
-            // animation.transition(
-            //     containerEl,
-            //     {
-            //         styles: {
-            //             transform: `translateX(${-dist}px)`
-            //         },
-            //         duration: '0.00001',
-            //         timingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-            //         delay: 0
-            //     },
-            //     () => {}
-            // );
+            const animation = weex.requireModule("animation");
+            const containerEl = this.$refs[`pageContainer`];
+            const dist = index * 750;
+            animation.transition(
+                containerEl,
+                {
+                    styles: {
+                        transform: `translateX(${-dist}px)`
+                    },
+                    duration: '0.00001',
+                    timingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    delay: 0
+                },
+                () => {}
+            );
         },
         onscroll(e) {
             let formatOffset = Math.abs(e.contentOffset.x);

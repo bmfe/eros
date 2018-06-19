@@ -105,6 +105,10 @@ export default {
         title: 'eros-ui.tab-bar',
         url: '/pages/demo/other/eros-ui/tab-bar/index.js'
     },
+    'demo.other.tab-page': {
+        title: 'eros-ui.tab-bar',
+        url: '/pages/demo/other/eros-ui/tab-page/index.js'
+    },
     'demo.other.input': {
         title: 'weex-ui.input',
         url: '/pages/demo/other/eros-ui/input/index.js'
@@ -124,6 +128,10 @@ export default {
     'demo.other.radio': {
         title: 'weex-ui.radio',
         url: '/pages/demo/other/eros-ui/radio/index.js'
+    },
+    'demo.other.container': {
+        // title: 'weex-ui.container',
+        url: '/pages/demo/other/eros-ui/container/index.js'
     },
     'demo.other.bui': {
         title: 'bui',
