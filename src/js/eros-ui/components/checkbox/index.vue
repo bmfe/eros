@@ -1,54 +1,82 @@
 <template>
-    <div class="eros-form" :class="listStyle">
-        <div class="eros-item" :class="cellStyle" :style="cellStyle">
-            <div class="flex-row" :class="justify" :style="fullJustified">
-                <div class="check-icon"></div>
-                <input class="eros-input" type="text" :placeholder="placeholder">
-            </div>
-            <text class="eros-input-right" :value="descripe"></text>
-        </div>
-    </div>
+        <erosCell>
+            <icon 
+            v-if="icon && !loading" 
+            :name="icon" 
+            :class="erosCheckbox" 
+            @click="_click"
+            @longpress="_longPress"></icon>
+            <!-- <unicodeIcon 
+            v-if="unicodeIcon" 
+            :name="unicodeIcon" 
+            :class="erosCheckbox"></unicodeIcon>
+            <text class="eros-check-txt" 
+            :class="erosCheckbox"
+            :value="title" ></text> -->
+        </erosCell>
 </template>
 
 <script>
-   export default {
-        name: 'eros-list',
+    import erosCell from "../cell"
+    import Icon from 'eros-ui/components/icon'
+
+    // import unicodeIcon from "../icon-type"
+    export default {
+       components: { 
+            erosCell,
+            Icon
+            // unicodeIcon,
+        },
         props: {
-            type: {
+            title: {
                 type: String,
                 default: "text"
             },
-            placeholder: {
+            type: {
                 type: String,
-                default: "请输入~"
+                default: 'default'
+            },
+            icon: {
+                type: String
+            },
+            unicodeIcon: {
+                type: String,
+            },
+            checked: {
+                type: Boolean,
+                default: false
             },
             disabled: {
                 type: Boolean,
-                default: true
+                default: false
             },
-            descripe: {
-                type: String,
-                default: "",
-            },
-            border: {
+            justify: {
                 type: Boolean,
-                default: true
-            },
-            cellStyle: Object,
-            fullJustified: Object
+                default: false
+            }
         },
         computed: {
-            cellStyle() {
+            erosCheckbox() {
                 return [
-                    this.border && 'bor-top',
+                     `theme-${this.type}`,
+                     this.unicode && this.title,
+                     this.icon 
                 ]
             },
             justify() {
                 return [
-                    this.flex && 'flex-1'
+                    this.justify && 'flex-1'
                 ]
             }
         },
+        methods: {
+            _click (e) {
+                if (!this.disabled) this.$emit('click', e)
+            },
+            _longPress(e){
+                if (!this.disabled) this.$emit('longpress', e)
+            }
+        }
    }
 </script>
 

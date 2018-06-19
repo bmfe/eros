@@ -1,5 +1,6 @@
 <template>
     <scroller class="bg-white">
+        <!--tab切换-->
         <div class="group">
             <category title="默认" type="primary"></category>
             <div class="group-body">

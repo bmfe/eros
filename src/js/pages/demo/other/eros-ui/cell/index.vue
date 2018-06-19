@@ -11,12 +11,12 @@
             <erosCell label="只有标题"></erosCell>
             <erosCell label="有箭头" has-arrow></erosCell>
             <category title="列表cell展示" type="danger"></category>
-            <erosCell label="标题" title="具体描述" :border="false"></erosCell>
-            <erosCell label="标题" title="具体描述"  has-arrow></erosCell>
-            <erosCell label="标题" title="换个描述"></erosCell>
+            <erosCell title="消息" :border="false" has-arrow></erosCell>
+            <erosCell title="通知"  has-arrow></erosCell>
+            <erosCell title="隐私" has-arrow></erosCell>
             <category title="列表cell展示——两端对齐" type="success"></category>
-            <erosCell label="标题" title="具体描述" justify :border="false"></erosCell>
-            <erosCell label="标题" title="具体描述" justify has-arrow></erosCell>
+            <erosCell label="通知" title="已开启" justify :border="false"></erosCell>
+            <erosCell label="标题" title="具体描述" justify></erosCell>
             <erosCell label="标题" title="换个描述" desc="来个备注" justify></erosCell>
       </cell>
   </list>

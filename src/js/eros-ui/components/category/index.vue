@@ -27,11 +27,11 @@ export default {
     },
     computed: {
         innerContainerStyle() {
-            return [!this.hollow && `category-${this.type}`];
+            return [!this.hollow && `bg-${this.type}`];
         },
         innerTextStyle() {
             return [
-                this.hollow && `title-${this.color}`,
+                this.hollow && `theme-${this.color}`,
                 this.icon && this.title 
             ];
         }

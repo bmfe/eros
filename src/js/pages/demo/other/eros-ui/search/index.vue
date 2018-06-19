@@ -1,3 +1,3 @@
 <template>
-    <div><text>search</text></div>
+    <div><text>&#xe752;</text></div>
 </template>
