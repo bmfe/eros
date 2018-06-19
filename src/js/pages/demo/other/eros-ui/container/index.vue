@@ -1,13 +1,13 @@
 <template>
     <eros-container touchBar>
         <div class="header">
-            <text>头部</text>
+            <text class="eros-txt">头部</text>
         </div>
         <div class="panel" @click="back">
-            <text>点击中间区域返回</text>
+            <text class="eros-txt">点击中间区域返回</text>
         </div>
         <div class="footer">
-            <text>尾部</text>
+            <text class="eros-txt">尾部</text>
         </div>
     </eros-container>
 </template>

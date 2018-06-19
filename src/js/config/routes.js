@@ -106,7 +106,7 @@ export default {
         url: '/pages/demo/other/eros-ui/tab-bar/index.js'
     },
     'demo.other.tab-page': {
-        title: 'eros-ui.tab-bar',
+        title: 'eros-ui.tab-page',
         url: '/pages/demo/other/eros-ui/tab-page/index.js'
     },
     'demo.other.input': {

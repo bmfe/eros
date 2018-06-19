@@ -34,3 +34,13 @@
 .text-underline{
     text-decoration: underline;
 }
+.eros-layout {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.eros-flex-1 {
+    flex: 1;
+}

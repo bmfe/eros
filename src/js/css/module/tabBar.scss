@@ -1,0 +1,109 @@
+@import "src/js/css/reset";
+/*滚动tab*/
+.scroller {
+    width: 750;
+    flex-direction: row;
+}
+.tabs-shadow {
+    box-shadow: 3px 0 5px #ebf0f5;
+}
+.segment-line {
+  width: 1;
+  height: 30;
+  @extend %bg-default;
+}
+.tabbar {
+    flex-direction: row;
+    padding-right: 30;
+    padding-left: 30;
+    overflow: hidden;
+}
+.tabbar-item {
+    position: relative;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100;
+    opacity: 0.8;
+}
+.tabbar-content {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.tabbar-border {
+    @include border-single($direction: bottom,$border-color:#fff,$border-style: solid,$border-width: 8px);
+}
+.tabbar-border-primary {
+    @include border-single($direction: bottom,$border-color:$primary,$border-style: solid,$border-width: 8px);
+}
+.active {
+    opacity: 1;
+    font-weight: bold;
+}
+.tabbar-icon {
+    font-size: 40;
+    @extend %c-dark;
+}
+.tabbar-label {
+    font-size: 32;
+    font-weight: normal;
+    @extend %c-dark;
+    opacity: 0.8;
+}
+.label-ink {
+    @extend %c-base;
+}
+.active-ink {
+    @extend %c-primary;
+    font-weight: bold;
+}
+.badge {
+    position: absolute;
+    right: 5%;
+    top: 0;
+    padding-top: 4;
+    padding-right: 10;
+    padding-bottom: 4;
+    padding-left: 10;
+    @extend %fs24;
+    @extend %c-white;
+}
+.badge-rounded {
+    border-radius: 200;
+}
+.badge-danger {
+    @extend %bg-danger;
+}
+.point {
+    position: absolute;
+    right: 40%;
+    top: 10;
+    @include circle(16);
+}
+.tabbar-white {
+    @extend %bg-white;
+}
+.tabbar-primary {
+    @extend %bg-primary;
+}
+.tabbar-secondary {
+    @extend %bg-secondary;
+}
+.tabbar-success {
+    @extend %bg-success;
+}
+.tabbar-warning {
+    @extend %bg-warning;
+}
+.tabbar-danger {
+    @extend %bg-danger;
+}
+.tabbar-dark {
+    @extend %bg-dark;
+}
+.page-container {
+    width: 750;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}

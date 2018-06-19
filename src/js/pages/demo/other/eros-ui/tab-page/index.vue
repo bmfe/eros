@@ -1,21 +1,26 @@
 <template>
     <scroller class="bg-white">
-        <div class="group">
-            <category title="默认" type="primary"></category>
-            <div class="group-body">
-                <uiTabPage :options="options">
-                    <div class="page">
-                        <text>1</text>
-                    </div>
-                    <div class="page">
-                        <text>2</text>
-                    </div>
-                    <div class="page">
-                        <text>3</text>
-                    </div>
-                </uiTabPage>
+        <category title="默认" type="primary"></category>
+        <uiTabPage :options="options">
+            <div class="page-item">
+                <text>1</text>
             </div>
-        </div>
+            <div class="page-item">
+                <text>2</text>
+            </div>
+            <div class="page-item">
+                <text>3</text>
+            </div>
+            <div class="page-item">
+                <text>4</text>
+            </div>
+            <div class="page-item">
+                <text>5</text>
+            </div>
+            <div class="page-item">
+                <text>6</text>
+            </div>
+        </uiTabPage>
     </scroller>
 </template>
 
@@ -29,21 +34,34 @@ export default {
             options: [
                 {
                     type: "iconFont",
-                    text: "首页",
-                    icon: "\ue750"
+                    text: "攻略",
+                    icon: "\ue872"
                 },
                 {
-                    type: "text",
-                    text: "我的",
-                    // icon: '&#xe75e;'
-                    icon: "\ue75e"
+                    type: "iconFont",
+                    text: "酒店",
+                    icon: "\ue870"
                 },
                 {
-                    type: "icon",
-                    text: "信息",
+                    type: "iconFont",
+                    text: "机票",
                     icon: "\ue744",
-                    badge: 5
+                },{
+                    type: "iconFont",
+                    text: "旅行商城",
+                    icon: "\ue746"
+                },
+                {
+                    type: "iconFont",
+                    text: "游记",
+                    icon: "\ue744",
+                },
+                {
+                    type: "iconFont",
+                    text: "问答",
+                    icon: "\ue72b"
                 }
+                
             ]
         };
     }

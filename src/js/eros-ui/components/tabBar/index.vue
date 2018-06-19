@@ -1,20 +1,22 @@
 <template>
-    <div>
-        <scroller append="tree" class="scroller" paging-enabled="true" scroll-direction="horizontal" @scroll="onscroll" offset-accuracy="0">
-            <div ref="pageContainer" style="flex-wrap: wrap;">
+    <div class="eros-layout">
+        <scroller append="tree" class="scroller eros-flex-1" paging-enabled="true" scroll-direction="horizontal" @scroll="onscroll" offset-accuracy="0">
+            <div ref="pageContainer" class="page-container">
                 <slot></slot>
             </div>
         </scroller>
-        <div class="tabbar" :style="{'background-color': bgColor}">
+        <div class="tabbar tabs-shadow" :style="{'background-color': bgColor}">
             <!-- primary secondary success warning danger dark -->
             <div class="tabbar-item active" :class="[index == activeIndex ? 'active' : '']" v-for="(item,index) in options" :key="index" @click="setCurrentPage(index)">
-                <text v-if="item.type == 'iconFont' || item.type == 'icon'" class="eros-icon tabbar-icon" :class="[index == activeIndex ? 'active' : '']" :style="{color: index == activeIndex ? activeColor : fontColor}">{{item.icon}}</text>
-                <text class="badge badge-danger badge-rounded" v-if="item.badge">{{item.badge}}</text>
-                <text v-if="item.type == 'iconFont' || item.type == 'text'" class="tabbar-label" :class="[index == activeIndex ? 'active' : '']" :style="{color: index == activeIndex ? activeColor : fontColor}">{{item.text}}</text>
+                <div class="tabbar-content">
+                    <text v-if="item.type == 'iconFont' || item.type == 'icon'" class="eros-icon tabbar-icon" :class="[index == activeIndex ? 'active' : '']" :style="{color: index == activeIndex ? activeColor : fontColor}">{{item.icon}}</text>
+                    <text class="badge badge-danger badge-rounded" v-if="item.badge">{{item.badge}}</text>
+                    <text class="point badge-danger" v-if="item.point">{{item.point}}</text>
+                    <text v-if="item.type == 'iconFont' || item.type == 'text'" class="tabbar-label" :class="[index == activeIndex ? 'active' : '']" :style="{color: index == activeIndex ? activeColor : fontColor}">{{item.text}}</text>
+                </div>
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
@@ -33,7 +35,7 @@ export default {
         },
         bgColor: {
             type: String,
-            default: "#ffffff"
+            default: "#fff"
         },
         fontColor: {
             type: String,
@@ -42,6 +44,13 @@ export default {
         activeColor: {
             type: String,
             default: "#32ace4"
+        },
+        badge : {
+            type: String,Number
+        },
+        point : {
+            type: Boolean,
+            default: false
         }
     },
     computed: {
@@ -91,5 +100,4 @@ export default {
     }
 };
 </script>
-
 <style lang="sass" src="./index.scss"></style>
