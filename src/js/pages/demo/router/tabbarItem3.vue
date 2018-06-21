@@ -1,6 +1,16 @@
 <template>
   <div>
-    <div class="item-container" :style="contentStyle"><text>个人中心</text></div>
+    <div class="item-container-home" :style="contentStyle">
+        <text> 联系人 </text>
+          <wxc-button text="设置红点"
+              style="margin-top: 20px; width: 250px;"
+              type="blue"
+              @wxcButtonClicked="showBadge"></wxc-button>
+          <wxc-button text="清除红点"
+              style="margin-top: 20px; width: 250px;"
+              type="blue"
+              @wxcButtonClicked="hideBadge"></wxc-button>
+    </div>
   </div>
 </template>
 
@@ -22,6 +32,7 @@
 
   import { WxcTabBar, WxcButton, Utils } from 'weex-ui';
   import Config from './config'
+  var tabbar = weex.requireModule('bmTabbar')
   export default {
     components: { WxcTabBar, WxcButton },
     data: () => ({
@@ -32,6 +43,18 @@
       const tabPageHeight = Utils.env.getPageHeight();
       const { tabStyles } = this;
       this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
+    },
+    methods: {
+      showBadge () {
+            tabbar.showBadge({
+              index:2
+            });
+      },
+      hideBadge () {
+        tabbar.hideBadge({
+          index:2
+        })
+      }
     }
   };
 </script>
