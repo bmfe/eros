@@ -44,3 +44,7 @@
 .eros-flex-1 {
     flex: 1;
 }
+// 边框
+.bor-top {
+    @extend %border-top;
+}

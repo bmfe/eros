@@ -405,6 +405,9 @@
         .#{$prefix}-#{$key} {
             color: $color;
         }
+        .placeholder-#{$key} {
+            placeholder-color: $color;
+        }
         @if $bg-color == null {
             .bg-#{$key} {
                 background-color: $color;

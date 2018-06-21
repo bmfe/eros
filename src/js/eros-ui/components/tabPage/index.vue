@@ -35,7 +35,7 @@
     <div class="eros-layout">
         <div class="tabbar-scroll" :style="{'background-color': bgColor}">
             <!-- primary secondary success warning danger dark -->
-            <div class="tabbar-item tabbar-item-shrink" :class="[index == activeIndex ? 'active' : '']" :style="{'border-color': index == activeIndex ? activeColor : bgColor}" v-for="(item,index) in options" :key="index" @click="setCurrentPage(index)">
+            <div class="tabbar-item tabbar-border tabbar-item-shrink" :class="[index == activeIndex ? 'active' : '']" :style="{'border-color': index == activeIndex ? activeColor : bgColor}" v-for="(item,index) in options" :key="index" @click="setCurrentPage(index)">
                 <text v-if="item.type == 'iconFont' || item.type == 'icon'" class="eros-icon tabbar-icon" :class="[index == activeIndex ? 'active' : '']" :style="{color: index == activeIndex ? activeColor : fontColor}">{{item.icon}}</text>
                 <text class="badge badge-danger badge-rounded" v-if="item.badge">{{item.badge}}</text>
                 <text v-if="item.type == 'iconFont' || item.type == 'text'" class="tabbar-label" :class="[index == activeIndex ? 'active' : '']" :style="{color: index == activeIndex ? activeColor : fontColor}">{{item.text}}</text>

@@ -1,0 +1,64 @@
+@import "src/js/css/reset";
+
+.eros-form {
+    @extend %bg-white;
+}
+.eros-cell-input {
+    padding-right: 30;
+    padding-left: 30;
+    @extend %row-start;
+    height: 100;
+}
+.eros-no-flat {
+    flex: 1;
+    @extend %row-start;
+    margin-top: 10;
+    margin-bottom: 10;
+    padding-right: 20;
+    padding-left: 20;
+    height: 80;
+    background-color:#fff;
+    @include border-radius(8);
+}
+.eros-target {
+    font-size: 30;
+}
+.eros-hint {
+    width: 160;
+    font-size: 32;
+}
+.eros-input {
+    flex: 1;
+    height: 80;
+}
+.cancel-label {
+    margin-left: 30;
+}
+// icon设置
+.eros-search {
+    margin-right: 20;
+    font-size: 36;
+    color: #999;
+}
+.eros-arrow-drop {
+    margin-right: 20;
+    margin-left: 10;
+    font-size: 20;
+}
+.eros-empty {
+    padding-top: 20;
+    padding-bottom: 20;
+    padding-left: 40;
+    font-size: 32;
+    color: #999;
+}
+.handle-btn {
+    margin-left: 20;
+    @include rect(120,60);
+    @extend %flex-align;
+    @include border($border-color:#c7ced4,$radius: 8);
+    background-color: #fff;
+}
+.bg-background {
+    background-color: #eee;
+}
