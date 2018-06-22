@@ -1,5 +1,13 @@
 @import "src/js/css/reset.scss";
 
+.eros-cell-checkbox {
+  position: relative;
+  @extend %row-start;
+  @extend %bg-white;
+  padding-right: 30;
+  padding-left: 30;
+  height: 90;
+}
 .eros-check-txt {
   font-size: 30;
   @extend %c-base;
@@ -8,5 +16,6 @@
 .flex-1 {
   @include flex-direction(row);
   flex: 1;
-  @include justify-content(flex-start);
+  @include justify-content(flex-end);
+  text-align:right;
 }
