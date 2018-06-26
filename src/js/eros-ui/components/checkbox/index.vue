@@ -59,8 +59,8 @@
                 return [
                     this.icon, 
                     `theme-${this.theme}`,
-                    this.disabled && 'theme-gray-light',
-                    !this.checked && 'theme-gray-light'
+                    this.disabled && 'theme-silver',
+                    !this.checked && 'theme-silver'
                 ]
             },
             justifyStyle() {

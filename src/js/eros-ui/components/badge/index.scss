@@ -1,0 +1,14 @@
+@import "src/js/css/reset.scss";
+.eros-badge {
+  padding-top: 4;
+  padding-right: 10;
+  padding-bottom: 4;
+  padding-left: 10;
+}
+.badge-txt {
+  @extend %fs24;
+  color: #333;
+}
+.circle {
+  @include border-radius(120);
+}

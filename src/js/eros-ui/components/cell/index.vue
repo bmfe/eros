@@ -1,15 +1,12 @@
 <template>
-    <div class="eros-list">
-        <div class="cell-item" :class="cellStyle">
-            <!-- <text class="cell-label" :value="label" :style="cellLabelStyle"></text>
-            <text class="cell-flex" :value="desc" :class="justifyStyle" :style="cellFlexStyle"></text>
-            <text class="arrow-right"></text> -->
+        <div class="cell-item" :class="cellStyle" :style="{ height: cellHeight + 'px'}">
+            <slot></slot>
             <slot name="label">
                 <div v-if="label">
                     <text class="cell-label-text">{{label}}</text>
                 </div>
             </slot>
-           <div class="cell-title">
+            <div class="cell-title">
                 <slot name="title">
                     <text class="cell-content" :class="justifyStyle">{{title}}</text>
                     <text class="cell-desc-text" :class="justifyStyle"
@@ -17,11 +14,9 @@
                 </slot>
             </div>
             <slot name="value"></slot>
-            <slot></slot>
             <text class="extra-content-text" v-if="extraContent">{{extraContent}}</text>
             <text class="eros-icon eros-arrow" v-if="hasArrow">&#xe775;</text>
         </div>
-    </div>
 </template>
 
 <script>
@@ -55,20 +50,38 @@ export default {
             type: Boolean,
             default: false
         },
-        cellLabelStyle: Object,
-        cellFlexStyle: Object
+        wrap: {
+            type: Boolean,
+            default: false
+        },
+        cellHeight: {
+            type: Number,
+            default: 90
+        },
+        cellPadding: {
+            type: Boolean,
+            default: true
+        },
+        cellMargin: {
+            type: Boolean,
+            default: false
+        }
     },
     computed: {
         cellStyle() {
             return [
                 this.border && 'bor-top',
+                this.wrap && 'cell-wrap',
+                this.cellHeight,
+                this.cellPadding && 'cell-padding',
+                this.cellMargin && 'cell-margin'
             ]
         },
         justifyStyle() {
             return [
                 this.justify && 'row-end'
             ]
-        }
+        },
     }
 }    
 </script>

@@ -5,6 +5,7 @@
          @click="_click">
         <slot></slot>
         <icon 
+            class="btn-text"
             v-if="icon && !loading" 
             :name="icon" 
             :class="innerTextStyle" 
@@ -33,12 +34,16 @@ export default {
         },
         type: {
             type: String,
-            default: 'default'
+            default: ''
         },
         icon: {
             type: String
         },
         disabled: {
+            type: Boolean,
+            default: false
+        },
+        active: {
             type: Boolean,
             default: false
         },
@@ -60,17 +65,22 @@ export default {
     computed: {
         innerContainerStyle() {
             return [
-                !this.hollow && `btn-background-${this.type}`,
-                `btn-border-${this.type}`,
+                `eros-border-${this.type}`,
+                !this.hollow && `bg-${this.type}`,
+                this.disabled && 'btn-disabled',
                 this.circle && 'btn-circle',
-                this.raised && 'btn-raised'
+                this.raised && 'btn-raised',
+                this.active && `bg-${this.type}-active`
             ]
         },
         innerTextStyle() {
-            return [
-                this.hollow && `btn-color-${this.type}`,
-                this.icon && this.text && 'pd-rt-18'
-            ]
+            if(this.type != `white`) {
+                return [
+                    !this.hollow && `theme-white`,
+                    this.hollow && `theme-${this.type}`,
+                    this.icon && this.text && 'pd-rt-18'
+                ]
+            }
         }
     },
     methods: {

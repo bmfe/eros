@@ -8,8 +8,13 @@
                       :desc="index.descripe"
                       :title="index.descripe"
                       ></erosCell>
-            <erosCell label="只有标题"></erosCell>
-            <erosCell label="有箭头" has-arrow></erosCell>
+
+            <category title="列表cell展示——线不到头" type="primary"></category>
+            <div class="eros-list">
+                <erosCell label="只有标题" cellMargin :cellPadding="false"></erosCell>
+                <erosCell label="有箭头" has-arrow cellMargin :cellPadding="false"></erosCell>
+            </div>
+
             <category title="列表cell展示" type="danger"></category>
             <erosCell title="消息" :border="false" has-arrow></erosCell>
             <erosCell title="通知"  has-arrow></erosCell>
@@ -40,3 +45,8 @@
 
     }    
 </script>
+<style scoped>
+    .eros-list {
+    background-color: #fff;
+    }
+</style>

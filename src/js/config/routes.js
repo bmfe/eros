@@ -89,6 +89,14 @@ export default {
         title: 'weex-ui',
         url: '/pages/demo/other/weexui.js'
     },
+    'demo.other.grid': {
+        title: 'Grid',
+        url: '/pages/demo/other/eros-ui/grid/index.js'
+    },
+    'demo.other.badge': {
+        title: 'Badge',
+        url: '/pages/demo/other/eros-ui/badge/index.js'
+    },
     'demo.other.button': {
         title: 'eros-ui.button',
         url: '/pages/demo/other/eros-ui/button/index.js'
@@ -128,6 +136,10 @@ export default {
     'demo.other.radio': {
         title: 'weex-ui.radio',
         url: '/pages/demo/other/eros-ui/radio/index.js'
+    },
+    'demo.other.pop': {
+        title: 'weex-ui.pop',
+        url: '/pages/demo/other/eros-ui/pop/index.js'
     },
     'demo.other.container': {
         // title: 'weex-ui.container',
