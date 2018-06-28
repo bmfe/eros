@@ -49,6 +49,19 @@
 <br>
 
 <h4 align="center">
+  <a href="http://j.izaodao.com/index.php?finger=3220803179&short_url=S3Ms">德语入门-早道网校大前端团队</a>
+</h4>
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/ger1.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/ger2.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/ger3.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/ger4.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/ger5.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+
+<br>
+
+<h4 align="center">
   <a href="http://yzsadmin.winshangdata.com/aiadmin/download/app/">赢商大数据(iOS/Android 市场均可下载，前端开发者独立完成)</a>
 </h4>
 <p align="center">
