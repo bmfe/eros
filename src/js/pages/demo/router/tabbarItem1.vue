@@ -6,6 +6,10 @@
               style="margin-top: 20px; width: 250px;"
               type="blue"
               @wxcButtonClicked="reset"></wxc-button>
+          <wxc-button text="跳转到第二页"
+              style="margin-top: 20px; width: 250px;"
+              type="blue"
+              @wxcButtonClicked="openPage"></wxc-button>    
     </div>
   </div>
 </template>
@@ -28,6 +32,8 @@
 
   import { WxcTabBar, WxcButton, Utils } from 'weex-ui';
   import Config from './config'
+  var tabbar = weex.requireModule('bmTabbar')
+
   export default {
     components: { WxcTabBar, WxcButton },
     data: () => ({
@@ -48,7 +54,12 @@
             this.$notice.toast({
                 message: '重置成功'
             });
-        }
+      },
+      openPage () {
+        tabbar.openPage({
+          index:1
+        })
+      }
     }
   };
 </script>
