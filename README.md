@@ -127,6 +127,7 @@
 * 德语入门-早道网校
 * 赢商大数据 
 * 多逛逛
+* 区块学院
 * 易送 
 * 蜂觅 
 * JEX
@@ -140,14 +141,14 @@
 * 亿康通
 * ...
 
-涉及行业分布于区块链、资讯、医疗、招商、购物、政府、办公、直播等。
+> 涉及行业分布于区块链、资讯、医疗、招商、购物、政府、办公、直播等。
 
 同时也有越来越多的团队加入到 eros 开发和讨论行列：
 * `StarLife` 大前端团队
-* `车国` 大前端团队
 * `早道网校` 大前端团队
 * `车保姆` 大前端团队
-* 等
+* `车国` 大前端团队
+
 
 ## 支持性
 跟随着 weex 的支持性，**但 eros 并不支持开发代码兼容 web 端**
@@ -275,6 +276,21 @@ QQ群:
 <img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/dgg4.jpg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/dgg5.jpg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 </p>
+
+<br>
+
+
+<h4 align="center">
+  区块学院(iOS/Android 市场均可下载，可自行搜索)
+</h4>
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/school1.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/school2.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/school3.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/school4.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/school5.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+
 <br>
 <h4 align="center">
   蜂觅（企业级 app）
