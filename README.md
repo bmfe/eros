@@ -117,8 +117,8 @@
 ### UI 库
 使用 UI 库，开发效率也会大大提升：
 * [alibaba/weex-ui](https://github.com/alibaba/weex-ui)
-* [bui](https://github.com/bingo-oss/bui-weex)
-* eros-ui (开发中)
+* [weex-amui](https://hminghe.github.io/weex-amui/#/)
+* [bui-weex](https://github.com/bingo-oss/bui-weex)
 
 ## 开源现状
 在 EROS 开源的半年时间，已帮助近千位开发者开发了属于自己的原生应用：
