@@ -41,6 +41,7 @@ module.exports = {
         'js/pages/demo/other/eros-ui/checkBox/index.vue',
         'js/pages/demo/other/eros-ui/checkBox-list/index.vue',
         'js/pages/demo/other/eros-ui/pop/index.vue',
+        'js/pages/demo/other/eros-ui/index/index.vue',
         'js/pages/demo/other/eros-ui/container/index.vue',
         'js/pages/demo/other/bui.vue'
     ],

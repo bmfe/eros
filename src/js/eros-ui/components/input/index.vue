@@ -9,6 +9,8 @@
                 </slot>
                 <input class="eros-input" :class="customizeInput" :type="type" :placeholder="placeholder" :disabled="disabled" :autofocus="autofocus"/>
                 <text class="eros-icon eros-empty">&#xe724;</text>
+                <text class="dividing-line" v-if="operate"></text>
+                <text class="cancel-label operate-label theme-success" v-if="operate">{{operate}}</text>
             </div>
             <div class="handle-btn" v-if="handle">{{handle}}</div>
             <text class="cancel-label theme-white" v-if="cancelLabel">{{cancelLabel}}</text>
@@ -62,12 +64,20 @@ export default {
             type: String,
             default: ''
         },
+        operate: {
+            type: String,
+            default: ''
+        },
         targetName: {
             type: String,
             default: ''
         },
         search: {
             type: Boolean
+        },
+        hollow: {
+            type: Boolean,
+            default: false
         },
         handle: {
             type: String

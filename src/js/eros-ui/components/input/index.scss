@@ -4,41 +4,46 @@
     @extend %bg-white;
 }
 .eros-cell-input {
-    padding-right: 30;
-    padding-left: 30;
+    // padding-right: 20;
+    padding-left: 20;
     @extend %row-start;
-    height: 100;
 }
 .eros-no-flat {
     flex: 1;
     @extend %row-start;
     margin-top: 10;
     margin-bottom: 10;
-    padding-right: 20;
+    margin-right: 20;
     padding-left: 20;
     height: 80;
     background-color:#fff;
     @include border-radius(8);
 }
 .eros-target {
-    font-size: 30;
+    font-size: 28;
 }
 .eros-hint {
     width: 160;
-    font-size: 32;
+    font-size: 28;
 }
 .eros-input {
     flex: 1;
     height: 80;
+    font-size: 28;
 }
 .cancel-label {
-    margin-left: 30;
+    padding-right: 20;
+    font-size: 28;
+}
+.operate-label {
+    margin-right: 10;
+    padding-left: 30;
 }
 // icon设置
 .eros-search {
     margin-right: 20;
-    font-size: 36;
-    color: #999;
+    font-size: 28;
+    color: #333;
 }
 .eros-arrow-drop {
     margin-right: 20;
@@ -49,16 +54,23 @@
     padding-top: 20;
     padding-bottom: 20;
     padding-left: 40;
+    padding-right: 20;
     font-size: 32;
     color: #999;
 }
 .handle-btn {
-    margin-left: 20;
+    margin-right: 20;
     @include rect(120,60);
     @extend %flex-align;
     @include border($border-color:#c7ced4,$radius: 8);
     background-color: #fff;
+    font-size: 28;
 }
 .bg-background {
     background-color: #eee;
+}
+.dividing-line {
+    width: 1;
+    height: 30;
+    background-color: #dfe1eb;
 }

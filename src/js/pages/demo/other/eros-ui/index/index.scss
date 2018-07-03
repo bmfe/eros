@@ -1,0 +1,71 @@
+@import "src/js/css/reset.scss";
+// 搜索
+.index-search {
+    margin-top: 20;
+    margin-bottom: 20;
+}
+.group-tit {
+    margin-left: 30;
+    padding-top: 4;
+    padding-bottom: 20;
+    font-size: 28;
+    @extend %c-base;
+    line-height: 28;
+}
+.group-item-tit {
+    margin-left: 20;
+    padding-bottom: 10;
+    font-size: 32;
+    @extend %c-base;
+    line-height: 52;
+}
+.form-wrap-upload {
+    border-radius: 8;
+    margin-right: 20;
+    margin-left: 20;   
+    @extend %bg-white;
+}
+.item-group {
+    padding-bottom: 30;
+}
+.group-constantly {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 20;
+    margin-left: 20;
+}
+.tag-constantly {
+    margin-left: 10;
+    height: 70;
+    line-height: 70;
+    padding-right: 37;
+    padding-left: 37;
+    font-size: 32;
+    @extend %c-base;
+    border-radius: 8;
+    @extend %bg-white;
+}
+.item-national {
+    margin-right: 30;
+    margin-left: 30;
+    line-height :100;
+    @include border-single(bottom);
+    font-size: 32;
+    @extend %c-base;
+    @extend %bg-white;
+}
+.index-sidebar-container {
+    position: fixed;
+    top: 184;
+    right: 0;
+}
+.index-item {
+    padding-right: 20;
+    padding-left: 20;
+    font-size: 30;
+    color: $base-green;
+    line-height: 40;
+}
+.no-border-bottom {
+    border-bottom-width: 0;
+}

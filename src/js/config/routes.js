@@ -137,6 +137,10 @@ export default {
         title: 'weex-ui.radio',
         url: '/pages/demo/other/eros-ui/radio/index.js'
     },
+    'demo.other.index': {
+        title: 'weex-ui.index',
+        url: '/pages/demo/other/eros-ui/index/index.js'
+    },
     'demo.other.pop': {
         title: 'weex-ui.pop',
         url: '/pages/demo/other/eros-ui/pop/index.js'

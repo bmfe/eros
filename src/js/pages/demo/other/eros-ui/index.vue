@@ -27,6 +27,8 @@
             </wxc-cell>
             <wxc-cell title="pop" desc="pop" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('pop')">
             </wxc-cell>
+             <wxc-cell title="index" desc="索引列表" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('index')">
+            </wxc-cell>
             <wxc-cell title="container" desc="兼容iPhone X" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('container')">
             </wxc-cell>
         </cell>
