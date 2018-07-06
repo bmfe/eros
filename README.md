@@ -123,7 +123,9 @@
 ## 开源现状
 在 EROS 开源的半年时间，已帮助近千位开发者开发了属于自己的原生应用：
 
-* StarLife 
+* StarLife
+* 大嘴吧拼读
+* 韩语入门-早道网校
 * 德语入门-早道网校
 * 赢商大数据 
 * 多逛逛
@@ -191,7 +193,6 @@ eros 正式开源到现在已经有了一个拥有大量开发者的群(微信�
 
 
 <p align="center">
-QQ群: 
 <img src="https://bmfe.github.io/eros-docs/zh-cn/image/eros-qq-qrcode.png" width="200" style="margin-right:5px; border: 1px solid #ccc;" />
 </p>
 
@@ -236,6 +237,29 @@ QQ群:
 <img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star7.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star8.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/star9.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+
+<br>
+
+<h4 align="center">
+  大嘴吧拼读-上海才隽前端团队(安卓/苹果市场搜索)
+</h4>
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/spell1.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/spell2.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/spell3.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/spell4.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+
+<br>
+
+<h4 align="center">
+  <a href="http://j.izaodao.com/index.php?finger=3220803179&short_url=Kyg6">韩语入门-早道网校大前端团队</a>
+</h4>
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/korea1.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/korea2.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/korea3.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 </p>
 
 <br>
