@@ -137,6 +137,10 @@ export default {
         title: 'weex-ui.radio',
         url: '/pages/demo/other/eros-ui/radio/index.js'
     },
+    'demo.other.flow-diagram': {
+        title: 'weex-ui.flow-diagram',
+        url: '/pages/demo/other/eros-ui/flow-diagram/index.js'
+    },
     'demo.other.index': {
         title: 'weex-ui.index',
         url: '/pages/demo/other/eros-ui/index/index.js'

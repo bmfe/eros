@@ -11,7 +11,8 @@ $eros-theme:(
     danger:               #dd514c,
     dark:                 #393939,
     white:                #ffffff,
-    silver:               #c7ced4
+    silver:               #c7ced4,
+    gray:                 #808080
 );
 $eros-active:(
     default:              #c4c4c4,
@@ -21,7 +22,7 @@ $eros-active:(
     warning:              #dc670c,
     danger:               #d42e28,
     dark:                 #303030,
-    silver:               #eee
+    silver:               #eeeeee
 );
 
 
@@ -31,26 +32,19 @@ $eros-active:(
 //文本色 
 $base-color: 		   #333333;
 $base-gray:            #999999;
-$base-red:             #ff6d6e;
-$base-orange:          #ff9000;
 $base-yellow:          #fffde8;
-$base-green:           #44bcbc;
-$base-blue:            #32ace4;
-$border-color:         #eeeeee;
-$disabled-color:       #cccccc;
-$placeholder-color:    #999999;
+$border-color:         #ccc;
 $text-color:           #888888;
 $text-sub:             #555555;
-$success:              #5eb95e;
 
 // 状态色
 $default:              #6d6d72;
 $primary:              #0e90d2;
 $secondary:            #3bb4f2;
-$success:              #5eb95e;
-$warning:              #f37b1d;
-$danger:               #dd514c;
-$dark:                 #393939;
+$success:              #44bcbc;
+$warning:              #111010;
+$danger:               #d42e28;
+$dark:                 #303030;
 $white:                #ffffff;
 $silver:               #c7ced4;
 

@@ -87,3 +87,38 @@
     @include border-single();
 }
 
+// 定义布局
+%dir-row {
+    flex-direction: row;
+}
+%dir-col {
+    flex-direction: column;
+}
+%flex-align{
+    align-items: center;
+    justify-content: center;
+}
+%row-start {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+%row-end {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+}
+%row-center {
+    flex-direction: row;
+    @extend %flex-align;
+}
+%row-between {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+%column-between {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

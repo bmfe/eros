@@ -20,40 +20,6 @@
     // 现代浏览器（支持最新草案）
     #{$property}: $value;
 }
-%dir-row {
-    flex-direction: row;
-}
-%dir-col {
-    flex-direction: column;
-}
-%flex-align{
-    align-items: center;
-    justify-content: center;
-}
-%row-start {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-%row-end {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items:center;
-}
-%row-center {
-    flex-direction: row;
-    @extend %flex-align;
-}
-%row-between {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-%column-between {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
 /**
  * @module 功能
  * @description 生成全屏方法
@@ -387,7 +353,7 @@
  * @param {Length} $size 定义圆的半径长度 
  * @param {Length} $radius 定义圆的圆角半径长度 
  */
-@mixin circle($size, $radius: 50%) {
+@mixin circle($size, $radius: 200) {
     @include square($size);
     @include border-radius($radius);
 }
