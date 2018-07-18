@@ -25,7 +25,7 @@
           <wxc-button text="清除配置信息"
               style="margin-top: 20px; width: 250px;"
               type="blue"
-              @wxcButtonClicked="clearTabbarInfo"></wxc-button>
+              @wxcButtonClicked="clearInfo"></wxc-button>
     </div>
   </div>
 </template>
@@ -137,8 +137,8 @@
       {
         this.$router.setHomePage('tabBar');
       },
-      clearTabbarInfo(){
-        tabbar.clearTabbarInfo()
+      clearInfo(){
+        tabbar.clearInfo()
         this.$notice.toast({
                 message: '清除成功'
             });

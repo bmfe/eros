@@ -3,7 +3,7 @@ module.exports = {
     'appBoard': '/config/index.js',
     // android 监听全局事件homeBack 如果为true 安卓端需要自行调用router.finish方法来关闭应用
     'androidIsListenHomeBack': 'true',
-    'customBundleUpdate': 'true',
+    'customBundleUpdate': 'false',
     'version': {
         'android': 'eros-template-version',
         'iOS': 'eros-template-version'
