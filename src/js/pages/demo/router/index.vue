@@ -174,10 +174,11 @@ export default {
             })
         },
         toWebView () {
-            this.$router.toWebView({
-                url: 'https://www.baidu.com',
-                title: 'WebView标题'
-            })
+            this.$event.emit('openPage', '123213213213')
+            // this.$router.toWebView({
+            //     url: 'bmlocal://assets/test.html?value=123&vaule2=kdkdkkd',
+            //     title: 'WebView标题'
+            // })
         },
         getUrl () {
             const urlData = this.$router.getUrl('demo.router')
