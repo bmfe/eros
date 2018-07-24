@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>测试</title>
+</head>
+
+<body>
+    <button onclick="closePage()"> 关闭当前页面 </button>
+    <button onclick="fireEvent()"> fireEvent </button>
+</body>
+
+<script>
+    function closePage() {
+        bmnative.closePage();
+    }
+
+    function fireEvent() {
+        bmnative.fireEvent('event', {
+            'name': 'xiaoming'
+        });
+    }
+</script>
+
+</html>>

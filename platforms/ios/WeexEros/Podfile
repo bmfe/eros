@@ -9,12 +9,11 @@ def common
     #Weex debugger 调试工具，只在开发模式集成
     pod 'WXDevtool', '0.15.3', :configurations => ['Debug']
     #Eros iOS 基础库
-    pod 'BMBaseLibrary', :git => 'https://github.com/bmfe/Benmu-iOS-Library.git', :tag => '1.2.6'
-    
+#    pod 'BMBaseLibrary', :git => 'https://github.com/bmfe/Benmu-iOS-Library.git', :tag => '1.2.8'
+    pod 'BMBaseLibrary', :path => 'ErosiOSPlugin/Benmu-iOS-Library/'
 
     #Other Plugins
     
-
    end
 
 target 'WeexEros' do

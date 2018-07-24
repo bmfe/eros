@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="item-container-home" :style="contentStyle">
-        <text> 联系人 </text>
+        <text> tabbar相关方法 </text>
           <wxc-button text="设置角标"
               style="margin-top: 20px; width: 250px;"
               type="blue"
@@ -10,6 +10,18 @@
               style="margin-top: 20px; width: 250px;"
               type="blue"
               @wxcButtonClicked="hideBadge"></wxc-button>
+          <wxc-button text="获取下标"
+              style="margin-top: 20px; width: 250px;"
+              type="blue"
+              @wxcButtonClicked="getIndex"></wxc-button>
+          <wxc-button text="监听index"
+              style="margin-top: 20px; width: 250px;"
+              type="blue"
+              @wxcButtonClicked="watchIndex"></wxc-button>
+          <wxc-button text="取消监听"
+              style="margin-top: 20px; width: 250px;"
+              type="blue"
+              @wxcButtonClicked="clearWatch"></wxc-button>
     </div>
   </div>
 </template>
@@ -57,6 +69,22 @@
         tabbar.hideBadge({
           index:1
         })
+      },
+      getIndex () {
+        var index = tabbar.getIndex()
+        this.$notice.toast({
+                message: index
+            });
+      },
+      watchIndex(){
+        tabbar.watchIndex(resData => {
+          this.$notice.toast({
+                message: resData
+            });
+        })
+      },
+      clearWatch(){
+        tabbar.clearWatch()
       }
     }
   };
