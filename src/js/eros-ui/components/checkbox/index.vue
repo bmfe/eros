@@ -1,54 +1,48 @@
 <template>
-        <erosCell>
+        <div class="eros-cell-checkbox" :class="erosCheckbox" @click="_toggle">
             <icon 
             v-if="icon && !loading" 
             :name="icon" 
-            :class="erosCheckbox" 
-            @click="_click"
-            @longpress="_longPress"></icon>
-            <!-- <unicodeIcon 
-            v-if="unicodeIcon" 
-            :name="unicodeIcon" 
-            :class="erosCheckbox"></unicodeIcon>
-            <text class="eros-check-txt" 
-            :class="erosCheckbox"
-            :value="title" ></text> -->
-        </erosCell>
+            :class="erosCheckTheme" 
+            ></icon>
+            <slot name="label" :class="justifyStyle">
+                <div v-if="label" :class="justifyStyle">
+                    <text class="cell-label-text" :class="erosCheckTheme">{{label}}</text>
+                </div>
+            </slot>
+        </div>
 </template>
 
 <script>
     import erosCell from "../cell"
-    import Icon from 'eros-ui/components/icon'
-
-    // import unicodeIcon from "../icon-type"
+    import Icon from 'eros-ui/components/iconEros'
     export default {
        components: { 
             erosCell,
             Icon
-            // unicodeIcon,
         },
         props: {
-            title: {
+            label: {
                 type: String,
-                default: "text"
             },
-            type: {
+            theme: {
                 type: String,
-                default: 'default'
+                default: 'primary'
             },
             icon: {
                 type: String
             },
-            unicodeIcon: {
-                type: String,
+            disabled: {
+                type: Boolean,
+                default: false
             },
             checked: {
                 type: Boolean,
                 default: false
             },
-            disabled: {
+            border: {
                 type: Boolean,
-                default: false
+                default: true
             },
             justify: {
                 type: Boolean,
@@ -58,18 +52,27 @@
         computed: {
             erosCheckbox() {
                 return [
-                     `theme-${this.type}`,
-                     this.unicode && this.title,
-                     this.icon 
+                     this.border && 'bor-top',
                 ]
             },
-            justify() {
+            erosCheckTheme() {
+                return [
+                    this.icon, 
+                    `theme-${this.theme}`,
+                    this.disabled && 'theme-silver',
+                    !this.checked && 'theme-silver'
+                ]
+            },
+            justifyStyle() {
                 return [
                     this.justify && 'flex-1'
                 ]
             }
         },
         methods: {
+            _toggle(){
+               this.checked = !checked;
+            },
             _click (e) {
                 if (!this.disabled) this.$emit('click', e)
             },

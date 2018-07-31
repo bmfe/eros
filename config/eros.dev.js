@@ -28,6 +28,8 @@ module.exports = {
         'js/pages/demo/other/bindingx.vue',
         'js/pages/demo/other/weexui.vue',
         'js/pages/demo/other/eros-ui/index.vue',
+        'js/pages/demo/other/eros-ui/grid/index.vue',
+        'js/pages/demo/other/eros-ui/badge/index.vue',
         'js/pages/demo/other/eros-ui/button/index.vue',
         'js/pages/demo/other/eros-ui/cell/index.vue',
         'js/pages/demo/other/eros-ui/tab-bar/index.vue',
@@ -38,6 +40,9 @@ module.exports = {
         'js/pages/demo/other/eros-ui/radio/index.vue',
         'js/pages/demo/other/eros-ui/checkBox/index.vue',
         'js/pages/demo/other/eros-ui/checkBox-list/index.vue',
+        'js/pages/demo/other/eros-ui/pop/index.vue',
+        'js/pages/demo/other/eros-ui/index/index.vue',
+        'js/pages/demo/other/eros-ui/flow-diagram/index.vue',
         'js/pages/demo/other/eros-ui/container/index.vue',
         'js/pages/demo/other/bui.vue'
     ],

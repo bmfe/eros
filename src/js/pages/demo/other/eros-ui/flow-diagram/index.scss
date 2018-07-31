@@ -1,0 +1,113 @@
+@import "src/js/css/reset.scss";
+$axis-left : 180;
+$point-top: 40;
+$right-zone-space: 30;
+$pivot-size: 20;
+.time-box {
+    position: relative;
+    @extend %dir-row;
+    padding-bottom: 10;
+    width: 750;
+}
+.axis {
+    @include abs-pos($left: $axis-left);
+    @include border-single($direction:left,$border-color:$base-gray);
+}
+// 顶端控制线不出头
+.top-end {
+    @include abs-pos($top:$point-top,$bottom:0,$left: $axis-left);
+    @include border-single($direction:left,$border-color:$base-gray);
+}
+// 底端控制线不出头
+.bottom-end {
+    @include abs-pos($top:0,$left:$axis-left);
+    height: $point-top;
+    @include border-single($direction:left,$border-color:$base-gray);
+}
+// 轴点
+.pivot-point {
+    position: absolute;
+    top: $point-top;
+    left: $axis-left - $pivot-size/ 2 + 1;
+    @include border-radius(200);
+}
+.point {
+    @include circle($pivot-size);
+    @include border($border-width:3px,$border-color: #a9e4a9);
+    @extend %bg-primary;
+}
+.pivot-icon {
+    @include align();
+    @include circle(50);
+    text-align: center;
+    line-height: 50;
+    @extend %bg-danger;
+    margin-left: -15;
+    font-size: 30;
+    color: #fff;
+}
+// active状态，放大1.8倍数
+.active {
+    transform: scale(1.8);
+    background-color: #1da1f2 / 2;
+}
+/* 轴左侧区域 */
+.left-zone {
+    padding-right: 10;
+    padding-left: 10;
+    width: $axis-left - 20;
+    align-items: flex-end;
+}
+.time {
+    color: $base-gray;
+    font-size: 20;
+    padding-top: 50;
+}
+// 轴右侧区域
+.right-zone {
+    position: relative;
+    margin-left: $axis-left + $right-zone-space;
+    margin-right: $right-zone-space;
+    padding-bottom: 20;
+    flex: 1;
+}
+.had-left {
+    margin-left: $pivot-size + $right-zone-space;
+}
+.right-zone-tit {
+    font-size: 24;
+    color:$text-sub;
+    font-weight: bold;
+    padding-top: $point-top - 4;
+    padding-bottom: 10;
+}
+.label-txt {
+    font-size: 20;
+    color:$text-sub;
+    line-height: 30;
+}
+
+// 横向流程图
+.horizontal-flow {
+    @extend %dir-row;
+    @extend %flex-align;
+}
+.time-box-hor {
+    flex: 1;
+    @extend %flex-align;
+}
+.axis-hor {
+    @include abs-pos($top: $pivot-size / 2);
+    @include border-single($direction:top,$border-color: $base-gray);
+}
+.left-end {
+    @include abs-pos($top: $pivot-size / 2,$left: 75);
+    @include border-single($direction:top,$border-color: $base-gray);
+}
+.right-end {
+    @include abs-pos($top: $pivot-size / 2,$right: 75);
+    @include border-single($direction:top,$border-color: $base-gray);
+}
+.row-center {
+    @extend %flex-align;
+}

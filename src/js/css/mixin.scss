@@ -20,40 +20,6 @@
     // 现代浏览器（支持最新草案）
     #{$property}: $value;
 }
-%dir-row {
-    flex-direction: row;
-}
-%dir-col {
-    flex-direction: column;
-}
-%flex-align{
-    align-items: center;
-    justify-content: center;
-}
-%row-start {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-%row-end {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items:center;
-}
-%row-center {
-    flex-direction: row;
-    @extend %flex-align;
-}
-%row-between {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-%column-between {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
 /**
  * @module 功能
  * @description 生成全屏方法
@@ -155,14 +121,8 @@
  * @module 功能
  * @description 元素在包含块中的对齐方式，默认为水平垂直对齐
  * @method align
- * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text 
  * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center 
  * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center 
- * @example
- * <div class="demo">
- *      <img class="item" alt="未知尺寸图片居中" />
- * </div>
- * .demo {@include align;}
  */
 @mixin align( $justify-content: center, $align-items: center) {
     @include justify-content($justify-content);
@@ -393,7 +353,7 @@
  * @param {Length} $size 定义圆的半径长度 
  * @param {Length} $radius 定义圆的圆角半径长度 
  */
-@mixin circle($size, $radius: 50%) {
+@mixin circle($size, $radius: 200) {
     @include square($size);
     @include border-radius($radius);
 }
@@ -405,9 +365,18 @@
         .#{$prefix}-#{$key} {
             color: $color;
         }
+        .placeholder-#{$key} {
+            placeholder-color: $color;
+        }
+        .eros-border-#{$key} {
+            border-color: $color;
+        }
         @if $bg-color == null {
             .bg-#{$key} {
                 background-color: $color;
+            } 
+            .bg-#{$key}-active {
+                background-color: $color * 2;
             } 
         }
     }
@@ -418,3 +387,11 @@
     }
 }
 @include customize-theme(theme);
+@mixin eros-active() {
+    @each $key,$color in $eros-active {
+        .bg-#{$key}-active {
+            background-color: $color;
+        } 
+    }
+}
+@include eros-active();

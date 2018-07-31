@@ -1,6 +1,10 @@
 <template>
     <list>
         <cell>
+             <wxc-cell title="grid" desc="grid" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('grid')">
+            </wxc-cell>
+            <wxc-cell title="badge" desc="badge" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('badge')">
+            </wxc-cell>
             <wxc-cell title="button" desc="button" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('button')">
             </wxc-cell>
             <wxc-cell title="cell" desc="cell" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('cell')">
@@ -20,6 +24,12 @@
             <wxc-cell title="input" desc="input" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('input')">
             </wxc-cell>
             <wxc-cell title="search" desc="search" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('search')">
+            </wxc-cell>
+            <wxc-cell title="pop" desc="pop" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('pop')">
+            </wxc-cell>
+            <wxc-cell title="index" desc="索引列表" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('index')">
+            </wxc-cell>
+            <wxc-cell title="flow-diagram" desc="流程图" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('flow-diagram')">
             </wxc-cell>
             <wxc-cell title="container" desc="兼容iPhone X" :has-arrow="true" :has-top-border="true" @wxcCellClicked="jump('container')">
             </wxc-cell>

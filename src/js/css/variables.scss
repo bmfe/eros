@@ -3,17 +3,28 @@
  *eros可选主题
  */
 $eros-theme:(
-    default:              #6d6d72,
-    // primary:              #0e90d2,
+    default:              #e6e6e6,
     primary:              #1da1f2,
     secondary:            #3bb4f2,
-    success:              #5eb95e,
+    success:              #44bcbc,
     warning:              #f37b1d,
     danger:               #dd514c,
     dark:                 #393939,
     white:                #ffffff,
-    gray-light:           #c7ced4
+    silver:               #c7ced4,
+    gray:                 #808080
 );
+$eros-active:(
+    default:              #c4c4c4,
+    primary:              #0c7ab3,
+    secondary:            #10a4ef,
+    success:              #48a548,
+    warning:              #dc670c,
+    danger:               #d42e28,
+    dark:                 #303030,
+    silver:               #eeeeee
+);
+
 
 /**
  * eros全局颜色变量定义
@@ -21,26 +32,21 @@ $eros-theme:(
 //文本色 
 $base-color: 		   #333333;
 $base-gray:            #999999;
-$base-red:             #ff6d6e;
-$base-orange:          #ff9000;
 $base-yellow:          #fffde8;
-$base-green:           #44bcbc;
-$base-blue:            #32ace4;
-$border-color:         #eeeeee;
-$disabled-color:       #cccccc;
-$placeholder-color:    #999999;
+$border-color:         #ccc;
 $text-color:           #888888;
 $text-sub:             #555555;
+
 // 状态色
 $default:              #6d6d72;
 $primary:              #0e90d2;
 $secondary:            #3bb4f2;
-$success:              #5eb95e;
-$warning:              #f37b1d;
-$danger:               #dd514c;
-$dark:                 #393939;
+$success:              #44bcbc;
+$warning:              #111010;
+$danger:               #d42e28;
+$dark:                 #303030;
 $white:                #ffffff;
-$gray-light:           #c7ced4;
+$silver:               #c7ced4;
 
 /*
  *eros全局基础字号设置
@@ -65,10 +71,11 @@ $gray-light:           #c7ced4;
 
  
 /*eros-btn相关*/ 
-$color-default: #e5e5e5;
-$color-primary: #1da1f2;
-$color-warning: #ffb400;
-$color-success: #00d1c1;
-$color-danger: #fc3646;
+// $color-default: #e5e5e5;
+// $color-primary: #1da1f2;
+// $color-warning: #ffb400;
+// $color-success: #00d1c1;
+// $color-danger: #fc3646;
 
+// 仅IOS支持阴影
 $box-shadow-raised: 0 0 2px #808080;

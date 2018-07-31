@@ -1,21 +1,16 @@
 @import "src/js/css/reset.scss";
-.eros-list {
-  @extend %bg-white;
-}
-
 .cell-item {
   position: relative;
   @extend %row-start;
   @extend %bg-white;
   padding-right: 30;
+}
+.cell-margin {
   margin-left: 30;
-  height: 90;
 }
-
-.bor-top {
-  @extend %border-top;
+.cell-padding {
+  padding-left: 30;
 }
-
 .cell-label {
   width: 180;
   font-size: 30;
@@ -66,4 +61,7 @@
   font-size: 28;
   color: #999999;
   margin-right: 4;
+}
+.cell-wrap {
+  flex-wrap: wrap;
 }
