@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <!--引入百度地图的jssdk，这里需要使用你在百度地图开发者平台申请的 ak-->
+    <!--            <script src="http://api.map.baidu.com/getscript?v=2.0&ak=aRpfah4cfUGbWT7oSNU2uG2jQEfbupFk"></script>-->
+    <!-- 引入 ECharts -->
+    <script type="text/javascript" src="./echarts.min.js"></script>
+    <!-- 引入百度地图扩展 -->
+    <!--            <script type="text/javascript" src="./bmap.min.js"></script>-->
+    <title>ECharts</title>
+</head>
+
+<body style="margin:0; padding:0;">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:260px;width: 100%;"></div>
+    <!-- ECharts单文件引入 -->
+    <script type="text/javascript">
+        var mainDom = document.querySelector('#main')
+        mainDom.style.height = window.innerHeight + 'px';
+
+        function setHeight(height) {
+            mainDom.style.height = height + 'px';
+        }
+        /*
+         
+         */
+        function setOption(options) {
+            var formatOptions = JSON.parse(options, function(k, v) {
+                if (v.indexOf && v.indexOf('function') > -1) {
+                    return eval("(function(){return " + v + " })()")
+                }
+                return v;
+            });
+            var myChart = echarts.init(mainDom);
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(formatOptions);
+        }
+    </script>
+</body>
+
+</html>
