@@ -14,9 +14,10 @@
 </h4>
 
 
-## 介绍
+## 欢迎
 
-**eros 不是框架，是基于 [weex](https://weex-project.io/cn/) 封装、面向前端的 [vue](https://cn.vuejs.org/v2/guide/) 写法的一整套 APP 开源解决方案，是由[本木医疗大前端团队](https://github.com/bmfe)经过大量实践沉淀而出。**
+### 介绍
+**eros 不是框架，是基于 [weex](https://weex-project.io/cn/) 封装、面向前端的 [vue](https://cn.vuejs.org/v2/guide/) 写法的一整套 APP 开源解决方案。**
 
 > 简单来说，在 weex 提供的强大支持下，用一份 vue 写法的代码，编译成 iOS/Android 两端原生 APP，并且通过我们内置的热更新逻辑和开源的服务器逻辑，可以使开发者以极快的速度开发 APP ，并赋予 APP 热更新能力(不用经过 appStore/android market 市场审核)。
 
@@ -28,6 +29,15 @@
 |50 - 100| 最晚两个半月开发完成|
 
 当然，这都得益于 `weex` 和 `vue` 。
+
+### 面向人群
+> 要非常注意，**eros/weex 并不太适合无客户端能力的个人或者团队**，当然也有独立前端开发者使用 eros 做出了一定复杂度的 app，**这完全取决于开发者能否有独立解决问题的能力**，请谨慎思考。
+
+### 适用场景
+> 首先你需要熟悉 weex 的基础 api，部分机制和与 web 开发的差异性，同时需要知道 eros 提供了哪些原生能力，在根据自身业务来判定是否能加入到技术选型。
+
+* 实时交互性，与键盘交互等功能复杂度不高的项目。
+* 在 app 中接入 eros/weex，**让某条业务线的部分流程达到快速迭代的目的，这也是 weex 的初衷**。
 
 ## 文档 
 > [帮助我们完善和翻译文档](https://github.com/bmfe/eros-docs)
@@ -83,6 +93,7 @@
 - 日历
 - Bindingx
 - 手势解锁
+- 访问本地图片，html等
 - ...
 
 > 而在纯净(pure)的开发模板中，是没有地图，个推等三方插件的，eros 有自己的插件体系，使得开发者在需要的时候，写入几行代码即可，不引用就不打包，减少安装包的大小，**pure 纯净版本只有 10 MB 出头**。
@@ -120,8 +131,13 @@
 * [weex-amui](https://hminghe.github.io/weex-amui/#/)
 * [bui-weex](https://github.com/bingo-oss/bui-weex)
 
+### 现有 app 接入
+我们也有热心的开发者分享了现有 app 接入 eros 的方案：
+
+* [教程：EROS集成到现有iOS应用](https://zhuanlan.zhihu.com/p/38905196)
+
 ## 开源现状
-在 EROS 开源的半年时间，已帮助近千位开发者开发了属于自己的原生应用：
+在 EROS 开源的一年时间，已帮助上千位开发者开发了属于自己的原生应用，这里列出一小部分：
 
 * StarLife
 * 大嘴吧拼读
