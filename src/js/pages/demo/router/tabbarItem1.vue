@@ -15,51 +15,50 @@
 </template>
 
 <style scoped>
-  .item-container-home {
+.item-container-home {
     width: 750px;
     background-color: #f2f3f4;
     align-items: center;
     justify-content: center;
-  }
-  .item-container {
+}
+.item-container {
     width: 750px;
     background-color: #f2f3f4;
     align-items: center;
     justify-content: center;
-  }
+}
 </style>
 <script>
+import { WxcTabBar, WxcButton, Utils } from "weex-ui";
+import Config from "./config";
+var tabbar = weex.requireModule("bmTabbar");
 
-  import { WxcTabBar, WxcButton, Utils } from 'weex-ui';
-  import Config from './config'
-  var tabbar = weex.requireModule('bmTabbar')
-
-  export default {
+export default {
     components: { WxcTabBar, WxcButton },
     data: () => ({
-      tabTitles: Config.tabTitles,
-      tabStyles: Config.tabStyles
+        tabTitles: Config.tabTitles,
+        tabStyles: Config.tabStyles
     }),
-    created () {
-      this.$navigator.setNavigationInfo({
-            statusBarStyle: 'LightContent'
-      });
-      const tabPageHeight = Utils.env.getPageHeight();
-      const { tabStyles } = this;
-      this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
+    created() {
+        this.$navigator.setNavigationInfo({
+            statusBarStyle: "LightContent"
+        });
+        const tabPageHeight = Utils.env.getPageHeight();
+        const { tabStyles } = this;
+        this.contentStyle = { height: tabPageHeight - tabStyles.height + "px" };
     },
     methods: {
-      reset () {
-            this.$router.setHomePage('/pages/demo/index.js');
+        reset() {
+            this.$router.setHomePage("/pages/demo/index.js");
             this.$notice.toast({
-                message: '重置成功'
+                message: "重置成功"
             });
-      },
-      openPage () {
-        tabbar.openPage({
-          index:1
-        })
-      }
+        },
+        openPage() {
+            tabbar.openPage({
+                index: 1
+            });
+        }
     }
-  };
+};
 </script>

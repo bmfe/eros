@@ -1,7 +1,75 @@
 <template>
-    <div>
-        <web style="flex:1" src='bmlocal://assets/test.html'></web>
-    </div>
+    <scroller>
+        <title title="路由/原生导航"></title>
+        <category title="路由相关"></category>
+        <wxc-cell title="获取上一页传递的参数"
+            desc="$router.getParams()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="getParams">
+        </wxc-cell>
+        <wxc-cell title="获取本页 URL 信息"
+            desc="$router.getUrl()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="getUrl">
+        </wxc-cell>
+        <wxc-cell title="跳转到 WebView"
+            desc="$router.toWebView()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="toWebView">
+        </wxc-cell>
+        <wxc-cell title="打开原生自带浏览器"
+            desc="$router.openBrowser()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="openBrowser">
+        </wxc-cell>
+        <wxc-cell title="重新加载当前 Weex 页面"
+            desc="$router.refresh()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="refresh">
+        </wxc-cell>
+        <wxc-cell title="设置 App 启动首页"
+            desc="$router.setHomePage()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="setHomePage">
+        </wxc-cell>
+        <wxc-cell title="返回上一页"
+            desc="$router.back()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="back">
+        </wxc-cell>
+        <category title="原生导航相关"></category>
+        <wxc-cell title="设置原生导航条/状态栏的部分属性"
+            desc="$navigator.setNavigationInfo()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="setNavigationInfo">
+        </wxc-cell>
+        <wxc-cell title="设置原生导航左侧文本及事件"
+            desc="$navigator.setLeftItem()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="setLeftItem">
+        </wxc-cell>
+        <wxc-cell title="设置原生导航中间文本及事件"
+            desc="$navigator.setCenterItem()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="setCenterItem">
+        </wxc-cell>
+        <wxc-cell title="设置原生导航右侧文本及事件"
+            desc="$navigator.setRightItem()"
+            :has-arrow="true"
+            :has-top-border="true"
+            @wxcCellClicked="setRightItem">
+        </wxc-cell>
+    </scroller>
 </template>
 <script>
 import { WxcCell } from 'weex-ui'
@@ -128,6 +196,15 @@ export default {
         },
         refresh () {
             this.$router.refresh()
+        }
+    },
+    eros :{
+        // 页面周期相关 start 
+        beforeAppear (params, options) {
+            console.log('beforeAppear');
+        },
+        beforeBackAppear (params, options) {
+            console.log('beforeBackAppear');
         }
     }
 }
