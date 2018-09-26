@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <BMBaseLibrary/BMAppDelegate.h>
+#import <ErosPluginBaseLibrary/BMAppDelegate.h>
 
 @interface AppDelegate : BMAppDelegate
 
