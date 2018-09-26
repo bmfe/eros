@@ -11,6 +11,7 @@
   :iphone: 一套 Vue 代码，两端原生应用。
   <br><br>
   Based in Weex and Vue.
+  Support By <a href="https://github.com/bmfe" target="_blank">Bytemaster</a>.
 </h4>
 
 
@@ -380,4 +381,5 @@ QQ群:
 ## License
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2017-present, 本木医疗
+Copyright (c) 2017-present, Byte Master.
+
