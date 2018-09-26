@@ -22,7 +22,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.benmu.WeexEros</string>
+			<string>com.ByteMaster.WeexEros</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>weexeros</string>
