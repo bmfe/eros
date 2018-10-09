@@ -1,10 +1,8 @@
-package com.benmu.wx;
+package com.eros.wx;
 
 import android.app.Application;
 
-import com.benmu.framework.BMInitConfig;
-import com.benmu.framework.BMWXApplication;
-import com.benmu.framework.BMWXEngine;
+import com.eros.framework.BMWXApplication;
 
 /**
  * Created by Carry on 2017/8/23.

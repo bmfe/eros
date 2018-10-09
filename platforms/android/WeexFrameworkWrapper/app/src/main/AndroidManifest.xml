@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.benmu.wx">
+          package="com.eros.wx">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
@@ -35,7 +35,7 @@
 
     <application
 
-            android:allowBackup="true"
+            android:allowBackup="false"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:supportsRtl="true"
@@ -45,7 +45,7 @@
 
 
 
-        <activity android:name="com.benmu.framework.activity.MainActivity"
+        <activity android:name="com.eros.framework.activity.MainActivity"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -66,7 +66,7 @@
 
         <!--图片预览Activity-->
         <activity
-                android:name="com.benmu.framework.activity.BrowseImgActivity"
+                android:name="com.eros.framework.activity.BrowseImgActivity"
                 android:screenOrientation="portrait"
                 android:theme="@android:style/Theme.Light.NoTitleBar"/>
 
@@ -80,7 +80,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.benmu.framework.activity.GlobalWebViewActivity">
+        <activity android:name="com.eros.framework.activity.GlobalWebViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
 
@@ -89,7 +89,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.benmu.framework.activity.DebugActivity">
+        <activity android:name="com.eros.framework.activity.DebugActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
 
@@ -134,7 +134,7 @@
             android:value="${GETUI_APP_SECRET}"/>
 
         <receiver
-            android:name="com.benmu.erosplugingt.GTPushReceiver"
+            android:name="com.eros.erosplugingt.GTPushReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.${GETUI_APP_ID}"/>

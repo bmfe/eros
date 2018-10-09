@@ -1,14 +1,14 @@
-//package com.benmu.wx.wxapi;
+//package com.eros.wx.wxapi;
 //
 //
 //import android.app.Activity;
 //import android.content.Intent;
 //import android.os.Bundle;
 //
-//import com.benmu.erospluginwxpay.WXApiModule;
-//import com.benmu.erospluginwxpay.model.WeChatPayResultModel;
-//import com.benmu.framework.manager.ManagerFactory;
-//import com.benmu.framework.manager.impl.dispatcher.DispatchEventManager;
+//import com.eros.erospluginwxpay.WXApiModule;
+//import com.eros.erospluginwxpay.model.WeChatPayResultModel;
+//import com.eros.framework.manager.ManagerFactory;
+//import com.eros.framework.manager.impl.dispatcher.DispatchEventManager;
 //import com.tencent.mm.opensdk.constants.ConstantsAPI;
 //import com.tencent.mm.opensdk.modelbase.BaseReq;
 //import com.tencent.mm.opensdk.modelbase.BaseResp;
