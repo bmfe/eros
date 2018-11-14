@@ -1,20 +1,9 @@
-package com.benmu.wx.activity;
+package com.eros.wx.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Handler;
-
-import com.benmu.framework.BMWXEnvironment;
-import com.benmu.framework.constant.Constant;
-import com.benmu.framework.constant.WXEventCenter;
-import com.benmu.framework.manager.ManagerFactory;
-import com.benmu.framework.manager.impl.ParseManager;
-import com.benmu.framework.manager.impl.VersionManager;
-import com.benmu.framework.manager.impl.dispatcher.DispatchEventManager;
-import com.benmu.framework.model.RouterModel;
-import com.benmu.framework.model.WeexEventBean;
-import com.benmu.framework.proxy.SplashActivityProxy;
-import com.benmu.wx.R;
+import com.eros.framework.proxy.SplashActivityProxy;
+import com.eros.wx.R;
 
 /**
  * Created by Carry on 2017/8/23.

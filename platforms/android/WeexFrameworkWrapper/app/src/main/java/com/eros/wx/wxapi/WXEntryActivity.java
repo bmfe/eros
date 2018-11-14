@@ -1,16 +1,16 @@
-//package com.benmu.wx.wxapi;
+//package com.eros.wx.wxapi;
 //
 //import android.os.Bundle;
 //
-//import com.benmu.erospluginwxpay.WXApiModule;
-//import com.benmu.framework.manager.ManagerFactory;
-//import com.benmu.framework.manager.impl.dispatcher.DispatchEventManager;
+//import com.eros.erospluginumeng.model.WXApiModule;
+//import com.eros.framework.manager.ManagerFactory;
+//import com.eros.framework.manager.impl.dispatcher.DispatchEventManager;
 //import com.tencent.mm.opensdk.modelbase.BaseReq;
 //import com.tencent.mm.opensdk.modelbase.BaseResp;
 //import com.tencent.mm.opensdk.modelmsg.SendAuth;
 //import com.tencent.mm.opensdk.openapi.IWXAPI;
 //import com.tencent.mm.opensdk.openapi.IWXAPIEventHandler;
-//import com.umeng.weixin.callback.WXCallbackActivity;
+//import com.umeng.socialize.weixin.view.WXCallbackActivity;
 //
 ///**
 // * Created by Dong Fuhai on 2014-07-22 16:42.
@@ -21,8 +21,6 @@
 //
 //
 //    public static WXEntryActivity activity;
-//
-//    IWXAPI api;
 //
 //    @Override
 //    public void onCreate(Bundle savedInstanceState) {
