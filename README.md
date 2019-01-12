@@ -20,6 +20,8 @@
 ### 介绍
 **eros 不是框架，是基于 [weex](https://weex-project.io/cn/) 封装、面向前端的 [vue](https://cn.vuejs.org/v2/guide/) 写法的一整套 APP 开源解决方案。**
 
+目前 eros 均由来自美团，今日头条，DClound 等数十个开发者组成的 [Bytemaster 公益开源团队](https://github.com/bmfe) 来共同维护，如果您想加入我们，或者有好的开源项目寻求平台，不妨[联系我们，加入我们](https://github.com/bmfe)(完全免费)。
+
 > 简单来说，在 weex 提供的强大支持下，用一份 vue 写法的代码，编译成 iOS/Android 两端原生 APP，并且通过我们内置的热更新逻辑和开源的服务器逻辑，可以使开发者以极快的速度开发 APP ，并赋予 APP 热更新能力(不用经过 appStore/android market 市场审核)。
 
 那么 eros 开发有多快呢？我们收集了一些问卷，**在复杂度不高，首次使用 eros 开发的**某些场景下：
@@ -30,6 +32,9 @@
 |50 - 100| 最晚两个半月开发完成|
 
 当然，这都得益于 `weex` 和 `vue` 。
+
+[想看看 EROS 开发了多少应用?](https://github.com/bmfe/eros#awesome-eros)
+
 
 ### 面向人群
 > 要非常注意，**eros/weex 并不太适合无客户端能力的个人或者团队**，当然也有独立前端开发者使用 eros 做出了一定复杂度的 app，**这完全取决于开发者能否有独立解决问题的能力**，请谨慎思考。
@@ -153,8 +158,11 @@ eros 在重做插件化后目前 github 上已经开源了近 20 多个由开发
 * [教程：EROS集成到现有iOS应用](https://zhuanlan.zhihu.com/p/38905196)
 
 ## 开源现状
-在 EROS 开源的一年时间，已帮助上千位开发者开发了属于自己的原生应用，这里列出一小部分：
+在 EROS 开源的一年时间，已帮助上千位开发者开发了属于自己的原生应用，支持了数百个 app，如：
 
+* 金宣公寓
+* 多利农庄
+* mmphoto
 * StarLife
 * 大嘴吧拼读
 * 韩语入门-早道网校
@@ -173,9 +181,12 @@ eros 在重做插件化后目前 github 上已经开源了近 20 多个由开发
 * 连云港政协
 * 连云港古树
 * 亿康通
+* 本木医疗助手
+* 本木医生助理
+* 京医通 APP
 * ...
 
-> 涉及行业分布于区块链、资讯、医疗、招商、购物、政府、办公、直播等。
+> 涉及行业分布于区块链、资讯、医疗、招商、购物、政府、办公、直播等各行各业。
 
 同时也有越来越多的团队加入到 eros 开发和讨论行列：
 * `StarLife` 大前端团队
@@ -214,6 +225,7 @@ eros 在重做插件化后目前 github 上已经开源了近 20 多个由开发
 * [eros-node-server 服务器增量发布逻辑](https://github.com/shawn-tangsc/eros-node-server)
 * [lygtq-eros-publish 服务器增量发布逻辑](https://github.com/hodgevk/lygtq-eros-publish)
 
+> 当然，开发者可以自己制作自己的发布逻辑。
 
 ## 讨论组
 eros 正式开源到现在已经有了一个拥有大量开发者的群(微信群已满)，群里有大量开发者已经有 eros 产品在开发中和已上线，为了维护一个良好的环境，还请先熟知以下群规：
@@ -238,7 +250,50 @@ QQ群:
 以下是部分 eros 产品的使用截图，我们会进行不定期更新：
 
 <h4 align="center">
-  star life new.(内测)
+  世界邦-mmphoto (iOS/Android 市场均可下载)
+</h4>
+
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/mmphoto1.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/mmphoto2.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/mmphoto3.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/mmphoto4.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/mmphoto5.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/mmphoto6.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/mmphoto7.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/mmphoto8.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/mmphoto9.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/mmphoto10.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+<br>
+
+<h4 align="center">
+  多利农庄 (iOS/Android 市场均可下载)
+</h4>
+
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/duoli1.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/duoli2.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/duoli3.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/duoli4.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+<br>
+
+<h4 align="center">
+  金宣公寓 (iOS/Android 市场均可下载)
+</h4>
+
+<p align="center">
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/jinxuan1.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/jinxuan2.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/jinxuan3.jpeg" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/jinxuan4.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="https://github.com/bmfe/eros-docs/blob/master/eros-products/jinxuan5.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
+<br>
+
+<h4 align="center">
+  star life new.
 </h4>
 
 <p align="center">
