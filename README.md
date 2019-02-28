@@ -20,7 +20,7 @@
 ### 介绍
 **eros 不是框架，是基于 [weex](https://weex-project.io/cn/) 封装、面向前端的 [vue](https://cn.vuejs.org/v2/guide/) 写法的一整套 APP 开源解决方案。**
 
-目前 eros 均由来自美团，今日头条，DClound 等数十个开发者组成的 [Bytemaster 公益开源团队](https://github.com/bmfe) 来共同维护，如果您想加入我们，或者有好的开源项目寻求平台，不妨[联系我们，加入我们](https://github.com/bmfe)(完全免费)。
+目前 eros 均由来自美团，今日头条，DCloud 等数十个开发者组成的 [Bytemaster 公益开源团队](https://github.com/bmfe) 来共同维护，如果您想加入我们，或者有好的开源项目寻求平台，不妨[联系我们，加入我们](https://github.com/bmfe)(完全免费)。
 
 > 简单来说，在 weex 提供的强大支持下，用一份 vue 写法的代码，编译成 iOS/Android 两端原生 APP，并且通过我们内置的热更新逻辑和开源的服务器逻辑，可以使开发者以极快的速度开发 APP ，并赋予 APP 热更新能力(不用经过 appStore/android market 市场审核)。
 
