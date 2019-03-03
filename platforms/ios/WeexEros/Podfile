@@ -5,14 +5,16 @@ inhibit_all_warnings!
 
 def common
     #WeexSDK
-    pod 'WeexSDK', :git => 'https://github.com/bmfe/WeexiOSSDK.git', :tag => '0.19'
-#    pod 'WeexSDK', :path => 'ErosiOSPlugin/WeexiOSSDK/'
+    pod 'WeexSDK', :git => 'https://github.com/bmfe/incubator-weex.git'
+#    pod 'WeexSDK', :path => 'ErosiOSPlugin/incubator-weex/'
 
     #Weex debugger 调试工具，只在开发模式集成
-    pod 'WXDevtool', '0.15.3', :configurations => ['Debug']
+    pod 'WXDevtool', :git => 'https://github.com/bmfe/weex-devtool-iOS.git', :configurations => ['Debug']
+#    pod 'WXDevtool', :path => 'ErosiOSPlugin/weex-devtool-iOS', :configurations => ['Debug']
     
     #Eros iOS 基础库
-    pod 'ErosPluginBaseLibrary', :path => 'ErosiOSPlugin/eros-plugin-ios-baseLibrary/'
+    pod 'ErosPluginBaseLibrary', :git => 'https://github.com/bmfe/eros-plugin-ios-baseLibrary.git', :tag => '1.3.5'
+#    pod 'ErosPluginBaseLibrary', :path => 'ErosiOSPlugin/eros-plugin-ios-baseLibrary/'
 
     #Other Plugins
 #    pod 'ErosPluginGeTui', :path => 'ErosiOSPlugin/eros-plugin-ios-getui/'

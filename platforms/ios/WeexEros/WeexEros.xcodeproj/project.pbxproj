@@ -119,8 +119,7 @@
 				9737F9E41F384AFD00000800 /* Sources */,
 				9737F9E51F384AFD00000800 /* Frameworks */,
 				9737F9E61F384AFD00000800 /* Resources */,
-				3BD915CA46C2120DF93B6216 /* [CP] Copy Pods Resources */,
-				7E8B791561CFA42B4D1EDF8B /* [CP] Embed Pods Frameworks */,
+				AFF30678E807149F46F9048F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,66 +187,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3BD915CA46C2120DF93B6216 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-resources.sh",
-				"${PODS_ROOT}/../ErosiOSPlugin/eros-plugin-ios-baseLibrary/Source/BMComponent/Calendar/Resources/CalendarLeftArrows@2x.png",
-				"${PODS_ROOT}/../ErosiOSPlugin/eros-plugin-ios-baseLibrary/Source/BMComponent/Calendar/Resources/CalendarLeftArrows@3x.png",
-				"${PODS_ROOT}/../ErosiOSPlugin/eros-plugin-ios-baseLibrary/Source/BMComponent/Calendar/Resources/CalendarReightArrows@2x.png",
-				"${PODS_ROOT}/../ErosiOSPlugin/eros-plugin-ios-baseLibrary/Source/BMComponent/Calendar/Resources/CalendarReightArrows@3x.png",
-				"${PODS_ROOT}/../ErosiOSPlugin/eros-plugin-ios-baseLibrary/Source/BMComponent/Chart/Resources/bm-chart.html",
-				"${PODS_ROOT}/../ErosiOSPlugin/eros-plugin-ios-baseLibrary/Source/BMComponent/Chart/Resources/echarts.min.js",
-				"${PODS_ROOT}/../ErosiOSPlugin/eros-plugin-ios-baseLibrary/Source/BMModule/Modal/SVProgressHUD/SVProgressHUD.bundle",
-				"${PODS_ROOT}/../ErosiOSPlugin/eros-plugin-ios-baseLibrary/Source/BMWeexExtension/Resources/arrowInKeyboard@2x.png",
-				"${PODS_ROOT}/../ErosiOSPlugin/eros-plugin-ios-baseLibrary/Source/BMWeexExtension/Resources/bm-base.js",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
-				"${PODS_ROOT}/WeexSDK/WeexSDK/Resources/native-bundle-main.js",
-				"${PODS_ROOT}/WeexSDK/WeexSDK/Resources/wx_load_error@3x.png",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarLeftArrows@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarLeftArrows@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarReightArrows@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarReightArrows@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bm-chart.html",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/echarts.min.js",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrowInKeyboard@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bm-base.js",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/native-bundle-main.js",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/wx_load_error@3x.png",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E8B791561CFA42B4D1EDF8B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-frameworks.sh",
-				"${PODS_ROOT}/PLPlayerKit/Pod/Library/PLPlayerKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLPlayerKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9DE0048A6664627058926D93 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +203,58 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFF30678E807149F46F9048F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-resources.sh",
+				"${PODS_ROOT}/ErosPluginBaseLibrary/Source/BMComponent/Calendar/Resources/CalendarLeftArrows@2x.png",
+				"${PODS_ROOT}/ErosPluginBaseLibrary/Source/BMComponent/Calendar/Resources/CalendarLeftArrows@3x.png",
+				"${PODS_ROOT}/ErosPluginBaseLibrary/Source/BMComponent/Calendar/Resources/CalendarReightArrows@2x.png",
+				"${PODS_ROOT}/ErosPluginBaseLibrary/Source/BMComponent/Calendar/Resources/CalendarReightArrows@3x.png",
+				"${PODS_ROOT}/ErosPluginBaseLibrary/Source/BMComponent/Chart/Resources/bm-chart.html",
+				"${PODS_ROOT}/ErosPluginBaseLibrary/Source/BMComponent/Chart/Resources/echarts.min.js",
+				"${PODS_ROOT}/ErosPluginBaseLibrary/Source/BMModule/Modal/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/ErosPluginBaseLibrary/Source/BMWeexExtension/Resources/arrowInKeyboard@2x.png",
+				"${PODS_ROOT}/ErosPluginBaseLibrary/Source/BMWeexExtension/Resources/bm-base.js",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
+				"${PODS_ROOT}/WeexSDK/pre-build/native-bundle-main.js",
+				"${PODS_ROOT}/WeexSDK/pre-build/weex-main-jsfm.js",
+				"${PODS_ROOT}/WeexSDK/pre-build/weex-polyfill.js",
+				"${PODS_ROOT}/WeexSDK/pre-build/weex-rax-api.js",
+				"${PODS_ROOT}/WeexSDK/ios/sdk/WeexSDK/Resources/wx_load_error@3x.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarLeftArrows@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarLeftArrows@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarReightArrows@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CalendarReightArrows@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bm-chart.html",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/echarts.min.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrowInKeyboard@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bm-base.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/native-bundle-main.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-main-jsfm.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-polyfill.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-rax-api.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/wx_load_error@3x.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeexEros/Pods-WeexEros-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
